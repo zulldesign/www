@@ -1,0 +1,130 @@
+﻿body {
+	/*overflow:hidden;*/
+	background-color:#aaaaaa;
+	margin:0px;
+	font-family:monospace;
+	font-size:9px;
+}
+.title
+{
+FONT-FAMILY: Arial ;
+FONT-SIZE: x-small;
+}
+
+#editor{
+	background-color:#ffffff;
+	overflow:hidden;
+	width:100%;
+	height:100%;
+	border:0px;
+	/*position:relative;*/
+	/*top:0px;*/
+}
+
+.editFrame{
+	width:100%;
+	height:100%;
+	/*overflow:auto;*/
+}
+.editDiv{
+
+}
+.source {
+	padding:0; 
+	margin:0;
+	overflow:hidden; 
+	font-family:monospace; 
+	font-size:medium; 
+	border:0px; 
+	width:100%; 
+	height:100%;
+}
+.print{
+	overflow:auto; 
+	font-family:monospace; 
+	font-size:medium; 
+	border:1px solid gray; 
+	width:800px; 
+	height:150px;
+}
+
+.order {
+ position: relative;
+ top: -27px;
+ left: -4px;
+}
+
+.ogContextMenus {
+    width:140px;
+    position: absolute; 
+    border: 1px solid #777777; 
+    background-color: #efefef; 
+    opacity : 0.9;
+    filter: alpha(opacity=90); // msie 
+    display: block; 
+    padding: 0px;
+    visibility: hidden
+}
+.ogContextMenus_sub {
+	width:160px;
+    position: absolute; 
+    border: 1px solid #777777; 
+    background-color: #efefef; 
+    opacity : 0.9;
+    filter: alpha(opacity=90); // msie 
+    display: block; 
+    padding: 0px;
+    visibility: hidden
+    
+}
+.menuItem {
+	width:100%;
+    cursor: pointer; 
+    font-size: 9pt; 
+    font-family: Arial, Helvetica, sans-serif; 
+    color: black; 
+    padding: 2px 0px;
+    border-bottom: 1px solid #aaaaaa;
+    background-color: transparent; 
+    opacity : 0.8;
+    filter: alpha(opacity=90); // msie 
+    text-decoration: none;
+    height: 18px;
+    display: block; 
+    
+}
+.menuItemOn {
+	width:100%;
+    cursor: pointer; 
+    font-size: 9pt; 
+    font-family: Arial, Helvetica, sans-serif; 
+    color: white; 
+    padding: 2px 0px;
+    border-bottom: 1px solid #aaaaaa;
+    background-color: #444444; 
+    opacity : 0.6;
+    filter: alpha(opacity=90); // msie 
+    text-decoration: none;
+    height: 18px; 
+    display: block; 
+}
+.spanForOgMenu{
+	display: inline-block;
+	width:75%;
+	margin:0px 0px 0px 15px;
+}
+.imgNextMenuForOgMenu{
+	display: inline-block;
+	border: 0;
+	vertical-align: bottom;
+}
+/* clerfix */
+
+.clearBoth {
+    clear:both;
+}
+
+/* Hide Mac IE \*/
+* html .clearfix { height: 1%; }
+.clearfix { display: block; }
+    
