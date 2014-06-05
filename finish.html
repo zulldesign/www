@@ -20,9 +20,20 @@
 <body class="yui-skin-sam">
 <div id="ewPageContent" class="ewPageContent">
 <script type="text/javascript">
-P.pageID["index"] = true;
-P.DEFAULT_URL = "";
+P.pageID["finish"] = true;
 </script>
+<div class="ewClientTemplate" id="ewFinish">
+	<div class="paypalshopmaker ewTitle"><p><b>{{html P.Phrase('ThankYou')}}</b></p></div>
+	<p>
+		<span class="paypalshopmaker">
+		{{if P.USE_PAYPAL}}
+			{{html P.Phrase('ThankYouMessage')}}
+		{{else}}
+			{{html P.Phrase('OrderReceivedMessage')}}
+		{{/if}}
+		</span>
+	</p>
+</div>
 </div> 
 </body>
 </html>
