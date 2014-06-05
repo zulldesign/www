@@ -1,0 +1,71 @@
+<div id="ewLayout" class="ewLayout">
+<!-- header (begin) --><!-- *** Note: Only licensed users are allowed to change the logo *** -->
+ <div class="ewHeaderRow" id="ewHeader"><img src="images/paypalshopmkrhdr.png" alt="" border="0"></div>
+<!-- header (end) -->
+<!-- content (begin) -->
+<table cellspacing="0" class="ewContentTable">
+	<tr>
+		<td class="ewMenuColumn">
+		<!-- left column (begin) -->
+			<div class="paypalshopmaker" id="ewMenu"></div><br>
+			<div class="paypalshopmaker">&nbsp;&nbsp;&nbsp;&nbsp;<b>Categories</b></div>	
+			<div class="paypalshopmaker" id="ewCategory"></div>
+			<!-- Enter your HTML below the category menu here -->
+		<!-- left column (end) -->
+		</td>
+		<td class="ewContentColumn">
+		<!-- content column (begin) -->
+			<div id="ewContent">		
+			</div> 
+			<p>&nbsp;</p>	
+			<!-- content column (end) -->
+		</td>	
+		<td class="ewRightColumn">
+		<!-- right column (begin) -->
+		<!-- Note: DO NOT CHANGE THE ID OR CLASS AND DO NOT REMOVE THE COMMENTS! -->
+		<div id="ewCart" class="ewClientTemplate">			
+			<div class="paypalshopmaker"><p><b>{{html P.Phrase("ShopCart")}}</b></p></div>	
+			{{if items.length}}		
+			<form name="simple">
+				<table class="ewTable0">
+					<tbody>
+						<!-- {{each items}} -->
+						<tr>
+							<td>${$value.itemname}<br>
+								<span style="white-space: nowrap">${ $value.price}</span>&nbsp;&nbsp;{{html P.Phrase('DescQuantity')}}&nbsp;
+								{{if P.UNDEFINED_QUANTITY}}
+									<input type="text" name="quantity_${ $value.index}" value="${ $value.quantity}" size="2" class="ewQty" data-index="${ $value.index}">								
+								{{else}}
+									${$value.quantity}
+								{{/if}}
+								&nbsp;<a href="javascript:void(0)" class="ewRemove" data-index="${ $value.index}"><img data-src="images/delete.gif" alt="${ P.Phrase('DescRemove')}" title="${ P.Phrase('DescRemove')}" border="0" class="ewTmplImg"></a>
+							</td>
+						</tr>
+						<!-- {{/each}} -->
+					</tbody>
+					<tfoot>
+						<tr>
+							<td style="white-space: nowrap"><b>{{html P.Phrase('DescTotal')}}</b>&nbsp;${total}</td>
+						</tr>
+					</tfoot>
+				</table>
+				<input type="button" name="btnCheckout" id="btnCheckout" value="${ P.Phrase('Checkout')}">
+			</form>
+			{{else}}
+			<div class="ewMessage">{{html P.Phrase('CartEmptyMessage')}}</div>
+			{{/if}}
+			&nbsp;
+		</div>
+		<!-- Enter your HTML below the tiny shopping cart here -->
+		<!-- right column (end) -->
+		</td>
+	</tr>
+</table>
+<!-- content (end) -->	
+<!-- footer (begin) --><!-- *** Note: Only licensed users are allowed to remove or change the following copyright statement. *** -->
+<div class="ewFooterRow" id="ewFooter">	
+	<div class="ewFooterText">&copy;2014 e.World Technology Ltd. All rights reserved.</div>
+	<!-- Place other links, for example, disclaimer, here -->		
+</div>
+<!-- footer (end) -->	
+</div>
