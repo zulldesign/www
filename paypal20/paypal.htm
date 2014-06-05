@@ -1,0 +1,191 @@
+<!--##SESSION paypal-start##-->
+<!--##$COND TABLE/TblppType/NE/3##-->
+<form name="pp<!--%=ItemID-->"
+	<!--##$COND TABLE/TblppType/EQ/2##-->
+target="paypal"
+	<!--##$/COND##-->
+method="post" onSubmit="this.action=ntk_paypal_url;return SubmitItem(this);">
+<!--##$/COND##-->
+<!--##$COND TABLE/TblppType/EQ/3##-->
+<form name="pp<!--%=ItemID-->" onSubmit="return SubmitItemToCart(this);">
+<!--##$/COND##-->
+<!--##/SESSION##-->
+
+
+<!--##SESSION paypal-content-hidden##-->
+<!--##$COND TABLE/TblppType/EQ/3##-->
+<input type="hidden" name="id" value="<!--%=ItemID-->">
+<input type="hidden" name="amount" value="<!--%=ItemPrice-->">
+<input type="hidden" name="amount_base" value="<!--%=ItemPrice-->">
+<!-- *** Discount type -->
+<input type="hidden" name="discounttype" value="<!--%=ItemDiscountTypeID-->">
+<!-- *** Ship type -->
+<input type="hidden" name="shiptype" value="<!--%=ItemShippingTypeID-->">
+<input type="hidden" name="quantity" value="1">
+<input type="hidden" name="item_number" value="<!--%=ItemNumber_Html-->">
+<input type="hidden" name="item_name" value="<!--%=ItemName_Html-->">
+	<!--%$COND !Product/ItemOption1/NE/'',!Product/ItemOption1FieldName/NE/''-->
+<input type="hidden" name="on0" value="<!--%=ItemOption1FieldName-->">
+		<!--%$COND !Product/ItemOption1Required/NE/True-->
+<input type="hidden" name="or0" value="0">
+		<!--%$/COND-->
+		<!--%$COND !Product/ItemOption1Required/EQ/True-->
+<input type="hidden" name="or0" value="1">
+		<!--%$/COND-->
+	<!--%$/COND-->
+	<!--%$COND !Product/ItemOption2/NE/'',!Product/ItemOption2FieldName/NE/''-->
+<input type="hidden" name="on1" value="<!--%=ItemOption2FieldName-->">
+		<!--%$COND !Product/ItemOption2Required/NE/True-->
+<input type="hidden" name="or1" value="0">
+		<!--%$/COND-->
+		<!--%$COND !Product/ItemOption2Required/EQ/True-->
+<input type="hidden" name="or1" value="1">
+		<!--%$/COND-->
+	<!--%$/COND-->
+	<!--%$COND !Product/ItemHandling/GT/0-->
+<input type="hidden" name="handling" value="<!--%=ItemHandling-->">
+	<!--%$/COND-->
+	<!--%$COND !Product/ItemShipping/GT/0-->
+<input type="hidden" name="shipping" value="<!--%=ItemShipping-->">
+	<!--%$/COND-->
+	<!--%$COND !Product/ItemShipping2/GT/0-->
+<input type="hidden" name="shipping2" value="<!--%=ItemShipping2-->">
+	<!--%$/COND-->
+	<!--%$COND !Product/ItemTax/GT/0-->
+<input type="hidden" name="tax" value="<!--%=ItemTax_Display-->">
+	<!--%$/COND-->
+<!--##$/COND##-->
+
+<!--##$COND TABLE/TblppType/NE/3##-->
+	<!--##$COND PROJ/CharSet/NE/''##-->
+<!--##=PaypalCharSet##-->
+	<!--##$/COND##-->
+	<!--##$COND TABLE/TblppType/EQ/1##-->
+<input type="hidden" name="cmd" value="_xclick">
+	<!--##$/COND##-->
+	<!--##$COND TABLE/TblppType/EQ/2##-->
+<input type="hidden" name="cmd" value="_cart">
+<input type="hidden" name="add" value="1">
+	<!--##$/COND##-->
+<input type="hidden" name="business" value="<!--##=TblppEmail##-->">
+<input type="hidden" name="item_number" value="<!--%=ItemNumber_Html-->">
+<input type="hidden" name="item_name" value="<!--%=ItemName_Html-->">
+<input type="hidden" name="id" value="<!--%=ItemID-->">
+<input type="hidden" name="amount" value="<!--%=ItemPrice-->">
+<input type="hidden" name="amount_base" value="<!--%=ItemPrice-->">
+	<!--##$COND TABLE/TblppUndefinedQuantity/EQ/True##-->
+<input type="hidden" name="undefined_quantity" value="1">
+	<!--##$/COND##-->
+	<!--##$COND TABLE/TblppCustom/NE/''##-->
+<input type="hidden" name="custom" value="<!--##=TblppCustom##-->">
+	<!--##$/COND##-->
+	<!--##$COND TABLE/TblppInvoice/NE/''##-->
+<input type="hidden" name="invoice" value="<!--##=TblppInvoice##-->">
+	<!--##$/COND##-->
+	<!--%$COND !Product/ItemOption1/NE/'',!Product/ItemOption1FieldName/NE/''-->
+<input type="hidden" name="on0" value="<!--%=ItemOption1FieldName-->">
+		<!--%$COND !Product/ItemOption1Required/NE/True-->
+<input type="hidden" name="or0" value="0">
+		<!--%$/COND-->
+		<!--%$COND !Product/ItemOption1Required/EQ/True-->
+<input type="hidden" name="or0" value="1">
+		<!--%$/COND-->
+	<!--%$/COND-->
+	<!--%$COND !Product/ItemOption2/NE/'',!Product/ItemOption2FieldName/NE/''-->
+<input type="hidden" name="on1" value="<!--%=ItemOption2FieldName-->">
+		<!--%$COND !Product/ItemOption2Required/NE/True-->
+<input type="hidden" name="or1" value="0">
+		<!--%$/COND-->
+		<!--%$COND !Product/ItemOption2Required/EQ/True-->
+<input type="hidden" name="or1" value="1">
+		<!--%$/COND-->
+	<!--%$/COND-->
+	<!--%$COND !Product/ItemHandling/GT/0-->
+<input type="hidden" name="handling" value="<!--%=ItemHandling-->">
+	<!--%$/COND-->
+	<!--%$COND !Product/ItemShipping/GT/0-->
+<input type="hidden" name="shipping" value="<!--%=ItemShipping-->">
+	<!--%$/COND-->
+	<!--%$COND !Product/ItemShipping2/GT/0-->
+<input type="hidden" name="shipping2" value="<!--%=ItemShipping2-->">
+	<!--%$/COND-->
+	<!--##$COND TABLE/TblppTax/NE/''##-->
+<input type="hidden" name="tax" value="<!--##=Tax##-->">
+	<!--##$/COND##-->
+	<!--##$COND TABLE/TblppTax/EQ/''##-->
+	<!--%$COND !Product/ItemTax/GT/0-->
+<input type="hidden" name="tax" value="<!--%=ItemTax_Display-->">
+	<!--%$/COND-->
+	<!--##$/COND##-->
+	<!--##$COND TABLE/TblppCurrencyCode/NE/''##-->
+<input type="hidden" name="currency_code" value="<!--##=TblppCurrencyCode##-->">
+	<!--##$/COND##-->
+	<!--##$COND TABLE/TblppCS/EQ/True##-->
+<input type="hidden" name="cs" value="1">
+	<!--##$/COND##-->
+	<!--##$COND TABLE/TblppCS/EQ/False##-->
+<input type="hidden" name="cs" value="0">
+	<!--##$/COND##-->
+	<!--##$COND TABLE/TblppNoNote/EQ/True##-->
+<input type="hidden" name="no_note" value="1">
+	<!--##$/COND##-->
+	<!--##$COND TABLE/TblppNoNote/EQ/False##-->
+<input type="hidden" name="no_note" value="0">
+	<!--##$/COND##-->
+<input type="hidden" name="no_shipping" value="<!--##=TblppNoShipping##-->">
+	<!--##$COND TABLE/TblppCbt/NE/''##-->
+<input type="hidden" name="cbt" value="<!--##=TblppCbt##-->">
+	<!--##$/COND##-->
+	<!--##$COND TABLE/TblppCn/NE/''##-->
+<input type="hidden" name="cn" value="<!--##=TblppCn##-->">
+	<!--##$/COND##-->
+	<!--##$COND #Product/TblppCppHeaderImage/NE/''##-->
+<input type="hidden" name="cpp_header_image" value="<!--##=TblppCppHeaderImage##-->">
+	<!--##$/COND##-->
+	<!--##$COND #Product/TblppCppHeaderbackColor/NE/''##-->
+<input type="hidden" name="cpp_headerback_color" value="<!--##=CppHeaderbackColor##-->">
+	<!--##$/COND##-->
+	<!--##$COND #Product/TblppCppHeaderborderColor/NE/''##-->
+<input type="hidden" name="cpp_headerborder_color" value="<!--##=CppHeaderborderColor##-->">
+	<!--##$/COND##-->
+	<!--##$COND #Product/TblppCppPayflowColor/NE/''##-->
+<input type="hidden" name="cpp_headerborder_color" value="<!--##=CppPayflowColor##-->">
+	<!--##$/COND##-->
+	<!--##$COND TABLE/TblppImageUrl/NE/''##-->
+<input type="hidden" name="image_url" value="<!--##=TblppImageUrl##-->">
+	<!--##$/COND##-->
+	<!--##$COND TABLE/TblppCancelReturn/NE/''##-->
+<input type="hidden" name="cancel_return" value="<!--##=TblppCancelReturn##-->">
+	<!--##$/COND##-->
+	<!--##$COND TABLE/TblppReturn/NE/''##-->
+<input type="hidden" name="return" value="<!--##=TblppReturn##-->">
+	<!--##$/COND##-->
+	<!--##$COND TABLE/TblppRm/NE/''##-->
+<input type="hidden" name="rm" value="<!--##=TblppRm##-->">
+	<!--##$/COND##-->
+	<!--##$COND TABLE/TblppPageStyle/NE/''##-->
+<input type="hidden" name="page_style" value="<!--##=TblppPageStyle##-->">
+	<!--##$/COND##-->
+	<!--##$COND TABLE/TblppAddressOverride/NE/''##-->
+<input type="hidden" name="address_override" value="<!--##=TblppAddressOverride##-->">
+	<!--##$/COND##-->
+	<!--##$COND TABLE/TblppHandlingCart/NE/''##-->
+<input type="hidden" name="handling_cart" value="<!--##=TblppHandlingCart##-->">
+	<!--##$/COND##-->
+	<!--##$COND #Product/TblppPaymentAction/EQ/True##-->
+<input type="hidden" name="paymentaction" value="authorization">
+	<!--##$/COND##-->
+<!--##$/COND##-->
+<!--##/SESSION##-->
+
+
+<!--##SESSION paypal-end##-->
+</form>
+<!--%$COND GEN/Preview/EQ/False-->
+<script language="JavaScript">
+<!--
+UpdatePrice(document.pp<!--%=ItemID-->); // initialize option price
+//-->
+</script>
+<!--%$/COND-->
+<!--##/SESSION##-->

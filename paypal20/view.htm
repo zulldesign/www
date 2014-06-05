@@ -1,0 +1,34 @@
+<!--##SESSION table-start##-->
+<!-- view template customizable area start -->
+<p><span class="paypalsb"><a href="<!--%=listfn-->"><!--##@BackToList##--></a></span></p>
+<table class="ntkTable">
+<!--##/SESSION##-->
+
+<!--##SESSION table-content##-->
+<tr><td colspan="2"><div class="paypalsb"><b><!--%=ItemNumber--></b></div></td></tr>
+<tr><td colspan="2"><div class="paypalsb"><b><!--%=ItemName--></b></div></td></tr>
+<tr>
+<td valign="top" width="<!--%=ItemImageWidth-->"><!--%=ItemImage--></td>
+<td valign="top" width="99%"><div class="paypalsb">
+
+<div id="div_amount_<!--%=ItemID-->" name="div_amount_<!--%=ItemID-->"><!--##@Price##-->: <!--%=ItemPrice_Display--></div>
+<!--%$COND !Product/ItemOption1/NE/'',!Product/ItemOption1FieldName/NE/''-->
+<!--%=ItemOption1FieldName-->: <!--%=Option1--><br>
+<!--%$/COND-->
+<!--%$COND !Product/ItemOption2/NE/'',!Product/ItemOption2FieldName/NE/''-->
+<!--%=ItemOption2FieldName-->: <!--%=Option2--><br>
+<!--%$/COND-->
+<input type="image" src="<!--##=ButtonImage##-->" border="0" name="submit" alt="<!--##@&ImageAlt##-->">
+
+</div>
+</td>
+</tr>
+<tr>
+<td colspan=2><div class="paypalsb"><!--%=ItemDescription_Display--></div></td>
+</tr>
+<!--##/SESSION##-->
+
+<!--##SESSION table-end##-->
+</table>
+<!-- view template customizable area end -->
+<!--##/SESSION##-->
