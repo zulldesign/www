@@ -11,7 +11,7 @@
 <%
 set conn=Server.CreateObject("ADODB.Connection")
 conn.Provider="Microsoft.Jet.OLEDB.4.0"
-conn.Open("C:\WebData\Northwind.mdb")
+conn.Open("https://www.apphb.com/DemoASP/Northwind.mdb")
 set rs = Server.CreateObject("ADODB.recordset")
 rs.Open "Select CompanyName, City, Country from Customers", conn
 %>
