@@ -1,0 +1,96 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<title>PayPal Shop Maker 5 Demo Project (Unregistered version)</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">		
+	<script type="text/javascript" src="yui290/build/yahoo-dom-event/yahoo-dom-event.js"></script>
+	<script type="text/javascript" src="yui290/build/container/container_core-min.js"></script>
+	<script type="text/javascript" src="yui290/build/menu/menu-min.js"></script>
+	<script type="text/javascript" src="ppjs5/jquery-1.6.4.min.js"></script>
+	<script type="text/javascript" src="ppjs5/jquery.tmpl.min.js"></script>
+	<script type="text/javascript" src="ppjs5/ewutilities.js"></script>	
+	<script type="text/javascript" src="ppjs5/ewcartconfig.js"></script>
+	<script type="text/javascript" src="ppjs5/ewcartdata.js"></script>
+	<script type="text/javascript" src="ppjs5/ewcart5-min.js"></script>	
+	<link rel="stylesheet" type="text/css" href="yui290/build/menu/assets/skins/sam/menu.css">	
+	<link rel="stylesheet" type="text/css" href="ppcss5/ui-lightness/jquery-ui-1.8.16.custom.css">
+	<link href="ppcss5/demo.css" rel="stylesheet" type="text/css">
+<meta name="generator" content="PayPal Shop Maker v5.0.0.2 (Unregistered version)">
+</head>
+<body class="yui-skin-sam">
+<div id="ewPageContent" class="ewPageContent">
+<!-- ADD TO CART button code. -->
+<form action="https://www.e-junkie.com/ecom/fgb.php?c=cart&cl=1&ejc=2" target="ej_ejc" method="POST">
+
+<!-- paypal email(remove if not using PayPal) -->
+<input type="hidden" name="business" value="your_paypal_email"/>
+
+<!-- google merchant id (remove if not using Google Checkout) -->
+<input type="hidden" name="merchant_id" value="your_google_merchant_id"/>
+<!-- site url -->
+<input type="hidden" name="site_url" value="http://yoursite.com"/>
+
+<!-- contact email (where we can notify of the updates) -->
+<input type="hidden" name="contact_email" value="your@email.address"/>
+
+<!-- item name -->
+<input type="hidden" name="item_name" value="Test Item"/>
+<!-- item number (should be different for each product)-->
+<input type="hidden" name="item_number" value="1"/>
+<!-- item price -->
+<input type="hidden" name="amount" value="1.00"/>
+
+<!-- initial quantity -->
+<input type="hidden" name="quantity" value="1"/>
+
+<!-- item options (can be removed if not required) -->
+<input type="hidden" name="on0" value="Size"/>
+<select name="os0" >
+<option value="S">S</option><option value="M">M</option>
+</select>
+<input type="hidden" name="on1" value="Color"/>
+<select name="os1" >
+<option value="Orng">Orng</option><option value="Blk">Blk</option>
+</select>
+<input type="hidden" name="on2" value="Message"/>
+<input name="os2" type="text" value="Hello World"/>
+
+<!-- shipping cost -->
+<input type="hidden" name="shipping" value="1">
+
+<!-- shipping cost of each additional unit --> 
+<input type="hidden" name="shipping2" value="0.5">
+<!--handling cost --> 
+<input type="hidden" name="handling" value="0.5">
+
+<!-- tax (flat amount, NOT percentage)-->
+<input type="hidden" name="tax" value="0.50"/>
+
+<!-- following options are applicable to whole cart-->
+
+<!-- you thank you page -->
+<input type="hidden" name="return_url" value="http://www.e-junkie.com/"/>
+
+<!-- any custom info you want to pass for the whole order -->
+<input type="hidden" name="custom" value="anything"/>
+
+<!-- currency (USD for Google Checkout USA, GBP for Google Checkout UK. For PayPal: any currency that PayPal supports -->
+<input type="hidden" name="currency_code" value="USD"/>
+
+<input type="image" src="https://www.e-junkie.com/ej/ej_add_to_cart.gif" border="0" onClick="javascript:return EJEJC_lc(this.parentNode);">
+</form> 
+
+
+<!-- VIEW CART button code. --> 
+<a href="https://www.e-junkie.com/ecom/fgb.php?c=cart&cl=1&ejc=2&
+merchant_id=your_google_merchant_id&business=your_paypal_email" target="ej_ejc" class="ec_ejc_thkbx" onClick="javascript:return EJEJC_lc(this);"><img src="https://www.e-junkie.com/ej/ej_view_cart.gif" border="0"></a>
+<script language="javascript" type="text/javascript">
+<!-- 
+function EJEJC_lc(th) { return false; }
+// -->
+</script>
+<script type="text/javascript"
+src="https://www.e-junkie.com/ecom/box.js"></script>
+</div> 
+</body>
+</html>
