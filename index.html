@@ -1,0 +1,297 @@
+<HTML><HEAD><TITLE>PayPal Settings</TITLE>
+<META http-equiv=Content-Type content="text/HTML; charset=iso-8859-1"><LINK href="paypalshopmaker.css" type=text/css rel=StyleSheet>
+<style type="text/css">
+<!--
+.style2 {
+	font-weight: bold;
+	color: #FF0000;
+}
+.style1 {	color: #FF0000;
+	font-weight: bold;
+}
+-->
+</style>
+</HEAD>
+<BODY bottomMargin=0 leftMargin=0 topMargin=0 rightMargin=0 marginheight="0" marginwidth="0">
+<table cellspacing=0 cellpadding=0 width="100%" border=0>
+<TBODY>
+<TR>
+<TD colSpan=2>
+<table height=22 cellspacing=0 cellpadding=0 width="100%" border=0>
+<tbody>
+<tr bgcolor=#1A3665>
+<TD noWrap bgColor=#ffffff><img height=50 alt="" src="images/paypalshopmkrhdr.png" width=300 border=0></TD>
+<TD width="50%"></TD>
+<TD width="50%"></TD></TR></TBODY></TABLE></TD></TR>
+<TR>
+<TD vAlign=top width="100%" bgColor=#ffffff>
+<TABLE cellSpacing=0 cellPadding=15 width="99%" border=0>
+<TBODY>
+<TR>
+<TD><!-- Begin Main Content -->
+
+      
+<p>&nbsp; </p>
+<p><b>PayPal Settings </b></p>
+<p> You must set 
+  up the following settings to enable your PayPal shop:</p>
+<p><img src="images/paypalsetup_01.png" width="712" height="186"></p>
+<p><strong>General</strong></p>
+<table width="100%" border="0" cellpadding="5" cellspacing="1" bgcolor="#999999">
+  <tr bgcolor="#FFFFFF">
+    <td valign="top" nowrap bgcolor="#CCCCCC"><strong>Use PayPal</strong></td>
+    <td valign="top"><p>If disabled, the order will not be submitted to PayPal. Instead, only an email will be sent to the recipient specified in the <a href="optionsetup.htm#email">Email</a> settings.    
+      <p><span class="style1">Note: This feature requires PHP and server side database (Access/MySQL/SQLite), it cannot be used with JavaScript database type.</span> </td>
+  </tr>
+  <tr bgcolor="#FFFFFF">
+    <td valign="top" nowrap bgcolor="#CCCCCC"><strong>PayPal Account</strong></td>
+    <td valign="top"><p>Your registered email address (PayPal Account) in PayPal</p>
+        <p>Enter your Paypal account into the<strong> [PayPal account]</strong> textbox in the form of PayPal registered email. If you use Sandbox, enter your test account. If not, enter your real account.</p></td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<p><strong>Currency</strong></p>
+<p><img src="images/paypalsetup_02.png" width="700" height="251"></p>
+<table width="100%" border="0" cellpadding="5" cellspacing="1" bgcolor="#999999">
+  <tr bgcolor="#FFFFFF">
+    <td valign="top" nowrap bgcolor="#CCCCCC"><strong>Currency (currency_code) </strong></td>
+    <td valign="top">Defines the currency in which 
+      the monetary variables  are 
+      denoted.</td>
+  </tr>
+  <tr bgcolor="#FFFFFF">
+    <td valign="top" nowrap bgcolor="#CCCCCC"><strong>Currency symbol </strong></td>
+    <td valign="top"><p>The currency symbol or dollar sign before the amount. </p>
+      <blockquote>
+        <p><strong>Note:</strong> If the system encoding of your PC is utf-8 or windows-1252, you can use the euro currency symbol, &euro;. Otherwise, you should not use it because the symbol is not supported by other character sets. If your system encoding is not utf-8 or windows-1252 but you have to use the symbol, you need to use utf-8 project, set the project charset as &quot;utf-8&quot; (see <a href="htmlsetup.htm">HTML Settings</a>) and enable UTF8Output (see <a href="generatesetup.htm">Generate Settings</a>).</p>
+      </blockquote></td>
+  </tr>
+  <tr bgcolor="#FFFFFF">
+    <td valign="top" nowrap bgcolor="#CCCCCC"><strong>Decimal symbol </strong></td>
+    <td valign="top">The decimal symbol of the price. </td>
+  </tr>
+  <tr bgcolor="#FFFFFF">
+    <td valign="top" nowrap bgcolor="#CCCCCC"><strong>Grouping symbol </strong></td>
+    <td valign="top">The thousand separator.</td>
+  </tr>
+  <tr bgcolor="#FFFFFF">
+    <td valign="top" nowrap bgcolor="#CCCCCC"><strong>No. of digits after decimal </strong></td>
+    <td valign="top">The number of digits after decimal. In normal cases it should be 2. </td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<p><strong>Payment Data Transfer (PDT) </strong></p>
+<p><img src="images/paypalsetup_03.png" width="728" height="228"></p>
+<p>Payment Data Transfer (PDT) provides merchants with the ability to display transaction
+  details to buyers who are redirected back to their site upon payment completion.</p>
+<p>If you want to enable this feature, check<strong> [Use Payment Data Transfer (PDT)]</strong> and paste your identity token from PayPal.com to the <strong>[Identity Token]</strong> textbox. </p>
+  <blockquote>
+    <p><strong>Notes:</strong> You must login PayPal.com and enable Auto Return for Website Payments to use Payment Data Transfer.  When you  save your PDT preferences at PayPal.com, a message appears at the top of the page
+      indicating that you have successfully saved your preferences. Your identity token also appears 
+      in this message. 
+      You will need to copy this identity token to PayPal Shop Maker. Also see <a href="pdt.htm">Payment Data Transfer (PDT)</a> for more details. </p>
+    <p>&nbsp;</p>
+</blockquote>
+<p><strong>Instant Payment Notification (IPN) </strong></p>
+<p><img src="images/paypalsetup_04.png" width="726" height="185"></p>
+<p>Instant Payment Notification (IPN) allows you to integrate PayPal payments with your 
+  website's back-end operations. IPN provides immediate notification and confirmation of
+  PayPal payments you receive.</p>
+<p>If you want to enable this feature, check<strong> [Use Instant Payment Notification (IPN)]</strong>.</p>
+
+  <blockquote>
+    <p><strong>Notes:</strong> You also need to setup IPN at your PayPal account, see <a href="ipn.htm">Instant payment Notification (IPN)</a> for more details.</p>
+  </blockquote>
+  <p>&nbsp;</p>
+<p><strong><a name="digital"></a>Digital Goods</strong></p>
+<p><img src="images/paypalsetup_05.png" width="736" height="237"></p>
+<p>If you sell digital goods, you can allow customers instant access to the download URLs with an email (via IPN) or a return page (via PDT). To enable, check <strong>[Use digital goods download]</strong>.</p>
+<p>There are 2 types of download method. If the download files are not large in size, enable <strong>[Download via script]</strong>, otherwise disable it. (See <a href="digitalgoods.htm">Digital Goods Download</a> for explanation.)</p>
+<p>To prevent fraudulent transactions, you can choose <strong>[Approval before providing download URL]</strong> to receive an email for your approval before sending the email to your customer. After the period of time specified in <strong>[Download timeout (hours)]</strong>, the download URLs will become invalid.</p>
+<p> Also see <a href="digitalgoods.htm">Digital Goods Download</a> for more details.</p>
+<p>&nbsp;</p>
+<p><strong>Sandbox</strong></p>
+<p><img src="images/paypalsetup_07.png" width="715" height="235"></p>
+<p>PayPal provides a Sandbox test environment, you can use test accounts to try out the payment process. If you have a Sandbox test account, check <strong>[Use PayPal Sandbox]</strong>. If not, just left it unchecked now.</p>
+<p>To test in the Sandbox, you must first create a Developer Central account at PayPal.com. With this account, 
+    you can create multiple PayPal accounts, such as seller and buyer accounts, to simulate
+    different scenarios.</p>
+<p>For complete details about using <a href="https://developer.paypal.com/" target="_blank">Developer Central</a> and the Sandbox, see the <a href="https://www.paypal.com/en_US/pdf/PP_Sandbox_UserGuide.pdf" target="_blank">Sandbox User
+  Guide</a> by PayPal.</p>
+<div class="style2">
+<p>Notes:</p>
+<ol>
+  <li><strong> After testing, remember to uncheck this box and   generate production version of scripts.<br>  
+      <br>
+  </strong></li>
+  <li><strong> If you only uncheck this option to generate production version  and make no other changes in the project, you don't need to re-upload all pages. You can upload ppcfg.php only. </strong></li>
+</ol>
+</div>
+<p>&nbsp;</p>
+<p><strong>Other variables</strong></p>
+<p><img src="images/paypalsetup_08.png" width="868" height="521"></p>
+<p>There are many other PayPal variables but all of them are optional. Below is the set of PayPal options you can set in PayPal Shop Maker to integrate your 
+  site with PayPal. The visit the follows for official info from PayPal:<br> 
+  <a href="https://cms.paypal.com/us/cgi-bin/?&cmd=_render-content&content_ID=developer/howto_html_wp_standard_overview" target="_blank">https://cms.paypal.com/us/cgi-bin/?&amp;cmd=_render-content&amp;content_ID=developer/howto_html_wp_standard_overview</a></p>
+<table width="100%" border="0" cellpadding="6" cellspacing="1" bgcolor="#999999">
+  <tr bgcolor="#CCCCCC">
+    <td colspan="2"><strong>HTML Variables for Payment Transactions<br>
+    </strong></td>
+  </tr>
+  <tr bgcolor="#FFFFFF">
+    <td valign="top"><strong>address_override </strong></td>
+    <td valign="top"><p>If enabled, the address specified with automatic fill-in variables      overrides the PayPal member&rsquo;s stored address. Buyers see<br>
+      the addresses that you pass in, but they cannot edit them. 
+      PayPal does not show addresses if they are invalid or<br>
+      omitted.</p>
+      <blockquote>
+        <p>&nbsp;</p>
+      </blockquote></td>
+  </tr>
+  <tr bgcolor="#FFFFFF">
+    <td valign="top"><strong>weight_unit</strong></td>
+    <td valign="top">The unit of measure if weight_cart is specified. Possible
+      values are:<br>
+      lbs or
+      kgs<br>
+      Defaults to lbs.</td>
+  </tr>
+  
+  <tr bgcolor="#CCCCCC"> 
+    <td colspan="2"><strong>HTML Variables for Shopping Carts<br>
+      </strong></td>
+  </tr>
+  <tr bgcolor="#FFFFFF">
+    <td valign="top"><strong>paymentaction </strong></td>
+    <td valign="top"> Indicates whether transaction is an authorization to be captured later with PayPal Authorization &amp; Capture on https://www.paypal.com/. For more information, see the PayPal Authorization &amp; Capture Integration Guide.</td>
+  </tr>
+  <tr bgcolor="#FFFFFF">
+    <td valign="top"><strong>handling_cart</strong></td>
+    <td valign="top"> <p>Single handling fee to be charged cart-wide.</p>
+      <blockquote>
+        <p><strong>Note: </strong>If you use <strong>Custom</strong> shipping type, this fee will be added to the total of handling fee for individual items. Otherwise, it will be posted to PayPal directly.</p>
+        </blockquote>
+      <p><br>
+      </p></td>
+  </tr>
+  <tr bgcolor="#CCCCCC"> 
+    <td colspan="2"><strong>HTML Variables for Displaying PayPal Checkout Pages</strong><br></td>
+  </tr>
+  <tr bgcolor="#FFFFFF">
+    <td valign="top"><strong>page_style </strong></td>
+    <td valign="top"><p>Sets the Custom Payment Page Style for payment pages
+      associated with this button/link. Allowed values are:<br>
+      somePageStyleName: the name of a page style you have
+      defined<br>
+      primary: always use the page style set in the account profile
+      as primary.<br>
+      paypal: use the PayPal page style.<br>
+      Alphanumeric ASCII lower 7-bit characters only, plus
+      underscore. No spaces. (Max 30 chars) <br>
+    </p></td>
+  </tr>
+  <tr bgcolor="#FFFFFF">
+    <td valign="top"><strong>image_url </strong></td>
+    <td valign="top">The URL of the 150x50-pixel image you would like to use as
+      your logo. If omitted, the customer sees your business name (if
+      you have a Business account) or your email address (if you have
+      Premier account). (Max 1,024 chars) <br></td>
+  </tr>
+  <tr bgcolor="#FFFFFF">
+    <td valign="top"><strong>cpp_header_
+      image   </strong></td>
+    <td valign="top">      Sets the image you choose to appear at the top left of the payment page. The image
+      can have a maximum size of 750 pixels wide by 90 pixels high. Valid character set 
+      is URL-safe characters. The cpp_header_image variable has no character limit
+      because the image is not stored on our database. It is recommended that you only
+      provide an image that is stored on a secure (https) server. </td>
+  </tr>
+  <tr bgcolor="#FFFFFF">
+    <td valign="top"><strong>cpp_headerback_color <br>
+    </strong></td>
+    <td valign="top">      Sets the background color for the header of the payment page. Valid character set is
+      6 character HTML Hex code in ASCII. This variable is not case-sensitive.</td>
+  </tr>
+  <tr bgcolor="#FFFFFF">
+    <td valign="top"><strong>cpp_headerborder_color <br>
+    </strong></td>
+    <td valign="top">      Sets the border color around the header of the payment page. The border is a 2-pixel perimeter around the header space, which has a maximum size of 750 pixels
+      wide by 90 pixels high. Valid character set is 6 character HTML Hex code in
+      ASCII. This variable is not case-sensitive.</td>
+  </tr>
+  <tr bgcolor="#FFFFFF">
+    <td valign="top"><strong>cpp_payflow_color <br>
+    </strong></td>
+    <td valign="top">      Sets the background color for the payment page below the header. Valid character
+      set is 6 character HTML Hex code in ASCII. This variable is not case sensitive.
+      Certain background colors that conflict with PayPal's error messages are not
+      allowed.</td>
+  </tr>
+  <tr bgcolor="#FFFFFF"> 
+    <td width="17%" valign="top"> <strong>no_note </strong></td>
+    <td width="71%" valign="top">Including a note with payment. If checked, your 
+      customer will not be prompted to include a note. Otherwise your customer 
+      will be prompted to include a note.</td>
+  </tr>
+  <tr bgcolor="#FFFFFF">
+    <td valign="top"><strong>cn </strong></td>
+    <td valign="top">Label that will appear above the note field. 
+      This value is not saved and will not appear in any of your notifications. 
+      If
+      omitted, no variable will be passed back to you. (Max 60 chars) </td>
+  </tr>
+  <tr bgcolor="#FFFFFF">
+    <td valign="top"><strong>cs </strong></td>
+    <td valign="top">Sets the background color of your payment pages. 
+      If checked, the background color will be black. Otherwise the background 
+      color will be white.</td>
+  </tr>
+  <tr bgcolor="#FFFFFF"> 
+    <td valign="top"> <strong>no_shipping </strong></td>
+    <td valign="top">The buyer's shipping address.<br>
+      Omitted or set to 0 = customer is prompted to include a
+      shipping address<br>
+      1 = customer is not asked for a shipping address.<br>
+      2 = customer is required to provide a shipping address.<br></td>
+  </tr>
+  <tr bgcolor="#FFFFFF">
+    <td valign="top"><strong>return </strong></td>
+    <td valign="top">The URL to which the buyer&rsquo;s browser is redirected after
+      completing the payment; for example, a URL on your site that
+      displays a &ldquo;Thank you for your payment&rdquo; page.<br>
+      Default: buyer is redirected to a PayPal web page. (Max 1,024 chars) </td>
+  </tr>
+  <tr bgcolor="#FFFFFF">
+    <td valign="top"><strong>rm </strong></td>
+    <td valign="top"><p>&quot;Return method&quot;: FORM METHOD used to send data to the URL specified by the return variable after payment completion.<br>
+      Allowed values are:<br>
+      0: (default) all shopping cart transactions use the GET method<br>
+      1: the buyer&rsquo;s browser is redirected to the return URL by the GET method, and no transaction variables are sent<br>
+      2: The buyer&rsquo;s browser is redirected to the return URL by the POST method, and all transaction variables are also<br>
+      NOTE: The rm variable takes effect only if the return variable is also set.<br>
+    </p></td>
+  </tr>
+  <tr bgcolor="#FFFFFF">
+    <td valign="top"><strong>cbt </strong></td>
+    <td valign="top">Sets the text for the Continue button on the PayPal Payment 
+      Complete page. Requires Return URL to be set. (Max 60 chars) </td>
+  </tr>
+  <tr bgcolor="#FFFFFF">
+    <td valign="top"><strong>cancel_return </strong></td>
+    <td valign="top">An internet URL where the user will be returned if payment 
+      is cancelled - for example, a URL on your site which hosts
+      a &quot;Payment Cancelled&quot; page. If omitted, users will be taken to 
+      the PayPal website. (Max 1,024 chars) </td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p></TD>
+</TR></TBODY></TABLE><!-- End Main Content --></TD></TR>
+<TR>
+<TD colSpan=2>
+<TABLE cellSpacing=0 cellPadding=4 border=0>
+<TBODY>
+<TR>
+<TD>&nbsp;<FONT color=#808080>&copy;2008-2011 e.World Technology Limited. All rights reserved.</FONT></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></BODY></HTML>
