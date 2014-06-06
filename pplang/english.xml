@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" standalone="yes"?>
-<ew-language date="2014/6/6" version="5.0.0.0" id="en" name="English" desc="English" author="e.World Technology Ltd.">
+<ew-language date="2014/6/7" version="5.0.0.0" id="en" name="English" desc="English" author="e.World Technology Ltd.">
 	<global>
 		<phrase id="address1" value="Address 1"/>
 		<phrase id="address2" value="Address 2"/>

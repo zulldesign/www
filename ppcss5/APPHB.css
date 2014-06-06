@@ -29,21 +29,21 @@ html {
 body {
 	background-color: ; /* background color */
 	color: ; /* text color */
-	font-family: Poor Richard; /* font name */
-	font-size: x-small; /* font size */
+	font-family: Verdana; /* font name */
+	font-size: xx-small; /* font size */
 	margin: 0px 0px 0px 0px; /* top right bottom left */
 	height: 100%;	
 }
 
 .paypalshopmaker {
 	color: ; /* text color */
-	font-family: Poor Richard; /* font name */
-	font-size: x-small; /* font size */	
+	font-family: Verdana; /* font name */
+	font-size: xx-small; /* font size */	
 }
 
 input, textarea, select {
-	font-family: Poor Richard; /* font name */
-	font-size: x-small; /* font size */
+	font-family: Verdana; /* font name */
+	font-size: xx-small; /* font size */
 } 
 
 a:active {
@@ -66,16 +66,16 @@ a:visited {
 /* search table */
 .ewSearchTable {
 	color: ; /* text color */
-	font-family: Poor Richard; /* font name */
-	font-size: x-small; /* font size */	
+	font-family: Verdana; /* font name */
+	font-size: xx-small; /* font size */	
 }
 
 /* main table */
 .ewTable {
 	width: 100%; /* table width */	
 	color: ; /* text color */
-	font-family: Poor Richard; /* font name */
-	font-size: x-small; /* font size */
+	font-family: Verdana; /* font name */
+	font-size: xx-small; /* font size */
 	border: 0px solid; /* border */
 	border-color: #CCCCCC;  /* table border color */
 	border-collapse: collapse;	
@@ -90,8 +90,8 @@ a:visited {
 
 /* tables in main table */
 .ewTable td table {	
-	font-family: Poor Richard; /* font name */
-	font-size: x-small; /* font size */	
+	font-family: Verdana; /* font name */
+	font-size: xx-small; /* font size */	
 }
 
 /* main table row color */
@@ -107,8 +107,8 @@ a:visited {
 /* item table */
 .ewItemTable {
 	color: ; /* text color */
-	font-family: Poor Richard; /* font name */
-	font-size: x-small; /* font size */
+	font-family: Verdana; /* font name */
+	font-size: xx-small; /* font size */
 	border: 0px; /* border */	
 }
 
@@ -126,8 +126,8 @@ Template General Layout
 
 /* template layout */
 .ewLayout {
-	font-family: Poor Richard; /* font name */
-	font-size: x-small; /* font size */
+	font-family: Verdana; /* font name */
+	font-size: xx-small; /* font size */
 	width: 100%;
 	height: 100%;
 }
@@ -137,8 +137,8 @@ Template General Layout
 }
 
 .ewContentTable {
-	font-family: Poor Richard; /* font name */
-	font-size: x-small; /* font size */
+	font-family: Verdana; /* font name */
+	font-size: xx-small; /* font size */
 	width: 100%;
 	height: 100%;
 	clear: left;
@@ -180,8 +180,8 @@ Template General Layout
 }
 
 .ewFooterText {
-	font-family: Poor Richard; /* font name */
-	font-size: x-small; /* font size */
+	font-family: Verdana; /* font name */
+	font-size: xx-small; /* font size */
 }
 
 .ewOptionTable td {
@@ -362,8 +362,8 @@ Shopping Cart
 
 /* Vertical */
 .yui-skin-sam .yuimenu {	
-	font-family: Poor Richard; /* font name */
-	font-size: x-small; /* font size */
+	font-family: Verdana; /* font name */
+	font-size: xx-small; /* font size */
 	line-height: 2;
 }
 
@@ -373,7 +373,7 @@ Shopping Cart
 }
 
 .yui-skin-sam .yuimenu h6 {
-	font-size: x-small; /* font size */
+	font-size: xx-small; /* font size */
 }
 
 .yui-skin-sam .yuimenu div.first-of-type {
@@ -394,8 +394,8 @@ Shopping Cart
 
 /* Horizontal */
 .yui-skin-sam .yuimenubar {	
-	font-family: Poor Richard; /* font name */
-	font-size: x-small; /* font size */
+	font-family: Verdana; /* font name */
+	font-size: xx-small; /* font size */
 }
 
 .yui-skin-sam .yuimenubar .bd {	
@@ -404,7 +404,7 @@ Shopping Cart
 }
 
 .yui-skin-sam .yuimenubar h6 {
-	font-size: x-small; /* font size */
+	font-size: xx-small; /* font size */
 }
 
 .yui-skin-sam .yuimenubaritem a {
@@ -504,7 +504,7 @@ Shopping Cart
 
 /* jQuery UI */
 .ui-widget {
-	font-family: Poor Richard; /* font name */
+	font-family: Verdana; /* font name */
 }
 
 /*END_SYSTEM_STYLES*/
