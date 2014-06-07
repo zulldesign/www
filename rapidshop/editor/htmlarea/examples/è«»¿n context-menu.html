@@ -1,0 +1,37 @@
+<html>
+  <head>
+    <title>Test of ContextMenu plugin</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script type="text/javascript">
+      _editor_url = "../";
+      _editor_lang = "en";
+    </script>
+
+    <!-- load the main HTMLArea file -->
+    <script type="text/javascript" src="../htmlarea.js"></script>
+
+    <script type="text/javascript">
+      HTMLArea.loadPlugin("ContextMenu");
+      HTMLArea.loadPlugin("TableOperations");
+
+      function initDocument() {
+        var editor = new HTMLArea("editor");
+        editor.registerPlugin(ContextMenu);
+        editor.registerPlugin(TableOperations);
+        editor.generate();
+      }
+    </script>
+
+  </head>
+
+  <body onload="initDocument()">
+    <h1>Test of ContextMenu plugin</h1>
+
+
+<textarea id="editor" style="height: 30em; width: 100%;">
+
+    </textarea>
+
+ 
+  </body>
+</html>

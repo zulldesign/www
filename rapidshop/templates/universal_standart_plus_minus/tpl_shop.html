@@ -1,0 +1,873 @@
+<script language="javascript">
+cur_section=0; i=0; k=0; l=0;  m=0; GrN=new Array(); GN=new Array(); var GrC, GC; zak_summa=0; nn=0; var vlogen=new Array(); var search_res=new Array();
+zak_index=new Array(); zak=new Array(); dost=0; GCount=new Array(); is_moving="false"; win_left_0=0; win_top_0=0;win_left=0; win_top=0;
+var zak_count, zak_last, stepvar, cur_pos, zak_str1, zak_str2, cur_date, poisk_str, ip, zak_kolvo, str, str2, pos_last, search_count; search_on=0;
+zak_last=0; oc=0; zak_count=0; zak_kolvo=0; pos_end=0; end_sek=0; start_sek=0; cur_date=new Date(); flag_save_data="no"; restored=new Array();
+razdel_num=0; pos=0; m=0;
+tipdata=0;
+var GP,GK,GrP,GKod,infon,email,email2,email3,prov_ogran_kolva,min_summa,summa_dostavki,rub,stepvar,tip_sek,autowidth,dop_menu,tip_list,gnwidth,gpwidth,gkwidth,tablewidth,photoheight,photowidth,gnheight,GrC,infpath,imgpath,GC,scact,GrNStr,GNStr,reqfieleds, showfields, namefields, paymentsname, paynote;
+var flag_pay_module, merchantID; skidka=0;
+</script>
+<input type=hidden id=save_data value="no">
+<script language="javaScript">
+function save_data()
+{	
+	str="";
+	for (var i=0;i<GC;i++) {
+  		if (zak[i]!=0) {str=str+i+";"+zak[i]+";"; }
+	} 
+	str = str + "{#end#}";
+	for (i=0;i<(showfields.length-1);i++)
+	{	
+		if (showfields[i]!='payment') {str=str+showfields[i]+"|"+document.forma2.elements[showfields[i]].value+"|";}
+	}
+	document.getElementById("save_data").value=str; 
+	flag_save_data="yes";
+	setCookie("rapidshop",str, 1); 
+}
+function restore_data()
+{	if (flag_save_data=="no")
+	{
+		str=document.getElementById("save_data").value; 
+		if (str=="no") 
+		{
+			str=getCookie("rapidshop");  document.getElementById("save_data").value=str; 
+		}
+		if (str!="no") 
+		{
+			str=str.substring(0,str.indexOf("{#end#}")-1);  
+			if (str.length>2) 
+			{
+				restored=str.split(";");				 		
+				for (i=0;i<(restored.length/2);i++)
+					{				
+						zak[parseInt(restored[i*2])]=parseInt(restored[i*2+1]);					
+					}				
+			}
+			str=document.getElementById("save_data").value; 
+			str=str.substring(str.indexOf("{#end#}")+7,str.length-1); 
+			if (str.length>2) 
+			{
+				restored=str.split("|");
+				if (restored[0]!="")
+				{				 		
+					for (i=0;i<(showfields.length-1);i++)
+						{				
+							if (showfields[i]==restored[i*2] && showfields[i]!='payment') {document.forma2.elements[showfields[i]].value=restored[i*2+1]; }					
+						}				
+				}
+			}			
+		}		
+	summa();
+	show();
+	flag_save_data="yes";
+	}	
+}
+function setCookie(name, value, expires, path, domain, secure) 
+{     expDate=new Date(); caution="true";
+       if (expires) {expDate.setMonth(expDate.getMonth()+expires);}
+        var curCookie = name + "=" + escape(value) +
+                ((expires) ? "; expires=" + expDate.toGMTString() : "") +
+                ((path) ? "; path=" + path : "") +
+                ((domain) ? "; domain=" + domain : "") +
+                ((secure) ? "; secure" : "");
+        if (!caution || (name + "=" + escape(value)).length <= 4000)
+                document.cookie = curCookie
+        else
+                if (confirm("Cookie превышает 4KB и будет вырезан !"))
+                        document.cookie = curCookie
+}
+function getCookie(name) 
+{
+        var prefix = name + "=";
+        var cookieStartIndex = document.cookie.indexOf(prefix);
+        if (cookieStartIndex == -1)
+                return ""
+        var cookieEndIndex = document.cookie.indexOf(";", cookieStartIndex + prefix.length);
+        if (cookieEndIndex == -1)
+                cookieEndIndex = document.cookie.length
+        return unescape(document.cookie.substring(cookieStartIndex + prefix.length, cookieEndIndex));
+}
+document.onmousemove=mouse_info;
+document.onmouseup=putObj;
+function mouse_info(e) {
+	restore_data();
+	win_left = (window.navigator.userAgent.indexOf("Gecko") != -1) ? e.pageX : window.event.x + document.body.scrollLeft;
+	win_top = (window.navigator.userAgent.indexOf("Gecko") != -1) ? e.pageY : window.event.y + document.body.scrollTop;
+	obj=document.getElementById("div_description");
+	if (is_moving=="true") 
+	{	obj.style.left=win_left - win_left_0;
+		obj.style.top=win_top - win_top_0; 			
+	}
+}
+function takeObj(e)
+{  obj=document.getElementById("div_description");
+    is_moving = "true";        
+    win_left_0=win_left- parseInt(obj.style.left); win_top_0=win_top- parseInt(obj.style.top);
+}
+function putObj(e)
+{  var obj = (window.navigator.userAgent.indexOf("Gecko") != -1) ? e.target : window.event.srcElement;
+    is_moving = "false";   
+}
+function copy_info()
+{	window.top.document.getElementById('div_description').innerHTML=window.top.dataframe.document.getElementById('description').value;	
+	obj=document.getElementById("div_description");
+	if (popup_desc==2) {		
+		if ((win_left+desc_width)>(screen.width)) {win_left=screen.width-40-desc_width;}
+		if (win_left<0) {win_left=0;}
+		if ((win_top+desc_height)>(screen.height+document.body.scrollTop)) {win_top=screen.height+document.body.scrollTop-desc_height;}
+		if (win_top<0) {win_top=document.body.scrollTop;}	
+		obj.style.left=win_left;
+		obj.style.top=win_top;
+		win_left_0=win_left; win_top_0=win_top;
+	}
+	obj.style.display='block';
+	window.top.document.getElementById('div_description').style.visibility='visible';
+}
+function get_var_from_str(sstr,svar) {
+	ss=sstr.split("&");	
+	res="";
+	for (i=0;i<ss.length;i++) {		
+		if (ss[i].indexOf(svar)!=-1) {res=(ss[i].substring(ss[i].indexOf("=")+1,ss[i].length));}		
+	};	
+	return res;
+}
+
+function check_order()  {
+	y=0; str2=""; paynote="";	
+ 	if (reqfields.length>0 && reqfields[0].length!=0) 	
+	{
+		for (i=0;i<(showfields.length-1);i++)
+		{
+			if (reqfields[i]==1) {paynote=paynote + " " + namefields[i] + ": " + document.forma2.elements[showfields[i]].value; if (document.forma2.elements[showfields[i]].value.length<2) {y=1; str2=str2 + namefields[i] + ", ";}}
+
+		}
+ 	}	
+ 	if (y!=0) {str2=str2.substr(0,(str2.length-2)); alert ("{#noemail#}" + str2 + ".");} 
+	else 
+	{
+		makePayments() ;
+		if (flag_pay_module=="url") 
+		{
+			document.forma2.target=""; document.forma2.submit();
+		}
+		else 
+		{
+			document.forma2.target="dataframe"; 
+			document.forma2.submit(); 
+			setTimeout("document.forma_pay.submit()",1000);
+			
+		}
+	};
+}
+function makePayments() {
+	if (document.forma2.payment.value.indexOf("$")==-1) {flag_pay_module="url";document.getElementById("pay_zone").innerHTML="<input type='button' style='width:150' class='but_style' value='{#sendorder#}'  onclick='check_order()'>";} 
+	else 
+	{
+		flag_pay_module="standart";
+		if (document.forma2.payment.value.indexOf("$googleCheckout")!=-1) 
+		{
+			merchantID=get_var_from_str(document.forma2.payment.value,"param1");document.getElementById("pay_zone").innerHTML=makeGoogleApi();
+		}
+		if (document.forma2.payment.value.indexOf("$paypal")!=-1) {document.getElementById("pay_zone").innerHTML=makePayPal();	}
+		if (document.forma2.payment.value.indexOf("$e-gold")!=-1) {document.getElementById("pay_zone").innerHTML=makeEGold();};
+		if (document.forma2.payment.value.indexOf("$webmoney")!=-1) {document.getElementById("pay_zone").innerHTML=makeWebmoney();};
+		if (document.forma2.payment.value.indexOf("$money.mail.ru")!=-1) {document.getElementById("pay_zone").innerHTML=makeMoneyMailRu();};
+	}	
+}
+function makeGoogleApi()
+{	if (merchantID=='738991747006380') {str='<form method="POST" name=forma_pay  action="https://sandbox.google.com/checkout/cws/v2/Merchant/'+merchantID+'/checkoutForm" accept-charset="utf-8">';}
+	else {str='<form method="POST" name=forma_pay action="https://checkout.google.com/cws/v2/Merchant/'+merchantID+'/checkoutForm" accept-charset="utf-8">';}	
+	kskidka=(100-skidka)/100;	
+	for (var i=0;i<=zak_count;i++) 
+	{ 
+		str=str+'<input type="hidden" name="item_name_' +(i+1)+ '" value="'+ GN[zak_index[i]] +'"/>';
+		//str=str+'<input type="hidden" name="item_description_' +(i+1)+ '" value="'+ GKod[zak_index[i]] +'"/>';
+		str=str+'<input type="hidden" name="item_description_' +(i+1)+ '" value="'+ "" +'"/>';
+		str=str+'<input type="hidden" name="item_quantity_' +(i+1)+ '" value="'+ zak[zak_index[i]] +'"/>';
+		str=str+'<input type="hidden" name="item_price_' +(i+1)+ '" value="'+ (GP[zak_index[i]]*kskidka) +'"/>';		
+	}	
+	str=str+'<input type="hidden" name="ship_method_name_1" value="'+get_var_from_str(document.forma2.payment.value,"param2")+'"/>';
+	str=str+'<input type="hidden" name="ship_method_price_1" value="'+formatCur(dost,znakov)+'"/>';
+	str=str+'<input type="hidden" name="tax_rate" value="'+get_var_from_str(document.forma2.payment.value,"param3")+'"/>';
+	str=str+'<input type="hidden" name="tax_us_state" value="'+get_var_from_str(document.forma2.payment.value,"param4")+'"/>';
+	str=str+'<input type="hidden" name="_charset_"/><a href="javascript:check_order()">';
+	//str=str+"<input type='button' style='width:150' class='but_style' value='GoogleCheckout'  onclick='check_order()'><a href='javascript:check_order()'>";
+	if (merchantID=='738991747006380') {str=str+'<img alt="Fast checkout through Google" border=0 src="http://sandbox.google.com/checkout/buttons/checkout.gif?merchant_id='+merchantID+'&w=180&h=46&style=white&variant=text&loc=en_US" height="46" width="180">';}	 
+	else {str=str+'<img alt="Fast checkout through Google" border=0  src="http://checkout.google.com/buttons/checkout.gif?merchant_id='+merchantID+'&w=180&h=46&style=white&variant=text&loc=en_US" height="46" width="180">';}		
+	str=str+'</a></form>';
+	return str;
+}
+function makePayPal()
+{	str='<form action="https://www.paypal.com/cgi-bin/webscr" method="post" name=forma_pay >';	
+	str=str+'<input type="hidden" name="cmd" value="_cart"><input type="hidden" name="upload" value="1">';
+ 	str=str+'<input type="hidden" name="business"  value="'+email+'">';
+	str=str+'<input type="hidden" name="currency_code" value="'+get_var_from_str(document.forma2.payment.value,"param1")+'">';
+	kskidka=(100-skidka)/100;	
+	for (var i=0;i<=zak_count;i++) 
+	{ 
+		str=str+'<input type="hidden" name="item_name_' +(i+1)+ '" value="'+ GN[zak_index[i]] +'"/>';
+		//str=str+'<input type="hidden" name="item_description_' +(i+1)+ '" value="'+ GKod[zak_index[i]] +'"/>';
+		//str=str+'<input type="hidden" name="item_description_' +(i+1)+ '" value="'+ "" +'"/>';
+		str=str+'<input type="hidden" name="quantity_' +(i+1)+ '" value="'+ zak[zak_index[i]] +'"/>';
+		str=str+'<input type="hidden" name="amount_' +(i+1)+ '" value="'+ formatCur(GP[zak_index[i]]*kskidka,znakov) +'"/>';
+	}
+	str=str+'<input type="hidden" name="shipping_1" value="'+formatCur(dost,znakov)+'"/>';
+	//str=str+"<input type='button' style='width:150' class='but_style' value='PayPal'  onclick='check_order()'>";
+	str=str+'<a href="javascript:check_order()"><img src="https://www.paypal.com/en_US/i/btn/btn_xpressCheckoutsm.gif" border=0 alt="Make payments with payPal - it&#39;s fast, free and secure!"></a>';
+	str=str+'<img alt="" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">';
+	str=str+'</form>';	
+	return str;
+}
+function makeEGold()
+{	str='<form action="https://www.e-gold.com/sci_asp/payments.asp" method="POST" name=forma_pay   target=_top>';
+	str=str+'<input type="hidden" name="PAYEE_ACCOUNT" value="'+get_var_from_str(document.forma2.payment.value,"param1")+'">';
+	str=str+'<input type="hidden" name="PAYEE_NAME" value="'+get_var_from_str(document.forma2.payment.value,"param2")+'">';
+	str=str+'<input type=hidden name="PAYMENT_AMOUNT" size=4 value="'+ formatCur((dost+zak_summa),znakov) +'">';
+	str=str+'<input type=hidden name="PAYMENT_UNITS" value=1>';
+	str=str+'<input type=hidden name="PAYMENT_METAL_ID" value=1>';
+	str=str+'<input type="hidden" name="STATUS_URL" value="mailto:'+email+'">';
+	str=str+'<input type="hidden" name="NOPAYMENT_URL" value="'+get_var_from_str(document.forma2.payment.value,"param4")+'">';
+	str=str+'<input type="hidden" name="NOPAYMENT_URL_METHOD" value="LINK">';
+	str=str+'<input type="hidden" name="PAYMENT_URL" value="'+get_var_from_str(document.forma2.payment.value,"param3")+'">';
+	str=str+'<input type="hidden" name="PAYMENT_URL_METHOD" value="LINK">';
+	str=str+'<input type="hidden" name="BAGGAGE_FIELDS" value="CUSTOMERID">';
+	str=str+'<input type="hidden" name="CUSTOMERID" value="0">';
+	str=str+'<input type="hidden" name="SUGGESTED_MEMO" value="' + paynote + '  '+ '">';
+	str=str+'<a href="javascript:check_order()"><img src=http://www.e-gold.com/gif/paywith.gif border=0 Alt="Pay Now with e-gold..."></a>';
+	str=str+'</form> ';
+	return str;
+}
+function makeWebmoney()
+{	 ss=zak_str1.replace("zak_str1=","");ss=ss.replace(/:;/g,",");ss=ss.replace(/,;/g,"  ");
+	str='<form name=forma_pay method="POST" action="https://merchant.webmoney.ru/lmi/payment.asp">';
+	str=str+'<input type="hidden" name="LMI_PAYMENT_AMOUNT" value="'+ formatCur((dost+zak_summa),znakov) +'">';
+	str=str+'<input type="hidden" name="LMI_PAYMENT_DESC" value="' + ss + ' ">';
+	str=str+'<input type="hidden" name="LMI_PAYMENT_NO" value="1">';
+	str=str+'<input type="hidden" name="LMI_PAYEE_PURSE" value="'+get_var_from_str(document.forma2.payment.value,"param1")+'">';
+	str=str+'<input type="hidden" name="LMI_SIM_MODE" value="'+get_var_from_str(document.forma2.payment.value,"param2")+'">';
+	str=str+"<input type='button' style='width:150' class='but_style' value='{#sendorder#}'  onclick='check_order()'>";
+	str=str+'</form> ';
+	return str;
+}
+
+function makeMoneyMailRu()
+{	str='<form name=forma_pay method="POST" action="https://money.mail.ru/">';
+	str=str+'<INPUT type="hidden" name="action" value="pay">';	
+	str=str+'<INPUT type="hidden" name="recipient" value="'+email+'">';
+	str=str+'<INPUT type="hidden" name="value" value="'+ formatCur((dost+zak_summa),znakov) +'">';
+	str=str+'<INPUT type="hidden" name="currency" value="RUR">';
+	str=str+'<INPUT type="hidden" name="reason" value="' + paynote + '  ' + zak_str1 + '">';
+	str=str+'<INPUT type="hidden" name="success_url" value="'+get_var_from_str(document.forma2.payment.value,"param1")+'">';
+	str=str+'<INPUT type="hidden" name="error_url" value="'+get_var_from_str(document.forma2.payment.value,"param2")+'">';
+	str=str+'<a href="javascript:check_order()"><img SRC="https://money.mail.ru/img/zaplati.gif" alt="Деньги@Mail.Ru" border=0></a>';
+	return str;
+}
+function get_var(svar) {
+	ss=document.location.href.split("&");	
+	res="";
+	for (i=0;i<ss.length;i++) {		
+		if (ss[i].indexOf(svar)!=-1) {res=(ss[i].substring(ss[i].indexOf("=")+1,ss[i].length));}		
+	};	
+	return res;
+}
+function Nadpis(a) {	
+	i=1;
+	while (a!=nadpisi[i] && i<nadpisi.length) {i=i+2;}
+	if (a==nadpisi[i]) {return nadpisi[i-1].replace("<font color='red'>*</font>","");} else {return i};	
+}
+
+function formatCur(amount, znakov) {
+amount=Math.round(amount*Math.pow(10,znakov))/Math.pow(10,znakov);
+ if (znakov==2) {
+   if (String(amount).indexOf(".")==-1) {str=amount+".00"} 
+   else {kp=(String(amount).length-String(amount).indexOf("."));  if (kp==2) {str=amount+"0"} else {str=amount} }; 
+ }
+ if (znakov==1) {if (String(amount).indexOf(".")==-1) {str=amount+".0"} else {str=amount}; }
+ if (znakov!=1 && znakov!=2) {str=amount;}
+ return str;
+}
+function convert_data(){
+if (tipdata==0) {GrNStr=document.all.GrNStr.value; GNStr=document.all.GNStr.value;} 
+  GrNStr=GrNStr.replace(/:;/g,"'");   GrN=GrNStr.split("|"); 
+  GNStr=GNStr.replace(/:;/g,"'");   GN=GNStr.split("|");     GText=GTextStr.split("|");    
+  reqfields=reqfieldsstr.split("|");   showfields=showfieldsstr.split("|"); 
+  namefields=namefieldsstr.split("|");paymentsname=paymentsnamestr.split("|");
+  if (shopvis=="none") {shopvis="style='display:none;'"} else {shopvis="";};
+  for (var i=0;i<=GC;i++) {   zak[i]=0;     };
+  k=0; k2=0;
+  for (var i=GrC+1;i>0;i--) {l=GrP[i]-GrP[i-1]; k=k+l; k2=k2+l;  if (l==0) {GCount[i-1]=k; } else {GCount[i-1]=l; if (GrLevel[i-1]==-2) {k=0;}; if (GrLevel[i-1]==-1) {k=0; k2=0;}}  }
+k1=0; k2=0; k3=0;
+ for (var i=GrC+1;i>0;i--) 
+	{
+		l=GrP[i]-GrP[i-1]; 
+		if (GrLevel[i-1]==-3) {k3=k3+l; GCount[i-1]=k3; k2=k2+l; k1=k1+l; k3=0; };
+		if (GrLevel[i-1]==-2) {k2=k2+l; GCount[i-1]=k2; k1=k1+l;k2=0;};
+		if (GrLevel[i-1]==-1) {k1=k1+l; GCount[i-1]=k1; k1=0;};
+	}
+    m=0; str_test="";
+    for (var i=0; i<GrC; i++)  {                    	
+            vlogen[i]=-(GrLevel[i+1]-GrLevel[i]); m=m+vlogen[i];            
+            str=str+"<br>i="+i+";GrLevel="+GrLevel[i]+";vlogen="+vlogen[i];
+     };
+     vlogen[GrC]=-m; 
+  tip_sek_base=tip_sek;
+}
+function make_menu() {
+ document.write ("<select size=1 onchange='gogroup()' id='group_selector' title='{#gotosection#}' class='but_style'>");
+ str="";
+ if (GrLevel[0]==-2)  {str="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";};
+ if (GrLevel[0]==-3)  {str="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";};
+ document.write ("<option  value='0' selected>",str,GrN[0]); 
+ for (var i=1; i<=GrC; i++){
+   str="";
+   if (GrLevel[i]==-2)  {str="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";};
+   if (GrLevel[i]==-3)  {str="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";};
+  document.write ("<option  value='",i,"'>",str,GrN[i]);
+ }
+ if (tip_sek_base==0) {document.write ("<option  value='",i,"'>{#AllProducts#}");} 
+ document.write ("</select>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td><td valign=middle align=right><input type='text' style='width:150' name=poisk_str onKeyDown='javascript: if (event.keyCode==13) {poisk();};' onclick=javascript:this.value=''; class='gzak_style' value=''>&nbsp;<input type='button'  name='poisk_but' value='{#search#}' title='{#searchalt#}' onclick='poisk()' class=but_style>");
+ document.write ("");
+}
+
+function make_menu2(d) {
+ ss="";
+ if (d==1) 
+ {document.write ("<table class='menu21'  height=100% width=100%><tr><td class='menu21'>"); 
+   for (var i=0; i<=GrC; i++)  {
+	str="style=margin-left:"+((GrLevel[i]+1)*(-15))+"pt";
+	if (qty_sek==2) {ss=" ("+GCount[i]+")";} 
+	if (vlogen[i]==0 || vlogen[i]==-1 || vlogen[i]==-2) {document.write ("<div width=100% class='menu21' "+str+"><a href=javascript:change_group('"+i+"'); class='menu2"+(-GrLevel[i])+"'>"+ GrN[i]+ss+"</a></div>");}
+	if (vlogen[i]==1) {document.write ("<div class='menu21' "+str+"><a href=javascript:show_menu2('"+i+"'); class='menu2"+(-GrLevel[i])+"'>"+ GrN[i]+ss+"</a></div><div class='menu2' style='display:none;' id='menu2p" + i + "'>");};
+	if (vlogen[i]==-1) {document.write("</div>");};	
+	if (vlogen[i]==-2) {document.write("</div></div>");};		
+    } 
+  if (tip_sek_base==0) {document.write("<div class='menu21' style='margin-left:0pt'><a href=javascript:change_group('"+i+"'); class='menu21'>{#AllProducts#}</a></div>");}
+  document.write ("</td></tr></table>");
+ }
+ else { 
+  for (var i=0; i<=GrC; i++)
+     { document.write ("<a href=# class='menu21' onclick=change_group('"+i+"')>"+ GrN[i]+"</a>"+d);  } 
+ }
+}
+
+function make_client_info()
+{
+	str="<table class=dandost>";
+	for (i=0;i<(showfields.length-1);i++)
+	{
+		str=str + "<tr><td class=clientinfo>"+ ((reqfields[i]==1) ? "<span class=req>*</span>": "") +namefields[i]+"</td><td>";
+		if (showfields[i]=='payment') 
+		{
+			str=str + "<select name='payment' size='1'  class='gzak_style' onchange=makePayments()>";
+			for (j=0;j<(paymentsname.length-1)/2;j++)
+			{
+			  str=str+"<option value='"+paymentsname[j*2+1]+"'>"+paymentsname[j*2]+"</option>";
+			}
+			str=str + "</select>";
+		}
+		else {str=str + "<input type='text' name='"+showfields[i]+"'  class='gzak_style' value='' onchange='save_data()'>";}
+		str=str+"</td></tr>";
+	}
+	str=str+"</table>";
+	return str;
+}
+
+function show_menu2(d) 
+{
+    if (document.all.item("menu2p"+d).style.display=="none") {document.all.item("menu2p"+d).style.display="block";}else {document.all.item("menu2p"+d).style.display="none";}
+}
+function summa() {
+ zak_summa=0;
+ for (var i=0;i<GC;i++) {
+  zak_summa=GP[i]*zak[i]+zak_summa; 
+ } 
+ document.all.summa_but.value=formatCur(zak_summa,znakov);
+  save_data();
+}
+
+function printRow(name,price,kolvo,kinfo, kod, nomer,tip,id,pp) {	
+	str=""; nrow2=""; curalign="left";
+	if ((pp/2-Math.round(pp/2))==0) {k="chet"} else {k="nechet"};   
+	if (tip==2) {curalign="center"};
+	if (kinfo==2 || kinfo==3) {str01="<a href=javascript:show_info('"+infpath+"/"+kod+".htm') class=row>"; str02="</a>";} else {str01="";str02="";};	
+	photowidth2=photowidth;
+	if (tip_list==2) {photowidth2=gnwidth; str=str+"<td class=nazvan"+k+" style='width:"+gnwidth+";vertical-align:top' ><table width=100%><tr>"; nrow2="</tr><tr>";}	
+	if (tip_list!=0) { 
+		if (kinfo!=0 && kinfo!=3) {
+			str=str+"<td class=infimg"+k+"  style='width:"+photowidth2+"'>"+str01+"<img id='photo"+ i +"' src="+infpath+"/"+imgpath+"/"+kod+"_icon.{#jpg#} height="+photoheight+" width="+photowidth+" class='photo' align=center alt='{#goodsdescription#}'>"+str02+"</td>"+nrow2;
+		}
+	                else {
+			str=str+"<td class=infimg"+k+"  style='width:"+photowidth2+"'>"+str01+"<img  id='photo"+ i +"' src="+infpath+"/"+imgpath+"/nophoto.{#jpg#} height="+photoheight+" width="+photowidth+" class='photo' align=center alt='{#goodsdescription#}'>"+str02+"</td>"+nrow2;
+		}                     		   	
+	}
+	str=str+"<td class='nazvan"+k+"'  style='width:"+gnwidth+";' align="+curalign+">";  
+	str=str+str01+name+str02;	
+	if (tip!=2) {str=str+"</td><td class='cena"+k+"'  style='width:" + gpwidth + "; '>"} else {str=str+"</tr><tr><td class='cena"+k+"'>{#rubbefore#}";};
+	str=str+formatCur(price,znakov);		
+	if (tip!=2) {str=str+"</td><td  "+shopvis+" style='width:"+gkwidth+"'  class='kolvo"+k+"'>"} else {str=str+"&nbsp;{#rubafter#}&nbsp;"+"</td></tr><tr><td  "+shopvis+" class='kolvo"+k+"'>";};
+	str=str+"<input type='text' value="+kolvo+" name='k"+nomer+"' onchange='rukami("+nomer+")' onclick='this.select()' class='gk_style"+k+"'  >";
+	str=str+"<input type='hidden' value="+id+" name='id"+nomer+"' onchange='rukami("+nomer+")' >";
+	//if (tip!=0) {str=str+"<br>";};
+	str=str+"<input type='button' class='pm_style"+k+"' title='{#addtocart#}' value='{#addtocart#}' onclick='plus("+ nomer +")'>"
+	//str=str+"<input type='button' class='pm_style"+k+"' style='width:25; ' value=' - ' title='{#cartout#}' onclick='minus("+nomer+")'>";
+	if (tip==2) {str=str+"</td></tr></table>"};
+	str=str+"</td>";	
+	return str;
+}
+ function show() { 	
+  sShow="<table class='price' cellpadding=0 cellspacing=0><tr>"; 
+  if (tip_list==2) {l=Math.floor((tablewidth-menu2width)/gnwidth); m=0;} 
+  if (tip_list==0) {l=-2; sShow=sShow+"<td class='zagolovki' style='width:"+gnwidth+";'>{#goodsname#}</td><td class='zagolovki'>{#goodsprice#}, {#rubafter#}{#rubbefore#}</td><td  "+shopvis+"  class='zagolovki'>{#quantity#}</td></tr><tr>";};
+  if (tip_list==1) {l=-2; sShow=sShow+"<td class='zagolovki' colspan=2 style='width:"+(gnwidth+photowidth)+";'>{#goodsname#}</td><td class='zagolovki'>{#goodsprice#},  {#rubafter#}{#rubbefore#} </td><td  "+shopvis+"  class='zagolovki'>{#quantity#}</td></tr><tr>";};
+ document.all.summa_but.value=formatCur(zak_summa,znakov);
+ namegroup(); 
+ if (search_on==0)  
+ {
+	 if (razdel_num==0) 
+	 {
+		if (tip_sek==0) {end_sek=GrP[Number(document.all.group_selector.value)+1]} else {end_sek=GC}; 
+	 } 
+	 else 
+	 {
+		start_sek=0; end_sek=zak_count;	
+	 }
+ }
+ if (oc==0) {if (na.length!=35 || na.substring(4,5)!="d") {stepvar=0;};}
+ for (var i=pos; i<(pos+stepvar);i++) 
+{	
+	m=m+1; nrow="</tr><tr>";
+	if (tip_list==2) { 
+		if (m==l) {m=0; } else {nrow="";};
+	}
+	if (search_on==0) 
+	{
+  		if (razdel_num==0 ) 
+		{         
+  		     if (i<end_sek) {sShow=sShow+printRow(GN[i],GP[i],zak[i],infon[i],GKod[i],i-pos,tip_list,i,i)+nrow;}          
+	    	}
+  		else 
+		{  
+     			 ik=zak_index[i];
+		     	if (i<=zak_count) {sShow=sShow+printRow(GN[ik],GP[ik],zak[ik],infon[ik],GKod[ik],ik-pos,tip_list,ik,i)+nrow; end_sek=zak_count; }   
+		  }    
+	}
+	else
+	{
+		ik=search_res[i];
+	     	if (i<search_count) {sShow=sShow+printRow(GN[ik],GP[ik],zak[ik],infon[ik],GKod[ik],ik-pos,tip_list,ik,i)+nrow;  }   	
+	}
+ }
+sShow=sShow+"</tr></table>"; 
+if (((pos+stepvar-start_sek)/stepvar-Math.floor((pos+stepvar-start_sek)/stepvar))==0) {document.all.curpage.value = Math.floor((pos+stepvar-start_sek)/stepvar);} 
+else {document.all.curpage.value = Math.floor((pos+stepvar-start_sek)/stepvar)+1;};
+document.all.allpage.value = Math.ceil((end_sek - start_sek)/stepvar);
+if (Number(document.all.allpage.value)<Number(document.all.curpage.value)) {document.all.curpage.value=document.all.allpage.value};
+document.all["tovary"].innerHTML=sShow;
+}
+function change_group(i) {  
+ if (razdel_num==1) {change_razdel();}
+  back();
+  document.all.group_selector.value=i; gogroup();  
+}
+function showgroup(a) {
+   pos=GrP[a]; 
+  if (tip_sek_base==0) 
+ {	
+	 if (a==(GrC+1)) {pos=0; tip_sek=1;} else {tip_sek=0;}
+  }  
+  if (tip_sek==0) {end_sek=GrP[Number(document.all.group_selector.value)+1]} else {end_sek=GC+1};
+  if (tip_sek==0) {start_sek=GrP[Number(document.all.group_selector.value)]} else {start_sek=0};
+  show();  
+ document. all.tovary_a.scrollIntoView(true); 
+}
+function namegroup() {  
+	 for (var  i=0;i<=GrC;i++) {
+	  if ((pos>=GrP[i]) && (pos<GrP[i+1])) {document.all.group_selector.value=i} 
+	 }
+}
+function gogroup() { 
+  search_on=0; document.all.poisk_str.value="";
+  if (razdel_num==0) 
+  { 
+	i=Number(document.all.group_selector.value); 	
+	showgroup(i);
+   };
+}
+
+function zak_null() {
+  for (var i=0;i<=GC;i++) {zak[i]=0};
+  show();
+  summa(); document. all.tovary_a.scrollIntoView(true); 
+}
+function zaks_count() {
+  zak_count=-1;
+  zak_kolvo=0;
+  for (var i=0;i<=GC;i++) { 
+   if (zak[i]!=0) { 
+    zak_count=zak_count+1;
+    zak_kolvo=zak_kolvo+zak[i];    
+    zak_index[zak_count]=i;    
+   }
+  }
+}
+
+function products_list()
+{
+    str="<table width=100% border=0 cellpadding=10 cellspacing=0><tr>";
+   str=str + "<tr><td style='border-bottom:solid 1px gray;'>&nbsp;</td><td align=center style='border-bottom:solid 1px gray;'>{#goodsprice#}</td><td  align=center style='border-bottom:solid 1px gray;'>{#quantity#}</td><td style='border-bottom:solid 1px gray;' align=center>{#goodscost#}</td></tr>";
+   for (var i=0;i<=zak_count;i++) 
+  {   	 
+	 str=str + "<tr><td>"+ GN[zak_index[i]] +"</td><td  align=center>"+ GP[zak_index[i]] +"</td><td  align=center>"+ zak[zak_index[i]] +"</td><td  align=center>"+ formatCur(GP[zak_index[i]]*zak[zak_index[i]],znakov)  +"</td></tr>";
+   }
+   str=str + "<tr><td style='border-top:solid 1px gray;'>&nbsp;</td><td align=right  style='border-top:solid 1px gray;'>{#goodscost#}</td><td  align=center style='border-top:solid 1px gray;'>"+zak_kolvo+"</td><td style='border-top:solid 1px gray;' align=center>"+ formatCur(zak_summa,znakov) +"</td></tr>";
+   str=str + "</tr></table>";
+   return str;
+}
+function printOrder () {
+	prOrder=window.open("");	
+	prOrder.document.write("<title>{#yourorder#}</title><b>{#yourorder#}</b><hr>" + products_list());
+   	prOrder.document.write("<hr><table width=100% cellpadding=10 cellspacing=0 border=0><tr><td width=60% align=right>{#deliverycost#}: </td><td align=right>{#rubbefore#}"+formatCur(dost,znakov)+" &nbsp;{#rubafter#}</td></tr>");
+   	prOrder.document.write("<tr><td width=60% align=right>{#discount#}: </td><td align=right>{#rubbefore#}"+document.forma2.skidka.value+" &nbsp;{#rubafter#}</td></tr><tr><td  width=80% align=right>{#totalsum#}: </td><td align=right>{#rubbefore#}" + document.forma2.f2itogo.value + " &nbsp;{#rubafter#}</td></tr></table>");   
+	prOrder.document.write("<hr>{#contacts#}");
+	prOrder.document.close();	
+}
+function calc_delivery()
+{
+	skidka=0;
+	if (tipskidki==1) { if (zak_kolvo>=skidkakol1) {skidka=skidkaval1;}  ;  if (zak_kolvo>=skidkakol2) {skidka=skidkaval2;}}
+	if (tipskidki==2) { if (zak_summa>=skidkakol1) {skidka=skidkaval1;}  ;  if (zak_summa>=skidkakol2) {skidka=skidkaval2;}}
+}
+function oform_zak() {
+  zaks_count();  
+  if (zak_summa<=0) { 
+   alert ("{#orderisnull#}")
+  }
+  else {
+   zak_str1="zak_str1=";
+   zak_str2="zak_str2=";   
+   for (var i=0;i<=zak_count;i++) 
+  { 
+  	  zak_str1=zak_str1 + GN[zak_index[i]] + ":; Qty=" + zak[zak_index[i]] + ":; Price=" + GP[zak_index[i]]+ ":;;";
+	  zak_str2=zak_str2 + GKod[zak_index[i]] + ":;" + zak[zak_index[i]] + ":;" ;
+   }   
+   document.getElementById("spisok_tovarov").innerHTML="<br>" + products_list();
+
+   document.forma2.zak_kol.value=zak_str2;
+   document.forma2.zak_pos.value=zak_str1;
+   document.all.prilavok.style.display="none";
+   document.all.oformit.style.display="block";
+   if (zak_count!=-1) {document.forma2.f2kolvo.value=zak_kolvo};
+   document.forma2.f2summa.value=formatCur(zak_summa,znakov);
+   calc_delivery(); 
+   document.forma2.skidka.value=formatCur(zak_summa*skidka/100,znakov);
+   document.forma2.f2date.value=cur_date;   
+    if (tipcostdost==0) {dost=summa_dostavki;} else {dost=zak_summa*summa_dostavki/100}	   ;
+    if (tipcostdost==2) {dost=zak_kolvo*summa_dostavki;};
+    if (zak_summa>=min_summa && min_summa!=-1) { dost=0;  } 
+   document.forma2.f2dost.value=formatCur(dost,znakov);
+   document.forma2.f2itogo.value=formatCur(dost+zak_summa*(1-skidka/100),znakov);     
+    makePayments();
+   document. all.zakaz_a.scrollIntoView(true); 
+  }
+}
+function back() {    
+ document.all.prilavok.style.display="block";
+ document.all.oformit.style.display="none";
+ document. all.tovary_a.scrollIntoView(true); 
+ if (zak_count!=-1) {document.forma2.f2kolvo.value=zak_count+1}
+}
+function poisk() { 
+    poisk_str=document.all.poisk_str.value; 
+    if (poisk_str!="") 
+   { 
+	search_count=0; 
+	for (i=0;i<GC;i++) 
+	{
+		if (find_str(GN[i],poisk_str)==1) 
+		{				
+			search_res[search_count]=i;	
+			search_count=search_count+1;
+		}			
+	}
+   search_on=1;
+   pos=0;
+   start_sek=0; end_sek=search_count-1;
+   show(); 
+   }
+ }
+function find_str(gde,chto) {
+ if (gde.toLowerCase().search(chto.toLowerCase())==-1) {return 0}
+ else {return 1}
+}
+function plus(a){
+        id=document.all["id"+a].value;
+        if (prov_ogran_kolva==1) 
+       {	
+   	if (zak[id]<GK[id]) {zak[id]=zak[id]+1;} else   { alert("{#maxquantity#}" + GK[id]);}
+        }    
+        else 
+        {	
+	zak[id]=zak[id]+1;
+        }    
+  document.all["k"+a].value=zak[id];
+  summa();
+}
+function minus(a){
+  id=document.all["id"+a].value;
+  if (zak[id]!=0)  { 
+       zak[id]=zak[id]-1;
+  }
+  document.all["k"+a].value=zak[id];
+  summa();
+}
+function rukami(a){
+ id=document.all["id"+a].value;
+ if (isNaN(document.all["k"+a].value)) {document.all["k"+a].value=0;alert("{#notnumber#}");}
+ if (Number(document.all["k"+a].value)<0) {document.all["k"+a].value=0;alert("{#negnumber#}");}
+ zak_last=Number(document.all["k"+a].value);
+        if (prov_ogran_kolva==1) 
+       {	
+   	if (zak_last<GK[id]) {zak[id]=zak_last;} else   { alert("{#maxquantity#}" + GK[id]);zak[id]=GK[id];}
+        }    
+        else 
+        {	
+	zak[id]=zak_last;
+        }    
+  document.all["k"+a].value=zak[id]; 
+ summa();
+}
+function show_info(a)
+{	
+	obj=document.all["div_description"];
+	obj.innerHTML="<br><br>Loading...<br>";	
+	if (popup_desc==1) {document. all.desc_a.scrollIntoView(true); }
+	window.top.dataframe.location.replace(a);
+}
+function  pageup()  {
+ if (search_on==0) {if (tip_sek==0) {start_sek=GrP[Number(document.all.group_selector.value)]} else {start_sek=0};}
+	  if ((pos-stepvar)>=start_sek) 
+	{ 
+		pos=pos-stepvar; 		
+	  }
+  	else 
+	{
+		pos=start_sek; 
+		alert ("{#startoflist#}"); 
+  	}
+	show();
+	 namegroup(); document. all.tovary_a.scrollIntoView(true); 
+}
+function pagedown()  { 
+ if (search_on==0) 
+{
+	if (tip_sek==0) {end_sek=GrP[Number(document.all.group_selector.value)+1];start_sek=GrP[Number(document.all.group_selector.value)]} else {end_sek=GC+1;start_sek=0;};
+	if (razdel_num==0) {pos_end=end_sek;} else {pos_end=zak_count;};
+}
+else {pos_end=search_count;}
+  if ((pos+stepvar)<pos_end) 
+  { 
+  	pos=pos+stepvar; 	
+   }
+   else 
+   { 		
+	alert ("{#endoflist#}");
+   }
+   show(); 
+   namegroup(); document. all.tovary_a.scrollIntoView(true); 
+}
+function search_off(){search_on=0; document.all.poisk_str.value="";}
+function change_razdel() {
+ if (oc==0) {if (document.all.fr.height!='80' || document.all.fr.width!='100%') {zak_null();}};
+search_off();
+ if (razdel_num==0) 
+{ 
+	document.getElementById("razdel_cart").style.display="none";
+	document.getElementById("razdel_order").style.display="block";
+	document.all.but_zak.value="{#backtolist#}";
+	razdel_num=1;  	
+	zaks_count();
+	document.all.but_zak.value="{#backtolist#}";
+ }
+ else 
+ {
+	document.getElementById("razdel_cart").style.display="block";
+	document.getElementById("razdel_order").style.display="none";
+	document.all.but_zak.value="{#showcart#}";
+	razdel_num=0;	
+  }
+  pos=0;
+  show();
+  document. all.tovary_a.scrollIntoView(true); 
+}
+
+</script>
+<iframe name=dataframe height=1 width=100% style="visibility:hidden;" src=rs_files/null.html></iframe>
+<center>
+<div id=warning style="position:absolute; left:0; top:50;width:400;border:1px solid black; height:150;vertical-align:middle;text-align:center;z-index:100;background:white;color:red">
+{#warning#}
+</div>
+</center>
+<a id=tovary_a></a>
+<script language="javascript">
+document.getElementById("warning").style.display="none";
+convert_data();
+
+if (autowidth==1) {k=screen.width/800; tablewidth=tablewidth*k;gnwidth=gnwidth*k;gpwidth=gpwidth*k;gkwidth=gkwidth*k;stepvar=Math.round(stepvar*k);}; 
+l=Math.floor((tablewidth-menu2width)/gnwidth); 
+if (tip_list==2) {stepvar=Math.round(stepvar/l)*l;}
+if (tip_list==0) {gnwidth=tablewidth-gpwidth-gkwidth;};
+if (tip_list==1) {gnwidth=tablewidth-gpwidth-gkwidth-photowidth;};
+</script>
+
+<div id="prilavok">
+<script language="javascript">document.write("<table class='osnov' width='"+tablewidth+"'>");</script>
+<tr><td class="strokaverh" width="100%">
+<script language="javascript">
+if (dop_menu==1) {
+document.write("<table class=osnov width=100%><tr><td class='menu2' width=100%>"); make_menu2("&nbsp;|&nbsp;");document.write("</td></tr></table>");
+}
+</script>
+<table class="strokaverh" width=100%>
+<tr id=razdel_cart><td class="strokaverh">
+{#tradinghall#}&nbsp;
+<script language="javascript"> make_menu();</script>
+</td></tr>
+<tr id=razdel_order style="display:none;"><td class="strokaverh">
+{#cart#}
+
+</td></tr>
+</table>
+</td></tr><tr><td class="strokatovarov"><form name='forma1'>
+<script language="javascript">
+if (dop_menu==2) {document.write("<table class='menu2'  width=100%'><tr><td class='menu2'  width='"+menu2width+"'>"); make_menu2(1);document.write("</td><td class='blocktovarov'>");}
+
+if (popup_desc==2) 
+{	sss="";
+	if (desc_width!=0) {sss=sss+"width:"+desc_width+";";} 
+	if (desc_height!=0) {sss=sss+"height:"+desc_height+";";} 
+	document.write("<div id=div_description class=desc style='position:absolute;overflow:auto;left:300px;top:200px;"+sss+"visibility:hidden' onmouseout=putObj() onmousedown=takeObj()> </div> ");
+}
+else 
+{
+	document.write("<a id=desc_a><div id=div_description style='display:none'><br></div> </a> ");
+}
+document.write("<span id='tovary'></span>");
+
+if (dop_menu==2) {document.write("</td></tr></table>");}
+</script>
+
+</td></tr>
+<tr><td class="strokanavig" ></form>
+
+<script language="javascript">document.write('<span '+shopvis+'>{#sumofcart#}&nbsp;{#rubbefore#}<input type="text" value="0" readonly="true" size="15" class="summa" name="summa_but">&nbsp; {#rubafter#}</span>');</script>
+</td></tr>
+<tr><td class="strokanavig">
+<table width="100%"><tr><td align="left" width="30%">
+</td><td align="right">{#page#} <input type="text" style="width:30" name="curpage" value="" readonly="true" class=gp_style title="{#currentpage#}"> {#of#} <input type="text" style="width:40" readonly="true" value="" name="allpage" title="{#pageall#}" class=gp_style>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="button" style="width:80" value="{#pageup#}" onclick="pageup()"  title="{#pageupalt#}" class="but_style">
+&nbsp;&nbsp;&nbsp;<input type="button" value="{#pagedown#}" onclick="pagedown()" style="width:80" title="{#pagedownalt#}" class="but_style">
+</td></tr></table>
+</td></tr>
+
+<script language='javascript'>document.write("<tr  "+shopvis+"><td class='strokasumma'  align='center'> ");</script>
+
+<input style="width:150" type="button" value="{#clearcart#}" onclick="zak_null()" title="{#clearcartalt#}" class="but_style">&nbsp;&nbsp;
+<input style="width:150" type="button" name="but_zak" value="{#showcart#}" onclick="change_razdel()" class="but_style">&nbsp;&nbsp;
+<input  type="button" name="oform" style="width:150"  value="{#issueorder#}" title="{#issueorderalt#}" onclick="oform_zak()" class="but_style">
+</td></tr></table>
+<br>
+</div>
+
+<script language="javascript">
+
+document.write("<table class='osnov' width='"+tablewidth+"'>");
+</script>
+<tr><td width="100%" class='strokazakaz'>
+<div style="display:none" id="oformit">
+<script language="javascript">document.write("<form name='forma2' action='"+scact+"' method='post'>")</script>
+<input type="hidden" name="subject" value="{#subject#}">
+<script language="javascript">
+document.write ("<input type=hidden name='email' value='" + email + "'>");
+document.write ("<input type=hidden name='email2' value='" + email2 + "'>");
+document.write ("<input type=hidden name='email3' value='" + email3 + "'>");
+document.write ("<input type=hidden name='showfieldsstr' value='subject|f2kolvo|f2summa|f2dost|skidka|f2itogo|f2date|zak_pos|zak_kol|" + showfieldsstr + "'>");
+document.write ("<input type=hidden name='namefieldsstr' value='|{#quantity#}|{#goodscost#}|{#deliverycost#}|{#discount#}|{#totalsum#}||||" + namefieldsstr + "'>");
+
+</script>
+<table class='zakaz'>
+<tr><td class="zakaztitle1"><a id=zakaz_a></a>&nbsp;{#yourorder#}</td><td class='zakazright'></td></tr>
+<tr><td class="zakazleft">
+
+<div id=spisok_tovarov> </div>
+
+<input type="hidden" name="f2kolvo" class="gk_style" value="0" size="7" readonly="true"> 
+ <input type="hidden" name="f2summa" class="gp_style" value="0" size="10" readonly="true">
+<br>
+<table>
+<tr><td align=right>{#deliverycost#}</td>
+<td>{#rubbefore#}<input type='text' name='f2dost' class=gp_style value='0' size='12' readonly='true'> 
+&nbsp;{#rubafter#}
+</td></tr>
+<tr><td align=right>{#discount#}</td>
+<td>{#rubbefore#}<input type='text' name='skidka' class=gp_style value='0' size='12' readonly='true'> 
+&nbsp;{#rubafter#}
+</td></tr>
+<tr><td align=right>{#totalsum#}</td>
+<td>{#rubbefore#}<input type='text' name='f2itogo' class=gp_style value='0' size='12' readonly='true'>
+&nbsp;{#rubafter#}
+</td></tr></table>
+<table width=100%><tr><td align=right><input type='button' style="width:150" class="but_style" value='{#printable#}' onclick='printOrder ()' ></td></tr></table>
+</td>
+<td class='zakazright'>{#rem1#}
+</td></tr><tr><td ></td><td ></td></tr>
+<tr><td  class="zakaztitle2">&nbsp;{#deliverydata#}</td><td class='zakazright'></td></tr>
+<tr><td class="zakazleft">
+
+<script language=javascript>
+document.write(make_client_info());
+</script>
+
+</td>
+<td class='zakazright'>
+{#rem2#}</td></tr>
+</table>
+<input type='hidden' name='f2date'>
+<input type='hidden' name='zak_pos'>
+<input type='hidden' name='zak_kol'>
+</form>
+
+
+<table><tr><td valign=top>
+<input type='button' style="width:150" class="but_style" value='{#returnhall#}' onclick='back()' >
+</td><td width=10px></td><td valign=top>
+<span id=pay_zone>
+payzone
+<form name=forma_pay method="POST" action="https://merchant.webmoney.ru/lmi/payment.asp">
+</form>
+</span>
+</td></tr></table>
+
+
+</td></tr></table></div>
+<!--
+<input type=button value=html onclick="javascript:alert(document.all['tovary'].outerHTML)"><input type=button value=html onclick="javascript:alert(document.all['telo'].outerHTML)">
+-->
+<script>
+str=get_var("code");
+if (str!="") 
+{
+	window.top.dataframe.location.replace(infpath+"/"+str+".htm");
+	document.all["div_description"].style.display='block';
+	ip=0; nn=0;
+	while (ip<=GC && nn==0) 
+	{
+		if (GKod[ip]==str) {nn=1;pos=ip;}		
+		ip=ip+1;
+	}	
+}
+else
+{show();}
+</script>
+
+
