@@ -106,7 +106,7 @@ var PAYPALSHOPMAKER = {};
 	P.PAGE_INDEX_FILTER = "{\"\":{\"left\": \"%s\"}}"; // Page index filter (string)
 	P.PAGE_INDEX_OTHER_FILTER = "{\"\":{\"!left\": %s}}"; // Page index filter (string)
 	P.displayRecs = 20; // Number of records per page
-	P.recPerRow = 2; // Number of records per row (multi column)
+	P.recPerRow = 3; // Number of records per row (multi column)
 	P.totalRecs; // Total number of records (int)
 	P.totalPages; // Total number of pages (int)
 	P.multiPage; // More than one page (bool)
