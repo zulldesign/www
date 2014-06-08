@@ -1,1 +1,0 @@
-Universal skin for shopping cart or product catalog with additional pages. Text buttons.  Only "+" / "-" buttons.
