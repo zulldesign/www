@@ -90,9 +90,10 @@ P.pageID["list"] = true;
 <table class="ewTable">
 <tbody class="ewClientTemplate" id="ewItems">
 <tr>
-<td style="vertical-align: top;${ ImageWidth}">
+<td style="vertical-align: top;">
+<table width="100%" border="0" cellspacing="0" cellpadding="0"><tr><td>
 {{if ItemImage}}
-<a href="${ ImageHref}" rel="${ ItemId}">{{html ImageTag}}</a>
+<a href="${ ImageHref}" rel="${ ItemId}">{{html ImageTag}}</a><br>
 {{/if}}
 {{if ItemImage2}}
 <a href="${ ImageHref2}" rel="${ ItemId}" class="ewHidden">{{html ImageTag2}}</a>
@@ -109,48 +110,8 @@ P.pageID["list"] = true;
 {{if ItemImage6}}
 <a href="${ ImageHref6}" rel="${ ItemId}" class="ewHidden">{{html ImageTag6}}</a>
 {{/if}}
-</td>
-<td style="vertical-align: top; width: 99%;">
-<table class="ewItemTable" cellspacing="0">
-<tr><td colspan="2"><a href="${ CartViewUrl}">{{html ItemNumber}}</a></td></tr>
-<tr><td colspan="2"><a href="${ CartViewUrl}">{{html ItemName}}</a></td></tr>
-<!-- {{if ShowCustom}} -->
-<tr>
-	<td style="vertical-align: top;">{{html ItemCustomName}}</td>
-	<td>{{html ItemCustom}}</td>
-</tr>
-<!-- {{/if}} -->
-<!-- {{if ShowCustom2}} -->
-<tr>
-	<td style="vertical-align: top;">{{html ItemCustomName2}}</td>
-	<td>{{html ItemCustom2}}</td>
-</tr>
-<!-- {{/if}} -->
-<!-- {{if ShowCustom3}} -->
-<tr>
-	<td style="vertical-align: top;">{{html ItemCustomName3}}</td>
-	<td>{{html ItemCustom3}}</td>
-</tr>
-<!-- {{/if}} -->
-<!-- {{if ShowCustom4}} -->
-<tr>
-	<td style="vertical-align: top;">{{html ItemCustomName4}}</td>
-	<td>{{html ItemCustom4}}</td>
-</tr>
-<!-- {{/if}} -->
-<!-- {{if ShowCustom5}} -->
-<tr>
-	<td style="vertical-align: top;">{{html ItemCustomName5}}</td>
-	<td>{{html ItemCustom5}}</td>
-</tr>
-<!-- {{/if}} -->
-<!-- {{if ShowCustom6}} -->
-<tr>
-	<td style="vertical-align: top;">{{html ItemCustomName6}}</td>
-	<td>{{html ItemCustom6}}</td>
-</tr>
-<!-- {{/if}} -->
-</table>
+<a href="${ CartViewUrl}">{{html ItemNumber}}</a><br>
+<a href="${ CartViewUrl}">{{html ItemName}}</a><br>
 <form name="pp${ ItemId}" id="pp${ ItemId}" class="ewItemForm ewForm" action="" data-type="${ ItemButtonTypeId}">
 <!-- Common -->
 <input type="hidden" name="id" value="${ ItemId}">
@@ -302,6 +263,7 @@ P.pageID["list"] = true;
 <input type="submit" name="btnSubmit" class="${ SubmitButtonClass}" value="${ SubmitButtonText}">
 {{/if}}
 </form>
+</td></tr></table>
 </td>
 </tr>
 </tbody>
