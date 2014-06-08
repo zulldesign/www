@@ -145,7 +145,7 @@ Template General Layout
 }
 
 .ewMenuColumn {
-	background-color: #FF0000; /* background color */
+	background-color: #F5F5F5; /* background color */
 	width: 180px;
 	vertical-align: top;
 	padding: 1px;	
@@ -164,7 +164,7 @@ Template General Layout
 
 /* Right column (Shopping cart column) */
 .ewRightColumn {
-	background-color: #C5C5C5;
+	background-color: #F5F5F5;
 	padding: 4px;	
 	width: 180px;
 	vertical-align: top;
@@ -198,7 +198,7 @@ Template General Layout
 .ewMenuRow {
 	width: 100%;
 	float: left;
-	background-color: #FF0000;
+	background-color: #F5F5F5;
 }
 
 .ewBrowse {
@@ -368,7 +368,7 @@ Shopping Cart
 }
 
 .yui-skin-sam .yuimenu .bd {	
-	background-color: #FF0000;
+	background-color: #F5F5F5;
 	/*z-index: 10020;*/
 }
 
@@ -399,7 +399,7 @@ Shopping Cart
 }
 
 .yui-skin-sam .yuimenubar .bd {	
-	background-color: #FF0000;
+	background-color: #F5F5F5;
 	/*z-index: 10020;*/
 }
 
