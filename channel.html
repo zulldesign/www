@@ -33,7 +33,33 @@ function Login() {
   }, { scope: 'email,user_photos,publish_actions' });
 
 }
-<div id="fb-root"></div>
+ FB.Event.subscribe('auth.authResponseChange', function (response) {
+  if (response.status === 'connected') {
+    alert("Successfully connected to Facebook!");
+  }
+  else if (response.status === 'not_authorized') {
+    alert("Login failed!");
+  } else {
+    alert("Unknown error!");
+  }
+});
+function Login() {
+  FB.login(function (response) {
+    if (response.authResponse) {
+      FB.api('/me', function (response) {
+        document.getElementById("displayName").innerHTML = response.name;
+        document.getElementById("userName").innerHTML = response.username;
+        document.getElementById("userID").innerHTML = response.id;
+        document.getElementById("userEmail").innerHTML = response.email;
+        FB.api('/me/picture?type=normal', function (response) {
+          document.getElementById("profileImage").setAttribute("src", response.data.url);
+        });
+      });
+    } else {
+      alert("Login attempt failed!");
+    }
+  }, { scope: 'email,user_photos,publish_actions' });
+}
 </script>
 
 <div
