@@ -21,6 +21,19 @@
   js.src = "//connect.facebook.net/en_US/all.js";
   ref.parentNode.insertBefore(js, ref);
 }(document));
+<input type="button" value="Login" onclick="Login();" />
+function Login() {
+  FB.login(function (response) {
+    if (response.authResponse) {
+      // some code here
+      };
+    } else {
+      alert("Login attempt failed!");
+    }
+  }, { scope: 'email,user_photos,publish_actions' });
+
+}
+<div id="fb-root"></div>
 </script>
 
 <div
@@ -29,7 +42,6 @@
   data-width="450"
   data-show-faces="true">
 </div>
-<div id="fb-root"></div>
 <!-- template.html -->
 <html>
   <head>
