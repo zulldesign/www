@@ -1,25 +1,17 @@
-<div id="fb-root"></div>
-<script src="//connect.facebook.net/en_US/all.js"></script>
 <script>
-  FB.init({
-    appId  : '209888129184206',
-    status : true, // check login status
-    cookie : true, // enable cookies to allow the server to access the session
-    xfbml  : true, // parse XFBML
-    channelUrl : 'https://www.apphb.com/channel.html', // channel.html file
-    oauth  : true // enable OAuth 2.0
-  });
-</script>
+      window.fbAsyncInit = function() {
+        FB.init({
+          appId      : '209888129184206',
+          xfbml      : true,
+          version    : 'v2.0'
+        });
+      };
 
-Quickstart: Facebook SDK for JavaScript
-
-The Facebook SDK for JavaScript provides a rich set of client-side functionality that:
-
-Enables you to use the Like Button and other Social Plugins on your site.
-Enables you to use Facebook Login to lower the barrier for people to sign up on your site.
-Makes it easy to call into Facebook's Graph API.
-Launch Dialogs that let people perform various actions like sharing stories.
-Facilitates communication when you're building a game or an app tab on Facebook.
-The SDK, social plugins and dialogs work on both desktop and mobile web browsers.
-
-This quickstart will show you how to setup the SDK and get it to make some basic Graph API calls. If you don't want to setup just yet, you can use our JavaScript test console to use all of the SDK methods, and explore some examples (you can skip the setup steps, but the rest of this quickstart can be tested in the console).
+      (function(d, s, id){
+         var js, fjs = d.getElementsByTagName(s)[0];
+         if (d.getElementById(id)) {return;}
+         js = d.createElement(s); js.id = id;
+         js.src = "//connect.facebook.net/en_US/sdk.js";
+         fjs.parentNode.insertBefore(js, fjs);
+       }(document, 'script', 'facebook-jssdk'));
+    </script>
