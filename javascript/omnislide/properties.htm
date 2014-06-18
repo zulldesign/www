@@ -1,0 +1,196 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+<!-- saved from url=(0072)http://home.comcast.net/~jscheuer1/side/oo_omni_top_fixed/properties.htm -->
+<HTML><HEAD><TITLE>Property Values - an explanation of their use and meaning</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=iso-8859-1">
+<STYLE type=text/css>BODY {
+	COLOR: #333333; BACKGROUND-COLOR: #dddddd
+}
+#content {
+	MARGIN: 0px auto; WIDTH: 90%
+}
+.prop {
+	COLOR: red; BACKGROUND-COLOR: white
+}
+.val {
+	COLOR: blue; BACKGROUND-COLOR: white
+}
+.com {
+	COLOR: green; BACKGROUND-COLOR: white
+}
+</STYLE>
+
+<META content="MSHTML 6.00.2900.2995" name=GENERATOR></HEAD>
+<BODY>
+<DIV id=content>
+<DIV>
+<H2>Property Values - an explanation of their use and meaning:</H2>All 
+properties are composed of the property name followed by a colon and a value 
+that is quoted if it is a literal or unquoted if it is a pure number or 
+true/false value.&nbsp; All property values are followed by a comma except for 
+the last one for a given menu (usually the links/headings array).&nbsp; All 
+properties have the default values shown and are therefore optional, unless 
+described as <B>REQUIRED</B>.&nbsp; Raw unquoted numbers refer to pixels unless 
+otherwise noted.</DIV><BR>
+<DIV><SPAN class=prop>id</SPAN><B>:</B><SPAN 
+class=val>"menu1"</SPAN><B>,</B>&nbsp; <SPAN class=com>// A unique id is 
+<B>REQUIRED</B> for each menu</SPAN></DIV><BR>
+<DIV><SPAN class=prop>menupos</SPAN><B>:</B><SPAN 
+class=val>"left"</SPAN><B>,</B>&nbsp; <SPAN class=com>// Menu position - 
+left<B>,</B> top<B>,</B> or right</SPAN></DIV>
+<DIV><SPAN class=prop>keepinview</SPAN><B>:</B><SPAN 
+class=val>30</SPAN><B>,</B>&nbsp; <SPAN class=com>// For left and right menus 
+and only with <SPAN class=prop>kviewtype</SPAN></SPAN><B>:</B><SPAN 
+class=val>'absolute'</SPAN><B>,</B><SPAN class=com> - distance from top after 
+page has scrolled beyond menutop - may optionally be set to true or false.&nbsp; 
+Using true will have the menu maintain its menutop position during page scroll, 
+false will prevent the menu from following page scroll.&nbsp; <B>Top menus</B> 
+will <B>always follow page scroll</B>.</SPAN></DIV>
+<DIV><SPAN class=prop>kviewtype</SPAN><B>:</B><SPAN 
+class=val>'absolute'</SPAN><B>,</B>&nbsp; <SPAN class=com>// The method used to 
+keep menu visible when page is scrolled - 'fixed' or 'absolute'. Fixed will not 
+appear to move at all, staying completely stationary in relation to the window's 
+frame, while 'absolute' will follow scrolling in a fluid motion<B>:</B> defaults 
+to 'absolute' (floating) unless menu is top menu. 'fixed' is overridden in 
+browsers that do not support it.&nbsp; For a menu that appears in the normal 
+flow of the page, use 'absolute' here and false for <SPAN 
+class=prop>keepinview</SPAN> (see previous).</SPAN></DIV><BR>
+<DIV><SPAN class=prop>menutop</SPAN><B>:</B><SPAN 
+class=val>150</SPAN><B>,</B>&nbsp; <SPAN class=com>// For left and right menus 
+only<B>,</B> the initial distance from the top of the page</SPAN></DIV>
+<DIV><SPAN class=prop>menuleft</SPAN><B>:</B><SPAN 
+class=val>"50%"</SPAN><B>,</B>&nbsp; <SPAN class=com>// For top menu 
+only<B>,</B> initial left position.&nbsp; May be an unquoted number referring to 
+pixels or a quoted percentage value.ex<B>:</B> menuleft<B>:</B>400<B>,</B> - for 
+pixels<B>,</B> no units or quotes used&nbsp; or menuleft<B>:</B>'45%' - quotes 
+and percent sign for % value</SPAN></DIV>
+<DIV><SPAN class=prop>wrapbar</SPAN><B>:</B><SPAN 
+class=val>false</SPAN><B>,</B>&nbsp; <SPAN class=com>// For left and right menus 
+only<B>,</B> will wrap the 'draw' bar around the bottom of the menu if 
+true</SPAN></DIV><BR>
+<DIV><SPAN class=prop>menuspeed</SPAN><B>:</B><SPAN 
+class=val>20</SPAN><B>,</B>&nbsp; <SPAN class=com>// Speed of menu 
+sliding<B>,</B> smaller is faster (interval of milliseconds)</SPAN></DIV>
+<DIV><SPAN class=prop>menupause</SPAN><B>:</B><SPAN 
+class=val>500</SPAN><B>,</B>&nbsp; <SPAN class=com>// How long menu stays 
+extended when mouse is not over it (in milliseconds)</SPAN></DIV>
+<DIV><SPAN class=prop>d_colspan</SPAN><B>:</B><SPAN 
+class=val>2</SPAN><B>,</B>&nbsp; <SPAN class=com>// Number of columns to make 
+available in the menu body</SPAN></DIV>
+<DIV><SPAN class=prop>allowtransparent</SPAN><B>:</B><SPAN 
+class=val>false</SPAN><B>,</B>&nbsp; <SPAN class=com>// Ordinarily<B>,</B> the 
+table's bgcolor is the border color<B>,</B> use true here to make it 
+transparent</SPAN></DIV><BR>
+<DIV><SPAN class=prop>barwidth</SPAN><B>:</B><SPAN 
+class=val>22</SPAN><B>,</B>&nbsp; <SPAN class=com>// Width of 'draw' bar (this 
+will be its height for the top menu The below hdingwidth plus (for left and 
+right menus) the above barwidth and (2+d_colspan) times the borderwidth will be 
+used for the table's width.</SPAN></DIV><BR>
+<DIV><SPAN class=prop>hdingwidth</SPAN><B>:</B><SPAN 
+class=val>149</SPAN><B>,</B>&nbsp; <SPAN class=com>// This will be the menu body 
+width as well as any single column headings.</SPAN></DIV>
+<DIV><SPAN class=prop>hdingheight</SPAN><B>:</B><SPAN 
+class=val>22</SPAN><B>,</B>&nbsp; <SPAN class=com>// Heading height</SPAN></DIV>
+<DIV><SPAN class=prop>hdingindent</SPAN><B>:</B><SPAN 
+class=val>1</SPAN><B>,</B>&nbsp; <SPAN class=com>// Text indent for 
+headings.&nbsp; Here 1=@8px or 1 character's width - decimals 
+allowed.</SPAN></DIV>
+<DIV><SPAN class=prop>linkheight</SPAN><B>:</B><SPAN 
+class=val>16</SPAN><B>,</B>&nbsp; <SPAN class=com>// This will be the height for 
+linked cells</SPAN></DIV><BR>
+<DIV><SPAN class=prop>outbrdwidth</SPAN><B>:</B><SPAN 
+class=val>0</SPAN><B>,</B>&nbsp; <SPAN class=com>// If an outer border (for the 
+containing division) is desired<B>,</B> this will be its width. A single 
+unquoted pixel value without units or quoted top right bottom left values may be 
+used<B>,</B> ex<B>:</B> outbrdwidth<B>:</B>5<B>,</B> or 
+outbrdwidth<B>:</B>'5px'<B>,</B> or outbrdwidth<B>:</B>'2px 3px 2px 
+5px'<B>,</B></SPAN></DIV><BR>
+<DIV><SPAN class=prop>outbrdcolor</SPAN><B>:</B><SPAN 
+class=val>"none"</SPAN><B>,</B>&nbsp; <SPAN class=com>// Outer border 
+color</SPAN></DIV>
+<DIV><SPAN class=prop>outbrdstyle</SPAN><B>:</B><SPAN 
+class=val>"none"</SPAN><B>,</B>&nbsp; <SPAN class=com>// Outer border style 
+('solid'<B>,</B> 'dashed'<B>,</B> 'outset'<B>,</B> etc.)</SPAN></DIV>
+<DIV><SPAN class=prop>borderwidth</SPAN><B>:</B><SPAN 
+class=val>1</SPAN><B>,</B>&nbsp; <SPAN class=com>// Border width used inside 
+menus and for menu table (unquoted number without units referring to 
+pixels)</SPAN></DIV>
+<DIV><SPAN class=prop>bordercolor</SPAN><B>:</B><SPAN 
+class=val>"black"</SPAN><B>,</B>&nbsp; <SPAN class=com>// Border color used 
+inside menus and for menu table</SPAN></DIV>
+<DIV><SPAN class=prop>borderstyle</SPAN><B>:</B><SPAN 
+class=val>"solid"</SPAN><B>,</B>&nbsp; <SPAN class=com>// Border style used 
+inside menus and for menu table</SPAN></DIV>
+<DIV><SPAN class=prop>barcolor</SPAN><B>:</B><SPAN 
+class=val>"white"</SPAN><B>,</B>&nbsp; <SPAN class=com>// Text color for 'draw' 
+bar</SPAN></DIV>
+<DIV><SPAN class=prop>barbgcolor</SPAN><B>:</B><SPAN 
+class=val>"#444444"</SPAN><B>,</B>&nbsp; <SPAN class=com>// Background color for 
+'draw' bar</SPAN></DIV>
+<DIV><SPAN class=prop>barfontweight</SPAN><B>:</B><SPAN 
+class=val>"bold"</SPAN><B>,</B>&nbsp; <SPAN class=com>// Bar font 
+weight</SPAN></DIV>
+<DIV><SPAN class=prop>baralign</SPAN><B>:</B><SPAN 
+class=val>"center"</SPAN><B>,</B>&nbsp; <SPAN class=com>// Bar text 
+align</SPAN></DIV>
+<DIV><SPAN class=prop>menufont</SPAN><B>:</B><SPAN 
+class=val>"verdana"</SPAN><B>,</B>&nbsp; <SPAN class=com>// Font for 
+menu<B>,</B> use any you like<B>,</B> defaults to sans-serif if not 
+supported</SPAN></DIV>
+<DIV><SPAN class=prop>fontsize</SPAN><B>:</B><SPAN 
+class=val>"80%"</SPAN><B>,</B>&nbsp; <SPAN class=com>// Font size<B>,</B> use 
+quoted percent value</SPAN></DIV>
+<DIV><SPAN class=prop>hdingcolor</SPAN><B>:</B><SPAN 
+class=val>"white"</SPAN><B>,</B>&nbsp; <SPAN class=com>// Headings - text 
+color</SPAN></DIV>
+<DIV><SPAN class=prop>hdingbgcolor</SPAN><B>:</B><SPAN 
+class=val>"#170088"</SPAN><B>,</B>&nbsp; <SPAN class=com>// Headings - 
+background color</SPAN></DIV>
+<DIV><SPAN class=prop>hdingfontweight</SPAN><B>:</B><SPAN 
+class=val>"bold"</SPAN><B>,</B>&nbsp; <SPAN class=com>// Headings - font 
+weight</SPAN></DIV>
+<DIV><SPAN class=prop>hdingvalign</SPAN><B>:</B><SPAN 
+class=val>"middle"</SPAN><B>,</B>&nbsp; <SPAN class=com>// Headings - vertical 
+align</SPAN></DIV>
+<DIV><SPAN class=prop>hdingtxtalign</SPAN><B>:</B><SPAN 
+class=val>"left"</SPAN><B>,</B>&nbsp; <SPAN class=com>// Headings - text 
+align</SPAN></DIV>
+<DIV><SPAN class=prop>linktopad</SPAN><B>:</B><SPAN 
+class=val>0</SPAN><B>,</B>&nbsp; <SPAN class=com>// Top padding for 
+links</SPAN></DIV>
+<DIV><SPAN class=prop>linktxtalign</SPAN><B>:</B><SPAN 
+class=val>"left"</SPAN><B>,</B>&nbsp; <SPAN class=com>// Links text 
+align</SPAN></DIV>
+<DIV><SPAN class=prop>linktarget</SPAN><B>:</B><SPAN 
+class=val>""</SPAN><B>,</B>&nbsp; <SPAN class=com>// Default link 
+target</SPAN></DIV>
+<DIV><SPAN class=prop>bartext</SPAN><B>:</B><SPAN class=val>"SIDE 
+MENU"</SPAN><B>,</B>&nbsp; <SPAN class=com>// Text for 'draw' bar.&nbsp; Quoted 
+&lt;img&gt; tag may be used, ex<B>:</B> bartext<B>:</B>'&lt;img 
+src="my_bar.gif"&gt;'<B>,</B></SPAN></DIV><BR>
+<DIV><SPAN class=prop>user_defined_stylesheet</SPAN><B>:</B><SPAN 
+class=val>false</SPAN><B>,</B>&nbsp; <SPAN class=com>// Set to true if you wish 
+to override the script's stylesheet</SPAN></DIV>
+<DIV><SPAN class=prop>user_defined_markup</SPAN><B>:</B><SPAN 
+class=val>false</SPAN><B>,</B>&nbsp; <SPAN class=com>// Set to true if you wish 
+to override the script's markup</SPAN></DIV>
+<DIV><SPAN class=prop>design_mode</SPAN><B>:</B><SPAN 
+class=val>false</SPAN><B>,</B>&nbsp; <SPAN class=com>// Set to true to see the 
+generated styles and markup</SPAN></DIV><BR>
+<DIV><SPAN class=prop>menuItems</SPAN><B>:</B>[] <SPAN class=com>// An array of 
+menu items is <B>REQUIRED</B> for each menu, ex:</SPAN></DIV><PRE>menuItems:[ // REQUIRED!!
+//[name, link, target, colspan, endrow?] - leave 'link' and 'target' blank to make a header
+["Menu"], //create header
+["Dynamic Drive", "http://www.dynamicdrive.com", ""],
+["What's New", "http://www.dynamicdrive.com/new.htm",""],
+["What's Hot", "http://www.dynamicdrive.com/hot.htm", ""],
+["Message Forum", "http://www.dynamicdrive.com/forums", ""],
+["Submit Script", "http://www.dynamicdrive.com/submitscript.htm", ""],
+["Link to Us", "http://www.dynamicdrive.com/link.htm", ""],
+
+["FAQ", "http://www.dynamicdrive.com/faqs.htm", "", 1, "no"], //create two column row, requires d_colspan:2 (the default)
+["Email", "http://www.dynamicdrive.com/contact.htm", "",1],
+
+["External Links", "", ""], //create header
+["JavaScript Kit", "http://www.javascriptkit.com", "_new"],
+["Freewarejava", "http://www.freewarejava.com", "_new"],
+["Coding Forums", "http://www.codingforums.com", "_new"]  //no comma after last entry</PRE></DIV></BODY></HTML>
