@@ -1,18 +1,15 @@
-public static RestResponse SendSimpleMessage() {
-    RestClient client = new RestClient();
-    client.BaseUrl = "https://api.mailgun.net/v2";
-    client.Authenticator =
-           new HttpBasicAuthenticator("api",
-                                      "key-8tkon8xdmrkj007q-ugdkm2amts5pgw1");
-    RestRequest request = new RestRequest();
-    request.AddParameter("domain",
-                        "sandboxdce2ce30ee4f481dbcd207032b1de40a.mailgun.org", ParameterType.UrlSegment);
-    request.Resource = "{domain}/messages";
-    request.AddParameter("from", "Mailgun Sandbox <postmaster@sandboxdce2ce30ee4f481dbcd207032b1de40a.mailgun.org>");
-    request.AddParameter("to", "ZULFAHMY <admin@zulldesign.ml>");
-    request.AddParameter("subject", "Hello ZULFAHMY");
-    request.AddParameter("text", "Congratulations ZULFAHMY, you just sent an email with Mailgun!  You are truly awesome!  You can see a record of this email in your logs: https://mailgun.com/cp/log .  You can send up to 300 emails/day from this sandbox server.  Next, you should add your own domain so you can send 10,000 emails/month for free.");
-    request.Method = Method.POST;
-    return client.Execute(request);
-}
+# Include the Autoloader (see "Libraries" for install instructions)
+require 'vendor/autoload.php';
+use Mailgun\Mailgun;
+
+# Instantiate the client.
+$mgClient = new Mailgun('key-8tkon8xdmrkj007q-ugdkm2amts5pgw1');
+$domain = "sandboxdce2ce30ee4f481dbcd207032b1de40a.mailgun.org";
+
+# Make the call to the client.
+$result = $mgClient->sendMessage("$domain",
+                  array('from'    => 'Mailgun Sandbox <postmaster@sandboxdce2ce30ee4f481dbcd207032b1de40a.mailgun.org>',
+                        'to'      => 'ZULFAHMY <admin@zulldesign.ml>',
+                        'subject' => 'Hello ZULFAHMY',
+                        'text'    => 'Congratulations ZULFAHMY, you just sent an email with Mailgun!  You are truly awesome!  You can see a record of this email in your logs: https://mailgun.com/cp/log .  You can send up to 300 emails/day from this sandbox server.  Next, you should add your own domain so you can send 10,000 emails/month for free.'));
     
