@@ -1,0 +1,10 @@
+<%
+	' ADODB connection object
+
+	Set Conn = Server.CreateObject("ADODB.Connection")
+	' Remember to specify the correct path to your database
+	DSN = "DRIVER = {Microsoft Access Driver (*. mdb)}; DBQ =" & Server.MapPath("/cgi-bin/tutorial.mdb")
+
+	'Open database connection
+	Conn.Open DSN
+	%>
