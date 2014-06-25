@@ -1,0 +1,92 @@
+<html>
+<head>
+<script language="JavaScript" src="Validation_Form.js"></script>		 
+  <title>Validation Form designed by Muhammad Naeem</title>
+</head>
+<link rel="stylesheet" href="A.css">
+
+<body onload="F()">
+<pre>
+<form name="f1"> 
+ <table bgcolor="#FFFFBB" border="0" align="center" style="text-align: left; color: #000099;" cellpadding="1" cellspacing="5">
+ <tr><td colspan="6">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+ </td></tr>
+ <tr><td colspan="6" align="center"><h1>Membership Form</h1></td></tr>
+ <tr>
+ <td></td>
+ <td>FIRST NAME:</td>
+ <td colspan="3"><INPUT type="text" size="24" value="" name="txt1" onkeypress="Trim(document.f1.txt1)" onblur="T(document.f1.txt1)"> </td>
+ <td></td>
+ </tr>
+  <tr><td></td>
+ <td>MIDDLE NAME: </td>
+ <td colspan="3"><INPUT type="text" size="24" value="" name="txt2" onkeypress="Trim(document.f1.txt2)" onblur="T(document.f1.txt2)"></td>
+ <td></td></tr>
+  <tr><td></td>
+ <td>LAST NAME  :</td>
+ <td colspan="3"><INPUT type="text" size="24" value="" name="txt3" onkeypress="Trim(document.f1.txt3)" onblur="Trim(document.f1.txt3)"></td>
+ <td></td></tr>
+ <tr><td></td>
+ <td>DATE OF BIRTH:</td>
+ <td> <select name="date" onchange="D()"><script>Displaynumbers(1,31,0)</script></SELECT><br>Day </td>
+ <td> <select name="month" onchange="M()"><script>Displaynumbers(1,12,1)</script> </SELECT><br>Month </td>
+ <td> <select name="year" onblur="Dmy()" onblur="Dmy()"><script>Displaynumbers(1970,1980,1950)</script></SELECT><br>Year</td>
+ <td></td></tr>
+ <tr><td></td>
+ <td>GENDER :  </td>
+ <td> Male: <input type="Radio" name="rad1" checked></input></td>
+ <td> Female: <input type="Radio"v name="rad1"></input></td>
+ <td></td></tr>
+ <tr><td></td>
+ <td>I.D. CARD NO. :</td>
+ <td colspan="5"><INPUT type="text" maxlength="4" size="4" value="" name="txt41" onkeypress="Id41()">&ndash;</input>
+ <INPUT type="text" maxlength="2" size="2" value="" name="txt42" onkeypress="Id42()">&ndash;
+ <input type="Text" maxlength="3" size="3" value="" name="txt43" onkeypress="Id43()">&ndash;
+ <input type="Text" size="2" value="" name="txt44" maxlength="2" onkeypress="Id44()"></input></td>
+ 
+ 
+ <td></td></tr>
+ <tr><td></td>
+ <td>E-mail ADDRESS :</td>
+ <td colspan="3"><INPUT type="text" size="24" name="txt5" onblur="Email()"></input></td>
+ <td></td></tr>
+ <tr><td></td>
+ <td>POSTAL ADDRESS:</td>
+ <td colspan="3"><textarea cols="20" rows="2"></textarea></td>
+ <td></td></tr>
+ <tr><td></td>
+ <td colspan="1">Region     : <select name="Region">	
+				<option value="Asia">Asia</option>
+				<option value="Australia">Australia</option>
+				<option value="America">North America</option>
+				<option value="America">South America</option>
+				<option value="Africa">Africa</option>
+				<option value="Antarctica">Antarctica</option>
+				<option value="Europe">Europe</option>
+				 </SELECT></td>
+ <td colspan="3">Occupation   : <select name="Occupation">	
+				<option value="Teacher">Teacher</option>
+				<option value="Engineer">Engineer</option>
+				<option value="Doctor">Doctor</option>
+				<option value="Bussenis man">Bussenis man</option>
+				<option value="Shope keeper">Shope keeper</option>
+				<option value="Property dealer">Property dealer</option>
+				<option value="lawyer">Lawyer</option>					
+				 </SELECT></td>
+ <td></td></tr>
+ <tr><td></td>
+ <td colspan="4"><HR color="#000099" size="4"></td>
+ <td></td></tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+ <td colspan="4" align="center"><INPUT type="Submit" name="btn" style="color: #000099;" value="  Submit  " onmouseover="Mix()"  onclick="return d()"></input>&nbsp;&nbsp;&nbsp;&nbsp; 
+		  <INPUT type="Reset" name="btn2" style="color: #000099;" value="   Clear   ">  </input> &nbsp;&nbsp;&nbsp;&nbsp; 
+		  <INPUT type="Button" name="btn3" style="color: #000099;" value="   Home    "><br></input></td>
+ <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td></tr>
+ <tr><td colspan="6">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+ </td></tr>
+ <tr><td colspan="7" align="center">
+   Designed by:- <i><a href="mailto:naeem@email.com">Muhammad Naeem</a></i></td></tr>
+ </table>
+</form>
+</body>
+</html>
