@@ -1,16 +1,40 @@
-<%
-	' ADODB connection object
+<html>
+	<head>
+	<title>Retrieve data from database </title>
+	</head>
+	<body>
+
+	<%
+	' Database connection - remember to specify the path to your database
 
 	Set Conn = Server.CreateObject("ADODB.Connection")
-	' Remember to specify the correct path to your database
-	DSN = "DRIVER = {Microsoft Access Driver (*. mdb)}; DBQ =" & Server.MapPath("/cgi-bin/tutorial.mdb")
+	DSN = "DRIVER = {Microsoft Access Driver (*. mdb)}; "
+	DSN = DSN & "DBQ=" & Server.MapPath ("/cgi-bin/tutorial.mdb")
 
-	'Open database connection
 	Conn.Open DSN
-	%>
 
-<%
+	' SQL Query
+	strSQL = "SELECT * FROM people"
+	' Execute the query (the recordset rs contains the result)
+	Set rs = Conn.Execute(strSQL)
+
+	' Loop the recordset rs
+	Do
+
+	   ' Write the value of the column FirstName
+
+	   Response.Write rs("FirstName") & "<br />"
+
+	   ' Move to next record in rs
+	   rs.MoveNext
+
+	' Continue until end of recordset (EOF = End Of File)
+
+	Loop While Not rs.EOF
+
 	' Close the database connection
 	Conn.Close
 	Set Conn = Nothing
 	%>
+	</body>
+	</html>
