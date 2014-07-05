@@ -62,118 +62,118 @@ style1,				// Properties Array - this is set higher up, as above
 ,					// Background image for menu when BGColor set to transparent.
 ,					// Scrollable Menu
 ,					// Reserved for future use
-,"Home","index.php",,"Helbreath USA Home",1 // "Description Text", "URL", "Alternate URL", "Status", "Separator Bar"
-,"About","show-menu=about","/storyline.php","",1
-,"Downloads","show-menu=downloads","downloads.php","",1
-,"Guides & Info","show-menu=guide","/basicintro.php","",1
-,"Account","show-menu=account","http://www.helbreathusa.com/newaccount.php","",1
-,"Artwork","show-menu=artwork","/banners.php","",1
-,"Community","show-menu=community","/guilds.php","",1
-,"Customer Care","show-menu=customer","/contactus.php","",1
-,"Payment Help","show-menu=payment","/payment.php","",1
-,"FAQ","show-menu=faq","/faq.php","",1
+,"Home","index.htm",,"Helbreath USA Home",1 // "Description Text", "URL", "Alternate URL", "Status", "Separator Bar"
+,"About","show-menu=about","/storyline.htm","",1
+,"Downloads","show-menu=downloads","downloads.htm","",1
+,"Guides & Info","show-menu=guide","/basicintro.htm","",1
+,"Account","show-menu=account","https://www.apphb.com/newaccount.htm","",1
+,"Artwork","show-menu=artwork","/banners.htm","",1
+,"Community","show-menu=community","/guilds.htm","",1
+,"Customer Care","show-menu=customer","/contactus.htm","",1
+,"Payment Help","show-menu=payment","/payment.htm","",1
+,"FAQ","show-menu=faq","/faq.htm","",1
 
 ])
 
 addmenu(menu=["about",,,151,1,"",style1,,"left",effect,,,,,,,,,,,,
-,"&nbsp;Storyline","storyline.php",,,1
-,"&nbsp;Features","features.php",,,1
-,"&nbsp;Copyrights","copyrights.php",,,1
-,"&nbsp;Conduct Rules","rules.php",,,1
-,"&nbsp;FAQ","faq.php",,,1
-,"&nbsp;Game Reviews","GameReviews.php",,,1
-,"&nbsp;About iEN","http://www.ient.com/aboutus.php target=_blank",,,1
-,"&nbsp;iAffiliate","http://www.iamgame.com/affiliates/signup.php target=_blank",,,1
+,"&nbsp;Storyline","storyline.htm",,,1
+,"&nbsp;Features","features.htm",,,1
+,"&nbsp;Copyrights","copyrights.htm",,,1
+,"&nbsp;Conduct Rules","rules.htm",,,1
+,"&nbsp;FAQ","faq.htm",,,1
+,"&nbsp;Game Reviews","GameReviews.htm",,,1
+,"&nbsp;About iEN","http://www.ient.com/aboutus.htm target=_blank",,,1
+,"&nbsp;iAffiliate","http://www.iamgame.com/affiliates/signup.htm target=_blank",,,1
 
 ])
 
 addmenu(menu=["guide",,,150,1,,style1,0,"left",effect,,,,,,,,,,,,
-,"&nbsp;Beginners &nbsp;Guide","basicintro.php" ,,,1
-,"&nbsp;Hotkeys","hotkeys.php" ,,,1
-,"&nbsp;Game Information","infoindex.php",,,1
-,"&nbsp;Crusade Overview","crusades.php",,,1
-,"&nbsp;Siege Overview","siege.php",,,1
-,"&nbsp;Maps","maps.php",,,1
+,"&nbsp;Beginners &nbsp;Guide","basicintro.htm" ,,,1
+,"&nbsp;Hotkeys","hotkeys.htm" ,,,1
+,"&nbsp;Game Information","infoindex.htm",,,1
+,"&nbsp;Crusade Overview","crusades.htm",,,1
+,"&nbsp;Siege Overview","siege.htm",,,1
+,"&nbsp;Maps","maps.htm",,,1
 ])
 
 addmenu(menu=["account",,,150,1,"",style1,,"left",effect,,,,,,,,,,,,
-,"&nbsp;CREATE A NEW ACCOUNT","https://secure.ient.com/hb/signup2.php",,,1
+,"&nbsp;CREATE A NEW ACCOUNT","https://secure.ient.com/hb/signup2.htm",,,1
 ,"&nbsp;Maintenance","https://secure.ient.com/am/",,,1
-,"&nbsp;---------------------------","index.php",,,1
+,"&nbsp;---------------------------","index.htm",,,1
 
-,"&nbsp;Name Change","charnamelogin.php",,,1
-,"&nbsp;Transfer Character","CharTransfer.php",,,1
-,"&nbsp;City Move","CharCityLogin.php",,,1
-,"&nbsp;Recruit a Crusader","https://secure.ient.com/hb/affiliate.php",,,1
-,"&nbsp;Armor Sex Change","ArmorChangeLogin.php",,,1
-,"&nbsp;Rep Check","CharRepRequest.php",,,1
-,"&nbsp;Spell Removal","CharSpellRemovalLogin.php",,,1
+,"&nbsp;Name Change","charnamelogin.htm",,,1
+,"&nbsp;Transfer Character","CharTransfer.htm",,,1
+,"&nbsp;City Move","CharCityLogin.htm",,,1
+,"&nbsp;Recruit a Crusader","https://secure.ient.com/hb/affiliate.htm",,,1
+,"&nbsp;Armor Sex Change","ArmorChangeLogin.htm",,,1
+,"&nbsp;Rep Check","CharRepRequest.htm",,,1
+,"&nbsp;Spell Removal","CharSpellRemovalLogin.htm",,,1
 
-,"&nbsp;Contribution Reduction","http://www.helbreathusa.com/Cont-Reduction.php",,,1
+,"&nbsp;Contribution Reduction","https://www.apphb.com/Cont-Reduction.htm",,,1
 
-,"&nbsp;---------------------------","index.php",,,1
-,"&nbsp;Disclaimer: Account Changes","toschanges.php",,,1
+,"&nbsp;---------------------------","index.htm",,,1
+,"&nbsp;Disclaimer: Account Changes","toschanges.htm",,,1
 
 ])
 
 addmenu(menu=["artwork",,,150,1,"",style1,,"left",effect,,,,,,,,,,,,
-,"&nbsp;Wallpaper","wallpaper.php",,,1
-//,"&nbsp;Concept Art","art.php",,,1
-//,"&nbsp;Player Art","playerartwork.php",,,1
-,"&nbsp;Movies","movies.php",,,1
-,"&nbsp;Banners","banners.php",,,1
+,"&nbsp;Wallpaper","wallpaper.htm",,,1
+//,"&nbsp;Concept Art","art.htm",,,1
+//,"&nbsp;Player Art","playerartwork.htm",,,1
+,"&nbsp;Movies","movies.htm",,,1
+,"&nbsp;Banners","banners.htm",,,1
 ])
 
 addmenu(menu=["community",,,150,1,"",style1,,"left",effect,,,,,,,,,,,,
 ,"&nbsp;Forum","http://forums.hbportal.net/ target=_blank",,,1
-,"&nbsp;Screenshots","playerpics_new.php",,,1
-,"&nbsp;Events","events.php",,,1
-,"&nbsp;- EK Exchange","eventsscavhunt004.php",,,1
-,"&nbsp;- Scavenger Hunts","events-tokenExchange-Scav.php",,,1
-,"&nbsp;- Portal Tokens","events-tokenExchange-PortalTokens.php",,,1
-,"&nbsp;- Mysterious Tokens","events-mysterious-tokens.php",,,1
-,"&nbsp;Quests","quest-list.php",,,1
-,"&nbsp;Contribution Rewards","http://www.helbreathusa.com/events-quests-and-contribution.php",,,1
-,"&nbsp;Contribution Reduction","http://www.helbreathusa.com/Cont-Reduction.php",,,1
-,"&nbsp;Voting Links","bonus-vote.php",,,1
-,"&nbsp;Guilds","guilds.php",,,1
-,"&nbsp;Top 50","topfifty.php",,,1
-,"&nbsp;Race To 180","RaceTo180.php",,,1
-,"&nbsp;Top EK's","topEKs.php",,,1
-,"&nbsp;Top CP's","topcontributors.php",,,1
-,"&nbsp;Published EK Lists","http://www.helbreathusa.com/index.php?id=ek-links",,,1
-,"&nbsp;Fan Sites","fansite.php",,,1
+,"&nbsp;Screenshots","playerpics_new.htm",,,1
+,"&nbsp;Events","events.htm",,,1
+,"&nbsp;- EK Exchange","eventsscavhunt004.htm",,,1
+,"&nbsp;- Scavenger Hunts","events-tokenExchange-Scav.htm",,,1
+,"&nbsp;- Portal Tokens","events-tokenExchange-PortalTokens.htm",,,1
+,"&nbsp;- Mysterious Tokens","events-mysterious-tokens.htm",,,1
+,"&nbsp;Quests","quest-list.htm",,,1
+,"&nbsp;Contribution Rewards","https://www.apphb.com/events-quests-and-contribution.htm",,,1
+,"&nbsp;Contribution Reduction","https://www.apphb.com/Cont-Reduction.htm",,,1
+,"&nbsp;Voting Links","bonus-vote.htm",,,1
+,"&nbsp;Guilds","guilds.htm",,,1
+,"&nbsp;Top 50","topfifty.htm",,,1
+,"&nbsp;Race To 180","RaceTo180.htm",,,1
+,"&nbsp;Top EK's","topEKs.htm",,,1
+,"&nbsp;Top CP's","topcontributors.htm",,,1
+,"&nbsp;Published EK Lists","https://www.apphb.com/index.htm?id=ek-links",,,1
+,"&nbsp;Fan Sites","fansite.htm",,,1
 ])
 
 addmenu(menu=["customer",,,150,1,"",style1,,"left",effect,,,,,,,,,,,,
-,"&nbsp;Payment Methods","payment.php",,,1
-,"&nbsp;Bugs and Fixes","bugs.php",,,1
-,"&nbsp;Contact Form","contactAccounts.php",,,1
-,"&nbsp;Contact Us Details ","contactus.php",,,1
+,"&nbsp;Payment Methods","payment.htm",,,1
+,"&nbsp;Bugs and Fixes","bugs.htm",,,1
+,"&nbsp;Contact Form","contactAccounts.htm",,,1
+,"&nbsp;Contact Us Details ","contactus.htm",,,1
 
-,"&nbsp;Active GMs","activegms.php",,,1
-,"&nbsp;Need Help?","NeedHelp.php",,,1
+,"&nbsp;Active GMs","activegms.htm",,,1
+,"&nbsp;Need Help?","NeedHelp.htm",,,1
 ,"&nbsp;TIXX System","http://www.helsupport.com",,,1
-,"&nbsp;Search the Site","search.php",,,1
-,"&nbsp;News Archives","archive.php",,,1
+,"&nbsp;Search the Site","search.htm",,,1
+,"&nbsp;News Archives","archive.htm",,,1
 ])
 
 addmenu(menu=["payment",,,150,1,"",style1,,"left",effect,,,,,,,,,,,,
-,"&nbsp;Payment Methods","payment.php",,,1
-,"&nbsp;PayPal Overview","cash-shop-overview.php",,,1
-,"&nbsp;PayPal Subscriptions","cash-shop-paypal.php",,,1
-,"&nbsp;Pre-Pay Options","cash-shop-paypal-prepay.php",,,1
-,"&nbsp;Cash Shop","cash-shop.php",,,1
-,"&nbsp;Need Help?","NeedHelp.php",,,1
+,"&nbsp;Payment Methods","payment.htm",,,1
+,"&nbsp;PayPal Overview","cash-shop-overview.htm",,,1
+,"&nbsp;PayPal Subscriptions","cash-shop-paypal.htm",,,1
+,"&nbsp;Pre-Pay Options","cash-shop-paypal-prepay.htm",,,1
+,"&nbsp;Cash Shop","cash-shop.htm",,,1
+,"&nbsp;Need Help?","NeedHelp.htm",,,1
 ])
 
 addmenu(menu=["faq",,,150,1,"",style1,,"left",effect,,,,,,,,,,,,
-,"&nbsp;Frequently Asked Questions","faq.php",,,1
-,"&nbsp;Experiencing Lag?","http://www.helbreathusa.com/faq-lag.php",,,1
-,"&nbsp;---------------------------","index.php",,,1
-,"&nbsp;Help: Stuck Char.","stuck.php",,,1
+,"&nbsp;Frequently Asked Questions","faq.htm",,,1
+,"&nbsp;Experiencing Lag?","https://www.apphb.com/faq-lag.htm",,,1
+,"&nbsp;---------------------------","index.htm",,,1
+,"&nbsp;Help: Stuck Char.","stuck.htm",,,1
 ,"&nbsp;Help: TIXX System.","http://www.helsupport.com",,,1
-,"&nbsp;Help: Payment Methods","payment.php",,,1
-,"&nbsp;Help: PayPal Payment","giftvoucher.php",,,1
+,"&nbsp;Help: Payment Methods","payment.htm",,,1
+,"&nbsp;Help: PayPal Payment","giftvoucher.htm",,,1
 ])
 dumpmenus()
