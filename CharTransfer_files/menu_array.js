@@ -99,7 +99,7 @@ addmenu(menu=["guide",,,150,1,,style1,0,"left",effect,,,,,,,,,,,,
 addmenu(menu=["account",,,150,1,"",style1,,"left",effect,,,,,,,,,,,,
 ,"&nbsp;CREATE A NEW ACCOUNT","https://secure.ient.com/hb/signup2.htm",,,1
 ,"&nbsp;Maintenance","https://secure.ient.com/am/",,,1
-,"&nbsp;---------------------------","index.htm",,,1
+,"&nbsp;---------------------------","index.html",,,1
 
 ,"&nbsp;Name Change","charnamelogin.htm",,,1
 ,"&nbsp;Transfer Character","CharTransfer.htm",,,1
@@ -111,7 +111,7 @@ addmenu(menu=["account",,,150,1,"",style1,,"left",effect,,,,,,,,,,,,
 
 ,"&nbsp;Contribution Reduction","https://www.apphb.com/Cont-Reduction.htm",,,1
 
-,"&nbsp;---------------------------","index.htm",,,1
+,"&nbsp;---------------------------","index.html",,,1
 ,"&nbsp;Disclaimer: Account Changes","toschanges.htm",,,1
 
 ])
@@ -141,7 +141,7 @@ addmenu(menu=["community",,,150,1,"",style1,,"left",effect,,,,,,,,,,,,
 ,"&nbsp;Race To 180","RaceTo180.htm",,,1
 ,"&nbsp;Top EK's","topEKs.htm",,,1
 ,"&nbsp;Top CP's","topcontributors.htm",,,1
-,"&nbsp;Published EK Lists","https://www.apphb.com/index.htm?id=ek-links",,,1
+,"&nbsp;Published EK Lists","https://www.apphb.com/index.html?id=ek-links",,,1
 ,"&nbsp;Fan Sites","fansite.htm",,,1
 ])
 
@@ -170,7 +170,7 @@ addmenu(menu=["payment",,,150,1,"",style1,,"left",effect,,,,,,,,,,,,
 addmenu(menu=["faq",,,150,1,"",style1,,"left",effect,,,,,,,,,,,,
 ,"&nbsp;Frequently Asked Questions","faq.htm",,,1
 ,"&nbsp;Experiencing Lag?","https://www.apphb.com/faq-lag.htm",,,1
-,"&nbsp;---------------------------","index.htm",,,1
+,"&nbsp;---------------------------","index.html",,,1
 ,"&nbsp;Help: Stuck Char.","stuck.htm",,,1
 ,"&nbsp;Help: TIXX System.","http://www.helsupport.com",,,1
 ,"&nbsp;Help: Payment Methods","payment.htm",,,1
