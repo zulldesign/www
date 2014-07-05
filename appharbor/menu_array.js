@@ -62,7 +62,7 @@ style1,				// Properties Array - this is set higher up, as above
 ,					// Background image for menu when BGColor set to transparent.
 ,					// Scrollable Menu
 ,					// Reserved for future use
-,"Home","index.htm",,"Helbreath USA Home",1 // "Description Text", "URL", "Alternate URL", "Status", "Separator Bar"
+,"Home","index.html",,"Helbreath USA Home",1 // "Description Text", "URL", "Alternate URL", "Status", "Separator Bar"
 ,"About","show-menu=about","/storyline.htm","",1
 ,"Downloads","show-menu=downloads","downloads.htm","",1
 ,"Guides & Info","show-menu=guide","/basicintro.htm","",1
