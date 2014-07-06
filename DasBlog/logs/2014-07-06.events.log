@@ -1,3 +1,0 @@
-l2	time	2014-07-06T07:44:22	code	32000	message	<span>Application started</span>
-l2	time	2014-07-06T07:44:23	code	1120	message	<span>Report-Mailer Service Started</span>
-l2	time	2014-07-06T07:44:51	code	5001	message	<span>Audit: SecuritySuccess Login with username admin from 127.0.0.1</span>
