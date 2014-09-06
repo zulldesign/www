@@ -8,7 +8,7 @@
 	Dim queryvalue = Request.QueryString("id")
 If (IsNumeric(queryvalue)) then
         Dim query As String = "Select pagedata FROM tblpages WHERE id = " & queryvalue & ";"
-        Dim myConn As New OleDbConnection("PROVIDER=Microsoft.Jet.OLEDB.4.0;DATA SOURCE=" & dbsource & "")
+        Dim myConn As New OleDbConnection("PROVIDER=Microsoft.Jet.OLEDB.4.0;DATA SOURCE=acm2000.mdb")
         Dim myCmd As OleDbCommand = New OleDbCommand(query, myConn)
         myConn.Open()
         Dim myReader As OleDbDataReader = myCmd.ExecuteReader()
@@ -23,7 +23,7 @@ If (IsNumeric(queryvalue)) then
         MyConn = Nothing
 Else
         Dim query As String = "Select pagedata FROM tblpages WHERE homepage = 1;"
-        Dim myConn As New OleDbConnection("PROVIDER=Microsoft.Jet.OLEDB.4.0;DATA SOURCE=" & dbsource & "")
+        Dim myConn As New OleDbConnection("PROVIDER=Microsoft.Jet.OLEDB.4.0;DATA SOURCE=acm2000.mdb")
         Dim myCmd As OleDbCommand = New OleDbCommand(query, myConn)
         myConn.Open()
         Dim myReader As OleDbDataReader = myCmd.ExecuteReader()
