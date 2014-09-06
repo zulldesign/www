@@ -44,7 +44,7 @@
 	
 
 	dim newpage as integer = request.querystring("newpage")
-	if newpage = 1 then
+	if newpage = 3 then
 	  	  Dim strSQL As String = "INSERT INTO tblPages(pagename, pagedata, homepage) VALUES('*new page description*', '<html>" & vbcrlf & "<head>" & vbcrlf & "<title>Untitled</title>" & vbcrlf & vbcrlf & "</head>" & vbcrlf & "<body>" & vbcrlf & vbcrlf & vbcrlf & "</body>" & vbcrlf & "</html>', 0);"
 	  	  Dim iConn As New OleDbConnection("PROVIDER=Microsoft.Jet.OLEDB.4.0;DATA SOURCE=" & dbsource)
     	  Dim iCmd As New OleDbCommand(strSQL, iconn)
@@ -83,7 +83,7 @@
 </script>
 <body style="font-family: Arial, Helvetica, sans-serif;">
 <h3 class="myfont" title="visit www.basic-cms.com for updates">Basic CMS - Page Management</h3>
-<p><a href="list.aspx?newpage=0" title="click here to create a new page">Create New Page</a></p>
+<p><a href="list.aspx?newpage=3" title="click here to create a new page">Create New Page</a></p>
 <asp:Repeater id="tblpages" runat="server">
 <HeaderTemplate>
 <table border="1" cellspacing="0" cellpadding="4" bordercolor="#000000" class="myfont">
@@ -131,7 +131,7 @@
 
 <asp:Label Id="lblhelp" RunAt="server" class="myfont" Text="<p><strong>Page Name:</strong> The page description</p><p><strong>Default:</strong> 1=default, or start page. Click to set.</p><p><strong>URL:</strong> To link to this page, use this location.</p><p><strong>Edit:</strong> Click Edit to edit the page.</p><p><strong>Delete:</strong> Click Delete to delete the page.</p>" />
 
-<p><small><a href="http://www.basic-cms.com" title="basic content management" target="_blank">powered by basic-cms</a></small></p>
+<p><small><a href="http://www.basic-cms.com" title="basic content management" target="_blank">powered by asic-cms</a></small></p>
 
 </body>
 </html>
