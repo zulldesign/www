@@ -1,4 +1,4 @@
-<%@ Page Language="vb" Debug=false %>
+<%@ Page Language="vb" Debug=true %>
 <%@ import Namespace="System.Data.OLEDB" %>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
@@ -83,7 +83,7 @@
 </script>
 <body style="font-family: Arial, Helvetica, sans-serif;">
 <h3 class="myfont" title="visit www.basic-cms.com for updates">Basic CMS - Page Management</h3>
-<p><a href="list.aspx?newpage=1" title="click here to create a new page">Create New Page</a></p>
+<p><a href="list.aspx?newpage=0" title="click here to create a new page">Create New Page</a></p>
 <asp:Repeater id="tblpages" runat="server">
 <HeaderTemplate>
 <table border="1" cellspacing="0" cellpadding="4" bordercolor="#000000" class="myfont">
