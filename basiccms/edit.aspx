@@ -24,7 +24,7 @@ if Page.IsPostBack then
 	  	pagedataupdate = replace(pagedataupdate,"'", "''")
 	  
       Dim strSQL As String = "UPDATE tblPages SET pagedata = '" & pagedataupdate & "', pagename = '" & pagenameupdate & "' where ID = " & queryvalue & ";"
-	  Dim myConn As New OleDbConnection("PROVIDER=Microsoft.Jet.OLEDB.4.0;DATA SOURCE=" & dbsource & "")
+	  Dim myConn As New OleDbConnection("PROVIDER=Microsoft.Jet.OLEDB.4.0;DATA SOURCE=acm2000.mdb")
       Dim Cmd As New OleDbCommand(strSQL, Myconn)
         MyConn.Open()
         Cmd.ExecuteReader()
@@ -34,7 +34,7 @@ end if
 
 If (IsNumeric(queryvalue)) then
       Dim query As String = "Select pagedata, pagename FROM tblpages WHERE id = " & queryvalue & ";"
-      Dim myConn As New OleDbConnection("PROVIDER=Microsoft.Jet.OLEDB.4.0;DATA SOURCE=" & dbsource & "")
+      Dim myConn As New OleDbConnection("PROVIDER=Microsoft.Jet.OLEDB.4.0;DATA SOURCE=acm2000.mdb")
       Dim myCmd As OleDbCommand = New OleDbCommand(query, myConn)
       myConn.Open()
       Dim myReader As OleDbDataReader = myCmd.ExecuteReader()
