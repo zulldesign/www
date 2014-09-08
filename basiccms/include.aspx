@@ -2,7 +2,7 @@
 dim dbsource as string = Server.MapPath("/App_Data/acm2000.mdb")
 dim user as string = "admin"
 dim pass as string = "ZZuuLL$$99"
-dim uploadpath as string = server.MapPath("images\") '"
+dim uploadpath as string = server.MapPath("/images/") '"
 </script>
 
 
