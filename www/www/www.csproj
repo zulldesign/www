@@ -183,6 +183,7 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LamanSeniController.cs" />
     <Compile Include="Controllers\MoviesController.cs" />
     <Compile Include="Controllers\MvcController.cs" />
     <Compile Include="Controllers\TutorialsController.cs" />
@@ -252,6 +253,34 @@
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <None Include="Scripts\jquery-1.8.2.intellisense.js" />
+    <Content Include="Images\design_studio_template_1109\body_bg.gif" />
+    <Content Include="Images\design_studio_template_1109\body_bg.png" />
+    <Content Include="Images\design_studio_template_1109\body_t.gif" />
+    <Content Include="Images\design_studio_template_1109\body_t.png" />
+    <Content Include="Images\design_studio_template_1109\box_b.gif" />
+    <Content Include="Images\design_studio_template_1109\box_bg.gif" />
+    <Content Include="Images\design_studio_template_1109\box_t.gif" />
+    <Content Include="Images\design_studio_template_1109\btn_learn_more.gif" />
+    <Content Include="Images\design_studio_template_1109\btn_more.gif" />
+    <Content Include="Images\design_studio_template_1109\btn_zoom.gif" />
+    <Content Include="Images\design_studio_template_1109\footer.gif" />
+    <Content Include="Images\design_studio_template_1109\footer_ie.gif" />
+    <Content Include="Images\design_studio_template_1109\logo.gif" />
+    <Content Include="Images\design_studio_template_1109\menu_1.gif" />
+    <Content Include="Images\design_studio_template_1109\menu_2.gif" />
+    <Content Include="Images\design_studio_template_1109\menu_3.gif" />
+    <Content Include="Images\design_studio_template_1109\menu_4.gif" />
+    <Content Include="Images\design_studio_template_1109\menu_5.gif" />
+    <Content Include="Images\design_studio_template_1109\page_bg.gif" />
+    <Content Include="Images\design_studio_template_1109\paper_b.gif" />
+    <Content Include="Images\design_studio_template_1109\paper_bg.gif" />
+    <Content Include="Images\design_studio_template_1109\picture_1.jpg" />
+    <Content Include="Images\design_studio_template_1109\picture_2.jpg" />
+    <Content Include="Images\design_studio_template_1109\picture_3.jpg" />
+    <Content Include="Images\design_studio_template_1109\style.css" />
+    <Content Include="Images\design_studio_template_1109\title_latest_designs.gif" />
+    <Content Include="Images\design_studio_template_1109\title_latest_news.gif" />
+    <Content Include="Images\design_studio_template_1109\title_main_page.gif" />
     <Content Include="Scripts\jquery-1.8.2.js" />
     <Content Include="Scripts\jquery-1.8.2.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
@@ -316,6 +345,7 @@
     <Content Include="Views\Movies\Create.cshtml" />
     <Content Include="Views\Movies\Edit.cshtml" />
     <Content Include="Views\Movies\Delete.cshtml" />
+    <Content Include="Views\LamanSeni\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
