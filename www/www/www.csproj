@@ -345,6 +345,10 @@
     <Content Include="Views\Movies\Delete.cshtml" />
     <Content Include="Views\LamanSeni\Index.cshtml" />
     <Content Include="Views\Movies\SearchIndex.cshtml" />
+    <Content Include="Views\Home\Students.cshtml" />
+    <Content Include="Views\Home\Courses.cshtml" />
+    <Content Include="Views\Home\Instructors.cshtml" />
+    <Content Include="Views\Home\Departments.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

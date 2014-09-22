@@ -22,10 +22,11 @@
                         <ul id="menu">
                             <li>@Html.ActionLink("Home", "Index", "Home")</li>
                             <li>@Html.ActionLink("About", "About", "Home")</li>
-                            <li>@Html.ActionLink("Students", "Index", "Student")</li>
-                            <li>@Html.ActionLink("Courses", "Index", "Course")</li>
-                            <li>@Html.ActionLink("Instructors", "Index", "Instructor")</li>
-                            <li>@Html.ActionLink("Departments", "Index", "Department")</li>
+                            <li>@Html.ActionLink("Students", "Students", "Home")</li>
+                            <li>@Html.ActionLink("Courses", "Courses", "Home")</li>
+                            <li>@Html.ActionLink("Instructors", "Instructors", "Home")</li>
+                            <li>@Html.ActionLink("Departments", "Departments", "Home")</li>
+                            <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
                         </ul>
                     </nav>
                 </div>
@@ -40,7 +41,7 @@
         <footer>
             <div class="content-wrapper">
                 <div class="float-left">
-                    <p>&copy; @DateTime.Now.Year - APPHB</p>
+                    <p>&copy; @DateTime.Now.Year - My ASP.NET MVC Application</p>
                 </div>
             </div>
         </footer>
