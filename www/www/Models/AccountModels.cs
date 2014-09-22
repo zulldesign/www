@@ -11,7 +11,7 @@ namespace www.Models
     public class UsersContext : DbContext
     {
         public UsersContext()
-            : base("MovieDBContext")
+            : base("DefaultConnection")
         {
         }
 
