@@ -7,7 +7,7 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{10F87F92-17AF-4F6C-AFB5-A7551492B467}</ProjectGuid>
+    <ProjectGuid>{CDF71D0F-C11D-46E4-9BA8-E5EECB3AAE4A}</ProjectGuid>
     <ProjectTypeGuids>{E3E379DF-F4C6-4180-9B81-6769533ABE47};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -16,10 +16,10 @@
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <MvcBuildViews>false</MvcBuildViews>
     <UseIISExpress>true</UseIISExpress>
-    <IISExpressSSLPort>44300</IISExpressSSLPort>
-    <IISExpressAnonymousAuthentication>enabled</IISExpressAnonymousAuthentication>
-    <IISExpressWindowsAuthentication>disabled</IISExpressWindowsAuthentication>
-    <IISExpressUseClassicPipelineMode>false</IISExpressUseClassicPipelineMode>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -183,14 +183,15 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\LamanSeniController.cs" />
     <Compile Include="Controllers\MoviesController.cs" />
+    <Compile Include="Controllers\PaypalController.cs" />
     <Compile Include="Filters\InitializeSimpleMembershipAttribute.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountModels.cs" />
     <Compile Include="Models\Movie.cs" />
+    <Compile Include="Models\PayPalModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -255,34 +256,6 @@
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <None Include="Scripts\jquery-1.8.2.intellisense.js" />
-    <Content Include="Images\design_studio_template_1109\body_bg.gif" />
-    <Content Include="Images\design_studio_template_1109\body_bg.png" />
-    <Content Include="Images\design_studio_template_1109\body_t.gif" />
-    <Content Include="Images\design_studio_template_1109\body_t.png" />
-    <Content Include="Images\design_studio_template_1109\box_b.gif" />
-    <Content Include="Images\design_studio_template_1109\box_bg.gif" />
-    <Content Include="Images\design_studio_template_1109\box_t.gif" />
-    <Content Include="Images\design_studio_template_1109\btn_learn_more.gif" />
-    <Content Include="Images\design_studio_template_1109\btn_more.gif" />
-    <Content Include="Images\design_studio_template_1109\btn_zoom.gif" />
-    <Content Include="Images\design_studio_template_1109\footer.gif" />
-    <Content Include="Images\design_studio_template_1109\footer_ie.gif" />
-    <Content Include="Images\design_studio_template_1109\logo.gif" />
-    <Content Include="Images\design_studio_template_1109\menu_1.gif" />
-    <Content Include="Images\design_studio_template_1109\menu_2.gif" />
-    <Content Include="Images\design_studio_template_1109\menu_3.gif" />
-    <Content Include="Images\design_studio_template_1109\menu_4.gif" />
-    <Content Include="Images\design_studio_template_1109\menu_5.gif" />
-    <Content Include="Images\design_studio_template_1109\page_bg.gif" />
-    <Content Include="Images\design_studio_template_1109\paper_b.gif" />
-    <Content Include="Images\design_studio_template_1109\paper_bg.gif" />
-    <Content Include="Images\design_studio_template_1109\picture_1.jpg" />
-    <Content Include="Images\design_studio_template_1109\picture_2.jpg" />
-    <Content Include="Images\design_studio_template_1109\picture_3.jpg" />
-    <Content Include="Images\design_studio_template_1109\style.css" />
-    <Content Include="Images\design_studio_template_1109\title_latest_designs.gif" />
-    <Content Include="Images\design_studio_template_1109\title_latest_news.gif" />
-    <Content Include="Images\design_studio_template_1109\title_main_page.gif" />
     <Content Include="Scripts\jquery-1.8.2.js" />
     <Content Include="Scripts\jquery-1.8.2.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
@@ -297,9 +270,7 @@
     <Content Include="Scripts\knockout-2.2.0.debug.js" />
     <Content Include="Scripts\knockout-2.2.0.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
-    <Content Include="Web.config">
-      <SubType>Designer</SubType>
-    </Content>
+    <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -338,13 +309,16 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Web.config" />
+    <Content Include="Views\PayPal\NotifyFromPaypal.cshtml" />
+    <Content Include="Views\PayPal\CancelFromPaypal.cshtml" />
+    <Content Include="Views\PayPal\RedirectFromPaypal.cshtml" />
+    <Content Include="Views\PayPal\ValidateCommand.cshtml" />
+    <Content Include="Views\PayPal\Index.cshtml" />
     <Content Include="Views\Movies\Index.cshtml" />
     <Content Include="Views\Movies\Details.cshtml" />
     <Content Include="Views\Movies\Create.cshtml" />
     <Content Include="Views\Movies\Edit.cshtml" />
     <Content Include="Views\Movies\Delete.cshtml" />
-    <Content Include="Views\LamanSeni\Index.cshtml" />
-    <Content Include="Views\Movies\SearchIndex.cshtml" />
     <Content Include="Views\Home\Students.cshtml" />
     <Content Include="Views\Home\Courses.cshtml" />
     <Content Include="Views\Home\Instructors.cshtml" />
@@ -370,9 +344,9 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>1709</DevelopmentServerPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:2020/</IISUrl>
+          <IISUrl>http://localhost:5064/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
