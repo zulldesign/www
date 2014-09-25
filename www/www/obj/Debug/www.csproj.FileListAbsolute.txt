@@ -1,4 +1,3 @@
-c:\users\user\documents\visual studio 2012\Projects\www\www\obj\Debug\www.csprojResolveAssemblyReference.cache
 c:\users\user\documents\visual studio 2012\Projects\www\www\bin\www.dll
 c:\users\user\documents\visual studio 2012\Projects\www\www\bin\www.pdb
 c:\users\user\documents\visual studio 2012\Projects\www\www\bin\Antlr3.Runtime.dll
@@ -81,5 +80,6 @@ c:\users\user\documents\visual studio 2012\Projects\www\www\bin\ko\System.Spatia
 c:\users\user\documents\visual studio 2012\Projects\www\www\bin\ru\System.Spatial.resources.dll
 c:\users\user\documents\visual studio 2012\Projects\www\www\bin\zh-Hans\System.Spatial.resources.dll
 c:\users\user\documents\visual studio 2012\Projects\www\www\bin\zh-Hant\System.Spatial.resources.dll
+c:\users\user\documents\visual studio 2012\Projects\www\www\obj\Debug\www.csprojResolveAssemblyReference.cache
 c:\users\user\documents\visual studio 2012\Projects\www\www\obj\Debug\www.dll
 c:\users\user\documents\visual studio 2012\Projects\www\www\obj\Debug\www.pdb

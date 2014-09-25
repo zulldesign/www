@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Data.Entity;
 
-namespace www.Models
+namespace MvcMovie.Models
 {
     public class Movie
     {

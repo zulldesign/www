@@ -22,34 +22,6 @@ namespace www.Controllers
             return View();
         }
 
-        public ActionResult Students()
-        {
-            ViewBag.Message = "Welcome to APPHB.";
-
-            return View();
-        }
-
-        public ActionResult Courses()
-        {
-            ViewBag.Message = "Welcome to APPHB.";
-
-            return View();
-        }
-
-        public ActionResult Instructors()
-        {
-            ViewBag.Message = "Welcome to APPHB.";
-
-            return View();
-        }
-
-        public ActionResult Departments()
-        {
-            ViewBag.Message = "Welcome to APPHB.";
-
-            return View();
-        }
-
         public ActionResult Contact()
         {
             ViewBag.Message = "Your contact page.";

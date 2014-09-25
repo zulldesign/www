@@ -5,7 +5,7 @@ using System.Data.Entity;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using www.Models;
+using MvcMovie.Models;
 
 namespace www.Controllers
 {
