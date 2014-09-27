@@ -1,5 +1,0 @@
-<%
-
-Response.Write Server.MapPath("/")
-
-%>
