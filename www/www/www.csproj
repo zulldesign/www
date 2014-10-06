@@ -144,6 +144,7 @@
     <Compile Include="Models\MyAppUser.cs" />
     <Compile Include="Models\FacebookPicture.cs" />
     <Compile Include="Models\FacebookPhoto.cs" />
+    <Compile Include="Models\PaypalModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -242,6 +243,10 @@
     <Content Include="Views\Paypal\Index.cshtml" />
     <Content Include="Views\apphb\Index.cshtml" />
     <Content Include="Views\apphb\Product.cshtml" />
+    <Content Include="Views\Paypal\ValidateCommand.cshtml" />
+    <Content Include="Views\Paypal\RedirectFromPaypal.cshtml" />
+    <Content Include="Views\Paypal\CancelFromPaypal.cshtml" />
+    <Content Include="Views\Paypal\NotifyFromPaypal.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
