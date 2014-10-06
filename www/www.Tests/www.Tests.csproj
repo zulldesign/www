@@ -6,7 +6,7 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{246543CC-3414-430E-95C9-39040315E350}</ProjectGuid>
+    <ProjectGuid>{B8C184D5-2E3B-427E-8E24-CB816E981780}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>www.Tests</RootNamespace>
@@ -107,7 +107,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\www\www.csproj">
-      <Project>{99AFA871-209D-4167-AF2C-D903FE55CC34}</Project>
+      <Project>{58F52ABC-D491-4314-B571-40341C779954}</Project>
       <Name>www</Name>
     </ProjectReference>
   </ItemGroup>
