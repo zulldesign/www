@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<publishData>
+  <publishProfile publishUrl="ftp://www.prakash.somee.com" deleteExistingFiles="False" ftpAnonymousLogin="False" ftpPassiveMode="False" msdeploySite="user112.webmatrix2.discountasp.net" msdeploySiteID="" msdeployRemoteSitePhysicalPath="" msdeployAllowUntrustedCertificate="True" msdeploySkipExtraFilesOnServer="True" msdeployMarkAsApp="True" profileName="Profile1" publishMethod="FTP" replaceMatchingFiles="True" userName="pramuk97" savePWD="True" userPWD="AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAArA/v7/4Rlk6GQeRptdKNhwAAAAACAAAAAAAQZgAAAAEAACAAAAAPuXVNSEC2XPJBb2cfReDZs4VtmLmnX2uuFBXegO8z+QAAAAAOgAAAAAIAACAAAAB86C+xoOZHGUNV4WlrAd4P/nTBaqhM1MbpOsDfQXpTWCAAAADiAVGWU4Ms3s1ROEEKFGdFbw4Z6fz7opYNNW/TBX9STUAAAACJ1BzRNeqBOpbGw3MuS6yRCibbSf3rq601yb2LT9SRFOvHahA2ZTEFzqxRT6daWre1pBjOtskgiBdsZIyx6fvH" SelectedForPublish="True">
+    <file relUrl="AdminEntry.aspx" publishTime="09/09/2011 16:31:49" />
+    <file relUrl="WebForm3.aspx" publishTime="09/05/2011 05:15:19" />
+    <file relUrl="XMLFile1.xml" publishTime="09/09/2011 16:00:31" />
+    <file relUrl="Web.config" publishTime="09/15/2011 17:10:13" />
+    <file relUrl="WebForm2.aspx" publishTime="09/05/2011 05:39:18" />
+    <file relUrl="cCart.aspx" publishTime="09/05/2011 11:48:19" />
+    <file relUrl="Site1.Master" publishTime="09/15/2011 15:57:37" />
+    <file relUrl="default.aspx" publishTime="09/09/2011 08:38:58" />
+    <file relUrl="contact.aspx" publishTime="09/09/2011 08:50:23" />
+    <file relUrl="error.aspx" publishTime="09/09/2011 15:57:53" />
+    <file relUrl="car.aspx" publishTime="09/09/2011 16:52:36" />
+    <file relUrl="laptop.aspx" publishTime="09/09/2011 09:02:04" />
+    <file relUrl="productDetail.aspx" publishTime="09/05/2011 11:21:19" />
+    <file relUrl="mobile.aspx" publishTime="09/09/2011 15:50:13" />
+    <file relUrl="login.aspx" publishTime="09/02/2011 05:11:57" />
+  </publishProfile>
+</publishData>

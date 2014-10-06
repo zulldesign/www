@@ -1,12 +1,7 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyProject", "MyProject\MyProject.csproj", "{D0905A2B-0346-4338-8355-7EA0A77ABA26}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{56A2B9C4-AB5A-48C7-B9A9-35FF7BA5978B}"
-	ProjectSection(SolutionItems) = preProject
-		..\..\..\APPDATA\LOCAL\MICROSOFT\VISUALSTUDIO\11.0\EXTENSIONS\FERX1PSS.EIC\description.html = ..\..\..\APPDATA\LOCAL\MICROSOFT\VISUALSTUDIO\11.0\EXTENSIONS\FERX1PSS.EIC\description.html
-	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
