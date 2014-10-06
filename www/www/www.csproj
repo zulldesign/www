@@ -136,6 +136,7 @@
     <Compile Include="Controllers\apphbController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\PaypalController.cs" />
+    <Compile Include="Controllers\ProductController.cs" />
     <Compile Include="Controllers\UserRealtimeUpdateController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -206,7 +207,33 @@
     <Content Include="Images\arrow.png" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
+    <Content Include="lightbox\css\lightbox.css" />
+    <Content Include="lightbox\css\screen.css" />
+    <Content Include="lightbox\img\close.png" />
+    <Content Include="lightbox\img\demopage\favicon.png" />
+    <Content Include="lightbox\img\demopage\image-1.jpg" />
+    <Content Include="lightbox\img\demopage\image-2.jpg" />
+    <Content Include="lightbox\img\demopage\image-3.jpg" />
+    <Content Include="lightbox\img\demopage\image-4.jpg" />
+    <Content Include="lightbox\img\demopage\image-5.jpg" />
+    <Content Include="lightbox\img\demopage\image-6.jpg" />
+    <Content Include="lightbox\img\demopage\thumb-1.jpg" />
+    <Content Include="lightbox\img\demopage\thumb-2.jpg" />
+    <Content Include="lightbox\img\demopage\thumb-3.jpg" />
+    <Content Include="lightbox\img\demopage\thumb-4.jpg" />
+    <Content Include="lightbox\img\demopage\thumb-5.jpg" />
+    <Content Include="lightbox\img\demopage\thumb-6.jpg" />
+    <Content Include="lightbox\img\loading.gif" />
+    <Content Include="lightbox\img\next.png" />
+    <Content Include="lightbox\img\prev.png" />
+    <Content Include="lightbox\js\jquery-1.11.0.min.js" />
+    <Content Include="lightbox\js\lightbox.js" />
+    <Content Include="lightbox\js\lightbox.min.js" />
     <Content Include="packages.config" />
+    <Content Include="lightbox\js\.DS_Store" />
+    <Content Include="lightbox\js\jquery-1.11.0.min.map" />
+    <Content Include="lightbox\js\lightbox.min.map" />
+    <Content Include="lightbox\img\demopage\.DS_Store" />
     <None Include="readme.txt" />
     <None Include="Scripts\jquery-1.8.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.8.2.js" />
@@ -247,6 +274,7 @@
     <Content Include="Views\Paypal\RedirectFromPaypal.cshtml" />
     <Content Include="Views\Paypal\CancelFromPaypal.cshtml" />
     <Content Include="Views\Paypal\NotifyFromPaypal.cshtml" />
+    <Content Include="Views\Product\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
