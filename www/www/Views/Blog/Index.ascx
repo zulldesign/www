@@ -23,6 +23,7 @@
 			data-name="Buy now!"
 			data-amount="1.00"
 			data-size="small"
+			data-currency="MYR"
 			data-callback="http://example.com/callback"
 		></script>
 	</div>
@@ -35,6 +36,7 @@
 			data-name="Buy now!"
 			data-amount="1.00"
 			data-size="medium"
+			data-currency="MYR"
 		></script>
 	</div>
 	<script src="/Images/JavaScriptButtons/test/functional/lib/require.js" data-main="lib/runner"></script>
