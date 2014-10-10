@@ -18,5 +18,13 @@
 			}
 		});
 	</script>
+	simpleCart({
+		checkout: { 
+			type: "PayPal" , 
+			email: "admin@zulldesign.ml" 
+		},
+		tax: 		0.075,
+		currency: 	"MYR"
+	});
 
 
