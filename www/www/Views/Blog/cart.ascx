@@ -1,4 +1,6 @@
-﻿<!DOCTYPE html>  
+﻿<%@ Control Language="VB" Inherits="System.Web.Mvc.ViewUserControl" %>
+
+<!DOCTYPE html>  
 <html>  
 <head>  
 	<title>simpleCart(js) QUnit Test Suite</title>  
@@ -117,3 +119,4 @@
 	<script type="text/javascript" src="/Images/simplecart/test/test.core.js"></script>  
 </body>  
 </html>
+

@@ -269,6 +269,7 @@
     <Content Include="Images\simplecart\test\inc\qunit.js" />
     <Content Include="Images\simplecart\test\index.html" />
     <Content Include="Images\simplecart\test\test.core.js" />
+    <Content Include="Views\Blog\cart.ascx" />
     <Content Include="Views\Blog\Index.ascx" />
     <Content Include="Views\Blog\upload.ascx" />
     <Content Include="Views\Paypal\Index.vbhtml" />

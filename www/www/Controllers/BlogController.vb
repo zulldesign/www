@@ -16,4 +16,8 @@
         Return View()
     End Function
 
+    Function cart() As ActionResult
+        Return View()
+    End Function
+
 End Class
