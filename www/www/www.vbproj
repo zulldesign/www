@@ -206,6 +206,7 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <Content Include="Views\Blog\Index.ascx" />
+    <Content Include="Views\Blog\upload.ascx" />
     <Content Include="Views\Paypal\Index.vbhtml" />
   </ItemGroup>
   <ItemGroup>

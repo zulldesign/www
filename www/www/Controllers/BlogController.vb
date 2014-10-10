@@ -8,4 +8,8 @@
         Return View()
     End Function
 
+    Function upload() As ActionResult
+        Return View()
+    End Function
+
 End Class
