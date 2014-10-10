@@ -7,7 +7,6 @@
 <p>My <b>trip</b> to the mountains was quite fun.</p>
 <p>Here is a picture of the mountain!</p>
 <p><img src="/Images/mountain-trip.jpg" title="mountain sample" border="1"></p>
-<p><a href="default.aspx" title="home">Home</p>
 
 <!DOCTYPE html>
 <html>
