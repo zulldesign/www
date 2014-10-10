@@ -1,8 +1,0 @@
-/*!
- * <%= pkg.name %>
- * <%= pkg.description %>
- *
- * @version <%= pkg.version %>
- * @url <%= pkg.homepage %>
- * @license <%= pkg.licenses[0].type %> <<%= pkg.licenses[0].url %>>
- */
