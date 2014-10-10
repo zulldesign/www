@@ -272,6 +272,7 @@
     <Content Include="Views\Blog\Index.ascx" />
     <Content Include="Views\Blog\upload.ascx" />
     <Content Include="Views\Paypal\Index.vbhtml" />
+    <Content Include="Views\Blog\simplecart.vbhtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />

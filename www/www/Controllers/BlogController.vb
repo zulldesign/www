@@ -12,4 +12,8 @@
         Return View()
     End Function
 
+    Function simplecart() As ActionResult
+        Return View()
+    End Function
+
 End Class
