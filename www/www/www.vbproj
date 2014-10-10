@@ -196,11 +196,60 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Images\JavaScriptButtons\.gitignore" />
+    <Content Include="Images\JavaScriptButtons\dist\button.js" />
+    <Content Include="Images\JavaScriptButtons\Gruntfile.js" />
+    <Content Include="Images\JavaScriptButtons\src\button.js" />
+    <Content Include="Images\JavaScriptButtons\src\constants.js" />
+    <Content Include="Images\JavaScriptButtons\src\factory.js" />
+    <Content Include="Images\JavaScriptButtons\src\form.js" />
+    <Content Include="Images\JavaScriptButtons\src\index.js" />
+    <Content Include="Images\JavaScriptButtons\src\qr.js" />
+    <Content Include="Images\JavaScriptButtons\src\theme\button.html" />
+    <Content Include="Images\JavaScriptButtons\src\theme\css\index.css" />
+    <Content Include="Images\JavaScriptButtons\src\theme\form.html" />
+    <Content Include="Images\JavaScriptButtons\src\theme\images\logo.png" />
+    <Content Include="Images\JavaScriptButtons\src\theme\images\wordmark_primary.png" />
+    <Content Include="Images\JavaScriptButtons\src\theme\images\wordmark_secondary.png" />
+    <Content Include="Images\JavaScriptButtons\src\theme\qr.html" />
+    <Content Include="Images\JavaScriptButtons\src\util\datastore.js" />
+    <Content Include="Images\JavaScriptButtons\src\util\template.js" />
+    <Content Include="Images\JavaScriptButtons\tasks\browserify.js" />
+    <Content Include="Images\JavaScriptButtons\tasks\content.js" />
+    <Content Include="Images\JavaScriptButtons\tasks\css.js" />
+    <Content Include="Images\JavaScriptButtons\tasks\eslint.js" />
+    <Content Include="Images\JavaScriptButtons\tasks\images.js" />
+    <Content Include="Images\JavaScriptButtons\tasks\jshint.js" />
+    <Content Include="Images\JavaScriptButtons\tasks\mocha_istanbul.js" />
+    <Content Include="Images\JavaScriptButtons\tasks\pkg.js" />
+    <Content Include="Images\JavaScriptButtons\tasks\templates.js" />
+    <Content Include="Images\JavaScriptButtons\tasks\uglify.js" />
+    <Content Include="Images\JavaScriptButtons\tasks\usebanner.js" />
+    <Content Include="Images\JavaScriptButtons\tasks\watch.js" />
+    <Content Include="Images\JavaScriptButtons\test\functional\index.html" />
+    <Content Include="Images\JavaScriptButtons\test\functional\lib\require.js" />
+    <Content Include="Images\JavaScriptButtons\test\functional\lib\runner.js" />
+    <Content Include="Images\JavaScriptButtons\test\functional\spec\test.js" />
+    <Content Include="Images\JavaScriptButtons\test\unit\util\datastore.js" />
     <Content Include="Images\simplecart\README.md" />
     <Content Include="Images\simplecart\test\core.html" />
     <Content Include="Images\simplecart\test\core.min.html" />
     <Content Include="Images\simplecart\test\e.png" />
     <Content Include="Images\simplecart\test\inc\get-raw-javascript.php" />
+    <Content Include="Images\JavaScriptButtons\.banner" />
+    <Content Include="Images\JavaScriptButtons\.editorconfig" />
+    <Content Include="Images\JavaScriptButtons\.jshintrc" />
+    <Content Include="Images\JavaScriptButtons\.travis.yml" />
+    <Content Include="Images\JavaScriptButtons\bower.json" />
+    <Content Include="Images\JavaScriptButtons\CONTRIBUTING.md" />
+    <Content Include="Images\JavaScriptButtons\eslint.json" />
+    <Content Include="Images\JavaScriptButtons\LICENSE.md" />
+    <Content Include="Images\JavaScriptButtons\package.json" />
+    <Content Include="Images\JavaScriptButtons\README.md" />
+    <Content Include="Images\JavaScriptButtons\locales\US\en\button.properties" />
+    <Content Include="Images\JavaScriptButtons\locales\US\es\button.properties" />
+    <Content Include="Images\JavaScriptButtons\locales\US\fr\button.properties" />
+    <Content Include="Images\JavaScriptButtons\locales\US\zh\button.properties" />
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
@@ -320,6 +369,29 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Images\JavaScriptButtons\locales\AU\" />
+    <Folder Include="Images\JavaScriptButtons\locales\BR\" />
+    <Folder Include="Images\JavaScriptButtons\locales\CA\" />
+    <Folder Include="Images\JavaScriptButtons\locales\CN\" />
+    <Folder Include="Images\JavaScriptButtons\locales\DE\" />
+    <Folder Include="Images\JavaScriptButtons\locales\DK\" />
+    <Folder Include="Images\JavaScriptButtons\locales\ES\" />
+    <Folder Include="Images\JavaScriptButtons\locales\FR\" />
+    <Folder Include="Images\JavaScriptButtons\locales\GB\" />
+    <Folder Include="Images\JavaScriptButtons\locales\HK\" />
+    <Folder Include="Images\JavaScriptButtons\locales\ID\" />
+    <Folder Include="Images\JavaScriptButtons\locales\IL\" />
+    <Folder Include="Images\JavaScriptButtons\locales\IT\" />
+    <Folder Include="Images\JavaScriptButtons\locales\JP\" />
+    <Folder Include="Images\JavaScriptButtons\locales\NL\" />
+    <Folder Include="Images\JavaScriptButtons\locales\NO\" />
+    <Folder Include="Images\JavaScriptButtons\locales\PL\" />
+    <Folder Include="Images\JavaScriptButtons\locales\PT\" />
+    <Folder Include="Images\JavaScriptButtons\locales\RU\" />
+    <Folder Include="Images\JavaScriptButtons\locales\SE\" />
+    <Folder Include="Images\JavaScriptButtons\locales\TH\" />
+    <Folder Include="Images\JavaScriptButtons\locales\TR\" />
+    <Folder Include="Images\JavaScriptButtons\locales\TW\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

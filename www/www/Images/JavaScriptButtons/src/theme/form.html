@@ -1,0 +1,43 @@
+<form method="post" action="<%= url %>" target="_top">
+	<% var optionIdx = 0; %>
+
+	<% for (var key in data) { %>
+		<% 
+			var item = data[key];
+			var renderable = (item.editable || item.value instanceof Array);
+		%>
+
+		<% if (renderable) { %>
+		
+			<p class="paypal-group">
+				<label class="paypal-label">
+					<%= item.label || content[key] || key %>
+				
+					<% if (item.value instanceof Array) { %>
+
+						<select class="paypal-select" name="os<%= optionIdx %>">
+							<% for (var i = 0, len = item.value.length; i < len; i++) { %>
+								<% var option = item.value[i].split(':') %>
+								<option value="<%= option[0] %>"><%= option.join(' ') %></option>
+							<% } %>
+						</select>
+						<input type="hidden" name="on<%= optionIdx %>" value="<%= item.label %>">
+						<% ++optionIdx; %>
+
+					<% } else { %>
+					
+						<input type="text" id="<%= key %>" name="<%= key %>" value="<%= item.value %>" class="paypal-input" />
+					
+					<% } %>
+				</label>
+			</p>
+
+		<% } else { %>
+
+			<input type="hidden" name="<%= key %>" value="<%= item.value %>" />
+
+		<% } %>
+	<% } %>
+
+	<%- button %>
+</form>

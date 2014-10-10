@@ -1,0 +1,32 @@
+{
+  "name": "paypaljsbuttons",
+  "version": "2.0.0",
+  "homepage": "https://github.com/paypal/JavaScriptButtons",
+  "authors": [
+    "Jeff Harrell"
+  ],
+  "description": "JavaScript integration for PayPal's payment buttons",
+  "main": "dist/paypal-button.min.js",
+  "moduleType": [
+    "globals"
+  ],
+  "keywords": [
+    "paypal",
+    "paypal",
+    "buttons",
+    "credit",
+    "card",
+    "payment",
+    "payments",
+    "ecommerce",
+    "javascriptbuttons",
+    "jsbuttons"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
