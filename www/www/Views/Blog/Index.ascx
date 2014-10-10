@@ -1,5 +1,5 @@
 ﻿<%@ Control Language="VB" Inherits="System.Web.Mvc.ViewUserControl" %>
-
+<base target="main">
 <title>My trip to the mountains</title>
 <body style="font-family: Verdana, Geneva, Arial, Helvetica, sans-serif; color: black;">
 <h1 style="color: steelblue;">Mountain</h1>
