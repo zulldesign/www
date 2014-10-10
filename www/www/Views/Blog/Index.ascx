@@ -9,4 +9,14 @@
 <p><img src="/Images/mountain-trip.jpg" title="mountain sample" border="1"></p>
 <p><a href="default.aspx" title="home">Home</p>
 
+	<script src="/simplecart/simpleCart.js"></script>
+	<script>
+		simpleCart({
+			checkout: {
+				type: "PayPal",
+				email: "admin@zulldesign.ml"
+			}
+		});
+	</script>
+
 
