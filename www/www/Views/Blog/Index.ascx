@@ -17,7 +17,7 @@
 
 	<div id="buynow-sm">
 		<h2>Buy Now (Small)</h2>
-		<script async src="/Images/JavaScriptButtons/dist/button.js?merchant=6XF3MPZBZV6HU"
+		<script async src="/Images/JavaScriptButtons/dist/button.js?merchant=Z5BU82XPS8KDC"
 			data-button="buynow"
 			data-type="form"
 			data-name="Buy now!"
@@ -29,7 +29,7 @@
 
 	<div id="buynow-md">
 		<h2>Buy Now (Medium)</h2>
-		<script async src="/Images/JavaScriptButtons/dist/button.js?merchant=6XF3MPZBZV6HU"
+		<script async src="/Images/JavaScriptButtons/dist/button.js?merchant=Z5BU82XPS8KDC"
 			data-button="buynow"
 			data-type="form"
 			data-name="Buy now!"
