@@ -205,6 +205,7 @@
     <Content Include="Content\themes\base\minified\jquery.ui.slider.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.tabs.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
+    <Content Include="Content\xbox.jpg" />
     <Content Include="Images\background.png" />
     <Content Include="Images\arrow.png" />
     <Content Include="favicon.ico" />

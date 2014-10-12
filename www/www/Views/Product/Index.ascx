@@ -1,4 +1,6 @@
 ﻿<%@ Control Language="C#" Inherits="System.Web.Mvc.ViewUserControl<dynamic>" %>
+<%@ Page Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="System.Web.Mvc.ViewPage" %>
+<%@ Import Namespace="www.Helpers" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" >
@@ -11,17 +13,15 @@
     <%= Html.Encode(ViewData["message"]) %>
     
     </div>
-    <%@ Page Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="System.Web.Mvc.ViewPage" %>
-<%@ Import Namespace="MvcApplication1.Helpers" %>
 
 <asp:Content ID="indexContent" ContentPlaceHolderID="MainContent" runat="server">
 
     <!-- Calling helper without HTML attributes -->
-    <%= Html.Image("img1", ResolveUrl("~/Content/XBox.jpg"), "XBox Console") %>
+    <%= Html.Image("img1", ResolveUrl("/Content/XBox.jpg"), "XBox Console") %>
 
 
     <!-- Calling helper with HTML attributes -->
-    <%= Html.Image("img1", ResolveUrl("~/Content/XBox.jpg"), "XBox Console", new {border="4px"})%>
+    <%= Html.Image("img1", ResolveUrl("/Content/XBox.jpg"), "XBox Console", new {border="4px"})%>
 
 
 </asp:Content>
