@@ -1,0 +1,152 @@
+<HTML>
+<HEAD>
+  <TITLE>
+    CHECKOUT -- The Ultimate Delicacy: Your Source for Gourmet Foods
+  </TITLE>
+  <STYLE>
+  .greetext  { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 12px;color: #006600;}
+  .blacktext { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 12px;color: #000000;}    
+  .checkout {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 12px; color: #000000;}
+  .checkoutinput {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 12px; color: #000000;}   
+  .nopcart {background: #464444;border: 1px;font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 12px; color: #ffffff;}
+  .nopheader {background: #464444;font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 12px; color: #FFFFFF;}
+  .nopentry {background: #FFFFFF;font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 12px; color: #000000;}
+  .noptotal {background: #FFFFFF;font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 12px; color: #000000;}
+  .nopbutton {background: #FFFFFF;font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 12px; color: #000000;} 
+  </STYLE>
+<SCRIPT SRC="language-en.js"></SCRIPT>
+<SCRIPT SRC="nopcart.js">
+  //=====================================================================||
+  //               NOP Design JavaScript Shopping Cart                   ||
+  //                                                                     ||
+  // For more information on SmartSystems, or how NOPDesign can help you ||
+  // Please visit us on the WWW at http://www.nopdesign.com              ||
+  //                                                                     ||
+  // JavaScript Shop Module, V.4.4.0                                     ||
+  //=====================================================================||
+</SCRIPT>
+<SCRIPT>
+function CheckForm( theform )
+{
+	var bMissingFields = false;
+	var strFields = "";
+	
+	if( theform.b_first.value == '' ){
+		bMissingFields = true;
+		strFields += "     Billing: First Name\n";
+	}
+	if( theform.b_last.value == '' ){
+		bMissingFields = true;
+		strFields += "     Billing: Last Name\n";
+	}
+	if( theform.b_addr.value == '' ){
+		bMissingFields = true;
+		strFields += "     Billing: Address\n";
+	}
+	if( theform.b_city.value == '' ){
+		bMissingFields = true;
+		strFields += "     Billing: City\n";
+	}
+	if( theform.b_state.value == '' ){
+		bMissingFields = true;
+		strFields += "     Billing: State\n";
+	}
+	if( theform.b_zip.value == '' ){
+		bMissingFields = true;
+		strFields += "     Billing: Zipcode\n";
+	}
+	if( theform.b_phone.value == '' ){
+		bMissingFields = true;
+		strFields += "     Billing: Phone\n";
+	}
+	if( theform.b_email.value == '' ){
+		bMissingFields = true;
+		strFields += "     Billing: Email\n";
+	}
+		
+	if( bMissingFields ) {
+		alert( "I'm sorry, but you must provide the following field(s) before continuing:\n" + strFields );
+		return false;
+	}
+	
+	return true;
+}
+</SCRIPT>
+</head>
+</HEAD>
+<BODY BGCOLOR="White" TEXT="Black">
+<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 WIDTH=100%>
+  <TD VALIGN=TOP BGCOLOR=#663333>
+   <IMG SRC="./images/one.gif" WIDTH=2 HEIGHT=20 ALT="">
+   <IMG SRC="./images/text.gif" WIDTH=391 HEIGHT=20 ALT="The Ultimate Delicacy">
+  </TD>
+  </TR>
+</TABLE>
+
+<blockquote>
+
+<NOSCRIPT>
+Whoops, we detected that your browser does not have JavaScript, or it is disabled.  Our product catalog requires that you
+have JavaScript enabled to order products.  <a href="http://www.netscape.com">Netscape</a> and <a href="http://www.microsoft.com/ie">Microsoft</a>
+offer free browsers which support JavaScript.  If you are using a JavaScript compliant browser and still have problems, make sure you
+have JavaScript enabled in your browser's preferences.
+</NOSCRIPT>
+<FONT CLASS="checkout">
+<form action="/cgi-bin/checkout.pl" method="POST" onSubmit="return CheckForm(this)">
+    <NOBR>
+    <SCRIPT>
+        CheckoutCart();
+    </SCRIPT>
+    </NOBR>
+<br>
+<P>
+<font class="blacktext">
+<b>Please fill out the following information below to complete your order.</b>
+</font>
+
+<p>
+<b><font class="greetext">Billing Information:</font></b><P>
+
+<TABLE class="blacktext">
+<TR><TD>Name:    </TD><TD><input type="text" size="18" name="b_first"> <input type="text" size="15" name="b_last"></TD></TR>
+<TR><TD>Address: </TD><TD><input type="text" size="37" name="b_addr"> </TD></TR>
+<TR><TD>Address: </TD><TD><input type="text" size="37" name="b_addr2"></TD></TR>
+<TR><TD>City:    </TD><TD><input type="text" size="21" name="b_city"> </TD></TR>
+<TR><TD>State:   </TD><TD><input type="text" size="1"  name="b_state"> </TD></TR>
+<TR><TD>Zip:     </TD><TD><input type="text" size="5"  name="b_zip"></TD></TR>
+<TR><TD>Phone:   </TD><TD><input type="text" size="37" name="b_phone"></TD></TR>
+<TR><TD>Fax:     </TD><TD><input type="text" size="37" name="b_fax"></TD></TR>
+<TR><TD>Email:   </TD><TD><input type="text" size="37" name="b_email"> </TD></TR>
+</TABLE>
+<p>
+<b><font class="greetext">Shipping Information (if different than billing):</font></b><P>
+<TABLE class="blacktext">
+<TR><TD>Name:    </TD><TD><input type="text" size="18" name="s_first"> <input type="text" size="15" name="s_last"></TD></TR>
+<TR><TD>Address: </TD><TD><input type="text" size="37" name="s_addr"> </TD></TR>
+<TR><TD>Address: </TD><TD><input type="text" size="37" name="s_addr2"></TD></TR>
+<TR><TD>City:    </TD><TD><input type="text" size="21" name="s_city"> </TD></TR>
+<TR><TD>State:   </TD><TD><input type="text" size="1"  name="s_state"> </TD></TR>
+<TR><TD>Zip:     </TD><TD><input type="text" size="5"  name="s_zip"></TD></TR>
+<TR><TD>Phone:   </TD><TD><input type="text" size="37" name="s_phone"></TD></TR>
+<TR><TD>Fax:     </TD><TD><input type="text" size="37" name="s_fax"></TD></TR>
+<TR><TD>Email:   </TD><TD><input type="text" size="37" name="s_email"> </TD></TR>
+</TABLE>
+<p>
+<FONT class="blacktext">
+<b><font class="greetext">Comments/Special Instructions:</font></b><P>
+<TEXTAREA NAME="comment" ROWS=6 COLS=40>
+</TEXTAREA>
+</font>
+<p>
+<b><font color="#660000">This is a DEMO SITE!  No real orders will be taken, and no products
+will be shipped.  Please use a real email address to view the checkout confirmation.  Your email 
+address will NOT be stored on the server, or used for ANYTHING, EVER!</font></b><P>
+<input type=submit Value="Submit Order"> <INPUT type=RESET value="  Clear Form  ">
+    </p>
+    </center>    
+    </FORM>    
+</blockquote>
+</body>
+</html>
+
+

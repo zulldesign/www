@@ -1,0 +1,16 @@
+var oCat_root = new Menu();
+var oCat_2 = oCat_root.CreateLink();
+oCat_2.displayHtml = "SALOON";
+oCat_2.href = NTK_RootPath + "Product_list_SALOON_1.html";
+oCat_root.AddItem(oCat_2);
+var oCat_1 = oCat_root.CreateLink();
+oCat_1.displayHtml = "SPORTS";
+oCat_1.href = NTK_RootPath + "Product_list_SPORTS_1.html";
+oCat_root.AddItem(oCat_1);
+var oCat_3 = oCat_root.CreateLink();
+oCat_3.displayHtml = "TRUCK";
+oCat_3.href = NTK_RootPath + "Product_list_TRUCK_1.html";
+oCat_root.AddItem(oCat_3);
+oCat_root.SetOrientation("v");
+//oCat_root.SetSubMenuImage("images/flyout_arrow.gif", 4, 7);
+oCat_root.SetSize(150, 20);
