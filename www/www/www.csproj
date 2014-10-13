@@ -227,7 +227,6 @@
     <Content Include="Scripts\knockout-2.2.0.debug.js" />
     <Content Include="Scripts\knockout-2.2.0.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
-    <Content Include="Views\Product\Index.ascx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -250,6 +249,7 @@
     <Content Include="Views\PayPal\CancelFromPaypal.cshtml" />
     <Content Include="Views\PayPal\RedirectFromPaypal.cshtml" />
     <Content Include="Views\PayPal\ValidateCommand.cshtml" />
+    <Content Include="Views\Shared\Site.Master" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

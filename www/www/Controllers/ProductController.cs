@@ -13,7 +13,7 @@ namespace www.Controllers
 
         public ActionResult Index()
         {
-            ViewData["message"] = "Ho World!";
+            ViewData["message"] = "Hello World!";
             return View();
         }
 
