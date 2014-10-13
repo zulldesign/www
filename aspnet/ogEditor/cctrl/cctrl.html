@@ -1,0 +1,169 @@
+﻿<div id="ogCCStyle_gradButton">
+	.ogCCClass_gradButton a {
+	display:block;
+	width: 130px;
+	text-align:center;
+	font-weight:bold;
+	color: #FFF;
+	font-size: 12px;
+	line-height: 25px;
+	text-decoration: none;
+	border-radius: 7px;
+	border: 1px solid #000;
+	text-shadow:0px 0px 2px rgba(0,0,0,0.45);
+	background-image:-moz-linear-gradient(rgb(176,176,176) 0%,rgb(40,40,40) 50%,rgb(7,7,7) 50%,rgb(0,0,0) 100%);
+	background-image:-webkit-linear-gradient(rgb(176,176,176) 0%,rgb(40,40,40) 50%,rgb(7,7,7) 50%,rgb(0,0,0) 100%);
+	background-image:linear-gradient(rgb(176,176,176) 0%,rgb(40,40,40) 50%,rgb(7,7,7) 50%,rgb(0,0,0) 100%);
+	background-color: #222;
+	box-shadow:inset 1px 1px 0px rgba(255,255,255,0.2);
+	}
+	.ogCCClass_gradButton a:hover {
+	border: 1px solid #000;
+	background-image:-moz-linear-gradient(rgb(0,0,0) 0%,rgb(7,7,7) 50%,rgb(40,40,40) 50%,rgb(176,176,176) 100%);
+	background-image:-webkit-linear-gradient(rgb(0,0,0) 0%,rgb(7,7,7) 50%,rgb(40,40,40) 50%,rgb(176,176,176) 100%);
+	background-image:linear-gradient(rgb(0,0,0) 0%,rgb(7,7,7) 50%,rgb(40,40,40) 50%,rgb(176,176,176) 100%);
+	}
+</div>
+<div id="ogCCHtml_gradButton">
+	<div class="ogCCClass_gradButton"><a id="{id}" name="{name}" href="{href}">{label}</a></div>
+</div>
+<div id="ogCCStyle_naviMenu">
+.naviMenuRoot{
+	clear:both;
+}
+.naviMenuRoot:after{
+	display:block;
+	clear:both;
+	height:0;
+	line-height:0;
+	visibility:hidden;
+	content:".";
+	font-size:0.1em;
+}
+.naviMenuRoot ul.naviMenu {
+	margin: 0;
+	padding: 0;
+	width:900px;
+	font-weight:bold;
+	line-height: 1;
+	float:left;
+	font-family: Arial;
+	box-shadow:1px 1px 3px rgba(0,0,0,0.4);
+}
+.naviMenuRoot ul.naviMenu li {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	float:left;
+	width: 150px;
+	position:relative;
+}
+.naviMenuRoot ul.naviMenu:after {
+	content: "";
+	display: block;
+	clear: both;
+}
+.naviMenuRoot ul.naviMenu li a {
+	color:#aaa;
+	text-decoration: none;
+	text-align:center;
+	padding:10px 0 10px 0;
+	display:block;
+	font-size:12px;
+	border-bottom:1px solid #777;
+	background-image:-moz-linear-gradient(rgb(176,176,176) 0%,rgb(40,40,40) 50%,rgb(7,7,7) 50%,rgb(0,0,0) 100%);
+	background-image:-webkit-linear-gradient(rgb(176,176,176) 0%,rgb(40,40,40) 50%,rgb(7,7,7) 50%,rgb(0,0,0) 100%);
+	background-image:linear-gradient(rgb(176,176,176) 0%,rgb(40,40,40) 50%,rgb(7,7,7) 50%,rgb(0,0,0) 100%);
+	background-color:#222;
+	z-index: 100;
+	position:relative;
+}
+.naviMenuRoot ul.naviMenu li a:hover {
+	color: #fff;
+	background-image:-moz-linear-gradient(rgb(109,6,8) 0%,rgb(191,5,10) 50%,rgb(191,5,10) 50%,rgb(212,2,7) 100%);
+	background-image:-webkit-linear-gradient(rgb(109,6,8) 0%,rgb(191,5,10) 50%,rgb(191,5,10) 50%,rgb(212,2,7) 100%);
+	background-image:linear-gradient(rgb(109,6,8) 0%,rgb191,5,10) 50%,rgb(191,5,10) 50%,rgb(212,2,7) 100%);
+}
+.naviMenuRoot ul.naviMenu li ul.subMenu {
+	margin:0;
+	padding:0;
+	height:0;
+	width:0;
+	overflow:hidden;
+	position:absolute;
+	z-index:10;
+	top:0;
+	font-size:10px;
+	background:#fff;
+	opacity:0.5;
+}
+.naviMenuRoot ul.naviMenu li:hover ul.subMenu {
+	height:inherit;
+	width:inherit;
+	opacity:1;
+	top:30px;
+}
+.naviMenuRoot ul.naviMenu li ul.subMenu li {
+	margin:0;
+	padding:0;
+	float:none;
+	background-color:#111;
+	border:none;
+}
+.naviMenuRoot ul.naviMenu li ul.subMenu li a {
+	font-size: 12px;
+	color:#777;
+	text-align:left;
+	padding:10px 10px;
+	font-weight:normal;
+	background-image:none;
+	background-color:#111;
+	text-shadow:none;
+	border:0;
+}
+.naviMenuRoot ul.naviMenu li ul.subMenu li a:hover {
+	color:#fff;
+	background-image:none; 
+	background-color:#333;
+	border:none;
+}
+</div>
+<div id="ogCCHtml_naviMenu">
+	<div class="naviMenuRoot" id="{id}" name="{name}">
+	<ul class="naviMenu">
+	<li><a href="#">Home</a>
+	<ul class="subMenu">
+	<li><a href="#">Home01</a></li>
+	<li><a href="#">Home02</a></li>
+	<li><a href="#">Home03</a></li>
+	<li><a href="#">Home04</a></li>
+	<li><a href="#">Home05</a></li>
+	</ul></li>
+	<li><a href="#">Products</a>
+	<ul class="subMenu">
+	<li><a href="#">Products01</a></li>
+	<li><a href="#">Products02</a></li>
+	<li><a href="#">Products03</a></li>
+	</ul></li>
+	<li><a href="#">Services</a>
+	<ul class="subMenu">
+	<li><a href="#">Services01</a></li>
+	<li><a href="#">Services02</a></li>
+	<li><a href="#">Services03</a></li>
+	</ul></li>
+	<li><a href="#">Download</a>
+	<ul class="subMenu">
+	<li><a href="#">Download01</a></li>
+	</ul></li>
+	<li><a href="#">Contact</a>
+	<ul class="subMenu">
+	<li><a href="#">Contact01</a></li>
+	</ul></li>
+	<li><a href="#">About</a>
+	<ul class="subMenu">
+	<li><a href="#">About01</a></li>
+	<li><a href="#">About02</a></li>
+	</ul></li>
+	</ul>
+	</div>
+</div>

@@ -1,0 +1,143 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+
+<head>
+<title></title>
+
+<script language=javascript>
+<!-- hide
+
+function write_to_field(code)
+{
+ var found = false;
+ var i =0;
+ while ((found == false) && (i < document.form1.elements.length))
+  {i = i + 1
+   if (document.form1.elements[i].name == code)
+     { 
+      found = true;
+      document.form1.elements[i].value = parent.item_quan(code);
+     }
+  }
+}
+
+function Loc_additem(code,price,desc,url)
+{
+ self.parent.additem(code,price,desc,url);
+ write_to_field(code)
+}
+
+function Loc_subitem(code,price,desc)
+{
+self.parent.subitem(code,price,desc);
+write_to_field(code)
+}
+
+function update_thiselem_page()
+{
+if (self!=parent)
+parent.update_this_page()
+}
+
+<!-- End -->
+</script>
+
+
+
+</head>
+
+<body bgcolor="#FFFFFF" alink="#FF0000" onload=update_thiselem_page()>
+<form name=form1>
+
+<!-- The script below is activated when this page is displayed outside of the frame model -->
+
+<script language=javascript>
+<!-- hide
+if (self==parent){document.write('<center><font color=#ff000><b>THIS IS A FRAME ELEMENT : GO TO  <a href=index.htm>Start Page</a> TO LOAD MAIN PAGE</b></font><BR></center>')};
+<!-- end hide -->
+</script>
+
+</center>
+
+
+<!-- Below are the links to the other pages -->
+
+<center>
+[ <a href="javascript:parent.updatemain_order()">Review Updated Order Form</a> ] 
+<br>
+</center>
+
+
+<P><HR Width="60%"><P>
+
+<!-- Below are the shopping cart order items -->
+<!-- If you haven't already looked, full instructions on -->
+<!-- converting these so you can use them are located in the tutorial and on -->
+<!-- pageone.htm -->
+
+
+
+
+<!-- This is named p3i1.  That stands for Page Three, Item One -->
+
+This Item Costs $5.55<P>		
+<input name=addbox type=button value="Add This Item To My Order" onclick=Loc_additem('p3i1','5.55','Page_3_Item_1','pagethree.html')><br>
+<input type=button name=subbox value="Subtract This Item From My Order" onclick=Loc_subitem('p3i1','5.55','Page_3_Item_1','pagethree.html')><BR>
+You Have Ordered This Many: <input type=text name=p3i1 size=2>
+
+
+
+
+
+
+<P><HR Width="60%"><P>
+
+
+
+
+
+<!-- This is named p3i2.  That stands for Page Three, Item Two -->
+
+This Item Costs $6.66<P>		
+<input name=addbox type=button value="Add This Item To My Order" onclick=Loc_additem('p3i2','6.66','Page_3_Item_2','pagethree.html')><br>
+<input type=button name=subbox value="Subtract This Item From My Order" onclick=Loc_subitem('p3i2','6.66','Page_3_Item_2','pagethree.html')><BR>
+You Have Ordered This Many: <input type=text name=p3i2 size=2>
+
+
+
+
+
+<P><HR Width="60%"><P>
+
+<!-- This is named p3i3.  That stands for Page Three, Item Three -->
+
+This Item Costs $7.77<P>		
+<input name=addbox type=button value="Add This Item To My Order" onclick=Loc_additem('p3i3','7.77','Page_3_Item_3','pagethree.html')><br>
+<input type=button name=subbox value="Subtract This Item From My Order" onclick=Loc_subitem('p3i3','7.77','Page_3_Item_3','pagethree.html')><BR>
+You Have Ordered This Many: <input type=text name=p3i3 size=2>
+
+
+
+
+
+<P><HR Width="60%"><P>
+
+
+
+
+
+
+
+<!-- Below are the links back to other pages pages -->
+
+
+<center>
+[ <a href="javascript:parent.updatemain_order()">Review updated Order Form</a> ] 
+
+<br>
+</center>   
+
+
+
+</body>
+</html>

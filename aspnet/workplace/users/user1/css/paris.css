@@ -1,0 +1,65 @@
+﻿
+	body{
+	margin:0;
+	padding:0;
+	background-image:url(../image/paris01.jpg);
+	background-position:bottom right;
+	background-repeat:no-repeat;
+	border:1px solid #c0c0c0;
+	}
+	#logo{
+	border:0;
+	margin:20px 0 0 20px;
+	}
+	ul#mainNavi li{
+	list-style: none;
+	}
+	ul#mainNavi li a{
+	text-decoration:none;
+	font-family:Arial;
+	font-size:14px;
+	font-weight:bold;
+	
+	}
+	ul#mainNavi{
+	display:block;
+	margin-bottom:0;
+	
+	}
+	ul#mainNavi li#mHome a{
+	position:absolute;
+	bottom:20px;
+	right:30px;
+	color:#fff;
+	}
+	ul#mainNavi li#mProd a{
+	position:absolute;
+	bottom:20px;
+	left:30px;
+	color:#000;
+	}
+	ul#mainNavi li#mShow a{
+	position:absolute;
+	bottom:20px;
+	left:120px;
+	color:#000;
+	}
+	ul#mainNavi li#mStore a{
+	position:absolute;
+	bottom:20px;
+	right:80px;
+	color:#fff;
+	}
+	ul#mainNavi li#mSupp a{
+	position:absolute;
+	bottom:20px;
+	left:220px;
+	color:#fff;
+	}
+	ul#mainNavi li#mAbout a{
+	position:absolute;
+	bottom:20px;
+	left:300px;
+	color:#fff;
+	}
+
