@@ -1,1 +1,0 @@
-Don't remove the Kartris or Admin skins... as the defaults, these must remain even if you actually use a different front end skin.
