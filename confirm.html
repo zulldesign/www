@@ -1,0 +1,264 @@
+<html>
+<head>
+<title>PayPal Shop Maker 3 Demo Project</title>
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Expires" content="0" />
+<script type="text/javascript">
+EW_ROOT_PATH = ""; // configure root path
+ew_cartAction = 0; // Load cart
+</script>
+<script type="text/javascript" src="Spry_1_6_1_022408/includes_minified/SpryData.js"></script>
+<script type="text/javascript" src="ewcartconfig.js"></script>
+<script type="text/javascript" src="ewcart35.js"></script>
+<script type="text/javascript" src="swfobject.js"></script>
+<link href="Spry_1_6_1_022408/SpryMenuBarVertical.css" rel="stylesheet" type="text/css" />
+<link href="demo1.css" rel="stylesheet" type="text/css" />
+<meta name="generator" content="PayPal Shop Maker v3.5.0.0" />
+</head>
+<body>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+	<!-- Logo and top banner background color -->
+	<tr class="ewTopRow">
+		<td><img src="paypalshopmkrhdr.png" border="0"></td>
+	</tr>
+</table>
+<table width="100%" height="100%" border="0" cellspacing="0" cellpadding="0" class="ewMain">	
+<tr>
+	<!-- Begin Menu Column -->
+	<td width="20%" height="100%" valign="top" class="ewLeftColumn">		
+<script type="text/javascript" src="Spry_1_6_1_022408/includes_minified/SpryMenuBar.js"></script>
+		<table width="100%" border="0" cellspacing="0" cellpadding="0">		
+			<tr><td style="white-space: nowrap"><span class="paypalshopmaker">
+<!-- Begin Main Menu -->
+<ul id="RootMenu" class="MenuBarVertical">
+<li><a href="home.html">Home</a>
+</li>
+<li><a href="contact_us.html">Contact Us</a>
+</li>
+<li><a href="mailto:sales@mycompany.com">Email Us</a>
+</li>
+<li><a href="about_us.html">About Us</a>
+</li>
+</ul>
+<!-- End Main Menu -->
+				<script type="text/javascript">				
+				var oMenuRoot = new Spry.Widget.MenuBar("RootMenu", {imgRight: EW_MENUBAR_RIGHTHOVER_IMAGE}); // Main menu 
+				</script>
+			</span></td></tr>
+		</table>	
+		<br />
+		<table width="100%" border="0" cellspacing="0" cellpadding="0">		
+			<tr><td style="white-space: nowrap">	
+			<span class="paypalshopmaker"><b>Browse</b></span>
+			</td></tr>		
+		</table>	
+		<table width="100%" border="0" cellspacing="0" cellpadding="0">
+			<tr><td style="white-space: nowrap"><span class="paypalshopmaker">
+				<script type="text/javascript">
+				var EW_NO_PRODUCT = "No product in this category.";
+				</script>
+<!-- Begin Categories -->
+<ul id="RootCat" class="MenuBarVertical">
+<li><a href="truck_1.html">Truck</a>
+</li>
+<li><a href="saloon_1.html">Saloon</a>
+</li>
+<li><a href="sports_1.html">Sports</a>
+</li>
+</ul>
+<!-- End Categories -->
+				<script type="text/javascript">
+				var oCatRoot = new Spry.Widget.MenuBar("RootCat", {imgRight: EW_MENUBAR_RIGHTHOVER_IMAGE}); // Category menu				
+				</script>
+			</span></td></tr>
+		</table>
+	</td>
+	<!-- End Menu Column -->
+	<!-- Begin Content column -->
+	<td valign="top" class="ewMidColumn">	
+<p><b><span class="paypalshopmaker">Confirm your order</span></b></p>
+<!--Shopping Cart Checkout Begin-->
+<form method="post" name="confirm" onSubmit="this.action=EW_PAYPAL_URL;return CheckCart();">
+<input type="hidden" name="cmd" value="_cart">
+<input type="hidden" name="upload" value="1">
+<input type="hidden" name="business" value="sales@mycompany.com">
+<div class="paypalshopmaker">
+<p><b>Order details</b></p>
+<!-- Note: DO NOT CHANGE THE IDs! -->
+<div id="ewCartView2" spry:region="dsShopCartItems dsShopCartSummary" class="SpryHiddenRegion">
+	<div spry:if="{dsShopCartItems::ds_RowCount} > 0">
+	<table class="ewTable1">
+		<thead>
+			<tr>
+				<td class="ewTable1Header">Item #</td>
+				<td class="ewTable1Header">Name</td>
+				<td class="ewTable1Header">Options</td>
+				<td class="ewTable1Header">Price</td>
+				<td class="ewTable1Header">Qty</td>
+				<td class="ewTable1Header">Discount</td>
+				<td class="ewTable1Header">Amount</td>				
+			</tr>
+		</thead>
+		<tbody>
+			<tr spry:repeat="dsShopCartItems">
+				<td>{itemnumber}</td>
+				<td>{itemname}</td>
+				<td>{option}</td>
+				<td style="white-space: nowrap">{price}</td>
+				<td>{quantity}</td>
+				<td>{discount}</td>
+				<td style="white-space: nowrap">{subtotal}{itemhidden}</td>				
+			</tr>
+		</tbody>
+		<tfoot>
+			<tr class="ewTable1Summary">
+				<td colspan="6">Sub Total</td>
+				<td style="white-space: nowrap">{dsShopCartSummary::total}</td>
+			</tr>
+			<tr spry:if="ew_shippingType > 0">
+				<td colspan="6">Shipping Cost</td>
+				<td style="white-space: nowrap">{dsShopCartSummary::shipping}</td>				
+			</tr>
+			<tr spry:if="ew_shippingType > 0">
+				<td colspan="6">Handling Cost</td>
+				<td style="white-space: nowrap">{dsShopCartSummary::handling}</td>
+			</tr>
+			<tr spry:if="ew_taxType > 0">
+				<td colspan="6">Tax</td>
+				<td style="white-space: nowrap">{dsShopCartSummary::tax}</td>				
+			</tr>
+			<tr class="ewTable1Summary">
+				<td colspan="6">
+					<span spry:if="ew_shippingType == 0 && ew_taxType == 0"><b>Total (Shipping, handling, and tax may be added upon checkout)</b></span>
+					<span spry:if="ew_shippingType != 0 || ew_taxType != 0"><b>Total</b></span>
+				</td>
+				<td style="white-space: nowrap"><b>{dsShopCartSummary::grandtotal}</b>{dsShopCartSummary::hidden}</td>
+			</tr>
+		</tfoot>
+	</table>
+	</div>
+	<div class="ewMessage" spry:if="{dsShopCartItems::ds_RowCount} == 0">No items</div>
+</div>
+<!-- shipping details -->
+<div id="ewShipView2" spry:region="dsShipView" class="SpryHiddenRegion">
+	<div spry:if="nItems > 0">
+<p><b>Shipping details</b></p>
+<label>{usePayPalStoredShippingAddress}Use my address stored with PayPal</label>
+<br /><br />
+<table class="ewTable2">
+	<tbody>
+		<tr id="PayPalShipAddress" name="PayPalShipAddress" class="ewShowRow" spry:if="'{firstname}' != ''">
+			<td class="ewTable2Header">First Name</td>
+			<td>{firstname}</td>
+		</tr>
+		<tr id="PayPalShipAddress" name="PayPalShipAddress" class="ewShowRow" spry:if="'{lastname}' != ''">
+			<td class="ewTable2Header">Last Name</td>
+			<td>{lastname}</td>
+		</tr>
+		<tr id="PayPalShipAddress" name="PayPalShipAddress" class="ewShowRow" spry:if="'{address1}' != ''">
+			<td class="ewTable2Header">Address 1</td>
+			<td>{address1}</td>
+		</tr>
+		<tr id="PayPalShipAddress" name="PayPalShipAddress" class="ewShowRow" spry:if="'{address2}' != ''">
+			<td class="ewTable2Header">Address 2</td>
+			<td>{address2}</td>
+		</tr>
+		<tr id="PayPalShipAddress" name="PayPalShipAddress" class="ewShowRow" spry:if="'{phone}' != ''">
+			<td class="ewTable2Header">Phone</td>
+			<td>{phone}</td>
+		</tr>
+		<tr id="PayPalShipAddress" name="PayPalShipAddress" class="ewShowRow" spry:if="'{city}' != ''">
+			<td class="ewTable2Header">City</td>
+			<td>{city}</td>
+		</tr>
+		<tr id="PayPalShipAddress" name="PayPalShipAddress" class="ewShowRow" spry:if="'{zip}' != ''">
+			<td class="ewTable2Header">Postal Code</td>
+			<td>{zip}</td>
+		</tr>
+<!--
+Note: Country and state are required by PayPal. If you remove the country (or state) row, make sure you add a hidden element named "country" (or "state") as default values. See Appendix C in PayPal's Website Payments Standard Integration Guide for allowable country codes. State (for U.S. only) must be two-character official U.S. abbreviation. e.g.
+<input type="hidden" name="country" value="GB">
+<input type="hidden" name="state" value="">
+-->
+		<tr spry:if="'{country}' != ''">
+			<td class="ewTable2Header">Country</td>
+			<td>{country}</td>
+		</tr>
+		<tr spry:if="'{state}' != ''">
+			<td class="ewTable2Header">State</td>
+			<td>{state}</td>
+		</tr>
+		<tr spry:if="'{email}' != ''">
+			<td class="ewTable2Header">Email</td>
+			<td>{email}</td>
+		</tr>		
+		<tr spry:if="'{custom}' != ''">
+			<td class="ewTable2Header">Others</td>
+			<td>{custom}</td>
+		</tr>
+	</tbody>
+</table>
+<br />
+<div>{shipmethod}</div>
+<br />
+<br /><br />	
+<input type="hidden" name="currency_code" value="USD">
+<input type="hidden" name="cs" value="0">
+<input type="hidden" name="no_note" value="0">
+<input type="hidden" name="no_shipping" value="0">
+<input type="hidden" name="return" value="">
+<input type="image" src="images/ppclicktopay.gif" border="0" alt="Checkout">
+	</div>
+</div>
+</form>
+<!--Shopping Cart Checkout End  -->
+<script type="text/javascript">
+document.forms["confirm"].elements["return"].value = getCurrentPath() + "thank.html";
+ShipView(2);
+</script>
+		<p>&nbsp;</p>
+	</td>
+	<!-- End Content column -->
+	<!-- Begin Cart column -->
+	<td width="20%" valign="top" class="ewRightColumn">			
+	<p><b><div class="paypalshopmaker">Shopping Cart</div></b></p>
+	<!-- Note: DO NOT CHANGE THE IDs! -->
+	<div id="ewCartView0" spry:region="dsShopCartItems dsShopCartSummary" class="SpryHiddenRegion">
+		<div spry:if="{dsShopCartItems::ds_RowCount} > 0">
+		<form name="simple" action="checkout.html">
+		<table class="ewTable0">
+			<tbody>
+				<tr spry:repeat="dsShopCartItems">
+					<td>{itemname}<br /><span style="white-space: nowrap">{price}</span>&nbsp;&nbsp;Qty&nbsp;{quantity1}&nbsp;{remove}
+					</td>
+				</tr>
+			</tbody>
+			<tfoot>
+				<tr>
+					<td style="white-space: nowrap"><b>Total</b>&nbsp;{dsShopCartSummary::total}</td>
+				</tr>
+			</tfoot>
+		</table>
+		<input type="image" src="images/ppcheckout.gif" alt="Checkout" border="0">
+		</form>
+		</div>
+		<div class="ewMessage" spry:if="{dsShopCartItems::ds_RowCount} == 0">No items</div>
+	</div>
+	</td>
+	<!-- End Cart column -->
+</tr>
+</table>
+<!-- Footor -->
+<table width="100%" border="0" cellspacing="0" cellpadding="0">	
+	<tr class="ewFooterRow">
+		<td>&nbsp;<!-- Note: Only licensed users are allowed to remove or change the following copyright statement. -->
+			<font class="ewFooterText">&copy;2008 e.World Technology Ltd. All rights reserved.</font>
+			<!-- Place other links, for example, disclaimer, here -->
+		</td>
+	</tr>
+</table>
+<script type="text/javascript">
+CartView();
+</script>
+</body>
+</html>
