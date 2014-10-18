@@ -1,0 +1,101 @@
+/* 
+========================================================================
+HORIZONTAL DROPDOWN MENU SYSTEM
+========================================================================
+*/
+#menubar								{ }
+
+#menubar .top-bar                       { background-color: #ddd; margin: 0 0 6px 0; }
+#menubar .top-bar.expanded .title-area  { background: #ccc; }
+#menubar .top-bar-section li a:not(.button)
+                                        { background-color: #ddd; color: #333; font-weight: normal; font-size: 70%; text-transform: uppercase; }
+/* Style top level links */
+#menubar .top-bar-section li            { border-left: solid 1px #fff; }
+#menubar .top-bar-section li a:hover
+                                        { background-color:#eee; }
+#menubar .top-bar li.name span          { display: inline-block; padding: 0 0 0 10px; }
+/* 
+========================================================================
+CATEGORY NAVIGATION MENU
+The primary styles are created by foundation.css. Rather than change
+styles there (which would be overwritten if we upgrade Foundation to
+a newer version), just just grab the bits we need to change here.
+========================================================================
+*/
+#categorymenu .top-bar                  { background-color: #333; }
+
+/* depending on the width of your site, you will need to adjust the
+    breakpoint where the nav menu collapses to the mobile version. You need to
+    find the following styles in foundation.css and tweak the width up or down.
+
+    .top-bar-js-breakpoint .... (tweak the 'width')
+    @media only screen and .... (tweak the 'min-width')
+    
+    Also, match the min-width in the style below to the same value as 
+    the one you use in the foundation.css */
+
+@media only screen and (min-width: 930px) {
+  #menubar .title-area li.name,
+  #categorymenu .title-area li.name { display: none; }
+  .row { max-width: 880px; }
+  }
+
+/* 
+========================================================================
+ADDITIONAL MEDIA QUERIES
+Special CSS rules for small screens, large screens, touch, etc.
+========================================================================
+*/
+@media only screen and (max-width: 500px) {
+  .products_tabular .item,
+  .products_shortened .item,
+  .subcategories_shortened .item,
+  #homepage .products_tabular .item { display: block; float: none; width: 100%; margin: 0 0 5px 0; }
+  .Kartris-DetailsView-Value { width: 270px; }
+  ul { max-width: 100%; }
+  #pagecontent_pad { min-height: 200px; padding-bottom: 15px; }
+  .hand { cursor: default; }
+  .versions td.info { max-width: 200px; overflow: hidden; }
+  }
+
+/* 
+========================================================================
+-- accordion style
+========================================================================
+*/
+#categorymenu .accordion                { display: block; margin: 2px 0 5px 0; }
+#categorymenu .accordion .AccordionHeader + div
+                                        { position: relative; z-index: 1; top: -1px; overflow: hidden; }
+#categorymenu .accordion .AccordionHeader
+                                        { position: relative; z-index: 10; margin-top: 1px; overflow: hidden; }
+#categorymenu .accordion .AccordionHeader a
+                                        { color: #333; background-color: #eee; font-weight: bold; cursor: pointer; display: block; padding: 2px 5px 3px 10px; }
+#categorymenu .accordion .AccordionHeader a:hover
+                                        { background-color: #666; color: #fff; cursor: pointer; }
+#categorymenu .accordion .AccordionContent
+                                        { margin: 0 auto; overflow: hidden; }
+#categorymenu .accordion .AccordionContent ul
+                                        { margin: 0; padding: 0; }
+#categorymenu .accordion .AccordionContent a
+                                        { float: left; width: 100%; display: inline-block; border-top: solid 1px #ccc; margin: 1px 0 0 0; padding: 1px 4px 1px 10px; color: #333; overflow: hidden; text-decoration: none; }
+#categorymenu .accordion .AccordionContent a:hover
+                                        { color: #fff; background-color: #666; }
+#categorymenu .accordion .AccordionContent li
+                                        { overflow: hidden }
+
+/* 
+========================================================================
+ORBIT SLIDESHOW
+========================================================================
+*/
+#front-slideshow                        { background-color: #fd5; }
+#front-slideshow li                     { padding: 10px 80px; min-height: 200px; }
+
+/* 
+========================================================================
+GENERAL 
+========================================================================
+*/
+table tr td                             { font-size: 100%; }
+table thead,
+table tfoot                             { background: #fff; }
