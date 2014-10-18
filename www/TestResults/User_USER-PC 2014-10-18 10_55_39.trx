@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="d3ac240c-32a6-4cb8-b06f-cae269ef5e58" name="User@USER-PC 2014-10-18 10:55:39" runUser="User-PC\User" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Default Test Settings" id="643a373b-5cd0-432f-8696-3d7c26eea890">
+    <Deployment runDeploymentRoot="User_USER-PC 2014-10-18 10_55_39">
+      <DeploymentItem filename="C:\Users\User\Workspace\www\www\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll" />
+      <DeploymentItem filename="C:\Users\User\Workspace\www\www\packages\Newtonsoft.Json.4.5.6\lib\net40\Newtonsoft.Json.dll" />
+      <DeploymentItem filename="C:\Users\User\Workspace\www\www\packages\Microsoft.AspNet.WebApi.WebHost.4.0.20710.0\lib\net40\System.Web.Http.WebHost.dll" />
+      <DeploymentItem filename="C:\Users\User\Workspace\www\www\www\bin\www.dll" />
+      <DeploymentItem filename="C:\Users\User\Workspace\www\www\packages\Microsoft.Net.Http.2.0.20710.0\lib\net40\System.Net.Http.dll" />
+      <DeploymentItem filename="C:\Users\User\Workspace\www\www\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.dll" />
+      <DeploymentItem filename="C:\Users\User\Workspace\www\www\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.Helpers.dll" />
+      <DeploymentItem filename="C:\Users\User\Workspace\www\www\packages\Microsoft.AspNet.WebApi.Client.4.0.20710.0\lib\net40\System.Net.Http.Formatting.dll" />
+      <DeploymentItem filename="C:\Users\User\Workspace\www\www\packages\Microsoft.AspNet.WebApi.Core.4.0.20710.0\lib\net40\System.Web.Http.dll" />
+      <DeploymentItem filename="C:\Users\User\Workspace\www\www\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Razor.dll" />
+      <DeploymentItem filename="C:\Users\User\Workspace\www\www\packages\Microsoft.AspNet.Mvc.4.0.20710.0\lib\net40\System.Web.Mvc.dll" />
+      <DeploymentItem filename="C:\Users\User\Workspace\www\www\packages\Microsoft.Net.Http.2.0.20710.0\lib\net40\System.Net.Http.WebRequest.dll" />
+      <DeploymentItem filename="C:\Users\User\Workspace\www\www\packages\Microsoft.AspNet.Razor.2.0.20710.0\lib\net40\System.Web.Razor.dll" />
+      <DeploymentItem filename="C:\Users\User\Workspace\www\www\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Deployment.dll" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2014-10-18T10:55:39.0665782+08:00" queuing="2014-10-18T10:55:41.8657383+08:00" start="2014-10-18T10:55:42.2867624+08:00" finish="2014-10-18T10:55:43.3218216+08:00" />
+  <ResultSummary outcome="Warning">
+    <Counters total="3" executed="3" passed="3" error="0" failed="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+    <RunInfos>
+      <RunInfo computerName="USER-PC" outcome="Warning" timestamp="2014-10-18T10:55:41.7687328+08:00">
+        <Text>Warning: Test Run deployment issue: The assembly or module 'log4net' directly or indirectly referenced by the test container 'c:\users\user\workspace\www\www\www.tests\bin\debug\www.tests.dll' was not found.</Text>
+      </RunInfo>
+      <RunInfo computerName="USER-PC" outcome="Warning" timestamp="2014-10-18T10:55:41.7687328+08:00">
+        <Text>Warning: Test Run deployment issue: The assembly or module 'Org.Mentalis.Security.Cryptography' directly or indirectly referenced by the test container 'c:\users\user\workspace\www\www\www.tests\bin\debug\www.tests.dll' was not found.</Text>
+      </RunInfo>
+    </RunInfos>
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="Index" storage="c:\users\user\workspace\www\www\www.tests\bin\debug\www.tests.dll" id="7d61e387-016e-9f92-38fa-2fa8b0275ba9">
+      <Execution id="060ebe2f-9956-4ed2-9eab-9f51ba862fe4" />
+      <TestMethod codeBase="C:/Users/User/Workspace/www/www/www.Tests/bin/Debug/www.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="www.Tests.Controllers.HomeControllerTest, www.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Index" />
+    </UnitTest>
+    <UnitTest name="About" storage="c:\users\user\workspace\www\www\www.tests\bin\debug\www.tests.dll" id="c9abd77d-0291-eab6-f474-0799da5cc0ba">
+      <Execution id="f478f9c0-5fca-48c5-90fb-e455da55d729" />
+      <TestMethod codeBase="C:/Users/User/Workspace/www/www/www.Tests/bin/Debug/www.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="www.Tests.Controllers.HomeControllerTest, www.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="About" />
+    </UnitTest>
+    <UnitTest name="Contact" storage="c:\users\user\workspace\www\www\www.tests\bin\debug\www.tests.dll" id="eafe29ff-a7be-e357-7f20-2c678ce79afe">
+      <Execution id="eacd2651-eea0-4b74-8feb-a8521456c6c2" />
+      <TestMethod codeBase="C:/Users/User/Workspace/www/www/www.Tests/bin/Debug/www.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="www.Tests.Controllers.HomeControllerTest, www.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Contact" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="7d61e387-016e-9f92-38fa-2fa8b0275ba9" executionId="060ebe2f-9956-4ed2-9eab-9f51ba862fe4" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="c9abd77d-0291-eab6-f474-0799da5cc0ba" executionId="f478f9c0-5fca-48c5-90fb-e455da55d729" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="eafe29ff-a7be-e357-7f20-2c678ce79afe" executionId="eacd2651-eea0-4b74-8feb-a8521456c6c2" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="060ebe2f-9956-4ed2-9eab-9f51ba862fe4" testId="7d61e387-016e-9f92-38fa-2fa8b0275ba9" testName="Index" computerName="USER-PC" duration="00:00:00.1468108" startTime="2014-10-18T10:55:42.4337708+08:00" endTime="2014-10-18T10:55:43.0788077+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="060ebe2f-9956-4ed2-9eab-9f51ba862fe4">
+    </UnitTestResult>
+    <UnitTestResult executionId="f478f9c0-5fca-48c5-90fb-e455da55d729" testId="c9abd77d-0291-eab6-f474-0799da5cc0ba" testName="About" computerName="USER-PC" duration="00:00:00.0021282" startTime="2014-10-18T10:55:43.0828079+08:00" endTime="2014-10-18T10:55:43.0898083+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="f478f9c0-5fca-48c5-90fb-e455da55d729">
+    </UnitTestResult>
+    <UnitTestResult executionId="eacd2651-eea0-4b74-8feb-a8521456c6c2" testId="eafe29ff-a7be-e357-7f20-2c678ce79afe" testName="Contact" computerName="USER-PC" duration="00:00:00.0022445" startTime="2014-10-18T10:55:43.1018090+08:00" endTime="2014-10-18T10:55:43.1158098+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="eacd2651-eea0-4b74-8feb-a8521456c6c2">
+    </UnitTestResult>
+  </Results>
+</TestRun>
