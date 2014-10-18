@@ -68,13 +68,24 @@
   <ItemGroup>
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\PayPalController.cs" />
+    <Compile Include="Controllers\ProductController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountModels.cs" />
+    <Compile Include="Models\PayPalModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\aspnet-www-20140918085555.mdf" />
+    <Content Include="App_Data\aspnet-www-20140918085555_log.ldf">
+      <DependentUpon>aspnet-www-20140918085555.mdf</DependentUpon>
+    </Content>
+    <Content Include="App_Data\ASPNETDB.MDF" />
+    <Content Include="App_Data\ASPNETDB_log.ldf">
+      <DependentUpon>ASPNETDB.MDF</DependentUpon>
+    </Content>
     <Content Include="Global.asax" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
@@ -108,7 +119,13 @@
     <Content Include="Views\Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\" />
+    <Content Include="Views\PayPal\CancelFromPaypal.cshtml" />
+    <Content Include="Views\PayPal\NotifyFromPaypal.cshtml" />
+    <Content Include="Views\PayPal\RedirectFromPaypal.cshtml" />
+    <Content Include="Views\PayPal\ValidateCommand.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Product\Index.cshtml" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
