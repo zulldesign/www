@@ -1,0 +1,8 @@
+C:\Users\User\Workspace\www\www\www.Tests\bin\Debug\www.Tests.dll.config
+C:\Users\User\Workspace\www\www\www.Tests\bin\Debug\www.Tests.dll
+C:\Users\User\Workspace\www\www\www.Tests\bin\Debug\www.Tests.pdb
+C:\Users\User\Workspace\www\www\www.Tests\bin\Debug\www.dll
+C:\Users\User\Workspace\www\www\www.Tests\bin\Debug\www.pdb
+C:\Users\User\Workspace\www\www\www.Tests\obj\Debug\www.Tests.csprojResolveAssemblyReference.cache
+C:\Users\User\Workspace\www\www\www.Tests\obj\Debug\www.Tests.dll
+C:\Users\User\Workspace\www\www\www.Tests\obj\Debug\www.Tests.pdb
