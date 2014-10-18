@@ -1,4 +1,0 @@
-C:\Users\User\Workspace\www\www\www\bin\www.dll
-C:\Users\User\Workspace\www\www\www\bin\www.pdb
-C:\Users\User\Workspace\www\www\www\obj\Debug\www.dll
-C:\Users\User\Workspace\www\www\www\obj\Debug\www.pdb
