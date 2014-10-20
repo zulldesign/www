@@ -246,6 +246,7 @@
     <Content Include="Views\PayPal\RedirectFromPaypal.cshtml" />
     <Content Include="Views\PayPal\ValidateCommand.cshtml" />
     <Content Include="Views\Home\Kod.cshtml" />
+    <Content Include="Views\PayPal\Index.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <PropertyGroup>

@@ -36,6 +36,11 @@ namespace www.Controllers
             return View();
         }
 
+        public ActionResult Index()
+        {
+            return View();
+        }
+
          //<add key="business" value="asrce2_1311074442_biz@gmail.com" />
     }
 }
