@@ -34,5 +34,10 @@ namespace www.Controllers
 
             return View("Error");
         }
+
+        public ActionResult Kod()
+        {
+            return View();
+        }
     }
 }
