@@ -134,11 +134,13 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\KNPR2C9H4G4KQ6MHC4YKM96XRController.cs" />
     <Compile Include="Controllers\PayPalController.cs" />
     <Compile Include="Controllers\UserRealtimeUpdateController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\KNPR2-C9H4G-4KQ6M-HC4YK-M96XRModel.cs" />
     <Compile Include="Models\MyAppUserFriend.cs" />
     <Compile Include="Models\MyAppUser.cs" />
     <Compile Include="Models\FacebookPicture.cs" />
@@ -246,6 +248,11 @@
     <Content Include="Views\PayPal\RedirectFromPaypal.cshtml" />
     <Content Include="Views\PayPal\ValidateCommand.cshtml" />
     <Content Include="Views\PayPal\Index.cshtml" />
+    <Content Include="Views\KNPR2C9H4G4KQ6MHC4YKM96XR\Index.cshtml" />
+    <Content Include="Views\KNPR2C9H4G4KQ6MHC4YKM96XR\NotifyFromPaypal.cshtml" />
+    <Content Include="Views\KNPR2C9H4G4KQ6MHC4YKM96XR\CancelFromPaypal.cshtml" />
+    <Content Include="Views\KNPR2C9H4G4KQ6MHC4YKM96XR\RedirectFromPaypal.cshtml" />
+    <Content Include="Views\KNPR2C9H4G4KQ6MHC4YKM96XR\ValidateCommand.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <PropertyGroup>
