@@ -1,0 +1,33 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+@using (Html.BeginForm("ValidateCommand", "PayPal"))
+{
+    <div>
+        <table >
+            <tr>
+                <td>
+                    Product Name:
+                </td>
+                <td>
+                    <input type="text" name="product" value="DOWNLOAD MICROSOFT OFFICE 2013 PROFESSIONAL PLUS FULL SERIAL KEYGEN" readonly />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                   Total Price:
+                </td>
+                <td>
+                   RM <input type="text" name="totalPrice" value="339.99" readonly />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                </td>
+                <td>
+                    <input type="submit" name="btnConfirm" value="Check Out with Paypal" />
+                </td>
+            </tr>
+        </table>
+    </div>
+}
