@@ -1,0 +1,1 @@
+Bootstrapper.bindDOMParsed(function(){var Bootstrapper=window["Bootstrapper"];var ensightenOptions=Bootstrapper.ensightenOptions;$(document).on("mousedown","a.buyBtn_AddtoCart","",function(){try{window["optimizely"]=window["optimizely"]||[];window["optimizely"].push(["trackEvent","AddToCart"])}catch(opterr){}})},473955,246699);

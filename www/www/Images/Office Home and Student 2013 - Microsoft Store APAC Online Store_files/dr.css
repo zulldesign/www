@@ -1,0 +1,6159 @@
+﻿@charset "utf-8";
+/*------------------------------------*\
+COMMON
+\*------------------------------------*/
+/*----------------------
+Call Center Tool Style
+------------------------*/
+.CallCenterToolPage .block {
+  display:inline-block;
+}
+.CallCenterToolPage .overlayWrap { 
+  position: absolute; left: 0; top: 0; 
+  background: #000; 
+  display:none; 
+  z-index:1001; 
+}
+.CallCenterToolPage #dr_scs_progress_wrapper {
+  width: 170px;
+  left: 45%;
+  position: absolute;
+  top: 50%;
+  z-index: 1001;
+  display:none;
+}
+.CallCenterToolPage #dr_scs_progress_wrapper .dr_scs_progress_inner_table_top_left { 
+  background: url("//drh.img.digitalriver.com/DRHM/Storefront/Library/images/scs_shadow8_w.png") right bottom no-repeat;
+  height: 8px;
+  padding: 0;
+  width: 8px;
+}
+.CallCenterToolPage #dr_scs_progress_wrapper .dr_scs_progress_inner_table_top_middle {
+  background: url("//drh.img.digitalriver.com/DRHM/Storefront/Library/images/scs_shadow1_w.png") center bottom repeat-x;
+  font-size: 8px;
+  height: 8px;
+  padding: 0;
+}
+.CallCenterToolPage #dr_scs_progress_wrapper .dr_scs_progress_inner_table_top_right {
+  background: url("//drh.img.digitalriver.com/DRHM/Storefront/Library/images/scs_shadow2_w.png") left bottom no-repeat;
+  height: 8px;
+  padding: 0;
+  width: 8px;
+}
+.CallCenterToolPage #dr_scs_progress_wrapper .dr_scs_progress_inner_table_left {
+  background: url("//drh.img.digitalriver.com/DRHM/Storefront/Library/images/scs_shadow7_w.png") right center repeat-y;
+  padding: 0;
+  width: 8px;
+}
+.CallCenterToolPage #dr_scs_progress_wrapper .dr_scs_progress_inner_table_middle {
+  background-color: #FFFFFF;
+  background: url("//drh.img.digitalriver.com/DRHM/Storefront/Library/images/scs_processing_back.gif") center bottom repeat-x;
+  border: 1px solid #FFFFFF;
+  line-height: 12px;
+  margin: 0 auto;
+  padding: 5px;
+  text-align: center;
+}
+.CallCenterToolPage #dr_scs_progress_wrapper .dr_scs_progress_inner_table_middle .dr_scs_progress_bar {
+  background: url("//drh.img.digitalriver.com/DRHM/Storefront/Library/images/scs_progress_bar_shadow.png") no-repeat;
+  margin: 0 auto 5px;
+  padding: 2px 0;
+  text-align: center;
+  width: 120px;
+}
+.CallCenterToolPage #dr_scs_progress_wrapper .dr_scs_progress_inner_table_middle .dr_scs_progress_bar img {
+  border: 1px solid #919191;
+}
+.CallCenterToolPage #dr_scs_progress_wrapper .dr_scs_progress_inner_table_right {
+  background: url("//drh.img.digitalriver.com/DRHM/Storefront/Library/images/scs_shadow3_w.png") left center repeat-y;
+  padding: 0;
+  width: 8px;
+}
+.CallCenterToolPage #dr_scs_progress_wrapper .dr_scs_progress_inner_table_bottom_left {
+  background: url("//drh.img.digitalriver.com/DRHM/Storefront/Library/images/scs_shadow6_w.png") right top no-repeat;
+  height: 8px;
+  padding: 0;
+  width: 8px;
+}
+.CallCenterToolPage #dr_scs_progress_wrapper .dr_scs_progress_inner_table_bottom_middle {
+  background: url("//drh.img.digitalriver.com/DRHM/Storefront/Library/images/scs_shadow5_w.png") center top repeat-x;
+  height: 8px;
+  padding: 0;
+}
+.CallCenterToolPage #dr_scs_progress_wrapper .dr_scs_progress_inner_table_bottom_right {
+  background: url("//drh.img.digitalriver.com/DRHM/Storefront/Library/images/scs_shadow4_w.png")  left top no-repeat;
+  height: 8px;
+  padding: 0;
+  width: 8px;
+}
+.CallCenterToolPage .marketSelector{
+  border:3px solid #D2480E; 
+  margin:0 auto;
+  position:absolute; 
+  left:35%; 
+  top:35%; 
+  background:#FFF; 
+  padding: 20px; 
+  z-index: 1001; 
+  display:none;
+}
+.CallCenterToolPage #dr_callCenterToolWLIDSearchSection input[name="email"] {
+  width:60%;
+}
+.CallCenterToolPage #dr_callCenterToolWLIDSearchSection #WLIDSearchButton:hover {
+  color:#D2480E;
+}
+.CallCenterToolPage #dr_callCenterToolCouponCodeSection .dr_callCenterToolCouponCodeInfo {
+  width: 180px; 
+  height: 50px; 
+  float: left; 
+  margin: 1em; 
+  padding: .625em
+  border: 1px solid black;
+}
+.CallCenterToolPage #dr_callCenterToolCouponCodeSection .dr_callCenterToolDiscountText {
+  margin-bottom: 1.5em
+}
+.CallCenterToolPage #dr_callCenterToolCouponCodeSection .dr_callCenterToolCouponCode {
+  font-weight: bold;
+} 
+.CallCenterToolPage #dr_callCenterToolProductSelector {
+  background-color: #EEE;
+  border: 1px #DDD solid;
+  padding: .3125em
+  width: 700px;
+  float: left;
+}
+.CallCenterToolPage #dr_callCenterToolProductSelector fieldset {
+  border: 4px white solid;
+  /*display: block;*/
+  margin: 0 0 1.5em;
+  padding: .625em;
+  font-size: 1em;
+}
+.CallCenterToolPage #dr_callCenterToolProductSelector fieldset legend { 
+  display: block;
+  font-size: 1.25em;
+  font-weight: 700;
+  width: 200px; 
+}
+.CallCenterToolPage #dr_callCenterToolProductSelector .CctUserSelectionMain fieldset legend {
+  width:auto;
+}
+.CallCenterToolPage #dr_callCenterToolProductSelector fieldset select {
+  padding: .1875em;
+  width: 70%;
+}
+.CallCenterToolPage #dr_callCenterToolProductSelector fieldset .cta {
+  font-weight:bold;
+  margin:.625em 0 .3125em;
+}
+.CallCenterToolPage #dr_callCenterToolProductSelector a {
+  float:right;
+  margin: 0 .3125em;
+}
+.CallCenterToolPage .dr_callCenterToolBaseProductDirectSelect, #dr_callCenterToolProductSelector .dr_callCenterToolProductVaration { 
+  display: none; 
+}
+.CallCenterToolPage #dr_CallCenterToolRelatedProductOfferSection .grid_2 { 
+  margin-left: 0; 
+}
+.CallCenterToolPage .sectionContainer {
+  display:inline-block;
+  margin:1em 0;
+  width:100%;
+}
+.CallCenterToolPage .dr_formLine label {
+  display:inline-block;
+  width:145px;
+}
+.CallCenterToolPage .dr_formLine {
+  float: left;
+  width: 100%;
+  margin: .3125em 0;
+}
+.CallCenterToolShoppingCartPage .section {
+  margin:0;
+}
+.CallCenterToolShoppingCartPage .dr_price input[type=text] {
+  min-width: 0;
+  max-width: 6em;
+}
+.CallCenterToolShoppingCartPage #dr_CallCenterToolShoppingCart {
+  padding-top:1.25em;
+}
+.CallCenterToolPage input[type=text], .CallCenterToolShoppingCartPage input[type=text] {
+  padding: .25em;
+  min-width: 20em;
+  font-size: 1em;
+  font-family: "wf_SegoeUI","Segoe UI","Segoe","Segoe WP","Tahoma","Verdana","Arial","sans-serif";
+}
+.CallCenterToolPage #newAddress label {  
+  width:445px;
+}
+.CallCenterToolPage #dr_callCenterToolDiscountInfoSection #discountNotes {
+  width:60%;
+}
+.CallCenterToolPage #dr_callCenterToolDiscountInfoSection span.dr_error {
+  display:none;
+}
+.CallCenterToolPage #dr_callCenterToolPaymentMethodsSection .paymentInstrumentList { 
+  width:732px; 
+}
+.CallCenterToolPage #dr_callCenterToolPaymentMethodsSection .paymentInstrument {
+  border-bottom: 0;
+}
+.CallCenterToolPage #dr_callCenterToolPaymentMethodsSection .continueButtonBottom { 
+  top:0; 
+  margin-bottom:1.25em;
+  width:732px;
+}
+.CallCenterToolPage #dr_callCenterToolCustomerFavoriteSection .ms_specListItem {
+  display:none;
+}
+.CallCenterToolShoppingCartPage #content {
+	margin-top: 0;
+}
+.CallCenterToolShoppingCartPage #dr_cartTbl {
+  width:100%;
+}
+#dr_ConfirmOrder #backToCCT {
+  float:left;
+  margin-top:1em;
+}
+#dr_ThankYou #startNewOrder {
+  margin-top:3.125em;
+  float:right;
+}
+.CallCenterToolPage select, .CallCenterToolShoppingCartPage select {
+  border: 1px solid #999;
+  font-size: 1em;
+}
+.CallCenterToolPage.rtlanguage.lt-ie8, .CallCenterToolShoppingCartPage.rtlanguage.lt-ie8 {
+  font-family: "Segoe UI", "Segoe", "Segoe WP", "Tahoma", "Verdana", "Arial", "sans-serif";
+}
+.fb-like .fb_iframe_widget > span {
+  vertical-align: top!important;
+}
+/* BEGIN SOLR AUTO-COMPLETE */
+.ac_results {
+  padding:0px;
+  border:1px solid #000;
+  background-color:#fff;
+  overflow:hidden;
+  z-index:99999;
+}
+.ac_results ul {
+  width:100%;
+  list-style-position:outside;
+  list-style:none;
+  padding:0;
+  margin:0;
+}
+.ac_results li {
+  margin:0px;
+  padding:2px 5px;
+  cursor:pointer;
+  display:block;
+  overflow: hidden;
+  text-align:left;
+}
+body[dir="rtl"] .ac_results li {
+  text-align:right;
+}
+.ac_loading {
+  background:#fff right center no-repeat;
+}
+.ac_over {
+  background-color:#1570a6;
+  color:#fff;
+}
+
+/* BEGIN Invoice Page */
+.InvoicePage .dr_addrBlock1,.InvoicePage .dr_paymentBlock1 {
+  display: inline;
+  float: left;
+  width: 150px;
+  padding-top:10px;
+}
+.rtlanguage.InvoicePage .dr_addrBlock1,.rtlanguage.InvoicePage .dr_paymentBlock1 {
+  float: right;
+}
+.InvoicePage .dr_addrBlock2,.InvoicePage .dr_paymentBlock2 {
+  display: inline;
+  float: left;
+  padding-right: 5px;
+  width: 150px;
+  word-wrap: break-word;
+  padding-top:10px;
+}
+.rtlanguage.InvoicePage .dr_addrBlock2, .rtlanguage.InvoicePage .dr_paymentBlock2 {
+  float: right;
+}
+.InvoicePage address {
+  font-style: normal;
+}
+.InvoicePage #dr_invoiceProducts {
+  clear: both;
+  float: left;
+  margin-top: 10px;
+  position: relative;
+  width: 100%;
+}
+.InvoicePage #dr_invoiceTbl thead {
+  display: none;
+}
+.InvoicePage h3{
+  border-bottom: 1px solid #CCCCCC;
+  font-size: 1.75em;
+  margin: 10px 0;
+  text-transform:capitalize;
+  width: 47%;
+}
+#dr_invoiceTbl  td.dr_price {
+  padding-left: 1em;
+}
+/* End Invoice Page */
+/* END SOLR AUTO-COMPLETE */
+.Windows8BackupText{margin:10px 0px;}
+.Windows8BackupLink{color: #1570A6;cursor: pointer;background: none;border: none;padding:0;margin:10px 0 0 -2px !important; font:1.0em "Segoe UI",Segoe,Arial,Sans-Serif;}
+.Windows8BackupLink:hover{text-decoration:underline;}
+
+/*------------------------------------*\
+MONACO
+\*------------------------------------*/
+
+/* DR universal rule */
+.skip {
+  display:none!important;
+}
+.clear {
+  clear:both;
+  display:block;
+  overflow:hidden;
+  visibility:hidden;
+  width:0;
+  height:0;
+}
+.dr_button,.button {
+  background-color:#BAD80A;
+  color:#333;
+  cursor:pointer;
+  display:inline-block;
+  font-size:.875em;
+  text-align:center;
+  text-decoration:none;
+  border:0;
+  line-height:1.4em;
+}
+.rwd .hero-box .button {
+  font-size:100%;
+}
+.dr_button:hover,.button:hover {
+  background-color:#7FBA00;
+}
+.dr_button.grey,.button.grey,.dr_button.orange,.button.orange {
+  background-color:#3F3F3F;
+  color:#FFF;
+}
+.dr_button.grey:hover,.button.grey:hover,.dr_button.orange:hover,.button.orange:hover {
+background-color:#D0491E;
+}
+#dr_siteButtons,.dr_siteButtons {
+  float:right;
+  text-align:right;
+}
+#content {
+  margin-top:12px;
+  padding-bottom:15px;
+}
+th,td,caption {
+  font-weight:400;
+  vertical-align:top;
+}
+a.dr_button,a.button,input.dr_button,input.button {
+  padding:7px 23px 8px;
+}
+a.dr_button:hover,a.button:hover {
+  color: #333;
+  text-decoration: none;
+}
+.section {
+  margin-top:1.25em;
+}
+.dr_error {
+  color:red;
+  display:block;
+}
+p.errorGermanyAge{
+  font-size:0.7em;
+  font-weight:bold;
+  margin-top:1em;
+}
+.CallCenterToolShoppingCartPage p.errorGermanyAge{
+  font-size:0.9em;
+  color:red;
+}
+.rwd p.errorGermanyAge a{
+  white-space:normal;
+}
+.hide, .hideImp {
+  display:none;
+}
+.continueButtonBottom {
+  position:relative;
+  top:15px;
+  text-align:right;
+  float:left;
+  width:100%;
+  border-top:0;
+}
+.lineThrough {
+  text-decoration:line-through;
+}
+#load_image {
+  display:none;
+}
+.returnTop {
+  margin-bottom:30px;
+}
+iframe[name=__bkframe] {
+  display:none;
+}
+input.dr_button,input.button {
+  cursor:pointer;
+}
+.dr_strikePrice {
+  color:#000;
+}
+.align-right {
+  text-align:right;
+}
+/* msResponsive grids */
+.mstResponsive .column-3 .colspan-2 .column-4 .grid-unit {
+  width:25%;
+}
+.mstResponsive .column-3 .colspan-2 .column-4 .colspan-2 {
+  width:50%;
+}
+.mstResponsive .column-3 .colspan-2 .column-4 .colspan-3 {
+  width:75%;
+  margin-left:0;
+}
+.lt-ie8.mstResponsive .grid-row .product-heading .table-cell {
+  float:left;
+}
+.mstResponsive .grid-row .table-cell {
+  float: none;
+  vertical-align: middle;
+  display: table-cell;
+  padding-left: 2%;
+}
+.mstResponsive .column-3 .colspan-2 .grid-unit {
+  margin-right:0;
+}
+.box.blue {
+  cursor:pointer;
+}
+button[disabled=disabled].box.blue, button.box.blue:disabled {
+  cursor:default;
+}
+.ellipsis {
+  white-space:nowrap;
+  overflow:hidden;
+  -ms-text-overflow:ellipsis;
+  -o-text-overflow:ellipsis;
+  -moz-text-overflow:ellipsis;
+  -webkit-text-overflow:ellipsis;
+  text-overflow:ellipsis;
+}
+.accessory-control .box {
+  padding:.07142857em 1.2142857em .1428571em;
+  margin-top:.7142857em;
+}
+.accessory-control .price {
+  display:inline-block;
+}
+.hide-option {
+  display:none!important;
+}
+.grid-unit.margin-top {
+  margin-top:2.5em;
+}
+.slider-tabs {
+  clear:both;
+}
+
+/* Home Page */
+/*.hero .overlay .description {
+margin-top:1.071428em;
+margin-bottom:1.785714em;
+font-size:.875em;
+}*/
+.hero .overlay-blue {
+  background:#002050;
+  background:rgba(0,32,80,0.93);
+}
+.hero .overlay-blue .header,.hero .overlay-blue .description {
+  color:#FFF;
+}
+.hero .overlay-blue .box {
+  color:#1370A5;
+  background-color:#FFF;
+}
+.hero .overlay-blue .box:hover,.hero .overlay-blue .box:focus {
+  color:#fff;
+  background-color:#1370A5;
+}
+
+/* Mutiple Pages */
+.recommended-products ul {
+  display:none;
+  margin:0;
+}
+.recommended-products ul li {
+  display:inline-block;
+  margin-right:5%;
+  width:auto;
+}
+.recommended-products h1 {
+  margin-bottom:.4375em;
+}
+.recommended-products h2 {
+  margin-bottom:1.5em;
+}
+.recommended-products .product-control .description ul {
+  display:inline-block;
+  margin:0;
+}
+.recommended-products .product-control .description ul li {
+  display:inline-block;
+  width:100%;
+}
+.search-results .heading--large,.product-results .heading--large {
+  margin-bottom:.425em;
+}
+.search-results .heading--medium, .product-results .heading--medium {
+  margin-top:0;
+}
+.product-results .heading--medium {
+  font-size:1.3729em;
+}
+.search-results .heading--large a {
+  font-family:wf_SegoeUILight,wf_SegoeUI,"Segoe UI Light","Segoe WP Light","Segoe UI",Segoe,"Segoe WP",Tahoma,Verdana,Arial,sans-serif;
+  font-size:100%;
+  padding:0;
+}
+.search-results .grid-row.result-head,.product-results .grid-row.result-head {
+  border:none;
+}
+.search-results .grid-row.result-footer,.product-results .grid-row.result-footer {
+  margin-bottom:2em;
+}
+.search-results .grid-unit.dr_sortBy,.product-results .grid-unit.dr_sortBy {
+  font-size:.875em;
+  margin-left:0;
+  font-family:wf_SegoeUILight,wf_SegoeUI,"Segoe UI",Segoe,"Segoe WP",Tahoma,Verdana,Arial,sans-serif;
+}
+.search-results .grid-unit.dr_sortBy label,.product-results .grid-unit.dr_sortBy label {
+  font-size:1.3729em;
+}
+.search-results .grid-unit.dr_sortBy select,.product-results .grid-unit.dr_sortBy select {
+  margin:0;
+  padding:0;
+}
+.search-results .dr_pagination,.product-results .dr_pagination {
+  font-size:.875em;
+  font-family:wf_SegoeUILight,wf_SegoeUI,"Segoe UI",Segoe,"Segoe WP",Tahoma,Verdana,Arial,sans-serif;
+}
+.search-results .dr_pagination a,.product-results .dr_pagination a {
+  padding:.013em .438em .175em .5em;
+  display:inline-block;
+}
+.search-results .dr_pagination ul,.product-results .dr_pagination ul {
+  margin-top:.325em;
+}
+.search-results .dr_pagination ul li,.product-results .dr_pagination ul li {
+  padding:0;
+}
+.search-results .dr_pagination .dr_selected a,.product-results .dr_pagination .dr_selected a {
+  background-color:#1370A5;
+  color:#FFF;
+}
+.search-results .dr_pagination a.next,.search-results .dr_pagination a.back,.product-results .dr_pagination a.next,.product-results .dr_pagination a.back {
+  margin-top:0;
+}
+.search-results .promo-offer {
+  display: inline-block;
+  background: #eee;
+  padding: 2em;
+  margin-bottom: 0.735em;
+}
+/**
+.search-results .phoneAndChatSupport{
+  margin-bottom:5.5em;
+}
+.search-results .phoneAndChatSupport .phone-support{
+  background: url("//dri1.img.digitalrivercontent.net/Storefront/Site/mscommon/cm/images/common_images/icon_phone.png") no-repeat 0px 2px transparent; 
+  padding: 0 0.5em 0 1.5em;
+  line-height: 23px;
+  font-size: 1.25em;
+  margin-left:0.5em;
+}
+@media screen and (max-width: 33.8125em) {
+  .search-results .phoneAndChatSupport .phone-support{
+    background: url("//dri1.img.digitalrivercontent.net/Storefront/Site/mscommon/cm/images/common_images/icon_phone_blue.png") no-repeat 0px 2px transparent; 
+    cursor:pointer;
+    color:#1570a6;
+  }
+  .search-results .phoneAndChatSupport .phone-support:hover{
+    text-decoration:underline;
+  }
+}
+.search-results .phoneAndChatSupport .chat-support{
+  color:#ffffff;
+}
+.search-results .phoneAndChatSupport .chat-support a{
+  background: url("//dri1.img.digitalrivercontent.net/Storefront/Site/mscommon/cm/images/common_images/icon_chat_blue.png") no-repeat 0px 5px transparent;
+  padding-left:1.5em;
+  line-height: 23px;
+  font-size: 1.25em;
+  cursor:pointer;
+  color:#1570a6;
+}
+.search-results .phoneAndChatSupport.noResultsFound{
+  margin-top:2.8em;
+  margin-bottom:9.25em;
+}
+.search-results .phoneAndChatSupport.noResultsFound .phone-support{
+  font-size:1em;
+  padding:0 1.8em;
+  margin-left:0;
+}
+.search-results .phoneAndChatSupport.noResultsFound .chat-support a{
+  background-position:0px 0px;
+  font-size: 1em;
+  padding-left:2em;
+}
+**/
+
+.grid-row.result-head {
+  border-top:1px solid #CCC;
+}
+#productListContainer {
+  margin-bottom:4.375em;
+}
+.dr_pagination ul {
+  list-style:none;
+  float:right;
+  margin: -.2em 0 0 .75em;
+}
+.rtlanguage .dr_pagination ul {
+  float:left;
+  margin: -.2em .75em 0 0;
+}
+.dr_pagination .dr_selected {
+  color:#676767;
+}
+.dr_pagination ul li {
+  margin:0;
+  float:left;
+  padding:5px 5px 0 0;
+}
+.dr_pagination .dr_viewing {
+  float:right;
+  font-size:1.3729em;
+}
+ul.ms_specListItem {
+  list-style:disc;
+  margin:0 0 1.5em 1em;
+}
+.header_search {
+  margin-bottom:14px;
+  width:360px;
+  float:left;
+  border:1px solid #CCC;
+}
+.header_search .input_text {
+  width:93%;
+  border:none;
+}
+.gt-ie8.dr_locale_ar_EG header.slim-header .global-navigation .search-form input[type="text"]{
+  font-family: "Tahoma","Verdana","Arial","sans-serif"
+}
+.menu {
+  list-style:none;
+  margin:0;
+  padding:0;
+}
+.menu li {
+  list-style:none;
+  margin:0;
+  padding:0;
+}
+.menu.horizontal li {
+  float:left;
+}
+.rtlanguage .menu.horizontal li {
+  float:right;
+}
+.menu.drop_down.inactive ul,.menu.drop_down.active ul {
+  display:none;
+  position:relative;
+  z-index:999;
+}
+.page {
+  margin:0 auto;
+  width:95%;
+  max-width:1180px;
+  background-color:#FFF;
+}
+.page_inner > .clear {
+  text-indent:-99999px;
+  visibility:hidden;
+}
+.pcf_header {
+  margin:0 0 .125em;
+  padding-bottom:.5em;
+}
+header .pcf_header .menulevel-merchandising {
+  float:none;
+  padding-top:0;
+}
+header .pcf_header .inline {
+  margin-top:-.2em;
+}
+.locale-selector {
+  display:inline-block;
+  position:relative;
+  top:1.5em;
+}
+.icon-globe {
+  font-size:1.85em;
+  float:left;
+  margin-top:0;
+  margin-right:10px;
+  text-decoration:none;
+  color:#000;
+}
+.legal {
+  font-size:.833em;
+}
+.legal a {
+  line-height:2em;
+}
+.legal .legalwrapper {
+  text-align:right;
+}
+.legal .legalwrapper li {
+  margin:0 0 0 2%;
+}
+.candy-rack .product-promotional-info {
+  margin-bottom:2em;
+}
+.product-promotional-info img {
+  display:block;
+  float:left;
+  margin-right:2%;
+  max-width:30%;
+}
+.product-promotional-info .promo-text {
+  float:left;
+  margin-top:.25em;
+  max-width:68%;
+}
+.product-promotional-info .heading--small {
+  color:#1A1A1A;
+  font-weight:300;
+  line-height:0;
+  font-family:wf_SegoeUILight,wf_SegoeUI,"Segoe UI Light","Segoe WP Light","Segoe UI",Segoe,"Segoe WP",Tahoma,Verdana,Arial,sans-serif;
+}
+.product-promotional-info .description {
+  font-size:.75em;
+  margin-top:.475em;
+}
+.product-promotional-info .productPrice {
+  color:#EB3900;
+  font-size:.875em;
+  margin-top:1em;
+  margin-left:0;
+}
+.product-promotional-info a.button {
+  padding:0;
+  background-color:transparent;
+  color:#1370A5;
+}
+.category-tab {
+  float:right;
+  width:100%;
+  margin-bottom:1em;
+}
+.category-tab ul {
+  list-style:none outside none;
+  margin:0;
+  padding:0;
+  float:left;
+}
+#dr_CategoryList {
+  padding-bottom: 4.375em;
+}
+#dr_CategoryList section.row-padded{
+  padding-bottom: 0;
+}
+.office-suites .byline.green-text-color + .heading--small , .office-suites .byline.blue-text-color + .heading--small , .office-suites .byline.darkblue-text-color + .heading--small {
+  margin-top: 0;
+}
+.office-suites .products-list .comment {
+  white-space: nowrap;
+}
+.office-suites .products-list ul li .table {
+  width: auto;
+}
+.nav-tabs {
+  float:right;
+  display:none;
+}
+.nav-tabs li {
+  float:left;
+  list-style:none outside none;
+  margin:0;
+  padding:0;
+  width:58px;
+}
+.nav-tabs li a {
+  display:block;
+  font-size:2em;
+  padding:0 8px;
+}
+.nav-tabs li a.active {
+  color:#D2480E;
+}
+.nav-tabs.left-right li a.disabled {
+  color:#CCC;
+}
+.nav-scroll a {
+  background:url(//dri1.img.digitalrivercontent.net/Storefront/Site/mscommon/cm/images/Monaco/store_sprite-v9.gif) no-repeat scroll 0 0 transparent;
+  height:41px;
+}
+.nav-scroll .disabled {
+  cursor:auto;
+}
+.nav-scroll .leftwards a {
+  background-position:0 -637px;
+}
+.nav-scroll .rightwards a {
+  background-position:0 -511px;
+}
+.nav-scroll .leftwards a:hover {
+  background-position:0 -679px;
+}
+.nav-scroll .rightwards a:hover {
+  background-position:0 -553px;
+}
+.nav-scroll .leftwards .disabled {
+  background-position:0 -721px;
+}
+.nav-scroll .rightwards .disabled {
+  background-position:0 -595px;
+}
+.nav-scroll .leftwards a.disabled:hover {
+  background-position:0 -721px;
+}
+.nav-scroll .rightwards a.disabled:hover {
+  background-position:0 -595px;
+}
+.editCard {
+  display:inline-block;
+  float:right;
+  cursor:pointer;
+}
+.editCard,.editCard a,.dr_orderInfoRightColumn a,#dr_AccountOrderList .dr_myAccountSiteButtons {
+  text-decoration:none;
+}
+.editCard a:hover,.dr_orderInfoRightColumn a:hover,#dr_AccountOrderList .dr_myAccountSiteButtons:hover {
+  text-decoration:underline;
+}
+.hero li:first-child, .hero li:first-child .overlay {
+  display:list-item;
+}
+section#models .grid-unit .incVat, .newpdp .new-pdp-hero .buy-box .price .incVat{
+  font-size:0.5em;
+}
+.facet_search {
+  display:inline-block;
+}
+.facetSearch {
+  border-bottom:solid 1px #EEE;
+  margin-bottom:1em;
+}
+.facet_title h2 {
+  float:left;
+  font-size:1.25em;
+  margin-top:0;
+}
+.facet_title span a {
+  float:right;
+  text-decoration:none;
+  font-size:1.25em;
+}
+.facet_title .facetReset a {
+  background-position:0 -712px;
+}
+.facet_title .facetReset a:hover {
+  background-position:0 -747px;
+}
+.facet_title .facetExpand a {
+  margin-right:1.2em;
+}
+.facet_title .expand a {
+  background-position:0 -572px;
+}
+.facet_title .expand a:hover {
+  background-position:0 -607px;
+}
+.facet_title .collapse a {
+  background-position:0 -642px;
+}
+.facet_title .collapse a:hover {
+  background-position:0 -677px;
+}
+.facet_title .expand .collapseText, .facet_title .collapse .expandText {
+  display:none;
+}
+.facet_title span a span {
+  margin-left:.5em;
+}
+.facetSub ul {
+  overflow-y:auto;
+  border-top:1px solid #CCC;
+  padding-top:5px;
+  margin-bottom:1.5em;
+}
+.facetSub.fiveEntries ul {
+  max-height:210px;
+}
+.facetSub.fourEntries ul {
+  max-height:168px;
+}
+.facetSub ul li {
+  font-size:1em;
+  padding:0.5em 0 0.5em 1.25em;
+}
+.facetSub ul li span {
+  position:relative;
+  margin-left:.5em;
+}
+.facetSub ul li a {
+  color:#1A1A1A;
+}
+.facetSub h3 {
+  font-weight:400;
+  font-family:wf_SegoeUI,"Segoe UI",Segoe,"Segoe WP",Tahoma,Verdana,Arial,sans-serif;
+  font-size:1em;
+  margin-bottom:.5em;
+}
+.facetSpin {
+  margin: 10em auto;
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+}
+.lt-ie9 .grid-container .grid-unit.facetSub.hide {
+  display:none;
+}
+.facet_title.reset {
+  margin-top:0em;
+  margin-bottom:1.875em;
+}
+.facet_title.reset .facetReset {
+  float:left;
+}
+
+/* PDP */
+.overview-featured-list .product-heading {
+  padding-left:2.375em;
+}
+.overview-featured-list ul {
+  margin:.5em 0;
+}
+.buy-box .product-additional-info .promo-text {
+  float:left;
+  max-width:68%;
+  margin-top:.25em;
+}
+.buy-box .product-additional-info.no-image .promo-text {
+  margin-top:0;
+  max-width:100%;
+}
+.buy-box .dr_quantity {
+  display:none;
+}
+.buy-box input[type="submit"].box.buyBtn_outOfStock {
+  background:#CCC;
+  color:#1a1a1a;
+  cursor:text;
+  margin:0;
+}
+.ProductDetailsPage .academicText {
+  color:#D2480E;
+}
+.ProductDetailsPage .releaseDateText {
+  margin-top:1em;
+}
+.ProductDetailsPage .buy-box a.box {
+  padding:.5em 1.25em .5625em;
+  font-size:1em;
+}
+.ProductDetailsPage .buy-box a.box:hover {
+  color:#FFF;
+}
+.ProductDetailsPage.newpdp .buy-box a.box {
+  padding-left:1.85em;
+  padding-right:1.85em;
+  font-size:1em;
+}
+.ProductDetailsPage.newpdp .new-pdp-hero .buy-box .shipping-return-text{
+  margin:0;
+}
+.ProductDetailsPage .slider-content .grid-unit:first-child{
+  word-wrap: break-word;
+}
+/*.ProductDetailsPage .buy-box a.box.overrideButton {
+background-color:#0060A6;
+color:#FFF;
+}
+.ProductDetailsPage .buy-box a.box.overrideButton:hover {
+  background-color: #002050;
+}*/
+.buy-box form {
+  clear:both;
+}
+.buy-box .product-additional-info a {
+  font-size:.95em;
+}
+#ms-complete-warranty .heading--medium {
+  font-size:1.25em;
+  margin:.15em 0 .5em;
+}
+.product-add-on .details-box .add-to-cart p {
+  font-size: 1.3333333333em;
+}
+.tabify .overview-featured-list .heading--medium {
+  line-height:1;
+  margin:0;
+}
+.age-gate .date-picker select {
+  width:10em;
+}
+
+/* BEGIN: Fix for defect #27516 */
+.ProductDetailsPage.newpdp .buy-box .btnSubmitSpinContainer{padding-top:2.25em;}
+.ProductDetailsPage.newpdp .buy-box .buyBtn_AddtoCart{margin-top:0;}
+.ProductDetailsPage.newpdp .buy-box input[type="submit"].box.buyBtn_outOfStock{margin:0 0.3125em 0 0;}
+/* END: Fix for defect #27516 */
+
+/* Interstitial */
+/*
+.quickViewMedium {
+  clear:both;
+  display:none;
+  min-height:25px;
+  min-width:84px;
+  max-width:146px;
+  text-align:center;
+  float:left;
+  margin:0;
+  overflow:hidden;
+  position:relative;
+  border:2px solid #000;
+  background:#fefffc;
+}
+a.qvoverlay {
+  padding:5px;
+  display:block;
+}
+a.qvoverlay:hover {
+  color:#000;
+  text-decoration:none;
+}
+#dr_quickviewOverlay {
+  margin-top:0;
+  position:fixed;
+  width:650px;
+  border:8px solid #00ACEC;
+  z-index:10;
+  background:#FFF;
+  float:left;
+  min-height:250px;
+  text-align:center;
+}
+#dr_quickviewOverlay #quickviewLoaderImage {
+  margin-top:100px;
+}
+#dr_quickviewOverlay .dr_closeQuickView {
+  float:right;
+  font-size:15px;
+  margin:7px 7px 0 0;
+  width:11px;
+  height:11px;
+  background:url(//dri1.img.digitalrivercontent.net/Storefront/Site/mscommon/cm/images/Monaco/popup_close.png) no-repeat;
+  background-position:top;
+}
+#dr_quickviewOverlay .dr_closeQuickView:hover {
+  background-position:bottom;
+}
+#dr_quickviewOverlay .dr_title {
+  border-bottom:1px solid #CCC;
+  width:95%;
+  text-align:left;
+  margin:0 auto;
+  padding:9px 0;
+  font-size:24px;
+  font-weight:700;
+}
+#dr_quickviewOverlay .dr_quickviewTopLeft {
+  width:39%;
+  padding:20px 0 20px 25px;
+  float:left;
+}
+#dr_quickviewOverlay .dr_quickviewTopRight {
+  width:51%;
+  float:right;
+  padding:20px 25px 20px 0;
+  text-align:left;
+}
+*/
+.ProductCrossSellPage .image-container.sold-out .sold-out-label {
+  position: absolute;
+  top: 35%;
+  width: 100%;
+  text-align: center;
+  font-size: 2em;
+  font-weight: 900;
+  color: #000;
+}
+.ProductCrossSellPage .image-container.sold-out img {
+  filter: alpha(opacity=20);
+  opacity: .2;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(opacity=20)";
+}
+/*
+.ProductCrossSellPage .accessory-control .savings-message {
+  min-height: .875em;
+  font-size: .875em;
+  line-height: .875em;
+  font-family: "wf_SegoeUI","Segoe UI","Segoe","Segoe WP","Tahoma","Verdana","Arial","sans-serif";
+  font-weight: bold;
+  padding-bottom:.3125em;
+}
+.ProductCrossSellPage .byline {
+  font-style: normal;
+  text-decoration: none;
+}
+.ProductCrossSellPage ul.product-colors li {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 5%;
+  height: auto;
+  margin-left: 1.5%;
+  margin-right: 0;
+  padding: 0;
+  float: left;
+  border: 2px solid transparent;
+}
+.ProductCrossSellPage ul.product-colors li:first-child {
+  margin-left: 0;
+}
+.ProductCrossSellPage ul.product-colors li.selected {
+  border: 2px solid #656565;
+}
+.ProductCrossSellPage ul.product-colors li a {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  border: 1px solid #656565;
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  white-space: normal;
+  text-align: center;
+  overflow: hidden;
+}
+.ProductCrossSellPage ul.product-colors li a:hover {
+  border: 2px solid #656565;
+}
+.ProductCrossSellPage ul.product-colors li.active a, 
+.ProductCrossSellPage ul.product-colors li.selected a {
+  border: 2px solid #656565;
+  font-weight: bold;
+}
+.ProductCrossSellPage ul.product-colors li a {
+  height: 1.6em;
+  width: 100%;
+  padding: 0;
+}*/
+
+/* Account Pages */
+#acctNavRight {
+  float:right;
+  background-color:#F9F9F9;
+  width:188px;
+  text-align:right;
+  margin-right:0;
+  margin-top:0;
+}
+#acctNavRight ul {
+  margin:.625em 0;
+  float:right;
+}
+#acctNavRight .rightPointer {
+  background:url(//dri1.img.digitalrivercontent.net/Storefront/Site/mscommon/cm/images/Monaco/left_facing_arrow_red.gif) no-repeat scroll 143px 13px transparent;
+  color:#767676;
+}
+#acctNavRight ul li {
+  padding:.4375em 1.25em .4375em 0;
+  float:right;
+  width:130px;
+  text-align:right;
+  list-style:none;
+  margin:0;
+  position:relative;
+}
+#acctNavRight .rightPointer a {
+  color:#767676;
+}
+.dr_accountLabel {
+  font-size:1.2em;
+  display:block;
+  margin-bottom:.25em;
+}
+.pagination a.dr_selected {
+  background:url(//dri1.img.digitalrivercontent.net/Storefront/Site/mscommon/cm/images/Monaco/sprite_pdpage_v3.gif) no-repeat 0 -532px;
+  padding:8px 2px;
+  width:22px;
+  text-align:center;
+}
+.pagination a.next {
+  height: 15px;
+  width: 22px;
+  display: block;
+  padding: 8px;
+  position: relative;
+  overflow: hidden;
+}
+.pagination a.next:hover img {
+  top: -237px;
+}
+.pagination a.next img {
+  position: absolute;
+  top: -205px;
+}
+.pagination a.back {
+  height: 15px;
+  width: 21px;
+  display: block;
+  padding: 8px;
+  position: relative;
+  overflow: hidden;
+  margin: 5px 0 0;
+}
+.pagination a.back img {
+  position: absolute;
+  top: -365px;
+}
+.pagination a.back:hover img {
+  top: -333px;
+}
+.dr_pagination a.next {
+  background:url(//dri1.img.digitalrivercontent.net/Storefront/Site/mscommon/cm/images/Monaco/sprite_pdpage_v3.gif) no-repeat 0 -209px;
+  display:inline-block;
+  height:22px;
+  padding:0;
+  width:22px;
+  text-decoration:none;
+}
+.dr_pagination a.next:hover {
+  background-position:0 -241px;
+}
+.rtlanguage .dr_pagination a.next {
+  background-position: 0 -369px;
+}
+.rtlanguage .dr_pagination a.next:hover {
+  background-position: 0 -337px;
+}
+.dr_pagination a.back {
+  background:url(//dri1.img.digitalrivercontent.net/Storefront/Site/mscommon/cm/images/Monaco/sprite_pdpage_v3.gif) no-repeat 0 -369px;
+  display:inline-block;
+  height:22px;
+  margin:0 10px;
+  padding:0;
+  width:22px;
+  text-decoration:none;
+}
+.dr_pagination a.back:hover {
+  background-position:0 -337px;
+}
+.rtlanguage .dr_pagination a.back {
+  background-position: 0 -209px;
+}
+.rtlanguage .dr_pagination a.back:hover {
+  background-position:0 -241px;
+}
+.pagination a,.pagination span {
+  display:block;
+  float:left;
+  padding:8px;
+}
+.rtlanguage .pagination a, .rtlanguage .pagination span {
+  float:right;
+}
+.pagination span.showing {
+  padding-left:0;
+}
+.pagination em {
+  display:block;
+  float:left;
+  padding:8px 2px;
+}
+.dr_fieldsetHeader {
+  display:block;
+  border-bottom:1px solid #ccc;
+  font-size:1.2em;
+}
+.dr_myAccountSiteButtons {
+  margin:.625em 0;
+  clear:both;
+}
+.addEditAddress h1,.profileEmail h1 {
+  margin:1.5em 0 0;
+}
+.addEditAddress {
+  clear:both;
+  float:left;
+}
+/* Edit Profile Page */
+.EditProfilePage .dr_profile_info_container2 {
+  display:none;
+}
+.EditProfilePage select {
+  font-size:.75em;
+}
+.EditProfilePage .dr_userInfo,.EditProfilePage .dr_required_field_text,.EditProfilePage .dr_formLine,.EditProfilePage .dr_formLine .state,.EditProfilePage .dr_formLine .phone {
+  margin:1.0625em 0 0;
+}
+.EditProfilePage .dr_userNotice {
+  margin:.875em 0 0;
+}
+#optIn {
+  float:left;
+  margin:6px;
+  width:auto;
+}
+.rtlanguage #optIn {
+  float:right;
+}
+#dr_optIn .dr_formLine label {
+  margin-bottom:-.125em;
+}
+.EditProfilePage #dr_myAccountColumn2Padding fieldset {
+  margin-top:1em;
+}
+#dr_AddEditAddress li {
+  list-style:none outside none;
+  margin:.625em 0;
+}
+.EditProfilePage #dr_myAccountColumn2Padding ul li fieldset {
+  margin:1.0625em 0 2.3125em;
+}
+.EditProfilePage #dr_AddEditAddress .dr_addressInfo {
+  display:block!important;
+  margin:0;
+}
+.dr_ms_error {
+  display:none;
+}
+.dr_formLine label {
+  display:block;
+}
+.EditProfilePage .dr_formLine input {
+  width:250px;
+}
+.EditProfilePage .optionalText {
+  color:#A2A2A2;
+  position:relative;
+  left:-252px;
+}
+.EditProfilePage .dr_formLine .state select,.EditProfilePage .dr_formLine .zip input {
+  width:95px;
+}
+.EditProfilePage .dr_myAccountSiteButtons {
+  margin:1.0625em 0;
+  float:left;
+}
+.EditProfilePage.rtlanguage .dr_myAccountSiteButtons {
+  float:right;
+}
+
+/* Download History */
+.customerAssist {
+  margin:.9375em .3125em .3125em 0;
+  line-height:1.125em;
+}
+#dr_DownloadList li {
+  list-style:none outside none;
+  margin:.625em 0;
+  padding:0;
+}
+.dr_downloadInfo {
+  border-bottom:1px solid #CCC;
+  margin-top:1.125em;
+  padding-bottom:.3125em;
+}
+.dr_downloadInfo span {
+  line-height:20px;
+}
+.dr_variationLanguage {
+  margin-top:12px;
+}
+.dr_selectBinarySetForm {
+  margin-bottom:0;
+  margin-top:.875px;
+}
+#dr_DownloadList .dr_pagination {
+  float:left;
+  margin-top:.75em;
+}
+.rtlanguage #dr_DownloadList .dr_pagination {
+  float:right;
+}
+.dr_selectBinarySetForm .downloadOptions {
+  margin-top: 1em;
+  display: none;
+}
+
+/* Order History */
+#dr_AccountOrderList .dr_fieldsetHeader {
+  margin-top:1.6875em;
+  padding-bottom:.25em;
+}
+#dr_AccountOrderList .dr_accountLabel {
+  margin-bottom:.3125em;
+  margin-top:.9375em;
+}
+#dr_AccountOrderList .dr_orderInfoLeftColumn div {
+  padding-bottom:.4375em;
+}
+#dr_AccountOrderList .dr_myAccountSiteButtons {
+  display:block;
+  text-decoration:none;
+  margin-top:1.0625em;
+}
+#dr_AccountOrderList .dr_orderItemDetailsSections .dr_button{color: #333333;}
+.DownloadHistoryPage .dr_button, .DownloadHistoryPage #dr_DownloadList .downloadOptions a{color: #333333;}
+.DownloadHistoryPage #dr_DownloadList .downloadOptions a.box.blue{color: #FFFFFF;}
+.DownloadHistoryPage .dr_button:hover, .DownloadHistoryPage #dr_DownloadList .downloadOptions a:hover{color: #FFFFFF !important;}
+#dr_AccountOrderList .dr_orderItemDetailsSections .dr_button:hover{text-decoration: none;color: #FFFFFF;}
+.dr_orderItemImage,.dr_orderItemDetails {
+  float:left;
+}
+.rtlanguage .rwd .dr_orderItemImage, .rtlanguage .rwd .dr_orderItemDetails {
+  float:right;
+}
+.dr_orderItemDetails {
+  margin-top:-.375em;
+}
+.dr_orderItemImage {
+  min-width:4.625em;
+  margin-top:.6875em;
+}
+
+/* Payment Info */
+.paymentInstrument {
+  border-bottom:1px solid #ccc;
+  padding:1.0625em 0;
+}
+.AddEditPaymentPage .editLink {
+  margin-bottom:1.5em;
+}
+/* Server Error Page */
+.ServerErrorPage .dr_error {
+  margin:250px 0;
+  font-family:Segoe UI Light;
+}
+
+/* Static Pages */
+.ms_help_subHeader {
+  margin:18px 0 8px;
+}
+.ms_help_subHeader a,.ms_help_subHeader span,.ms_help_subHeader .navLink {
+  color:#1370a5;
+}
+.ms_help_subHeading {
+  margin-top:20px;
+  font-size:1.25em;
+  font-weight:700;
+  text-transform:uppercase;
+}
+.ms_help_subHeader ul {
+  list-style-type:none;
+  margin-top:20px;
+  float:left;
+}
+.ms_help_subHeader ul li {
+  margin:0;
+  width:178px;
+  float:left;
+  margin-right:20px;
+}
+.ms_help_subHeader a,.ms_help_subHeader span {
+  font-size:1.25em;
+}
+.TermsOfUseAndSalePage #content ul,.TermsOfUseAndSalePage #content ol {
+  margin:0 0 0 7px;
+  padding:2px 0 0 15px;
+  list-style:decimal outside none;
+}
+.TermsOfUseAndSalePage #content ul {
+  list-style:disc outside none;
+}
+.TermsOfUseAndSalePage #content ul ul {
+  list-style:circle outside none;
+}
+
+/* PCF and non-PCF Pages */
+.border {
+  border:solid;
+  border-color:#eee;
+  border-width:1px;
+}
+.shoppingCartForm .grid-row .grid-unit.full-width {
+  width:100%;
+}
+.shoppingCartForm .grid-row .grid-unit.shopping-cart {
+  width:96%;
+  padding:1% 2%;
+  margin:0 0 1em;
+}
+.shoppingCartForm .cartThumb a {
+  font-size:.75em;
+}
+#dr_cartTbl .lineitem-information .dr_quantityText,#dr_cartTbl .lineitem-information select {
+  float:none;
+  margin:0;
+}
+.lineitem-information {
+  margin-top:0;
+  max-width:85%;
+  margin-left:2%;
+}
+.lineitem-information .heading--small {
+  margin-top:-.2em;
+  margin-bottom:.4em;
+}
+#dr_cartTbl select.variations {
+  width:210px;
+  margin-top:8px;
+}
+.coupon-code {
+  padding:.2em 1.25em .2625em;
+}
+.coupon-code label.heading--small {
+  font-size:1.25em;
+  margin-right:2.25em;
+}
+.coupon-code input.box[type="submit"] {
+  padding:.2em 1.25em .2625em;
+  font-size:.75em;
+}
+.dr_button.blue {
+  margin-left:8px;
+}
+.shipping-estimator {
+  font-size:.75em;
+}
+.shipping-estimator .heading--small {
+  font-size:1.65em;
+}
+.shipping-estimator input {
+  vertical-align:inherit;
+}
+.shoppingCartForm #dr_priceTotal td {
+  padding-bottom:1em;
+}
+.border-top-small {
+  border-top:1px solid #EEE;
+}
+.border-bottom-small {
+  border-bottom:1px solid #EEE;
+}
+.rwd .row-margin-bottom-small {
+margin-bottom: 1.875em;
+}
+.breadcrumbs span.step1 {
+  padding-left:0;
+}
+.breadcrumbs span.active {
+  color:#000;
+}
+.dr_emptyCart #dr_orderNumber {
+  padding:0;
+  margin:0;
+}
+#dr_continueShoppingButton {
+  margin:20px 0 30px;
+}
+.shoppingCartForm .grid-row .grid-unit.shopping-cart {
+  width:96%;
+  padding:1% 2%;
+  margin:0 0 1em;
+}
+body .shoppingCartForm .grid-row .grid-unit.reference-number {
+  padding:0 2%;
+  width:96%;
+}
+#dr_orderNumber {
+  margin:0 0 10px;
+  padding-top:10px;
+}
+#dr_orderNumber .description {
+  position:relative;
+  top:8px;
+}
+#dr_cartTbl {
+  margin-bottom:10px;
+}
+#dr_cartTbl td,#dr_cartTbl th,#dr_confirmTbl td,#dr_confirmTbl th,#dr_productTbl td,#dr_productTbl th {
+  text-align:left;
+  display:table-cell;
+  float:none;
+  padding-top:15px;
+  padding-bottom:35px;
+  vertical-align:top;
+}
+#dr_cartTbl .cartThumb,#dr_confirmTbl .cartThumb,#dr_productTbl .cartThumb {
+  text-align:center;
+}
+#dr_cartTbl .cartThumb a,#dr_confirmTbl .cartThumb a,#dr_productTbl .cartThumb a {
+  text-decoration:underline;
+  text-transform:capitalize;
+}
+.dr_qtySelect {
+  float:left;
+  margin-right:5px;
+  min-width:3.5em;
+  font-size:.75em;
+  border:1px solid #999;
+  padding:.125em;
+}
+.dr_refreshQty {
+  height:13px;
+  margin-top:4px;
+  padding-left:5px;
+  width:11px;
+  overflow:hidden;
+  display:block;
+}
+.lineitem-information span {
+  font-size:.75em;
+}
+#dr_cartTbl tr td.dr_price {
+  text-align:right;
+  color:#D2480E;
+}
+.dr_deleteItemLink {
+  display:block;
+  margin-top:2px;
+}
+#dr_shippingEstimator td {
+  border-bottom:1px solid #eee;
+  padding-bottom:15px;
+}
+.shoppingCartForm #dr_priceTotal td {
+  padding-bottom:1em;
+}
+#dr_confirmTbl #dr_priceTotal td,#dr_cartTbl #dr_priceTotal td {
+  border-bottom:0 none;
+}
+#dr_cartTbl td.dr_couponCode {
+  padding:20px 0;
+  border-bottom:1px solid #eee;
+  border-top:1px solid #eee;
+}
+#dr_cartTbl #dr_discountTotal, #dr_cartTbl #dr_discountTotal .dr_price.dr_totals {
+  color: #D2480E;
+}
+.coupon-code label.heading--small {
+  margin-right:2.25em;
+}
+#dr_cartTbl .dr_cartLable {
+  text-align:right;
+}
+#dr_cartTbl tr td.dr_totals {
+  color:#000;
+}
+#dr_siteButtons,.dr_siteButtons {
+  float:right;
+  text-align:right;
+}
+#dr_siteButtons #dr_checkoutButton {
+  float:right;
+}
+.payment_options {
+  padding-top:1.5em;
+  padding-bottom:.5em;
+}
+.fieldInfo.section {
+  margin-top:0;
+}
+#dr_optInEmail {
+  float:left;
+  margin-bottom:1em;
+}
+#dr_shipping .optionalText {
+  color:#A2A2A2;
+  position:relative;
+  left:-11.854838709677em;
+}
+.editLink {
+  display:block;
+  clear:both;
+  float:left;
+  cursor:pointer;
+}
+.paymentInstrumentList {
+  float:left;
+  width:100%;
+}
+.paymentInstrumentList .editLink,.paymentInstrumentList .editCard {
+  color:#1370A5;
+}
+.paymentInstrumentList .editLink:hover,.paymentInstrumentList .editCard:hover {
+  text-decoration:underline;
+}
+
+/* Cart */
+#dr_ThreePgCheckoutShoppingCart #dr_cartTbl tr td.dr_fees.dr_price {
+  padding-top:15px;
+}
+#dr_ThreePgCheckoutShoppingCart #dr_cartTbl tr td.dr_price {
+  vertical-align:top;
+}
+#dr_ThreePgCheckoutShoppingCart #dr_cartTbl tr td.dr_price {
+  vertical-align:top;
+}
+#dr_ThreePgCheckoutShoppingCart #dr_cartTbl #dr_discountTotal td.dr_price {
+  padding-top:15px;
+}
+.lt-ie9 .grid-container .reference-number .grid-unit.align-right {
+  width:48%;
+}
+.lt-ie9 .reference-number .grid-unit.align-right .grid-unit.align-right {
+  width: 48.33%
+}
+
+/* Checkout Cart */
+#dr_CheckoutCart {
+  font-size:.8125em;
+  float:left;
+  padding:1em 7.8947% 2em;
+  border:2px solid #D2D2D2;
+  width: 83.04%;
+}
+#dr_CheckoutCart .cartHeader{
+  margin-bottom: 1.154em;
+}
+#dr_CheckoutCart .cartHeader h1.heading--medium {
+  float:left;
+  position:relative;
+  /*width:35%;*/
+  font-size: 2.46em;
+  margin: 0;
+}
+#dr_CheckoutCart .cartHeader .dr_orderID {
+  float:left;
+  margin:0.2em 0 0;
+  font-size:1em;
+  clear: left;
+}
+#dr_CheckoutCart table {
+  font-size:1em;
+  width:100%;
+}
+#dr_CheckoutCart table td {
+  vertical-align:top;
+}
+#dr_CheckoutCart .dr_lineItemRow td {
+  padding:5% 0;
+}
+#dr_CheckoutCart table td.dr_productThumbnail {
+  min-width:74px;
+  width:35%;
+  text-align:center;
+}
+#dr_CheckoutCart table td.dr_productName {
+  width:40%
+}
+#dr_CheckoutCart table td.dr_price {
+  width:25%;
+}
+#dr_CheckoutCart tr#dr_discountTotal td {
+  color:#eb3900;
+}
+#dr_CheckoutCart tr#dr_taxTotal td {
+  vertical-align:bottom;
+}
+#dr_CheckoutCart tr#dr_cartTotal td {
+  font-size:1.33em;
+  padding-top:1em;
+}
+#dr_CheckoutCart .lineitem-information {
+  max-width:100%;
+  margin-left:0;
+}
+#dr_CheckoutCart .borderRow {
+  border-bottom:1px solid #D2D2D2;
+}
+#dr_CheckoutCart table .dr_variationLanguage {
+  margin-top:0!important;
+}
+#dr_CheckoutCart table .actual-price {
+  font-size:1em;
+}
+#dr_CheckoutCart table .dr_price,#dr_CheckoutCart table .dr_totals {
+  text-align:right;
+}
+#dr_CheckoutCart .price-seperator td {
+  padding-top:1%;
+}
+.dr_feeInfo {
+  color:#D2480E;
+}
+.FeesInfoPage {
+  background-color:#FFF;
+}
+#dr_feesInfo {
+  margin:5px;
+}
+#dr_CheckoutCart #dr_cartTbl tr td.dr_price.dr_fees {
+  padding-top:20px;
+}
+#dr_CheckoutCart table .heading--small {
+  font-size:1em;
+  font-family:wf_SegoeUI,"Segoe UI",Segoe,"Segoe WP",Tahoma,Verdana,Arial,sans-serif;
+  margin:0 0 1.25em;
+}
+#dr_CheckoutCart table .lineitem-information span {
+  font-size:1em;
+}
+#dr_CheckoutCart .cart-total {
+  float:right;
+}
+
+/* Customer Info */
+.sub-section {
+  margin:0 0 2em;
+}
+.sub-section.section {
+  margin:0;
+}
+.dr_profileContainer h2,.dr_emailContainer h2,.dr_confirmElement h1 {
+  margin-bottom:.25em;
+}
+#dr_CheckoutPayment .heading--medium {
+  font-size:1.95em;
+}
+#dr_CheckoutPayment .dr_formLine {
+  float:left;
+  width:100%;
+  margin:5px 0;
+}
+#dr_CheckoutPayment #dr_shippingEstimator .shippingMethodRadio {
+  margin:1em 0 0;
+}
+#dr_CheckoutPayment #dr_optInEmail label {
+  float:right;
+  width:95%;
+  position:relative;
+}
+#dr_CheckoutPayment {
+  font-size:.775em;
+}
+#dr_CheckoutPayment .dr_emailContainer p {
+  font-size:1em;
+}
+#dr_CheckoutPayment #useShippingAsBilling {
+  float:left;
+  margin:.2em 2em 0 0;
+}
+#dr_CheckoutPayment .dr_shippingNote,#dr_CheckoutPayment .dr_requiredFieldsInfo {
+  margin:.75em 0;
+}
+#dr_ThreePgCheckoutAddressPaymentInfo .paymentInstrumentList img {
+  position:relative;
+  top:1.2em;
+}
+#dr_shippingEstimator .shippingMethodRadio label {
+  display:inline;
+}
+.ThreePgCheckoutAddressPaymentInfoPage .continueButtonBottom {
+  padding-top:.9375em;
+}
+.continueButtonBottom input.box{
+  font-size:1.2em;
+  padding:.5em 1.25em .5625em;
+  background-color:#BAD80A;
+  color: #333;
+  margin:0;
+}
+.continueButtonBottom input.box:hover {
+  background-color:#7FBA00;
+}
+#dr_ThreePgCheckoutAddressPaymentInfo .checkoutText {
+  margin-bottom:1.0625em;
+  margin-top:.875em;
+}
+.checkoutText span {
+  display:block;
+  margin-bottom:0;
+  font-size:1em;
+}
+.ThreePgCheckoutAddressPaymentInfoPage #msWorldWideNote,#dr_ThreePgCheckoutCollectPaymentInfo #msWorldWideNote {
+  display:inline;
+  position:relative;
+  margin-top:5em;
+  float:left;
+}
+#dr_ThreePgCheckoutAddressPaymentInfo,#dr_ConfirmOrder,#dr_ThreePgCheckoutCollectPaymentInfo {
+  margin-bottom:2.8125em;
+  clear:both;
+}
+#dr_ThreePgCheckoutAddressPaymentInfo .paymentInstrumentList {
+  margin-top:.6875em;
+}
+.ThreePgCheckoutAddressPaymentInfoPage #msWorldWideNote a,#dr_ThreePgCheckoutCollectPaymentInfo #msWorldWideNote a {
+  text-decoration:underline;
+}
+
+/* Break out */
+#dr_Breakout {
+  margin:200px auto 150px;
+  width:400px;
+}
+.spinnerMain {
+  margin-left:-1.5625em;
+}
+.spinner {
+  float:left;
+  height:50px;
+  width:50px;
+  margin-right:1.6875em;
+  margin-top:.625em;
+}
+.spinner img {
+  height:50px;
+  width:50px;
+  position:relative;
+  top:-.375em;
+  left:.3125em;
+}
+.greyCircle {
+  position:relative;
+  padding-left:1.4375em;
+  clear:both;
+  top:-2.5em;
+}
+.greyCircle img {
+  padding-right:3.75em;
+}
+
+/* Confirm Page */
+.dr_profileContainer {
+  width:100%;
+  margin-bottom:1.5em;
+  float:left;
+}
+.dr_emailContainer {
+  width:100%;
+  clear:both;
+  float:left;
+}
+.dr_confirmElement {
+  float:left;
+  width:100%;
+  margin-top:1em;
+}
+.submitButtonBottom {
+  position:relative;
+  top:0;
+  text-align:right;
+  border-top:0;
+  float:left;
+  width:100%;
+}
+#dr_TermsOfServiceAcceptance input#tosAccepted {
+  margin-top:5px;
+}
+#dr_TermsOfSaleAcceptance,#dr_MobileTermsAndConditionsAcceptance,#germanyAgeConfirm {
+  text-align:left;
+  background-color:#E3E3E3;
+  padding:.9375em;
+  /*margin-bottom:1.25em;*/
+  display:inline-block;
+  float:left;
+}
+#dr_TermsOfServiceAcceptance.passive{
+  margin:1.5em 0 1em;
+  border-bottom: 1px solid #D2D2D2;
+}
+.passive #dr_TermsOfSaleAcceptance{
+  background-color: #fff;
+  padding:0;
+  text-align: left;
+}
+#dr_TermsOfSaleAcceptance .dr_label,#dr_MobileTermsAndConditionsAcceptance .dr_label {
+  display:block;
+  margin-top:.125em;
+}
+#dr_TermsOfSaleAcceptance a,#dr_MobileTermsAndConditionsAcceptance a {
+  text-decoration:underline;
+}
+#dr_TermsOfSaleAcceptance input,#dr_MobileTermsAndConditionsAcceptance input {
+  float:left;
+  margin-right:.625em;
+}
+#dr_ThreePgCheckoutAddressPaymentInfo .dr_siteButtons,#dr_ConfirmOrder .dr_siteButtons {
+  margin-top:1.0625em;
+  margin-bottom:.9375em;
+}
+#dr_ConfirmOrder .checkoutText {
+  float:right;
+  text-align:right;
+}
+
+/* TY page */
+.ms_wlidMessage {
+  width:100%;
+  margin:1.25em 0;
+}
+.dr_productInformation {
+  float:left;
+}
+#dr_ThankYou .dr_deliveryMethod,#dr_ThankYou .lineItemVariationLanguage,#dr_ThankYou .lineItemSubscriptionType {
+  margin-top:.875em;
+}
+#dr_ThankYou .dr_price {
+  white-space:nowrap;
+  color:#D2480E;
+}
+#dr_ThankYou td.dr_productDetail,#dr_ThankYou td.dr_price {
+  padding-top:.8125em;
+}
+#dr_ThankYou #dr_productInformation table{
+  width: 100%;
+}
+#dr_ThankYou td.dr_price{
+  text-align: right;
+}
+#dr_ThankYou .missingImage_msSmall{ 
+  width:100% 
+}
+#dr_productInformation ul.productDetails {
+  border:5px solid #CCC;
+  padding:.9375em;
+  margin-left:.9375px;
+}
+#dr_productInformation ul.productDetails li {
+  word-wrap:break-word;
+  margin:0 0 1em;
+}
+.ThankYouOrderTotals {
+  border-top:1px solid #CCC;
+  padding:1.25em 0;
+}
+.ThankYouOrderTotals span {
+  display:inline-block;
+  text-align:right;
+  float: right;
+}
+.ThankYouOrderTotals span.label {
+  display:inline-block;
+  text-align:left;
+  float: left;
+}
+#dr_orderInformation {
+  border-top:1px solid #000;
+  border-bottom:1px solid #000;
+  padding:1.25em 0;
+}
+.TYcontinueShopping {
+  margin:3.125em 0;
+  float:right;
+}
+#dr_ThankYou #dr_thankYouSurveyContainer {
+  clear:both;
+  margin-bottom:1em;
+}
+#dr_ThankYou .howCanIHelp {
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #dddddd;
+  padding-top: 1em;
+}
+#dr_ThankYou .howCanIHelp .howCanIHelpLeft img{
+  float: left;
+  margin-left: 2em;
+}
+#dr_ThankYou .howCanIHelp .howCanIHelpLeftInner{
+  float: left;
+  margin: 1em 0 0.33em 3em;
+}
+#dr_ThankYou .howCanIHelp .howCanIHelpLeftInner h1{
+  color: #29ACE2;
+}
+#dr_ThankYou .howCanIHelp .howCanIHelpRight{
+  margin-left: 0;
+  padding-left: 1em;
+  padding-top: 1em;
+}
+#dr_ThankYou .howCanIHelp .howCanIHelpRight .phoneIcon{
+  background: url(//dri1.img.digitalrivercontent.net/Storefront/Site/mscommon/cm/images/Monaco/store_sprite-v9.gif) no-repeat 0px -458px;
+  display: block;
+  margin-top: 2em;
+  padding-bottom: 0.1em;
+  padding-left: 40px;
+  padding-top: 0.1em;
+}
+#dr_ThankYou .howCanIHelp .howCanIHelpRight .supportPhone{
+  display: block;
+  padding-left: 40px;
+}
+#dr_ThankYou .howCanIHelp .howCanIHelpRight .liveChatIcon{
+  display: block;
+  margin-top: 0.3333em;
+}
+#dr_ThankYou .howCanIHelp .howCanIHelpRight .liveChatIcon a{
+  background: url(//dri1.img.digitalrivercontent.net/Storefront/Site/mscommon/cm/images/Monaco/store_sprite-v9.gif) no-repeat scroll 0px -250px transparent;
+  padding-left: 40px;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+}
+#dr_ThankYou .howCanIHelpTerms{
+  text-align: right;
+}
+#dr_ThankYou #ms_ty_terms_conditions_overlay {
+  display: block;
+  background-attachment: scroll;
+  background-color: rgb(255, 255, 255);
+  display: none;
+  border: 5px solid rgb(227, 227, 227);
+  left: 30%;
+  position: fixed;
+  top: 28%;
+  width: 35%;
+  z-index: 9999;
+}
+#dr_ThankYou #ms_overlay_close_btn {
+  padding-right: 0.5em;
+  float: right;
+  display: block;
+}
+#dr_ThankYou #ms_overlay_close_btn a:hover{
+  text-decoration: none;
+}
+#dr_ThankYou #ms_overlay_msg {
+  padding: 1.5em;
+  float: left;
+}
+
+/* Thank You Page Download Button Positioning */
+#dr_ThankYou .shoppingCartForm .ty_selectBinarySetForm, #dr_ThankYou .shoppingCartForm .ty_selectBinarySetForm .downloadOption {
+  display:block;
+}
+#dr_ThankYou #dr_productInformation div.ty_selectBinarySetForm div.dr_downloadButtonsList {
+  display:none;
+}
+#dr_ThankYou .shoppingCartForm .ty_selectBinarySetForm .downloadOption select.dr_selectBinarySet {
+  float:left;
+  margin:0px 5px 5px 0px;
+}
+#dr_ThankYou .shoppingCartForm .ty_selectBinarySetForm .downloadOption .dr_downloadButtons {
+  display:block;
+  float:left;
+}
+#dr_ThankYou .ThankYouOrderTotals table tr td:first-child {
+    vertical-align: bottom;
+    width: 70%;
+}
+#dr_ThankYou .ThankYouOrderTotals table td.dr_price {
+    vertical-align: bottom;
+		color:#1A1A1A;
+		padding:0;
+}
+#dr_ThankYou .ThankYouOrderTotals table {
+	width:100%;
+}
+/* Invoice Page */
+#dr_invoiceOrderInfo {
+  margin-top:1.5625em;
+}
+#dr_invoiceBottom {
+  border-top:1px solid #CCC;
+  clear:both;
+  display:block;
+  float:left;
+  margin-top:3.125em;
+  padding-top:1.25em;
+  width:64%;
+  margin-bottom:1.875em;
+}
+
+/* World Wide Page */
+.worldWide h1 {
+  border:0;
+  font-size:3.2em;
+}
+.worldWide ul {
+  margin-top:.75em;
+}
+.worldWide ul li {
+  padding-bottom:.5em;
+  margin-left:0;
+}
+.game-rating {
+  display:inline-block;
+  clear:both;
+  margin-top:1.2em;
+}
+.rating-image {
+  float:left;
+}
+.game-rating.ESRB .rating-image{
+  max-width:42px;
+  width:42px;
+  margin-right:1em;
+}
+/*.ACBRating .dr_ratingImage img {
+  max-width:125px;
+  width:125px;
+}*/
+.rating-reason {
+  float:left;
+  font-size: 0.875em;
+}
+.rating-reason ul {
+  list-style:none;
+  margin:0;
+}
+.rating-reason ul li{
+  margin-left:0;
+  line-height:1.4em;
+}
+.category-hero .grid-row.column-2 .grid-unit{
+	position: static;
+}
+/*Windows Phone Pricing link and Shop button styles*/
+.grid-unit .price-link {
+  padding-top: 15px;
+}
+.grid-unit .price-link .actual-price {
+  margin-top:0;
+}
+.grid-unit .shopPhone-button {
+    background-color: #0060A6;
+    cursor: pointer;
+    margin-top: 25px;
+    padding: 6px 19px 9px;
+    text-align: center;
+    float:left;
+}
+.grid-unit .shopPhone-button:hover {
+    background-color: #002050;
+}
+.grid-unit .shopPhone-button > a {
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+}
+/*Up and Running styles*/
+#up-and-running p{
+  margin-bottom:1em;
+}
+
+/*Layout for xbox.com PCF*/
+.dr_theme_35613200 header .logo{
+  display:inline;
+}
+header .xboxPCFContent{
+  display:none;
+}
+.buy-box .description {
+  float: left;
+  font-size: 0.875em;
+  width: 91.5%;
+  margin-left: 2%;
+}
+.buy-box .addon{
+  clear:both;
+}
+
+/* 24935-Monaco_MSCA_FR_Alignment issues with checkout buttons on student flow in French */
+.ThreePgCheckoutShoppingCartPage a.dr_forceAveVerifyAndCheckout{
+  float:right;
+}
+.reference-number .grid-unit {
+    width: 32% !important;
+}
+.reference-number .continue-shopping.grid-unit, .reference-number #dr_checkoutButton.grid-unit {
+    margin-left: 2% !important;
+}
+
+/*------------------------------------*\
+MONACO PCF
+\*------------------------------------*/
+
+.pcf-flow.dr_theme_35613200 header .logo{
+  display:none;
+}
+.pcf-flow.dr_theme_35613200 header .xboxPCFContent.logo,
+.pcf-flow.dr_theme_35613200 header .xboxPCFContent.seperator{
+  display:inline;
+}
+.pcf-flow.dr_theme_35613200 header .notification-bar+.grid-container{
+  padding-top:1.25em;
+  margin-top:0;
+}
+.pcf-flow.dr_theme_35613200 header{
+  background-color:#107c10;
+}
+.pcf-flow.dr_theme_35613200 header .pcf_header{
+  padding-bottom:0.1875em;
+}
+.pcf-flow.dr_theme_35613200 header .logo{
+  margin-right:1.25em;
+}
+.pcf-flow.dr_theme_35613200 header .xboxPCFContent.logo.xbox{
+  margin-left:1.25em;
+  margin-top:-0.125em;
+}
+.pcf-flow.dr_theme_35613200 header .xboxPCFContent.seperator{
+  border-left:1px #0d970d solid;
+  position:relative;
+  height:35px;
+  top:-7px;
+  float:left;
+}
+.pcf-flow.dr_theme_35613200 a,
+.pcf-flow.dr_theme_35613200 a.button,
+.pcf-flow.dr_theme_35613200 .product-promotional-info a.button,
+.pcf-flow.dr_theme_35613200 .paymentInstrumentList .editLink, 
+.pcf-flow.dr_theme_35613200 .paymentInstrumentList .editCard{
+  color:#107c10;
+}
+.pcf-flow.dr_theme_35613200 header a{
+  color:#baff6e;
+}
+.pcf-flow.dr_theme_35613200 header .notification-bar a{
+  color:#fff;
+}
+.pcf-flow.dr_theme_35613200 .dr_button,
+.pcf-flow.dr_theme_35613200 a.box,
+.pcf-flow.dr_theme_35613200 .continueButtonBottom input.box[type="submit"]{
+  background-color:#107c10;
+  color:#ffffff;
+}
+.pcf-flow.dr_theme_35613200 .dr_button:hover,
+.pcf-flow.dr_theme_35613200 a.box:hover,
+.pcf-flow.dr_theme_35613200 .continueButtonBottom input.box[type="submit"]:hover{
+  background-color:#0b680b;
+  color:#ffffff;
+}
+.pcf-flow.dr_theme_35613200 .dr_couponCode .dr_button{
+  background-color:#3a3a3a;
+}
+.pcf-flow.dr_theme_35613200 .dr_couponCode .dr_button:hover{
+  background-color:#646363;
+}
+.pcf-flow.dr_theme_35613200 #dr_cartTbl tr td.dr_price,
+.pcf-flow.dr_theme_35613200 #dr_cartSummaryTbl tr td.dr_price span,
+.pcf-flow.dr_theme_35613200 #dr_productInformation tr td.dr_price span,
+.pcf-flow.dr_theme_35613200 .productPrice{
+  color:#1a1a1a;
+}
+.pcf-flow.dr_theme_35613200 .background-grey a{
+  color:#1570a6;
+}
+/*------------------------------------*\
+New PCF REDESIGN
+\*------------------------------------*/
+.pcf-flow #dr_ThreePgCheckoutAddressPaymentInfo .grid-row.column-3 > .grid-unit.colspan-2,
+.pcf-flow #dr_ConfirmOrder .grid-row.column-3 > .grid-unit.colspan-2,
+.pcf-flow #dr_ThreePgCheckoutCollectPaymentInfo .grid-row.column-3 > .grid-unit.colspan-2{
+  width:57.627%;
+  margin-left:0;
+}
+.pcf-flow #dr_ThreePgCheckoutAddressPaymentInfo .grid-row.column-3 > .grid-unit,
+.pcf-flow #dr_ConfirmOrder .grid-row.column-3 > .grid-unit,
+.pcf-flow #dr_ThreePgCheckoutCollectPaymentInfo .grid-row.column-3 > .grid-unit {
+  width:32.203%;
+  margin:0 0 0 10.169%;
+}
+#dr_ThreePgCheckoutAddressPaymentInfo #dr_CheckoutPayment,
+#dr_ConfirmOrder #dr_CheckoutPaymentShippingInfo {
+  font-size:.8125em;
+  border:2px solid #D2D2D2;
+  padding:1em 7.353% 2em;
+  float:left;
+  width: 84.705%
+}
+#dr_ThreePgCheckoutAddressPaymentInfo .heading--medium,
+#dr_ConfirmOrder .heading--medium {
+  font-size:2.46em;
+}
+#dr_ThreePgCheckoutAddressPaymentInfo .dr_formLine select {
+  border:2px solid #d2d2d2;
+  min-width:10em;
+}
+#dr_ThreePgCheckoutAddressPaymentInfo #dr_shipping .dr_error {
+min-height:20px;
+}
+#dr_ThreePgCheckoutAddressPaymentInfo #dr_shipping .dr_formLine input.dr_input_invalid,
+#dr_ThreePgCheckoutAddressPaymentInfo #dr_shipping .dr_formLine select.dr_input_invalid {
+border-color:red;
+}
+#dr_ThreePgCheckoutAddressPaymentInfo #dr_shipping select#shippingState.empty option {
+  font-style:normal;
+  color:#1a1a1a;
+}
+#dr_ThreePgCheckoutAddressPaymentInfo #dr_shipping select#shippingState.empty option:first-child,
+#dr_ThreePgCheckoutAddressPaymentInfo #dr_shipping select#shippingState.empty {
+  font-style:italic;
+  color:#a1a1a1;
+}
+@-moz-document url-prefix() { 
+  #dr_ThreePgCheckoutAddressPaymentInfo #dr_shipping select#shippingState.empty option:first-child,
+  #dr_ThreePgCheckoutAddressPaymentInfo #dr_shipping select#shippingState.empty {
+    color:#6F706A;
+  }
+}
+#dr_ThreePgCheckoutAddressPaymentInfo .editAddress,
+#dr_ThreePgCheckoutAddressPaymentInfo .newAddress {
+  float:left;
+}
+#dr_ThreePgCheckoutAddressPaymentInfo .spliter {
+  float:left;
+  margin:0 0.5em
+}
+#dr_ThreePgCheckoutAddressPaymentInfo .editAddress.active, 
+#dr_ThreePgCheckoutAddressPaymentInfo .newAddress.active {
+  color: #1a1a1a;
+  text-decoration: none;
+  cursor:default;
+}
+#dr_ThreePgCheckoutAddressPaymentInfo #dr_shipping .dr_formLine {
+  margin:0;
+}
+#dr_ThreePgCheckoutAddressPaymentInfo #dr_shipping .defaultAddressFields .dr_formLine,
+#dr_ThreePgCheckoutAddressPaymentInfo #dr_shipping .addressFields .dr_formLine {
+  width:48.5%;
+  clear: both;
+  
+}
+#dr_ThreePgCheckoutAddressPaymentInfo #dr_shipping .defaultAddressFields .dr_formLine.even,
+#dr_ThreePgCheckoutAddressPaymentInfo #dr_shipping .addressFields .dr_formLine.even {
+  padding-left:3%;
+  clear: none;
+}
+#dr_ThreePgCheckoutAddressPaymentInfo #dr_shipping .dr_formLine input{
+  width: 93%;
+  height: 26px;
+  border: 2px solid #D2D2D2;
+  padding: 0 0.5em;
+}
+#dr_ThreePgCheckoutAddressPaymentInfo #dr_shipping .dr_formLine input.placehold {
+  color:#a1a1a1;
+  font-style:italic;
+}
+#dr_ThreePgCheckoutAddressPaymentInfo #dr_shipping select#shippingAddressBook {
+  min-width:60%;
+  max-width:44em;
+}
+#dr_ThreePgCheckoutAddressPaymentInfo #dr_shipping .dr_formLine.shippingCountry {
+  padding-left:0 !important;
+}
+#dr_ThreePgCheckoutAddressPaymentInfo #dr_shipping .dr_formLine.shippingCountry.singleCountry {
+  height: 2.33em;
+  line-height: 2.33em;
+  margin-top: 20px;
+}
+#dr_ThreePgCheckoutAddressPaymentInfo #dr_shipping .dr_formLine select#shippingState,
+#dr_ThreePgCheckoutAddressPaymentInfo #dr_shipping .dr_formLine select#shippingCountry {
+  width:99.2%;
+  margin:0;
+  height:30px;
+}
+#dr_ThreePgCheckoutAddressPaymentInfo #dr_shipping .dr_formLine.addEditLink {
+  float: left;
+  margin-top: 1em;
+}
+#dr_ThreePgCheckoutAddressPaymentInfo .addressFields { 
+  display:none;
+  float:left;
+  margin-top:1em;
+}
+#dr_ThreePgCheckoutAddressPaymentInfo #dr_shipping .dr_formLine ::-webkit-input-placeholder { font-style:italic; }
+#dr_ThreePgCheckoutAddressPaymentInfo #dr_shipping .dr_formLine ::-moz-placeholder { font-style:italic; } /* firefox 19+ */
+#dr_ThreePgCheckoutAddressPaymentInfo #dr_shipping .dr_formLine :-ms-input-placeholder { font-style:italic;  } /* ie */
+#dr_ThreePgCheckoutAddressPaymentInfo #dr_shipping .dr_formLine input:-moz-placeholder { font-style:italic;  }
+#dr_ThreePgCheckoutAddressPaymentInfo .paymentInstrumentList {
+  margin-top:0;
+}
+#dr_shippingEstimator .shippingMethodRadio {
+  margin:.25em 0;
+}
+#dr_shippingEstimator .shippingMethodRadio label {
+  display:inline;
+}
+#dr_shippingEstimator input[type=radio] {
+  margin:0;
+}
+.paymentInstrumentList .selector{
+  border: 2px solid #d2d2d2;
+  margin: 0;
+  width: 22em;
+  display:block;
+  color:initial;
+  background: url(//dri1.img.digitalrivercontent.net/Storefront/Site/mscommon/cm/images/Monaco/dropdown-arrow.png) no-repeat transparent 98% center;
+  color:#000;
+}
+.paymentInstrumentList .selector:hover,
+.paymentInstrumentList .selector:focus{
+  text-decoration:none;
+  color:initial;
+}
+.paymentInstrumentList ul{
+  border: 1px solid #d2d2d2;
+  border-top:none;
+  visibility:hidden;
+  margin: 0;
+  min-width: 22.2em;
+  position:absolute;
+  background:#FFF;
+  max-height:122px;
+  overflow-y: auto;
+  z-index:1;
+}
+.paymentInstrumentList .selector .chosen{
+  padding:.12em 2em;
+  position:relative;
+  z-index:-1;
+}
+.paymentInstrumentList .selector .chosen .content img,
+.paymentInstrumentList .selector .chosen .content span{
+  vertical-align:middle;
+}
+.paymentInstrumentList ul li {
+  padding:.20833em 2em;
+  position:relative;
+  z-index:1;
+  display:block;
+}
+.paymentInstrumentList ul li:hover,
+.paymentInstrumentList ul li.focus{
+  background-color: #3399ff;
+}
+.paymentInstrumentList .addPayment, 
+.paymentInstrumentList .editPayment{
+  float:left
+}
+.paymentInstrumentList .editLink{
+  float:none;
+}
+.paymentInstrumentList .secureLogo{
+  width:100%;
+  float:left;
+  margin-top:1.5em;
+}
+#dr_ThreePgCheckoutAddressPaymentInfo .paymentInstrumentList .selector_container img,
+#dr_ThreePgCheckoutAddressPaymentInfo .paymentInstrumentList .options li img{
+  max-height:1.2em;
+  max-width:3em;
+  top:0;
+}
+#dr_ThreePgCheckoutAddressPaymentInfo .paymentInstrumentList .options li img,
+#dr_ThreePgCheckoutAddressPaymentInfo .paymentInstrumentList .options li span{
+  position:relative;
+  z-index:-1;
+}
+.no_selection{
+  -webkit-user-select: none; // webkit (safari, chrome) browsers
+  -moz-user-select: none; // mozilla browsers
+  -ms-user-select: none; // IE10+
+  user-select: none; 
+  cursor:default;
+}
+#dr_ThreePgCheckoutAddressPaymentInfo .sub-section,
+#dr_ConfirmOrder .sub-section{
+  margin:0;
+  padding:10px 0 25px;
+  border-bottom: 1px solid #d2d2d2;
+}
+#dr_ThreePgCheckoutAddressPaymentInfo .dr_shippingContainer.sub-section,
+#dr_ConfirmOrder #dr_confirmShipping.sub-section{
+  padding-top: 0;
+}
+.dr_emailContainer input[type=text] {
+  height: 26px;
+  border: 2px solid #D2D2D2;
+  padding: 0 0.5em;
+  width: 22em;
+}
+#dr_ThreePgCheckoutAddressPaymentInfo .continueButtonTop{
+  position: absolute;
+  right: 7.653%;
+  top: 2em;
+}
+#dr_ThreePgCheckoutAddressPaymentInfo .continueButtonTop input.box[type="submit"]{
+  font-size:1.2em;
+  padding:.5em 1.25em .5625em;
+  background-color:#BAD80A;
+  color: #333;
+}
+#dr_ThreePgCheckoutAddressPaymentInfo .continueButtonTop input.box[type="submit"]:hover{
+  background-color:#7FBA00;
+}
+#dr_ThreePgCheckoutAddressPaymentInfo .continueButtonBottom .secureLogo{
+  position:absolute;
+  bottom:3.4em;
+}
+#dr_ThreePgCheckoutAddressPaymentInfo .data_usage_aggreement, #dr_ConfirmOrder .data_usage_aggreement, .EditProfilePage .data_usage_aggreement, .AddEditPaymentPage .data_usage_aggreement{
+  display: inline-block;
+  text-align: left;
+}
+.EditProfilePage #optIn {
+  margin-bottom: 0;
+}
+.pcf-flow .breadcrumbs .steps {
+  width:1.2em;
+  height:1.2em;
+  border-radius:1.2em;
+  background:#CCC;
+  padding:0;
+  float: left;
+  position:relative;
+  z-index:1;
+  margin-bottom:2em;
+}
+.pcf-flow .breadcrumbs .steps.step1 {
+left:0;
+}
+.pcf-flow .breadcrumbs .steps.active,
+.pcf-flow .breadcrumbs .liner.active {
+  background:#1371a7;
+}
+.pcf-flow .breadcrumbs .steps > span {
+  min-width:15em;
+  float:left;
+  padding:0;
+  margin-top:2em;
+}
+.pcf-flow .breadcrumbs .liner {
+  width:15%;
+  float:left;
+  background-color:#CCC;
+  height:6px;
+  position:relative;
+  top:4px;
+  margin: 0 -1px;
+}
+#dr_ConfirmOrder .submitButtonTop {
+  position:absolute;
+  right:7.653%;
+}
+#dr_ConfirmOrder .pcf-layout > .dr_error {
+  float:none;
+}
+#dr_ConfirmOrder .submitButtonTop input[type=submit],
+#dr_ConfirmOrder .submitButtonBottom input[type=submit] {
+  font-size:1.2em;
+}
+#dr_ConfirmOrder .secureLogo {
+  float:left;
+  margin-top: 1.0625em;
+}
+#dr_ConfirmOrder .editLink {
+  margin-top:1em;
+}
+#dr_ConfirmOrder #dr_confirmPaymentMethod .payment-icon {
+  max-height:1.1em;
+  vertical-align:middle;
+}
+#dr_ConfirmOrder #dr_TermsOfServiceAcceptance {
+  border-bottom: 1px solid #d2d2d2;
+  margin-top: 0.5em;
+  margin-bottom: 1em;
+}
+#dr_ConfirmOrder #dr_TermsOfServiceAcceptance #dr_TermsOfSaleAcceptance {
+  margin-bottom: 1em;
+  background-color:#FFF;
+}
+.lt-ie9 #dr_ThreePgCheckoutAddressPaymentInfo > .grid-row.column-3 > .grid-unit:first-child,
+  #dr_ThreePgCheckoutAddressPaymentInfo > .grid-row.column-3 > .grid-unit:first-child {
+  margin-left:0;
+}
+.lt-ie9 #dr_ThreePgCheckoutAddressPaymentInfo > .grid-row.column-3 > .grid-unit.colspan-2{
+  width:57%;
+}
+.lt-ie9 #dr_ThreePgCheckoutAddressPaymentInfo > .grid-row.column-3 > .grid-unit{
+  width:36%;
+  margin-left:7%;
+}
+.lt-ie9 #dr_ThreePgCheckoutAddressPaymentInfo #dr_CheckoutPayment {
+  padding:1em 5.263%;
+  width:88.78%;
+}
+.lt-ie9 #dr_ThreePgCheckoutAddressPaymentInfo .continueButtonTop{
+  right:5.263%;
+}
+.lt-ie9 #dr_ThreePgCheckoutAddressPaymentInfo .column-3 .colspan-2 .grid-unit{
+  width:48.33%;
+}
+.lt-ie9 #dr_ThreePgCheckoutAddressPaymentInfo .dr_formLine select{
+  width:auto;
+  min-width: 7em;
+}
+.lt-ie9 #dr_ThreePgCheckoutAddressPaymentInfo #dr_shipping select#shippingAddressBook {
+  max-width:38em;
+}
+.lt-ie9 #dr_ThreePgCheckoutAddressPaymentInfo .dr_formLine input{
+  line-height:1.8em;
+}
+.lt-ie9.pcf-flow .breadcrumbs .steps {
+  height:14px;
+  width:14px;
+  background: url(//dri1.img.digitalrivercontent.net/Storefront/Site/mscommon/cm/images/Monaco/pcf_breadcrumb_dot.png) no-repeat bottom center transparent;
+}
+.lt-ie9.pcf-flow .breadcrumbs .steps.active {
+  background-position:top;
+}
+/*----- Third Party Product -----*/
+.product-control.third-party-product img{
+  height: 153px;
+}
+.product-control .description p{
+  font-size: 1em;
+}
+.lt-ie9 .product-control.third-party-product img{
+  height: 127px;
+}
+
+/*------------------------------------*\
+MONACO MOBILE Activation
+\*------------------------------------*/
+
+/*------------------------
+  .widget : Styles Used by CE: includeItemBrowser
+  ---------------------*/
+.widget.section.hero_tabs_vertical, .widget.section.horizontal_tabbed_scroller {
+  margin-top:0;
+}
+.widget.horizontal_tabbed_scroller .tabs{
+  display:none;
+  float:right;
+  width:116px;
+}
+.widget.horizontal_tabbed_scroller .tabs ul{  
+  list-style:none;
+  margin:0;
+  padding:0;
+}
+.rtlanguage .widget.horizontal_tabbed_scroller .tabs ul{
+  float:left;
+}
+.widget.horizontal_tabbed_scroller .tabs li{
+  float:left;
+  list-style:none;
+  margin:0;
+  padding:0;
+  width:58px;
+}
+.widget.horizontal_tabbed_scroller .tabs li a{
+  display:block;
+  padding:0 0.500em;
+  font-size:2em;
+}
+.widget.horizontal_tabbed_scroller .tabs li a.active {
+  color:#D2480E;
+}
+.widget.horizontal_tabbed_scroller .tabs.leftright li a.disabled {
+  color:#CCC;
+}
+.widget.horizontal_tabbed_scroller.widget.enabled h3{
+  display:none;
+}
+.dr_MobileActivationsPage .widget.section.horizontal_tabbed_scroller .tab li a{
+  min-width:98%;
+  position:relative;
+}
+.maBlueArrow {
+  background-image: url("//dri1.img.digitalrivercontent.net/Storefront/Site/mscommon/cm/images/Monaco/MA_blue_arrow.png");
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  height:18px;
+  display:none;
+}
+.maBlueArrow.active {
+  display:block;
+  float:left;
+  width:100%;
+}
+a.active .maConfigureDevice{
+  background-color:#0072C6;  
+  color:#fff;
+}
+.maConfigureDevice{
+  background-color:#ACACAC;  
+  text-align:center;
+  width:100%;
+  font-size:1em;
+  padding:0.313em 0;
+}
+.lt-ie9 .maConfigureDevice{
+  font-size:0.813em; 
+  line-height:2.5em;
+}
+/*------------------------
+  .widget.tabs
+  ---------------------*/
+.widget.inactive .tab{
+  display:none;
+}
+.widget.active .tab{
+  display:block; 
+  float:left; 
+  width:100%;  
+}
+.widget.active.tabs .section h3{
+  display:none;
+}
+/*------------------------
+  .widget.tabs.tab
+  ---------------------*/
+.tab{
+  /*border-bottom:#DDD solid 1px;*/
+  margin-bottom:1.250em;
+}
+.tab ul{
+  list-style:none;
+  margin:0;
+  padding:0;
+}
+.tab li{
+  float:left;
+  list-style:none;
+  margin:0;
+  padding:0;
+}
+.tab li a{
+  display:block;    
+  color:#000;
+  border:2px solid #acacac;  
+}
+.tab li:first-child a{
+  margin-left:0;
+}
+.tab li a.active {
+  border:2px solid #0072c6;  
+}
+.tab li a.active:hover {
+  cursor:auto;
+}
+/*----------------------
+Mobile breadcrumb Styles
+------------------------*/
+.mobileActivationsBreadcrumb{  
+  border-bottom:2px #EEE solid; 
+  height:4.5em; 
+  margin-top:1em;
+}
+.mobileActivationsBreadcrumb .grid-unit.flow{  
+  color:#999;  
+  width:13%;
+  min-width:130px;
+}
+.MobileActivationsPlanPage .mobileActivationsBreadcrumb .grid-unit.flow,.MobileActivationsPreActivatePage .mobileActivationsBreadcrumb .grid-unit.flow {
+  width:49%;
+}
+.MobileActivationsPlanPage .mobileActivationsBreadcrumb .flow .num, .MobileActivationsPreActivatePage .mobileActivationsBreadcrumb .flow .num {
+  margin-left:0;
+}
+.mobileActivationsBreadcrumb .flow.active{
+  color:#000;
+}
+.mobileActivationsBreadcrumb .flow div{
+  float:left;
+}
+.mobileActivationsBreadcrumb .flow .num{
+  font-size:3em;
+  margin:0 0 -0.25em 0.295em;
+}
+.mobileActivationsBreadcrumb .flow .desc{
+  padding:0.75em 0 0 0.5em;
+  line-height:1.275em;
+  font-size:1.125em;
+}
+.mobileActivationsBreadcrumb #carrierLogo{
+  text-align:right;  
+  margin-top:1.2em;
+}
+.lt-ie9 .mobileActivationsBreadcrumb #carrierLogo{  
+  width:39%;
+}
+.mobileActivationsBreadcrumb .active .blue-slider {
+  background-color:#00BCF2;
+  height:2px;
+  width:130px;
+  position:relative;
+  top:2px;
+  clear:both;
+}
+.errroBBYLeft {
+  width:48%;
+  float:left;
+  border-right:1px solid #ccc;
+  padding-right:1em;
+}
+.errroBBYRight {
+  width:52%;
+  float:left;
+  padding-left:1em;
+}
+.errroBBYLeft a,.errroBBYRight a{
+  margin-top:1.6em;
+}
+/*----------------------
+MobileActivations Page Styles
+------------------------*/
+.dr_MobileActivationsPage .dr_formLine a,.dr_MobileActivationsPage .buttonContainer a,.dr_MobileActivationsPage input,.dr_MobileActivationsPage .validation label,.dr_MobileActivationsPage .item,.dr_MobileActivationsPage table,.dr_MobileActivationsPage  .popularAccessories,.dr_MobileActivationsPage .accountInfoFieldset p,.dr_MobileActivationsPage .dr_formLine .dr_error,.dr_MobileActivationsPage .note{
+  font-size:0.813em;
+}
+.dr_MobileActivationsPage h2 {
+  font-size:1.5em;  
+  text-transform:none;  
+  text-align:left;
+}
+.dr_MobileActivationsPage td, .dr_MobileActivationsPage th{
+  line-height: 1.42857em;
+  /*min-height:50px;*/
+  vertical-align:top;
+  padding: 0.2em 0.500em 2.5em 0;
+}
+.lt-ie9 .dr_MobileActivationsPage td, .dr_MobileActivationsPage th{
+  min-height:0px;
+}
+.dr_MobileActivationsPage th{
+  padding:0.500em 0.500em 0 0;
+}
+.dr_MobileActivationsPage .dr_formLine{
+  float:left;
+  width:100%;
+  margin-top:0;
+}
+.dr_MobileActivationsPage .formField{
+  margin:2em 0 0;
+}
+.dr_MobileActivationsPage .dr_formLine .formError{
+  height:34px;
+  position:relative;
+}
+.dr_MobileActivationsPage .dr_formLine .formError .dr_ms_error{
+  position:absolute;
+  bottom:0;
+}
+.dr_MobileActivationsPage .dr_formLine label.capitalize{
+  text-transform:capitalize;
+}
+.dr_MobileActivationsPage .dr_formLine label.inline{
+  display:inline;
+}
+.dr_MobileActivationsPage .floatRight,.mobile .floatRight{
+    float:right;
+}
+.dr_MobileActivationsPage .seperator{
+  margin:0 0.35em;
+}
+.dr_MobileActivationsPage a{
+  color:#1570a6;
+  text-decoration:underline;
+  cursor:pointer;
+}
+.dr_MobileActivationsPage .buttonContainer a,.dr_MobileActivationsPage .popularAccessories .description a,.dr_MobileActivationsPage .whyIsThisRequired a{
+  text-decoration:none;
+}
+.dr_MobileActivationsPage input.button,.dr_MobileActivationsPage input.dr_button{
+  padding:0.95em 1.5em;
+}
+.dr_MobileActivationsPage .box{
+  padding:0.9em 1.75em;
+}
+.dr_MobileActivationsPage a.button:hover{
+  color:#ffffff;
+}
+.dr_MobileActivationsPage .dr_button.disabled, .dr_MobileActivationsPage .button.disabled{
+  cursor:default;
+}
+.dr_MobileActivationsPage .customerType h2{
+  padding-bottom:0.625em;
+}
+.dr_MobileActivationsPage .compare,.dr_MobileActivationsPage .selections{
+  float:left;
+  width:100%;    
+}
+.dr_MobileActivationsPage .compareSeparation{
+  margin-bottom:0.5em;
+}
+.dr_MobileActivationsPage .compare table,.dr_MobileActivationsPage .selections table {
+  /*margin:0.625em 0;*/
+  border:3px solid #ededed;  
+  border-collapse:inherit;
+}
+.dr_MobileActivationsPage .compare table th, 
+.dr_MobileActivationsPage .selections table th{
+  height:45px;
+  text-align:left;
+  text-transform:capitalize;
+  vertical-align:middle;
+  border-bottom:#000 solid 1px;
+}
+.dr_MobileActivationsPage .section .sectionContainer .selections h3 {display:block;}
+.dr_MobileActivationsPage table td.first {
+  text-align:center;
+  padding:0 0.500em 0 1em;
+}
+.dr_MobileActivationsPage table td.last {
+  text-align:center;
+  padding:0 0.500em;
+}
+.dr_MobileActivationsPage .compare table tr.hover td,
+.dr_MobileActivationsPage .selections table tr.hover td {
+  background-color:#cccbcc;
+}
+.lt-ie9 .grid-container.dr_MobileActivationsPage .popularAccessories .grid-unit{
+  margin-right:1px;
+}
+.dr_MobileActivationsPage .popularAccessories {
+  border:3px solid #ededed;
+  border-collapse:collapse;
+  width:auto;
+  padding:2em 1em;
+  text-align:center;
+}
+.dr_MobileActivationsPage .popularAccessories .cross-sell{ 
+  padding:0.75em 0;
+}
+.dr_MobileActivationsPage .popularAccessories .description{ 
+  min-height:85px; 
+  padding:0.5em 0.5em 0;
+}
+.dr_MobileActivationsPage .popularAccessories .description a{ 
+  color:#000;
+}
+.dr_MobileActivationsPage .popularAccessories .footer{ 
+  text-align:left;  
+  margin:1.25em 0 0.75em;
+}
+.dr_MobileActivationsPage .dr_regularPriceLabel,.dr_MobileActivationsPage .dr_deleteItemLink{
+  text-transform:capitalize;
+}
+.dr_MobileActivationsPage tr.firstRow td {
+  border-top:0;
+  padding-top:2.813em;
+}
+.dr_MobileActivationsPage tr.firstRow td.first {
+  padding-top:2.65em;
+}
+.dr_MobileActivationsPage tr.lastRow td {
+  border-bottom:0;
+}
+.dr_MobileActivationsPage table th.blank, .dr_MobileActivationsPage table td.blank {
+  border:0;
+}
+.dr_MobileActivationsPage .planSizeContainer {
+  float:left;
+  background-color:#ededed;
+  width:100%;
+}
+.dr_MobileActivationsPage .planSizeContainer .planSizeContainerInner{
+  margin:0.625em 2.25em;
+  padding-left:1em;
+}
+.dr_MobileActivationsPage .planSizeContainer .planSizeContainerInner p{
+  margin:0.5em 0 1em;
+  line-height:1.2em;
+}
+.dr_MobileActivationsPage #load_image {
+  position:relative;
+}
+.dr_MobileActivationsPage #carrierLogo {
+  margin-bottom:0.625em;
+}
+.dr_MobileActivationsPage div.grayBg{
+  background-color:#D3D3D3;
+  margin:0.500em 0.500em 0.625em;
+  padding:0.625em 0.500em;
+}
+.dr_MobileActivationsPage .title{
+  font-weight:bold;
+}
+.dr_MobileActivationsPage .highlight{
+  color:#ff0000;
+}
+.dr_MobileActivationsPage.localized_content .widget.section.horizontal_tabbed_scroller ul,.dr_MobileActivationsPage.localized_content .widget.section.horizontal_tabbed_scroller ol,.dr_MobileActivationsPage.localized_content .widget.section.horizontal_tabbed_scroller li{
+  padding-top:0;
+}
+.dr_MobileActivationsPage.localized_content .widget.section.horizontal_tabbed_scroller .tab li a,.dr_MobileActivationsPage.localized_content .widget.section.horizontal_tabbed_scroller .tabs li a{
+  text-decoration:none;  
+  float:left;
+}
+.dr_MobileActivationsPage.localized_content .widget.section.horizontal_tabbed_scroller .tabSwitcher{
+   position:relative; top:-62px;
+}
+.dr_MobileActivationsPage.localized_content .widget.section.horizontal_tabbed_scroller .section.ready{
+  position:absolute;
+}
+.dr_MobileActivationsPage h2.secondary {
+  margin-top:2.500em;
+}
+.dr_MobileActivationsPage table.details tr td{
+  border-bottom:1px solid #D3D3D3;
+  padding:0.313em 0.625em 0.313em 0.313em;
+}
+.dr_MobileActivationsPage table.details tr.last td{
+  border-bottom:0;
+}
+.dr_MobileActivationsPage .colLeft{
+  border-right:1px solid #D3D3D3;
+}
+.dr_MobileActivationsPage .mobileInfo{
+  text-align:center;
+}
+.dr_MobileActivationsPage .mobileInfo.productDetails{
+  padding:0 0.5em 0.5em;
+}
+.dr_MobileActivationsPage .mobileInfo.productImage{
+  padding:1.5em 0 0.25em 0;
+}
+.dr_MobileActivationsPage .tab .productImage{
+  padding:0.9em 0 0.25em 0;
+}
+.dr_MobileActivationsPage .mobileInfo.productImage img{
+  max-width:126px;
+  max-height:104px;
+}
+.dr_MobileActivationsPage .productInfo{
+  margin:0em 0 2.5em;
+}
+.dr_MobileActivationsPage .tab.productInfo{
+  margin:0.5em 0 1.5em;
+}
+.MobileActivationsCoveragePage .productInfo{
+  margin-top:0.5em;
+}
+.MobileActivationsCoveragePage .productInfo .container.addAnotherDevice .mobileInfo .item a{
+  color:#999;
+  text-decoration:none;
+}
+.MobileActivationsCoveragePage .desc a{
+  display:none;
+}
+.MobileActivationsCoveragePage .buttonContainer{
+  margin-top:1.5em;
+}
+.dr_MobileActivationsPage .productPrice {
+  color:#eb3900;
+}
+.dr_MobileActivationsPage #dr_newCustomerInfo, .dr_MobileActivationsPage #dr_existingCustomerInfo {
+  margin-top:0.25em;
+}
+.dr_MobileActivationsPage .sub-header {
+  padding:2.5em 0 0;
+  margin-bottom:-1em;
+}
+.dr_MobileActivationsPage div.productPrice{
+  display:inline;
+}
+.dr_MobileActivationsPage #upgradeSelection{
+  text-align:left;
+}
+.dr_MobileActivationsPage #upgradeSelection .seperator{
+  padding:1.7em 0;
+}
+.dr_MobileActivationsPage #upgradeSelection .updatingPhoneNumberList{
+  padding-top:0.5em;
+}
+.dr_MobileActivationsPage #upgradeSelection .updatingPhoneNumber{
+  display:inline-block;
+  width:49%;
+}
+.dr_MobileActivationsPage #upgradeSelection .updatingPhoneNumber .thumbnail{
+  display:inline-block;
+  width:63px;
+  height:105px;
+  overflow:hidden;
+}
+.dr_MobileActivationsPage #upgradeSelection .updatingPhoneNumber .thumbnail span{
+  position:relative;
+  top:-95px;
+  left:13px;
+  font-size:3em;
+  color:#d9d9d9;
+}
+.dr_MobileActivationsPage #upgradeSelection .updatingPhoneNumber .label{
+  width:50%;
+  display:inline-block;
+  position:relative;
+  top:-40px;
+  font-size:0.85em;
+}
+.dr_MobileActivationsPage #upgradeSelection  .updatingPhoneNumber .label input[type="radio"] + label span{
+  margin-top:0.625em;
+}
+.dr_MobileActivationsPage  .formSubmit{
+  margin-left:1em;
+}
+.overlayPopUpWindowLink{
+  position:relative;
+}
+.overlayPopUpWindow{
+  position:absolute;
+  bottom:0;
+  left:0;
+  border:3px #999999 solid;
+  padding:0.938em 2.5em 0.938em 0.938em;
+  background-color:#fff;
+  min-width:20.25em;
+  z-index:1;
+}
+.overlayPopUpWindow .overlayPopUpClose{
+  background-image: url("//dri1.img.digitalrivercontent.net/Storefront/Site/mscommon/cm/images/Monaco/closeicon.png");
+  background-repeat: no-repeat;
+  margin:0em -1.563em 0em 0.5em;
+  width:21px;
+  height:21px; 
+  cursor:pointer;
+  float:right; 
+}
+.overlayPopUpWindow .overlayPopUpContent .seperator{
+  margin:0.75em 0;
+  border:1px #ededed solid;
+  height:0;
+}
+.plancollapse {
+  background-image: url("//dri1.img.digitalrivercontent.net/Storefront/Site/mscommon/cm/images/Monaco/collapse.png");
+  background-repeat: no-repeat;
+  margin:-1.25em -1.438em 0 0;
+  width:20px;
+  height:20px; 
+  cursor:pointer;
+  background-position: right 0;
+  float:right; 
+}
+.plancollapse.active{  
+  background-position: right -1.25em;  
+}
+.dr_MobileActivationsPage .whyIsThisRequired{
+  display:inline;
+  margin:0.375em 0 0 0.75em;
+  font-size:0.9em;
+  position:absolute;
+  width:100%;
+}
+.isMobile #submitTop,.isMobile #submitBottom{
+  font-size:1.2em;
+}
+.dr_liMAShopperSelections{  
+  margin-top:1.5em;
+  font-size:0.75em;  
+}
+#dr_CheckoutCart .dr_liMAShopperSelections,#dr_ThankYou .dr_liMAShopperSelections{  
+  font-size:1em;  
+}
+#dr_CheckoutCart .dr_liMAShopperSelections li{  
+  margin-left:0;
+}
+.dr_liMAShopperSelections li{
+  list-style-type:disc; 
+  margin-left:0.938em;
+}
+#dr_Invoice .dr_liMAShopperSelections ul{
+  padding:0 0 0.313em 1.250em;
+}
+.lt-ie9 #dr_checkoutButtonForMA a.box{
+  padding-left:1.16em; 
+  padding-right:1.16em;
+}
+.MobileActivationsPlanPage .rwd .pcf-layout .pcf-aside, .MobileActivationsPreActivatePage .rwd .pcf-layout .pcf-aside {
+  margin-top:12.25em;
+  
+}
+.MobileActivationsPlanPage .rwd .pcf-layout .pcf-aside .rwd-aside-main, .MobileActivationsPreActivatePage .rwd .pcf-layout .pcf-aside .rwd-aside-main {
+  margin-bottom:1em;
+  border: 3px solid #f3f3f3;
+  padding:1em;
+}
+.MobileActivationsPlanPage .rwd .pcf-layout .pcf-main, .MobileActivationsPreActivatePage .rwd .pcf-layout .pcf-main {
+  width:74%;
+}
+.MobileActivationsPlanPage #overlayPopUpWrap .overlayPopInner, .MobileActivationsPreActivatePage #overlayPopUpWrap .overlayPopInner{
+  border:none;
+  width:550px;
+}
+.MobileActivationsPlanPage #overlayPopUpWrap .overlayPopUpClose a.closeButton,.MobileActivationsPreActivatePage #overlayPopUpWrap .overlayPopUpClose a.closeButton {
+  color: #fff;
+  left: 25px;
+  top: -78px;
+  text-decoration:none;
+  opacity:0.7;
+  font-size:25px;
+  height:30px;
+}
+.MobileActivationsPlanPage #overlayPopUpWrap .overlayPopUpClose a.closeButton:hover,.MobileActivationsPreActivatePage #overlayPopUpWrap .overlayPopUpClose a.closeButton:hover {
+  opacity:1;
+}
+.pdp-ma-error {background-color:#fff;padding:2em 1em;}
+.mfp-content .pdp-ma-error .mfp-close {top:0;}
+/*----------------------
+overlayPopUp Styles
+------------------------*/
+#overlayPopUpWrap {
+  display:none;
+  position:relative;
+  z-index:1000;
+}
+#overlayPopUpWrap .overlay{
+  background-color: #000000;
+  bottom: 0;
+  color: #FFFFFF;
+  left: 0;
+  opacity: 0.75;
+  -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=75)";
+  filter: alpha(opacity=75);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index:100000;
+}
+#overlayPopUpWrap .overlayPopInner {
+  text-align:center;
+  background-color: #FFFFFF;
+  border: 3px solid #999;
+  left: 35%;
+  top: 25%;
+  padding: 2.813em 1.250em 2.500em;
+  position: fixed;
+  width: 382px;
+  z-index: 999999;
+}
+#overlayPopUpWrap  h1.overlayPopUpHeading {
+  color:#D2480E;
+  padding: 0.938em 0 0;
+}
+#overlayPopUpWrap  .overlayPopUpClose a.closeButton {
+  cursor: pointer;
+  display: block;
+  float: right;
+  height: 21px;
+  /*margin: -0.375em -0.625em 0 0;*/
+  overflow: hidden;
+  position: relative;
+  top: -30px;
+  width: 21px;
+}
+#overlayPopUpWrap  .overlayPopUpClose a.closeButton:hover, #overlayPopUpWrap  .overlayPopUpClose a.closeButton:active {
+  outline: medium none;
+}
+#overlayPopUpWrap  .overlayPopUpClose a.closeButton img {
+  margin-top: 0;
+  position: absolute;
+  top:0;
+  left:0;
+}
+.dr_locale_fr_FR #overlayPopUpWrap  .overlayPopUpClose a.closeButton:hover img {
+  margin-top: 0;
+}
+.dr_locale_fr_FR #overlayPopUpWrap  .overlayPopUpClose a.closeButton{
+  height: 15px;
+  width: 12px;
+}
+.dr_locale_fr_FR #overlayPopUpWrap .overlayPopInner{
+  text-align: left;
+}
+#overlayPopUpWrap a.button {
+  text-decoration:none;
+}
+#overlayPopUpWrap .overlayButtons {
+  margin:0.625em 0;
+}
+#overlayPopUpWrap .overlayButtons  .seperator{
+  margin:0 0.25em;
+}
+#overlayPopUpWrap .capitalize{
+  text-transform:capitalize;
+}
+
+/*----------------------
+MA mini cart Styles
+------------------------*/
+.dr_MobileActivationsPage .servicePlanMiniContainer .grid-row.buttonContainer, .dr_MobileActivationsPage .servicePlanMiniContainer .grid-row.servicePlanMini{
+  width:277px;
+}
+.dr_MobileActivationsPage .dr_formLine.buttonContainer{margin-top:0;}
+.dr_MobileActivationsPage .servicePlanMini table {
+  background-color:#ededed;
+  border:3px solid #ededed;
+  width:100%;
+  margin:0 0 2em;
+}
+.MobileActivationsCreditCheckPage .servicePlanMini table {
+  margin-top:0;
+}
+.dr_MobileActivationsPage .servicePlanMini table td{
+  background-color:#FFF;
+}
+.dr_MobileActivationsPage .servicePlanMini table td.price{
+  text-align:right;
+  padding-right:0em;
+  color:#D2480E;
+}
+.dr_MobileActivationsPage .servicePlanMini table tr.lineItemTotal td{  
+  border-top:1px solid #000;
+  padding-top:1em;
+  font-size:1.25em;
+}
+.dr_MobileActivationsPage .servicePlanMini table th, .dr_MobileActivationsPage .servicePlanMini table td, .dr_MobileActivationsPage .servicePlanMini table tr.lineItemTotal .blank{
+  border:0;
+}
+.dr_MobileActivationsPage .servicePlanMini table th{
+  padding:1em 1em 1.5em 0;
+}
+.dr_MobileActivationsPage .servicePlanMini table td{
+  padding:0em 0.500em 1.375em 0;
+}
+.dr_MobileActivationsPage .servicePlanMini table tr.first td{
+  padding-top:1.75em;
+}
+.dr_MobileActivationsPage .servicePlanMini table td.price .total{
+  float:left; 
+  color:#000;
+}
+.dr_MobileActivationsPage .servicePlanMini table td.miniCartLoader {
+  text-align:center;
+}
+.dr_MobileActivationsPage .footernote{
+  font-size:11px;
+  color:#1a1a1a;
+  margin:1.5em 0 1em;
+  float:left;
+}
+.dr_MobileActivationsPage .buttonContainer p{
+  font-size:0.9em;
+  font-weight:bold;
+}
+.buy-box .product-colors {
+  float:left; width:100%;
+}
+.ProductDetailsPage .mobile #overlayPopUpWrap .overlayPopUpClose a.closeButton{
+  display:none;
+}
+#dr_ConfirmOrder #dr_TermsOfServiceAcceptanceForMA {
+  border-bottom: 1px solid #d2d2d2;
+  margin-top: 0.5em;
+  margin-bottom: 1em;
+  text-align:left;
+}
+#dr_ConfirmOrder #dr_TermsOfServiceAcceptanceForMA #dr_TermsOfSaleAcceptanceForMA {
+  margin-bottom: 1em;
+  background-color:#FFF;
+}
+.ProductDetailsPage .product-hero .container-360 .overlay {
+	height: 15%;
+}
+/*----------------------
+MA form fields
+------------------------*/
+.mobile .row-padded-top,
+.lt-ie9 .mobile .row-padded-top{
+  padding-top:0.75em;
+  padding-bottom:0;
+}
+.mobile .row-padded,
+.lt-ie9 .mobile .row-padded{
+  padding:1.75em 0 3em;
+}
+.dr_MobileActivationsPage .row-padded-top.grid-row h1{
+  margin-top:1.15em;
+  margin-bottom:0.5em;
+}
+.dr_MobileActivationsPage select{
+  min-width:inherit;
+  border:2px solid #d2d2d2;
+}
+.lt-ie9 .dr_MobileActivationsPage .hide{
+  display:none;
+}
+.lt-ie9 .dr_MobileActivationsPage select{
+  width:auto;
+}
+.dr_MobileActivationsPage .grid-row .grid-unit .dr_formLine.autoSize input, 
+.dr_MobileActivationsPage .grid-row .grid-row .dr_formLine.autoSize input {
+  width:91%;
+}
+.dr_MobileActivationsPage .column-4 .column-6 .grid-unit{
+  width:16.66%;
+}
+.dr_MobileActivationsPage .column-4 .column-6 .colspan-2{
+  width:33.33%;
+}
+.dr_MobileActivationsPage .column-4 .column-6 .colspan-3{
+  width:50%;
+}
+.dr_MobileActivationsPage .column-4 .column-6 .colspan-4{
+  width:66.66%;
+}
+.lt-ie9 .dr_MobileActivationsPage .column-4 .column-6 .grid-unit{
+  width:115px;
+}
+.lt-ie9 .dr_MobileActivationsPage .column-4 .column-6 .colspan-2{
+  width:233px;
+}
+.lt-ie9 .dr_MobileActivationsPage .column-4 .column-6 .colspan-3{
+  width:354px;
+}
+.lt-ie9 .dr_MobileActivationsPage .column-4 .column-6 .colspan-4{
+  width:466px;
+}
+.lt-ie9 .dr_MobileActivationsPage .column-4 .column-6.portingInfo .grid-row .grid-unit{
+  width:16.66%;
+}
+.lt-ie9 .dr_MobileActivationsPage .column-4 .column-6.portingInfo .grid-row .colspan-2{
+  width:28.33%;
+}
+.lt-ie9 .dr_MobileActivationsPage .column-4 .column-6.portingInfo .grid-row .colspan-3{
+  width:47%;
+}
+.lt-ie9 .dr_MobileActivationsPage .column-4 .column-6.portingInfo .grid-row .colspan-4{
+  width:66.66%;
+}
+.dr_MobileActivationsPage .column-4 .column-6 .colspan-2 .dr_formLine.autoSize input{
+  width:88.1%;
+}
+.dr_MobileActivationsPage .column-4 .column-6 .colspan-3 .dr_formLine.autoSize input{
+  width:92.3%;
+}
+.dr_MobileActivationsPage .column-4 .column-6 .colspan-4 .dr_formLine.autoSize input{
+  width:94.1%;
+}
+.lt-ie9 .dr_MobileActivationsPage .column-4 .column-6 .colspan-2 .dr_formLine.autoSize input{
+  width:90%;
+}
+.lt-ie9 .dr_MobileActivationsPage .column-4 .column-6 .colspan-3 .dr_formLine.autoSize input{
+  width:334px;
+}
+.lt-ie9 .dr_MobileActivationsPage .column-4 .column-6 .colspan-4 .dr_formLine.autoSize input{
+  width:445px;
+}
+.lt-ie9 .dr_MobileActivationsPage .column-4 .column-6.portingInfo .colspan-2 .dr_formLine.autoSize input{
+  width:88.1%;
+}
+.lt-ie9 .dr_MobileActivationsPage .column-4 .column-6.portingInfo .colspan-3 .dr_formLine.autoSize input{
+  width:92.3%;
+}
+.lt-ie9 .dr_MobileActivationsPage .column-4 .column-6.portingInfo .colspan-4 .dr_formLine.autoSize input{
+  width:94.1%;
+}
+.dr_MobileActivationsPage .column-4 .grid-row .grid-row .dr_formLine.autoSize.floatRight input,
+.dr_MobileActivationsPage .column-4 .column-6 .grid-row .grid-row .dr_formLine.autoSize.floatRight input{
+  width:98.7%;
+}
+.dr_MobileActivationsPage .column-4 .column-6 .grid-unit .dr_formLine.autoSize.floatRight input{
+  width:91.9%;
+}
+.dr_MobileActivationsPage .column-4 .column-6 .colspan-2 .dr_formLine.autoSize.floatRight input{
+  width:96%;
+}
+.dr_MobileActivationsPage .column-4 .column-6 .colspan-3 .dr_formLine.autoSize.floatRight input{
+  width:97.4%;
+}
+.lt-ie9 .dr_MobileActivationsPage .column-4 .column-6 .grid-unit .dr_formLine.autoSize.floatRight input{
+  width:100%;
+}
+.lt-ie9 .dr_MobileActivationsPage .column-4 .column-6 .colspan-2 .dr_formLine.autoSize.floatRight input,
+.lt-ie9 .dr_MobileActivationsPage .column-4 .column-6 .colspan-3 .dr_formLine.autoSize.floatRight input{
+  width:100%;
+}
+.lt-ie9 .dr_MobileActivationsPage .column-4 .grid-row .grid-row .dr_formLine.autoSize.floatRight input{
+  width:718px;
+}
+.lt-ie9 .dr_MobileActivationsPage .column-4 .column-6.portingInfo .grid-row .grid-row .dr_formLine.autoSize.floatRight input{
+  width:96%;
+}
+.lt-ie9 .dr_MobileActivationsPage .column-4 .column-6.portingInfo .grid-unit .dr_formLine.autoSize.floatRight input{
+  width:91.9%;
+}
+.lt-ie9 .dr_MobileActivationsPage .column-4 .column-6.portingInfo .colspan-2 .dr_formLine.autoSize.floatRight input{
+  width:98%;
+}
+.lt-ie9 .dr_MobileActivationsPage .column-4 .column-6.portingInfo .colspan-3 .dr_formLine.autoSize.floatRight input{
+  width:99.4%;
+}
+.dr_MobileActivationsPage .column-4 .column-6 .colspan-2 .dr_formLine.autoSize.floatRight select{
+  width:100%;
+}
+.lt-ie9 .dr_MobileActivationsPage .column-4 .column-6 .colspan-2 .dr_formLine.autoSize.floatRight select{
+  width:245px;
+}
+.dr_MobileActivationsPage .grid-row .accountInfoFieldset .grid-unit, .dr_MobileActivationsPage .grid-row .customerInfoFieldset .grid-unit, .dr_MobileActivationsPage .grid-row .customerInfoFieldset.grid-unit, .dr_MobileActivationsPage .column-4 .colspan-3 .customerInfoFieldset .grid-unit, .column-4 .colspan-3 .popularAccessories .grid-unit{
+  margin-left:0;
+}
+.dr_MobileActivationsPage .column-4 .colspan-3 .grid-unit:nth-of-type(2n+3){
+  margin-left:0;
+}
+.dr_MobileActivationsPage input[type=text],.dr_MobileActivationsPage input[type=password]{
+  color:#1a1a1a;
+  font-size:1em;
+  margin:0.2em auto 0; 
+  padding:.25em;
+  border:2px solid #d2d2d2;
+  display:inline-block !important;
+  width:auto;
+  -webkit-box-sizing: border-box;   		 
+  -moz-box-sizing: border-box;   		 
+  box-sizing: border-box;   		 
+  -moz-appearance: none;   		 
+  -webkit-appearance: none;  
+}
+.dr_MobileActivationsPage label{
+  padding-bottom:0.375em;
+}
+.lt-ie9 .dr_formLine .autoFillOption label{
+  display:inline;
+}
+.MobileActivationsCoveragePage #coverageCheckNew .dr_formLine.zip label, .MobileActivationsCoveragePage #coverageCheckNew .dr_formLine.zip input{
+  width:47%;
+}
+.MobileActivationsCoveragePage #coverageCheckNew .dr_formLine.zip input{
+  margin-right:1.25em;
+}
+.yes input,.no input {
+  vertical-align:baseline;
+  margin-right:0.5em
+}
+span.yes,span.no {
+  margin-right:1.8em
+}
+span.yes label,span.no label{
+  display:inline;
+}
+.MobileActivationsCoveragePage input {
+  vertical-align:baseline;
+}
+.MobileActivationsCoveragePage input.dr_button.blue {
+  vertical-align:baseline;
+  margin-left:0;
+}
+.lt-ie9 .dr_MobileActivationsPage .dr_formLine.phoneNumber input{
+  width:20%;
+}
+.mobile input[type="radio"],.mobile input[type="checkbox"]  {
+  display:none;
+}
+.lt-ie9 .mobile input[type="radio"],.lt-ie9 .mobile input[type="checkbox"] {
+  display:inline-block;
+}
+.lt-ie9 .mobile input[name="sharedDataGroupId"].hide {
+  display:none;
+}
+.mobile input[type="radio"] + label span,.mobile input[type="checkbox"] + label span {
+  display:inline-block;
+  width:23px;
+  height:23px;
+  vertical-align:middle;
+  margin:0 0.625em 0 0;
+  background:url(//dri1.img.digitalrivercontent.net/Storefront/Site/mscommon/cm/images/common_images/check_radio_sheet.png) 0 bottom no-repeat;
+  cursor:pointer;
+}
+.mobile input[type="checkbox"] + label span {
+  width:21px;
+  height:21px;
+  background:url(//dri1.img.digitalrivercontent.net/Storefront/Site/mscommon/cm/images/common_images/check_checkBox_sheet.png) 0 bottom no-repeat;
+}
+.lt-ie9 .mobile input[type="radio"] + label span,.lt-ie9 .mobile input[type="checkbox"] + label span {
+  display:none;
+}
+.mobile input[type="radio"]:checked + label span{
+  background:url(//dri1.img.digitalrivercontent.net/Storefront/Site/mscommon/cm/images/common_images/check_radio_sheet.png) 0 top no-repeat;
+}
+.mobile input[type="checkbox"]:checked + label span {
+  background:url(//dri1.img.digitalrivercontent.net/Storefront/Site/mscommon/cm/images/common_images/check_checkBox_sheet.png) 0 top no-repeat;
+}
+.customerType #new,#coverageCheckExisting .upgrade{
+  padding-bottom:1.5em
+}
+/** Compare style **/
+.dr_prodCompare {
+display:none;
+}
+.product-results .dr_prodCompare {
+margin-top:1.5em;
+}
+.product-results .dr_prodCompare label {
+margin-left:5px;
+}
+.mstResponsive.ComparePage{
+  width:932px;
+  min-width:932px;
+}
+#dr_Compare .heading--large{
+  padding-left:1.25em;
+}
+#dr_Compare .grid-table .grid-row{
+  padding-top:0;
+  padding-bottom:0;
+}
+#dr_Compare .table-cell{
+  padding:.75em 1.25em;
+  border-left:1px #f1f1f1 solid;
+}
+#dr_Compare .table-cell.firstCol{
+  border:0;
+}
+#dr_Compare li{
+  background: url("//dri1.img.digitalrivercontent.net/Storefront/Site/msstore/cm/images/liBG.gif") no-repeat scroll 0 0.5em rgba(0, 0, 0, 0);
+  line-height: 1.3;
+  margin-top: 0.25em;
+  padding: 0 0.714286em;
+}
+#dr_Compare .product-descriptions{
+  padding-bottom:1.5em;
+}
+#dr_Compare .product-features{
+  background-color:#f5f5f5;
+  color:#1a1a1a;
+}
+#dr_Compare .productDetails,
+#dr_Compare .addCompareProductLink{
+  text-align:center;
+  padding-bottom:1.5em;
+}
+#dr_Compare .productDetails {
+  max-width:270px;
+}
+#dr_Compare .dr_productName{
+  text-align:left;
+}
+#dr_Compare .productImage{
+  height:200px;
+  display:inline-block;
+}
+#dr_Compare .productImage img{
+  max-height:200px;
+  max-width:270px;
+}
+#dr_Compare .removeLinks .table-cell{
+  background-color:#5e5e5e;
+}
+#dr_Compare .removeLink a{
+  margin: 5px 0 0;
+  background:url("//dri1.img.digitalrivercontent.net/Storefront/Site/mscommon/cm/images/common_images/button_removeCompare.png") no-repeat center left;
+  padding-left:2em;
+  color:#ffffff;
+}
+#dr_Compare .addCompareProduct {
+  text-decoration:underline;
+}
+#dr_Compare .addMore {
+  vertical-align:bottom; 
+}
+#dr_Compare .groupName {
+  border: 1px solid #eee;
+  background-color:#d8d8d8;
+}
+#dr_Compare .dr_buttons,#dr_Compare .product-control{
+  float:left;
+  padding-bottom:1.25em;
+}
+#dr_Compare .product-control{
+  padding-left:1.25em;
+  max-width:139px;
+}
+#compareContainer a{
+  color: #000000;
+  margin:0;
+}
+#compareItem1 {
+  background: url("//dri1.img.digitalrivercontent.net/Storefront/Site/mscommon/cm/images/Monaco/compareEmptyBG.gif") repeat scroll 0 0 #F68B23;
+}
+#compareItem2 {
+  background: url("//dri1.img.digitalrivercontent.net/Storefront/Site/mscommon/cm/images/Monaco/compareEmptyBG.gif") repeat scroll 70px 0 #A6CE3A;
+}
+#compareItem3 {
+  background: url("//dri1.img.digitalrivercontent.net/Storefront/Site/mscommon/cm/images/Monaco/compareEmptyBG.gif") repeat scroll 35px 0 #1D95D2;
+}
+#compareContainer{
+  width:495px;
+  height:92px;
+  padding:0.438em;
+  margin:0.625em;
+  position:fixed;
+  right:0em;
+  bottom:0em;
+  display:none;/*REQUIRED*/ 
+  z-index:9;
+}
+#compareContainer #compareBg{
+	position: absolute; /* This protects the inner element from being blurred */
+	padding: 52px 254px;
+	background-color: #a5a5a5;
+  opacity:0.25;
+  filter: alpha(opacity = 25);
+}
+#compareSubmitError{
+  clear:both;
+  float:left;
+  margin:0.625em 0 0;
+  color:#FF0000;
+  display:none; /*required*/
+}
+.compare-result-container {
+  float: left;
+  padding: 10px 0 0;
+  width: 100%;
+  color: #FFF;
+  text-align: center;
+}
+.compare-result-container.overlay {
+  text-align: left;
+  background-color: #FFF;
+  color: #1A1A1A;
+}
+.mfp-content .compare-result-container .grid-row {
+  background-color: #FFF;
+}
+.CategoryProductListPage .mfp-inline-holder .mfp-content {
+  max-width: 932px;
+  padding-top: 0;
+}
+#dr_CategoryProductList .compareItems{
+  float:left;
+  position:relative;
+  height:90px;
+  width:119px;
+  color:#fff;
+  text-align:center;
+  background:#ffffff;
+  margin:0;
+  border-right:1px solid #cccccc;
+}
+#dr_CategoryProductList #compareItem1{
+  background:url(//dri1.img.digitalrivercontent.net/Storefront/Site/mscommon/cm/images/Monaco/bg_compare1.png) no-repeat;
+}
+#dr_CategoryProductList #compareItem2{
+  background:url(//dri1.img.digitalrivercontent.net/Storefront/Site/mscommon/cm/images/Monaco/bg_compare2.png) no-repeat;
+}
+#dr_CategoryProductList #compareItem3{
+  background:url(//dri1.img.digitalrivercontent.net/Storefront/Site/mscommon/cm/images/Monaco/bg_compare3.png) no-repeat;
+}
+#compareWrapper{
+  height:90px;
+  overflow:hidden;
+  background-color:#ffffff;
+  position:relative;
+  top:7px;
+  left:7px;
+}
+#compareSubmit{
+  float:right;
+  padding:0;
+  margin:1.875em 1em;
+}
+#compareSubmit a:hover {
+  background-position:0em -1.563em;
+}
+#dr_CategoryProductList .compareItems a{
+  display:none; /*required*/
+  z-index:1001;
+  width:35px;
+  height:35px;
+  position:absolute;
+  top:0px;
+  left:85px;
+  background-image:url(//dri1.img.digitalrivercontent.net/Storefront/Site/mscommon/cm/images/common_images/button_removeCompare.png);
+}
+#dr_CategoryProductList .compareItems.occupied:hover a.removeCompare{
+  display:block !important;/*required*/
+}
+#dr_CategoryProductList .compareItems img.compareBoxImg{
+  z-index:1000;
+  border-right:1px solid #C2C2C2;
+  width: 119px;
+  height:90px;
+}
+#dr_CategoryProductList .list-spinning {
+  display: none;
+  margin: 10em auto;
+}
+#CompareTableMain tr.groupName td h3{
+  text-align:center;
+  border:0;
+}
+/**
+.ProductSearchResultsPage #body input[type="radio"],.ProductSearchResultsPage #body input[type="checkbox"]  {
+  display:none;
+}
+.lt-ie9.ProductSearchResultsPage #body input[type="radio"],.lt-ie9.ProductSearchResultsPage #body input[type="checkbox"] {
+  display:inline-block;
+}
+.ProductSearchResultsPage #body input[type="radio"] + label span {
+  display:inline-block;
+  width:23px;
+  height:23px;
+  vertical-align:middle;
+  margin:0 0.625em 0 0;
+  background:url(//dri1.img.digitalrivercontent.net/Storefront/Site/mscommon/cm/images/common_images/check_radio_sheet.png) 0 bottom no-repeat;
+  cursor:pointer;
+}
+.ProductSearchResultsPage #body input[type="checkbox"] + label span {
+  width:21px;
+  height:21px;
+  background:url(//dri1.img.digitalrivercontent.net/Storefront/Site/mscommon/cm/images/common_images/check_checkBox_sheet.png) 0 bottom no-repeat;
+  float:left;
+  margin:.1em 0.625em 1em 0;
+}
+.lt-ie9.ProductSearchResultsPage #body input[type="radio"] + label span,.lt-ie9.ProductSearchResultsPage #body input[type="checkbox"] + label span {
+  display:none;
+}
+.ProductSearchResultsPage #body input[type="radio"]:checked + label span{
+  background:url(//dri1.img.digitalrivercontent.net/Storefront/Site/mscommon/cm/images/common_images/check_radio_sheet.png) 0 top no-repeat;
+}
+.ProductSearchResultsPage #body input[type="checkbox"]:checked + label span {
+  background:url(//dri1.img.digitalrivercontent.net/Storefront/Site/mscommon/cm/images/common_images/check_checkBox_sheet.png) 0 top no-repeat;
+}
+**/
+.surface2-hero .next-slide {
+  outline:0;
+}
+/***** BEGIN: font for msfr *****/
+body.dr_site_msfr #dr_CategoryList .comparison-rows .product-details{padding:0;}
+/***** END: font for msfr *****/
+/***** BEGIN: font for msapac(vi_VN) *****/
+body.dr_locale_vi_VN.chrome{font-family: "Segoe UI","Segoe","Segoe WP","Tahoma","Verdana","Arial","sans-serif";}
+body.dr_locale_vi_VN #dr_CheckoutCart #dr_cartSummaryTbl .dr_lineItemRow .dr_productName {width:35%;}
+body.dr_locale_vi_VN #dr_CheckoutCart #dr_cartSummaryTbl #dr_taxTotal .dr_totals {width:40%;}
+body.dr_locale_vi_VN.chrome .list-of-links-sm .heading{font-family: "Segoe UI","Segoe","Segoe WP","Tahoma","Verdana","Arial","sans-serif";}
+/***** END: font for msapac(vi_VN) *****/
+/***** BEGING: font for msjp (split selector with the same style in order to avoid too long selector)*****/
+body.dr_site_msjp {font-family: Meiryo,wf_SegoeUI,"Segoe UI",Segoe,"Segoe WP",Tahoma,Verdana,Arial,sans-serif;}
+body.dr_site_msjp select, body.dr_site_msjp option, body.dr_site_msjp button {font-family: Meiryo,wf_SegoeUI,"Segoe UI",Segoe,"Segoe WP",Tahoma,Verdana,Arial,sans-serif;}
+body.dr_site_msjp .heading--bold, body.dr_site_msjp .list-of-links-sm .heading, body.dr_site_msjp .category-hero.holiday-12-days .grid-container .grid-unit .overlay .heading--larger  {font-family: Meiryo,wf_SegoeUI,"Segoe UI",Segoe,"Segoe WP",Tahoma,Verdana,Arial,sans-serif;}
+body.dr_site_msjp.lt-ie8 .notification-bar .close span, body.dr_site_msjp .triple-hero-control .right .overlay h1, body.dr_site_msjp .heading--large a , body.dr_site_msjp .image-and-text .sub-title {font-family: Meiryo,wf_SegoeUI,"Segoe UI",Segoe,"Segoe WP",Tahoma,Verdana,Arial,sans-serif;}
+body.dr_site_msjp .product-control .savings-message, body.dr_site_msjp .product-control .heading--small, body.dr_site_msjp .product-control .actual-price {font-family: Meiryo,wf_SegoeUI,"Segoe UI",Segoe,"Segoe WP",Tahoma,Verdana,Arial,sans-serif;}
+body.dr_site_msjp .ms-signature .heading--small a, body.dr_site_msjp .row-heading-label .heading {font-family: Meiryo,wf_SegoeUI,"Segoe UI",Segoe,"Segoe WP",Tahoma,Verdana,Arial,sans-serif;}
+body.dr_site_msjp .compare-table .product-control .heading--small, body.dr_site_msjp .whats-new-in-office .ms-accordion .toggle-icon span, body.dr_site_msjp .spec-table .heading--medium, body.dr_site_msjp .new-pdp-hero .buy-box .savings, body.dr_site_msjp .simple-overview h2 a {font-family: Meiryo,wf_SegoeUI,"Segoe UI",Segoe,"Segoe WP",Tahoma,Verdana,Arial,sans-serif;}
+body.dr_site_msjp .edu-content .edu-4tiles .grid-unit .image-and-text .heading--small, body.dr_site_msjp .student-hero .overlay .heading--larger, body.dr_site_msjp .student-hero .overlay .shopnow {font-family: Meiryo,wf_SegoeUI,"Segoe UI",Segoe,"Segoe WP",Tahoma,Verdana,Arial,sans-serif;}
+body.dr_site_msjp .rwd .drop-down-list select.placeholder, body.dr_site_msjp .office-suites .products-list .heading--small, body.dr_site_msjp .spec-table .grid-row .grid-unit p.price {font-family: Meiryo,wf_SegoeUI,"Segoe UI",Segoe,"Segoe WP",Tahoma,Verdana,Arial,sans-serif;}
+body.dr_site_msjp .rwd input[type="text"]::-webkit-input-placeholder,
+body.dr_site_msjp .rwd input[type="email"]::-webkit-input-placeholder,
+body.dr_site_msjp .rwd input[type="text"]:-moz-placeholder,
+body.dr_site_msjp .rwd input[type="email"]:-moz-placeholder,
+body.dr_site_msjp .rwd input[type="text"]::-moz-placeholder,
+body.dr_site_msjp .rwd input[type="email"]::-moz-placeholder,
+body.dr_site_msjp .rwd input[type="text"]:-ms-input-placeholder,
+body.dr_site_msjp .rwd input[type="email"]:-ms-input-placeholder {font-family: Meiryo,wf_SegoeUI,"Segoe UI",Segoe,"Segoe WP",Tahoma,Verdana,Arial,sans-serif;}
+body.dr_site_msjp .search-results .grid-unit.dr_sortBy, body.dr_site_msjp .product-results .grid-unit.dr_sortBy {font-family: Meiryo,wf_SegoeUI,"Segoe UI",Segoe,"Segoe WP",Tahoma,Verdana,Arial,sans-serif;}
+body.dr_site_msjp .search-results .dr_pagination, body.dr_site_msjp .product-results .dr_pagination {font-family: Meiryo,wf_SegoeUI,"Segoe UI",Segoe,"Segoe WP",Tahoma,Verdana,Arial,sans-serif;}
+body.dr_site_msjp .facetSub h3, body.dr_site_msjp .ServerErrorPage .dr_error, body.dr_site_msjp #dr_CheckoutCart table .heading--small, body.dr_site_msjp .ProductPickerPage .accessory-control .productName {font-family: Meiryo,wf_SegoeUI,"Segoe UI",Segoe,"Segoe WP",Tahoma,Verdana,Arial,sans-serif;}
+body.dr_site_msjp .actual-price, body.dr_site_msjp .spec-table p, body.dr_site_msjp .rwd .cart .cart-item .product-details .item-price, body.dr_site_msjp .rwd .cart .pcf-aside .candy-rack p.item-price {font-family: Meiryo,wf_SegoeUISemilight,"Segoe UI Light","Segoe WP Light","Segoe UI",Segoe,"Segoe WP",Tahoma,Verdana,Arial,sans-serif;}
+body.dr_site_msjp .font-light {font-family: Meiryo,wf_SegoeUILight,wf_SegoeUI,"Segoe UI Light","Segoe WP Light","Segoe UI",Segoe,"Segoe WP",Tahoma,Verdana,Arial,sans-serif;}
+body.dr_site_msjp h1, body.dr_site_msjp h2, body.dr_site_msjp h3, body.dr_site_msjp h4, body.dr_site_msjp h5, body.dr_site_msjp h6 {font-family: Meiryo,wf_SegoeUILight,wf_SegoeUI,"Segoe UI Light","Segoe WP Light","Segoe UI",Segoe,"Segoe WP",Tahoma,Verdana,Arial,sans-serif;}
+body.dr_site_msjp .category-hero.elp-email-signup .overlay .after-logo, body.dr_site_msjp .image-and-text .call-to-action.large {font-family: Meiryo,wf_SegoeUILight,wf_SegoeUI,"Segoe UI Light","Segoe WP Light","Segoe UI",Segoe,"Segoe WP",Tahoma,Verdana,Arial,sans-serif;}
+body.dr_site_msjp .surface2-hero ul li .with-arrow, body.dr_site_msjp .surface2-hero ul li .included-features .image-and-text p span {font-family: Meiryo,wf_SegoeUILight,wf_SegoeUI,"Segoe UI Light","Segoe WP Light","Segoe UI",Segoe,"Segoe WP",Tahoma,Verdana,Arial,sans-serif;}
+body.dr_site_msjp .new-pdp-hero .buy-box .current-price, body.dr_site_msjp .student-hero .edu-badge, body.dr_site_msjp .rwd .cart .cart-item .product-details .product-wrapper .title {font-family: Meiryo,wf_SegoeUILight,wf_SegoeUI,"Segoe UI Light","Segoe WP Light","Segoe UI",Segoe,"Segoe WP",Tahoma,Verdana,Arial,sans-serif;}
+body.dr_site_msjp .list-of-links-xlg li, body.dr_site_msjp.lt-ie9 .list-of-links-xlg li {font-family: Meiryo,wf_SegoeUILight,wf_SegoeUI,"Segoe UI Light","Segoe WP Light","Segoe UI",Segoe,"Segoe WP",Tahoma,Verdana,Arial,sans-serif;}
+body.dr_site_msjp .search-results .heading--large a, body.dr_site_msjp .product-promotional-info .heading--small, body.dr_site_msjp .rwd .order-totals p .desc .sub-desc {font-family: Meiryo,wf_SegoeUILight,wf_SegoeUI,"Segoe UI Light","Segoe WP Light","Segoe UI",Segoe,"Segoe WP",Tahoma,Verdana,Arial,sans-serif;}
+body.dr_site_msjp .ProductPickerPage .imageholder, body.dr_site_msjp .ProductPickerPage .placeholder {font-family: Meiryo,wf_SegoeUILight,wf_SegoeUI,"Segoe UI Light","Segoe WP Light","Segoe UI",Segoe,"Segoe WP",Tahoma,Verdana,Arial,sans-serif;}
+body.dr_site_msjp .surface2-hero .slider-tabs .dot-container .dot{font-family: "wf_SegoeUI","Segoe UI","Segoe","Segoe WP","Tahoma","Verdana","Arial","sans-serif";}
+/***** END: font for msjp *****/
+/***** BEGING: font for mstw (split selector with the same style in order to avoid too long selector)*****/
+body.dr_site_mstw {font-family: "Microsoft JhengHei",wf_SegoeUI,"Segoe UI",Segoe,"Segoe WP",Tahoma,Verdana,Arial,sans-serif;}
+body.dr_site_mstw select, body.dr_site_mstw option, body.dr_site_mstw button {font-family: "Microsoft JhengHei",wf_SegoeUI,"Segoe UI",Segoe,"Segoe WP",Tahoma,Verdana,Arial,sans-serif;}
+body.dr_site_mstw .heading--bold, body.dr_site_mstw .list-of-links-sm .heading, body.dr_site_mstw .category-hero.holiday-12-days .grid-container .grid-unit .overlay .heading--larger  {font-family: "Microsoft JhengHei",wf_SegoeUI,"Segoe UI",Segoe,"Segoe WP",Tahoma,Verdana,Arial,sans-serif;}
+body.dr_site_mstw.lt-ie8 .notification-bar .close span, body.dr_site_mstw .triple-hero-control .right .overlay h1, body.dr_site_mstw .heading--large a, body.dr_site_mstw .image-and-text .sub-title {font-family: "Microsoft JhengHei",wf_SegoeUI,"Segoe UI",Segoe,"Segoe WP",Tahoma,Verdana,Arial,sans-serif;}
+body.dr_site_mstw .product-control .savings-message, body.dr_site_mstw .product-control .heading--small, body.dr_site_mstw .product-control .actual-price {font-family: "Microsoft JhengHei",wf_SegoeUI,"Segoe UI",Segoe,"Segoe WP",Tahoma,Verdana,Arial,sans-serif;}
+body.dr_site_mstw .ms-signature .heading--small a, body.dr_site_mstw .row-heading-label .heading {font-family: "Microsoft JhengHei",wf_SegoeUI,"Segoe UI",Segoe,"Segoe WP",Tahoma,Verdana,Arial,sans-serif;}
+body.dr_site_mstw .compare-table .product-control .heading--small, body.dr_site_mstw .whats-new-in-office .ms-accordion .toggle-icon span, body.dr_site_mstw .spec-table .heading--medium, body.dr_site_mstw .new-pdp-hero .buy-box .savings, body.dr_site_mstw .simple-overview h2 a {font-family: "Microsoft JhengHei",wf_SegoeUI,"Segoe UI",Segoe,"Segoe WP",Tahoma,Verdana,Arial,sans-serif;}
+body.dr_site_mstw .edu-content .edu-4tiles .grid-unit .image-and-text .heading--small, body.dr_site_mstw .student-hero .overlay .heading--larger, body.dr_site_mstw .student-hero .overlay .shopnow {font-family: "Microsoft JhengHei",wf_SegoeUI,"Segoe UI",Segoe,"Segoe WP",Tahoma,Verdana,Arial,sans-serif;}
+body.dr_site_mstw .rwd .drop-down-list select.placeholder, body.dr_site_mstw .office-suites .products-list .heading--small, body.dr_site_mstw .spec-table .grid-row .grid-unit p.price {font-family: "Microsoft JhengHei",wf_SegoeUI,"Segoe UI",Segoe,"Segoe WP",Tahoma,Verdana,Arial,sans-serif;}
+body.dr_site_mstw .rwd input[type="text"]::-webkit-input-placeholder,
+body.dr_site_mstw .rwd input[type="email"]::-webkit-input-placeholder,
+body.dr_site_mstw .rwd input[type="text"]:-moz-placeholder,
+body.dr_site_mstw .rwd input[type="email"]:-moz-placeholder,
+body.dr_site_mstw .rwd input[type="text"]::-moz-placeholder,
+body.dr_site_mstw .rwd input[type="email"]::-moz-placeholder,
+body.dr_site_mstw .rwd input[type="text"]:-ms-input-placeholder,
+body.dr_site_mstw .rwd input[type="email"]:-ms-input-placeholder {font-family: "Microsoft JhengHei",wf_SegoeUI,"Segoe UI",Segoe,"Segoe WP",Tahoma,Verdana,Arial,sans-serif;}
+body.dr_site_mstw .search-results .grid-unit.dr_sortBy, body.dr_site_mstw .product-results .grid-unit.dr_sortBy {font-family: "Microsoft JhengHei",wf_SegoeUI,"Segoe UI",Segoe,"Segoe WP",Tahoma,Verdana,Arial,sans-serif;}
+body.dr_site_mstw .search-results .dr_pagination, body.dr_site_mstw .product-results .dr_pagination {font-family: "Microsoft JhengHei",wf_SegoeUI,"Segoe UI",Segoe,"Segoe WP",Tahoma,Verdana,Arial,sans-serif;}
+body.dr_site_mstw .facetSub h3, body.dr_site_mstw .ServerErrorPage .dr_error, body.dr_site_mstw #dr_CheckoutCart table .heading--small, body.dr_site_mstw .ProductPickerPage .accessory-control .productName {font-family: "Microsoft JhengHei",wf_SegoeUI,"Segoe UI",Segoe,"Segoe WP",Tahoma,Verdana,Arial,sans-serif;}
+body.dr_site_mstw .actual-price, body.dr_site_mstw .spec-table p, body.dr_site_mstw .rwd .cart .cart-item .product-details .item-price, body.dr_site_mstw .rwd .cart .pcf-aside .candy-rack p.item-price {font-family: "Microsoft JhengHei",wf_SegoeUISemilight,"Segoe UI Light","Segoe WP Light","Segoe UI",Segoe,"Segoe WP",Tahoma,Verdana,Arial,sans-serif;}
+body.dr_site_mstw .font-light {font-family: "Microsoft JhengHei",wf_SegoeUILight,wf_SegoeUI,"Segoe UI Light","Segoe WP Light","Segoe UI",Segoe,"Segoe WP",Tahoma,Verdana,Arial,sans-serif;}
+body.dr_site_mstw h1, body.dr_site_mstw h2, body.dr_site_mstw h3, body.dr_site_mstw h4, body.dr_site_mstw h5, body.dr_site_mstw h6 {font-family: "Microsoft JhengHei",wf_SegoeUILight,wf_SegoeUI,"Segoe UI Light","Segoe WP Light","Segoe UI",Segoe,"Segoe WP",Tahoma,Verdana,Arial,sans-serif;}
+body.dr_site_mstw .category-hero.elp-email-signup .overlay .after-logo, body.dr_site_mstw .image-and-text .call-to-action.large {font-family: "Microsoft JhengHei",wf_SegoeUILight,wf_SegoeUI,"Segoe UI Light","Segoe WP Light","Segoe UI",Segoe,"Segoe WP",Tahoma,Verdana,Arial,sans-serif;}
+body.dr_site_mstw .surface2-hero ul li .with-arrow, body.dr_site_mstw .surface2-hero ul li .included-features .image-and-text p span {font-family: "Microsoft JhengHei",wf_SegoeUILight,wf_SegoeUI,"Segoe UI Light","Segoe WP Light","Segoe UI",Segoe,"Segoe WP",Tahoma,Verdana,Arial,sans-serif}
+body.dr_site_mstw .new-pdp-hero .buy-box .current-price, body.dr_site_mstw .student-hero .edu-badge, body.dr_site_mstw .rwd .cart .cart-item .product-details .product-wrapper .title {font-family: "Microsoft JhengHei",wf_SegoeUILight,wf_SegoeUI,"Segoe UI Light","Segoe WP Light","Segoe UI",Segoe,"Segoe WP",Tahoma,Verdana,Arial,sans-serif;}
+body.dr_site_mstw .list-of-links-xlg li, body.dr_site_mstw.lt-ie9 .list-of-links-xlg li {font-family: "Microsoft JhengHei",wf_SegoeUILight,wf_SegoeUI,"Segoe UI Light","Segoe WP Light","Segoe UI",Segoe,"Segoe WP",Tahoma,Verdana,Arial,sans-serif;}
+body.dr_site_mstw .search-results .heading--large a, body.dr_site_mstw .product-promotional-info .heading--small, body.dr_site_mstw .rwd .order-totals p .desc .sub-desc {font-family: "Microsoft JhengHei",wf_SegoeUILight,wf_SegoeUI,"Segoe UI Light","Segoe WP Light","Segoe UI",Segoe,"Segoe WP",Tahoma,Verdana,Arial,sans-serif;}
+body.dr_site_mstw .ProductPickerPage .imageholder, body.dr_site_mstw .ProductPickerPage .placeholder{font-family:"Microsoft JhengHei",wf_SegoeUILight,wf_SegoeUI,"Segoe UI Light","Segoe WP Light","Segoe UI",Segoe,"Segoe WP",Tahoma,Verdana,Arial,sans-serif;}
+body.dr_site_mstw .rwd .hero-box .dot {letter-spacing: 0.75em;}
+body.dr_site_mstw .slider-tabs .dot-container .dot {font-size:1em;}
+/***** END: font for mstw *****/
+/***** BEGING: font for mskr (split selector with the same style in order to avoid too long selector)*****/
+body.dr_site_mskr {font-family: Malgun Gothic,wf_SegoeUI,"Segoe UI",Segoe,"Segoe WP",Tahoma,Verdana,Arial,sans-serif;}
+body.dr_site_mskr select, body.dr_site_mskr option, body.dr_site_mskr button {font-family: Malgun Gothic,wf_SegoeUI,"Segoe UI",Segoe,"Segoe WP",Tahoma,Verdana,Arial,sans-serif;}
+body.dr_site_mskr .heading--bold, body.dr_site_mskr .list-of-links-sm .heading, body.dr_site_mskr .category-hero.holiday-12-days .grid-container .grid-unit .overlay .heading--larger  {font-family: Malgun Gothic,wf_SegoeUI,"Segoe UI",Segoe,"Segoe WP",Tahoma,Verdana,Arial,sans-serif;}
+body.dr_site_mskr.lt-ie8 .notification-bar .close span, body.dr_site_mskr .triple-hero-control .right .overlay h1, body.dr_site_mskr .heading--large a, body.dr_site_mskr .image-and-text .sub-title {font-family: Malgun Gothic,wf_SegoeUI,"Segoe UI",Segoe,"Segoe WP",Tahoma,Verdana,Arial,sans-serif;}
+body.dr_site_mskr .product-control .savings-message, body.dr_site_mskr .product-control .heading--small, body.dr_site_mskr .product-control .actual-price {font-family: Malgun Gothic,wf_SegoeUI,"Segoe UI",Segoe,"Segoe WP",Tahoma,Verdana,Arial,sans-serif;}
+body.dr_site_mskr .ms-signature .heading--small a, body.dr_site_mskr .row-heading-label .heading {font-family: Malgun Gothic,wf_SegoeUI,"Segoe UI",Segoe,"Segoe WP",Tahoma,Verdana,Arial,sans-serif;}
+body.dr_site_mskr .compare-table .product-control .heading--small, body.dr_site_mskr .whats-new-in-office .ms-accordion .toggle-icon span, body.dr_site_mskr .spec-table .heading--medium, body.dr_site_mskr .new-pdp-hero .buy-box .savings, body.dr_site_mskr .simple-overview h2 a {font-family: Malgun Gothic,wf_SegoeUI,"Segoe UI",Segoe,"Segoe WP",Tahoma,Verdana,Arial,sans-serif;}
+body.dr_site_mskr .edu-content .edu-4tiles .grid-unit .image-and-text .heading--small, body.dr_site_mskr .student-hero .overlay .heading--larger, body.dr_site_mskr .student-hero .overlay .shopnow {font-family: Malgun Gothic,wf_SegoeUI,"Segoe UI",Segoe,"Segoe WP",Tahoma,Verdana,Arial,sans-serif;}
+body.dr_site_mskr .rwd .drop-down-list select.placeholder, body.dr_site_mskr .office-suites .products-list .heading--small, body.dr_site_mskr .spec-table .grid-row .grid-unit p.price {font-family: Malgun Gothic,wf_SegoeUI,"Segoe UI",Segoe,"Segoe WP",Tahoma,Verdana,Arial,sans-serif;}
+body.dr_site_mskr .rwd input[type="text"]::-webkit-input-placeholder,
+body.dr_site_mskr .rwd input[type="email"]::-webkit-input-placeholder,
+body.dr_site_mskr .rwd input[type="text"]:-moz-placeholder,
+body.dr_site_mskr .rwd input[type="email"]:-moz-placeholder,
+body.dr_site_mskr .rwd input[type="text"]::-moz-placeholder,
+body.dr_site_mskr .rwd input[type="email"]::-moz-placeholder,
+body.dr_site_mskr .rwd input[type="text"]:-ms-input-placeholder,
+body.dr_site_mskr .rwd input[type="email"]:-ms-input-placeholder {font-family: Malgun Gothic,wf_SegoeUI,"Segoe UI",Segoe,"Segoe WP",Tahoma,Verdana,Arial,sans-serif;}
+body.dr_site_mskr .search-results .grid-unit.dr_sortBy, body.dr_site_mskr .product-results .grid-unit.dr_sortBy {font-family: Malgun Gothic,wf_SegoeUI,"Segoe UI",Segoe,"Segoe WP",Tahoma,Verdana,Arial,sans-serif;}
+body.dr_site_mskr .search-results .dr_pagination, body.dr_site_mskr .product-results .dr_pagination {font-family: Malgun Gothic,wf_SegoeUI,"Segoe UI",Segoe,"Segoe WP",Tahoma,Verdana,Arial,sans-serif;}
+body.dr_site_mskr .facetSub h3, body.dr_site_mskr .ServerErrorPage .dr_error, body.dr_site_mskr #dr_CheckoutCart table .heading--small, body.dr_site_mskr .ProductPickerPage .accessory-control .productName {font-family: Malgun Gothic,wf_SegoeUI,"Segoe UI",Segoe,"Segoe WP",Tahoma,Verdana,Arial,sans-serif;}
+body.dr_site_mskr .actual-price, body.dr_site_mskr .spec-table p, body.dr_site_mskr .rwd .cart .cart-item .product-details .item-price, body.dr_site_mskr .rwd .cart .pcf-aside .candy-rack p.item-price {font-family: Malgun Gothic,wf_SegoeUISemilight,"Segoe UI Light","Segoe WP Light","Segoe UI",Segoe,"Segoe WP",Tahoma,Verdana,Arial,sans-serif;}
+body.dr_site_mskr .font-light {font-family: Malgun Gothic,wf_SegoeUILight,wf_SegoeUI,"Segoe UI Light","Segoe WP Light","Segoe UI",Segoe,"Segoe WP",Tahoma,Verdana,Arial,sans-serif;}
+body.dr_site_mskr h1, body.dr_site_mskr h2, body.dr_site_mskr h3, body.dr_site_mskr h4, body.dr_site_mskr h5, body.dr_site_mskr h6 {font-family: Malgun Gothic,wf_SegoeUILight,wf_SegoeUI,"Segoe UI Light","Segoe WP Light","Segoe UI",Segoe,"Segoe WP",Tahoma,Verdana,Arial,sans-serif;}
+body.dr_site_mskr .category-hero.elp-email-signup .overlay .after-logo, body.dr_site_mskr .image-and-text .call-to-action.large {font-family: Malgun Gothic,wf_SegoeUILight,wf_SegoeUI,"Segoe UI Light","Segoe WP Light","Segoe UI",Segoe,"Segoe WP",Tahoma,Verdana,Arial,sans-serif;}
+body.dr_site_mskr .surface2-hero ul li .with-arrow, body.dr_site_mskr .surface2-hero ul li .included-features .image-and-text p span {font-family: Malgun Gothic,wf_SegoeUILight,wf_SegoeUI,"Segoe UI Light","Segoe WP Light","Segoe UI",Segoe,"Segoe WP",Tahoma,Verdana,Arial,sans-serif}
+body.dr_site_mskr .new-pdp-hero .buy-box .current-price, body.dr_site_mskr .student-hero .edu-badge, body.dr_site_mskr .rwd .cart .cart-item .product-details .product-wrapper .title {font-family: Malgun Gothic,wf_SegoeUILight,wf_SegoeUI,"Segoe UI Light","Segoe WP Light","Segoe UI",Segoe,"Segoe WP",Tahoma,Verdana,Arial,sans-serif;}
+body.dr_site_mskr .list-of-links-xlg li, body.dr_site_mskr.lt-ie9 .list-of-links-xlg li {font-family: Malgun Gothic,wf_SegoeUILight,wf_SegoeUI,"Segoe UI Light","Segoe WP Light","Segoe UI",Segoe,"Segoe WP",Tahoma,Verdana,Arial,sans-serif;}
+body.dr_site_mskr .search-results .heading--large a, body.dr_site_mskr .product-promotional-info .heading--small, body.dr_site_mskr .rwd .order-totals p .desc .sub-desc {font-family: Malgun Gothic,wf_SegoeUILight,wf_SegoeUI,"Segoe UI Light","Segoe WP Light","Segoe UI",Segoe,"Segoe WP",Tahoma,Verdana,Arial,sans-serif;}
+body.dr_site_mskr .ProductPickerPage .imageholder, body.dr_site_mskr .ProductPickerPage .placeholder{font-family:Malgun Gothic,wf_SegoeUILight,wf_SegoeUI,"Segoe UI Light","Segoe WP Light","Segoe UI",Segoe,"Segoe WP",Tahoma,Verdana,Arial,sans-serif;}
+body.dr_site_mskr .rwd .hero-box .dot {letter-spacing: 0.75em;}
+body.dr_site_mskr .slider-tabs .dot-container .dot {font-size:1em;}
+/***** END: font for mskr *****/
+/***** BEGING: New PCF DESIGN for msusa *****/
+.rwd .cart-item .product-details .info,
+.rwd  .checkout-cart .order-item .info,
+.rwd .mobile-cart .product .info {
+  font-size:.9em;
+  margin-top:1em;
+}
+.rwd .info .esrb p {
+  font-size:.75em;
+}
+.rwd .order-totals p .desc .sub-desc {
+  font-family:"Segoe UI light";
+  font-size:14px;
+  color:#666666;
+}
+.rwd #dr_TermsOfServiceAcceptance.passive {
+  margin:0;
+  border:none;
+}
+.rwd span#lpChatDiv a:before { 
+  content:url(//dri1.img.digitalrivercontent.net/Storefront/Site/mscommon/cm/images/common_images/livechat_icon.png); 
+  display:inline-block; 
+  vertical-align:middle;
+  padding-right:7px;
+}
+.lt-ie9 .rwd .email-details .apply-email {
+  margin-top:.625em;
+  padding:.375em 1.78571428571em .4375em;
+}
+.rwd .email-details .apply-email {
+  display:inline-block;
+  font-size:1em;
+  white-space:nowrap;
+  -webkit-appearance:none;
+  -moz-appearance:none;
+  border-radius:0;
+  -webkit-box-sizing:border-box;
+  -moz-box-sizing:border-box;
+  box-sizing:border-box;
+  color:#fff;
+  background-color:#1570a6;
+  float:right;
+  padding:.375em 1.78571428571em .4375em;
+}
+.rwd .email-details .apply-email:hover,.rwd .email-details .apply-email:focus {
+  text-decoration:none;
+  background-color:#002050;
+}
+.rwd .responsive-footer .legal .host-by {
+  margin-right:15px;
+}
+.rwd .price del, .rwd .cart .pcf-aside .candy-rack p.item-price .regular-price {
+  color:#000;
+}
+.rwd .thank-you-page .rwd-aside-main#dr_orderInformation {
+  border: none;
+  padding:0 0;
+}
+.rwd .order-processed-page .cart-header.with-description .checkout {
+  margin:0;
+  float:left;
+}
+.rwd .order-processed-page .border-top, 
+.rwd .order-processed-page .border-bottom, 
+.rwd .order-processed-page .cart-header.with-description {
+  border:none;
+}
+.rwd .order-processed-page .cart-header .checkout {
+  padding-left:1.5625em;
+  padding-right:1.5625em;
+}
+.rwd .order-processed-page .rwd-aside-main .checkout {
+  margin-top: 1.28571em;
+}
+@media (min-width: 30.0625em) {
+  .rwd .order-processed-page .rwd-aside-main .checkout {
+    display: none;
+  }
+  .rwd .order-processed-page .cart-header .description {
+    width:80%;
+  }
+}
+.lt-ie9 .rwd .order-processed-page .rwd-aside-main .checkout {
+  display: none;
+}
+.rwd .responsive-footer ul.host .footer-legal-1 {
+  width: 334px;
+  height: 1px;
+  visibility: hidden;
+}
+.rwd .responsive-footer ul.host .footer-legal-5 {
+  width: auto;
+}
+.ThreePgCheckoutAddressPaymentInfoPage .rwd .rwd-main > .dr_error {
+  float: none;
+}
+.ThreePgCheckoutAddressPaymentInfoPage .rwd .pay-with-page .pay.dr_error {
+  background-color: #eeeeee;
+  color: #a0a0a0;
+}
+.ThreePgCheckoutAddressPaymentInfoPage .rwd .pay-with-page .pay.dr_error:hover,
+.ThreePgCheckoutAddressPaymentInfoPage .rwd .pay-with-page .pay.dr_error:focus {
+  background-color: none;
+  color: none;
+  cursor: default;
+  text-decoration: none;
+}
+/***** END: New PCF DESIGN for msusa *****/
+
+/* B.Update PI CSS */
+.UpdatePICustomerInfoPage #dr_ThreePgCheckoutAddressPaymentInfo .dr_userError{width: 50%;margin: 3.8em auto;}
+.UpdatePICustomerInfoPage #dr_ThreePgCheckoutAddressPaymentInfo .dr_userError p{ margin: 0.75em 0 1.4em;}
+.UpdatePICustomerInfoPage #dr_ThreePgCheckoutAddressPaymentInfo .dr_contactInfo{font-size: 0.75em;}
+.UpdatePICustomerInfoPage #dr_ThreePgCheckoutAddressPaymentInfo .dr_contactInfo span{color: #047DC6;}
+.UpdatePICustomerInfoPage .dr_button {padding: 7px 23px 8px;}
+.UpdatePICustomerInfoPage .dr_button a{margin: 0;padding: 0;font-size: 100%;vertical-align: baseline;background: transparent;color: #333333;text-decoration: none;}   
+.UpdatePICustomerInfoPage .dr_button a:hover{color: #333333;text-decoration: none;}
+.UpdatePICustomerInfoPage #body{min-height: 700px;}
+.UpdatePICustomerInfoPage .row-padded-top{margin-left: -36px;}
+.UpdatePICustomerInfoPage #dr_ThreePgCheckoutAddressPaymentInfo #dr_CheckoutPayment{padding: 1em 8.6% 2em;}
+.UpdatePICustomerInfoPage .heading--medium{margin: 0.25em 0 0.62em;}
+.UpdatePICustomerInfoPage .infoColon span{width:35%; display:inline-block;}
+.UpdatePICustomerInfoPage .UpdatePiInfo .infoColon {margin-top:2em;}
+.UpdatePICustomerInfoPage .UpdatePiInfo .infoColon:last-child {margin-top:0;}
+.UpdatePIConfirmOrderPage #dr_ThreePgCheckoutAddressPaymentInfo .sub-section, #dr_ConfirmOrder .sub-section{border-bottom: none;}
+.UpdatePIConfirmOrderPage #dr_ConfirmOrder .heading--medium{font-size: 1.5em;margin: 0.25em 0;}
+.UpdatePIConfirmOrderPage #dr_ConfirmOrder .heading--large{margin: 0.25em 0 0.75em;line-height: 1.25;}
+.UpdatePIConfirmOrderPage #dr_ConfirmOrder #dr_CheckoutCart .heading--medium{font-size: 2.46em;}
+.UpdatePIConfirmOrderPage #dr_ConfirmOrder .sub-section{padding: 14px 0 25px;}
+.UpdatePIConfirmOrderPage #dr_ConfirmOrder .submitButtonBottom{padding: 14px 0 26px;}
+    
+.UpdatePIThankYouPage #dr_ThankYou{margin-bottom: 2.8125em;}
+.UpdatePIThankYouPage #dr_ThankYou .dr_userInfoContainer{border: 2px solid #D2D2D2;float: left;padding: 1.6em 7.7125% 1.7em;font-size: 0.8125em;width: 79%;}
+.UpdatePIThankYouPage #dr_ThankYou .dr_offerContainer{border:medium none; float:none; padding:0.5em 4.895% 2em;}
+.UpdatePIThankYouPage #dr_ThankYou .dr_shippingMeth h2{font-size: 1.25em;font-weight: 300;line-height: 1.25;}
+.UpdatePIThankYouPage #dr_ThankYou td.dr_price{padding: 0;}
+.UpdatePIThankYouPage #dr_ThankYou .dr_total{font-size: 1.2em;font-weight: bold;padding-top: 1em;}
+.UpdatePIThankYouPage #dr_ThankYou .heading--medium{margin: 0.25em 0 0.57em;}
+.UpdatePIThankYouPage #dr_ThankYou #dr_shippingInformation{margin:2.6em 0 3.5em;}
+.UpdatePIThankYouPage .dr_confirmElement{margin:3.6em 0 3.4em;}
+.UpdatePIThankYouPage #dr_ThankYou #dr_productInformation table{margin-bottom:1.2em;}
+.UpdatePIThankYouPage .ThankYouOrderTotals span.label{margin-left:5em}
+.UpdatePIThankYouPage .ThankYouOrderTotals span.label.dr_total{margin-left:4em}
+.UpdatePIThankYouPage .TYcontinueShopping{margin:1.5em 0 2.6em;font-size: 1.4em;}
+.UpdatePIThankYouPage .rwd .pcf-layout .pcf-aside{width:33.7%}
+.UpdatePIThankYouPage #dr_CheckoutCart .dr_productImage{float: left;text-align: center;width: 50%;}
+.UpdatePIThankYouPage #dr_CheckoutCart .dr_productInfo{float: right;width: 50%;}
+.UpdatePIThankYouPage #dr_CheckoutCart hr{margin: 1.5em 0;}
+.UpdatePIThankYouPage #dr_CheckoutCart .dr_productDetails{float: left;margin: 2em 0 3em;}
+.UpdatePIThankYouPage #dr_CheckoutCart .heading--medium{word-wrap: break-word;}
+.UpdatePIThankYouPage #dr_CheckoutCart .productPrice{color: #E03400;}
+
+#dr_CheckoutCart.UpdatePICheckoutCart{width: 89.04%;}
+  #dr_CheckoutCart.UpdatePICheckoutCart #dr_cartSummaryTbl{border-top: 1px solid #D2D2D2;}
+  #dr_CheckoutCart.UpdatePICheckoutCart #dr_cartSummaryTbl tr.dr_lineItemRow{border-bottom: 1px solid #D2D2D2;}
+  #dr_CheckoutCart.UpdatePICheckoutCart table td.dr_productName{width: auto;}
+  #dr_CheckoutCart.UpdatePICheckoutCart table td.dr_price{width: auto;}
+  #dr_CheckoutCart.UpdatePICheckoutCart tr#dr_cartTotal td{font-size: 1.2em;font-weight: bold;padding-top: 0.54em;}
+  #dr_CheckoutCart.UpdatePICheckoutCart .heading--medium{margin: 0;}
+  #dr_CheckoutCart.UpdatePICheckoutCart .heading--small{line-height: 1;margin-bottom: 13px;}
+/* E.Update PI CSS */
+
+/*.buy-box variation selector three level */
+.MobileProductDetailsPage .buy-box .definingLevelTwo li,
+.MobileProductDetailsPage .buy-box .definingLevelOne li{
+  min-height:40px;
+  cursor:pointer;
+  width:113px;
+  color:#2a2a2a;
+  text-align:center;
+  padding-top:1px;
+  margin-top:0;
+  display:block;
+  float:left;
+  margin-right:0.625em;
+}            
+.MobileProductDetailsPage .buy-box .definingLevelTwo li div,
+.MobileProductDetailsPage .buy-box .definingLevelOne li div{
+  border:1px solid #747474;
+  height:40px;
+  display:table-cell;
+  vertical-align : middle;
+  width:113px; 
+  line-height:16px; 
+  font-size:11pt;
+}
+.MobileProductDetailsPage .buy-box .definingLevelTwo li:hover div, 
+.MobileProductDetailsPage .buy-box .definingLevelOne li:hover div{
+  border:2px solid #747474; 
+  padding-top:0;
+}
+.MobileProductDetailsPage .buy-box .definingLevelTwo li:hover , 
+.MobileProductDetailsPage .buy-box .definingLevelOne li:hover {  
+  padding-top:0;
+}
+.MobileProductDetailsPage .buy-box .definingLevelTwo li.select div, 
+.MobileProductDetailsPage .buy-box .definingLevelOne li.select div{
+  border:2px solid #747474;
+  background-color:#DEDEDE
+}
+.MobileProductDetailsPage .buy-box .definingLevelTwo li.select, 
+.MobileProductDetailsPage .buy-box .definingLevelOne li.select {
+  padding-top:0;
+}
+.MobileProductDetailsPage .buy-box .definingLevelThree li a span{
+  width:38px; 
+  height:25px; 
+  margin:1px;
+  display:inline-block;
+} 
+.MobileProductDetailsPage .buy-box .definingLevelThree li {
+  height:31px;
+  cursor:pointer;
+  width:44px;
+  color:#2a2a2a;
+  text-align:center;
+  padding-top:1px;
+  margin-top:0;
+  display:block;
+  float:left;
+  margin-right:0.625em;
+  padding-bottom:0 !important;
+}    
+.MobileProductDetailsPage .buy-box .definingLevelThree li.selected {  
+  padding-top:0;
+  border:none;
+}
+.MobileProductDetailsPage .buy-box .definingLevelThree li:hover {  
+  padding-top:0;
+  border:none;
+}
+.MobileProductDetailsPage .buy-box .definingLevelThree li a {
+  border:1px solid #747474;
+  height:27px;  
+  vertical-align : middle;
+  width:40px; 
+  line-height:16px; 
+  font-size:11pt;
+}    
+.MobileProductDetailsPage .buy-box .definingLevelThree li.selected a {  
+  border: 2px solid #747474;
+}
+.MobileProductDetailsPage .buy-box .definingLevelThree li:hover a {  
+  border:2px solid #747474; 
+  padding-top:0;
+}
+.MobileProductDetailsPage .buy-box .definingLevelOne,
+.MobileProductDetailsPage .buy-box .definingLevelTwo,
+.MobileProductDetailsPage .buy-box .definingLevelThree {
+  float:left; 
+  width:100%;
+  margin:0.5625em 0 0;
+}
+.MobileProductDetailsPage .buy-box .definingLevelThree {
+  height:31px;
+}
+.MobileProductDetailsPage .definingLables {
+  float:left; 
+  margin-top:1em;
+}
+.MobileProductDetailsPage .new-pdp-hero .buy-box .ms_BuyButtonPromoText .shipping-return-text {
+  margin:0;
+  color:#000;
+}
+.MobileProductDetailsPage .new-pdp-hero .buy-box .buyBtn_AddtoCart {
+  font-size:1em;  
+}
+.MobileProductDetailsPage #load_image {margin-top:2.25em;}
+.MobileProductDetailsPage .buy-box .definingLevelThree li.hide{display:none;}
+/***** BEGIN:ProductPickerPage styles *****/
+.ProductPickerPage #body{margin-bottom:45px;}
+.ProductPickerPage .cart-wrapper.grid-container{margin:0;max-width:none;min-width:auto;width:100%;background-color:#fff;z-index:1 !important;}
+.ProductPickerPage .bundle-header{margin:0.5em 0 1em;}
+.ProductPickerPage #dr_QuickView .selectButton.selected span{margin-top:0;width:50%}
+.ProductPickerPage .imageholder,.ProductPickerPage .placeholder{border:1px solid #666666;font-size:0.90em;height:74px;padding:5px;position:relative;text-align:center;width:74px;font-family:"wf_SegoeUILight","wf_SegoeUI","Segoe UI Light","Segoe WP Light","Segoe UI","Segoe","Segoe WP","Tahoma","Verdana","Arial","sans-serif";}
+.product-title{font-size:0.813em;}
+.ProductPickerPage .quickViewMediumProdPickPage{border:none;background:none repeat scroll 0 0 #171717;clear:both;display:none;float:left;min-height:30px;min-width:138px;max-width:138px;opacity:0.85;overflow:hidden;position:relative;text-align:center;text-decoration:none;margin-left:0px;margin-top:-35px}
+.ProductPickerPage .quickViewMediumProdPickPage a{color:#fff}
+.ProductPickerPage .quickViewMediumProdPickPage a:hover{color:#fff;text-decoration:none;}
+.ProductPickerPage #dr_quickviewOverlay{width:48.75em;z-index:100000;border:none;min-height:445px;}
+.ProductPickerPage .backgroundPopup{background-color:#000000;height:100%;opacity:0.8;position:fixed;width:100%;z-index:1000;top:0;left:0;}
+.ProductPickerPage .expand-product-list span.showLess img{position:relative;top:-2px;}
+.ProductPickerPage .expand-product-list{border-top:1px solid #EFEFEF;border-bottom:1px solid #EFEFEF;padding:0.31em;margin-bottom:1.95em;}
+.ProductPickerPage #dr_quickviewOverlay #quickviewLoaderImage{position:absolute;top:43%;left:47.5%;margin-top:0;}
+.ProductPickerPage .heading--large{margin-top:0.325em;}
+.ProductPickerPage a,.ProductPickerPage a:hover,.ProductPickerPage a:focus{text-decoration:none;}
+.ProductPickerPage .top-level-link:after{content:"\e007";font-family:'mshp_iconsregular';font-size:0.688em;margin-left:0.35em;}
+.ProductPickerPage .accessory-control{margin:0.45em 0 1.625em 0;}
+.ProductPickerPage .accessory-control .productName{font-family:"wf_SegoeUI","Segoe UI","Segoe","Segoe WP","Tahoma","Verdana","Arial","sans-serif";font-size:1em;line-height:1.2;margin-top:0.5em;min-height:2.375em;}
+.ProductPickerPage .hide{display:none;}
+.ProductPickerPage #dr_quickviewOverlay ul.qvProduct-hero{margin:0;}
+.ProductPickerPage #dr_quickviewOverlay .qvProduct-thumbnails li{float:left;height:44px;margin-right:0.5625em;width:44px;}
+.ProductPickerPage #dr_quickviewOverlay .qvProduct-thumbnails li a img{border:1px solid #D4D4D4;}
+.ProductPickerPage #dr_quickviewOverlay .qvProduct-thumbnails li a.active{border-bottom:2px solid #00BCF2;padding-bottom:2px;}
+.ProductPickerPage #dr_quickviewOverlay .dr_body{text-align:left;}
+.ProductPickerPage #dr_quickviewOverlay .prodDesc{font-size:14px;margin:1em auto 0;width:95%;}
+.ProductPickerPage #dr_quickviewOverlay .dr_title{padding:11px 0 13px;width:100%;}
+.ProductPickerPage #dr_quickviewOverlay .media-container{margin:1.05em auto 1.25em;max-height:281px;max-width:500px;}
+.ProductPickerPage #dr_quickviewOverlay .media-container-thumb{background-color:#000000;height:70px;margin-bottom:0;margin-top:0.8em;max-width:100%;}
+.ProductPickerPage #dr_quickviewOverlay .media-container-thumb .qvProduct-thumbnails{margin:13px 0 0 10px;}
+.ProductPickerPage #dr_quickviewOverlay .selectButton{float:right;margin-top:11px;}
+.ProductPickerPage #dr_quickviewOverlay .dr_closeQuickView{top:-11px;left:780px;position:absolute;margin:0;}
+.ProductPickerPage #dr_quickviewOverlay .mfp-close{right:-16px;top:-35px;}
+.ProductPickerPage .childProductImage img{max-width:85%;}
+.ProductPickerPage #dr_quickviewOverlay .dr_title{border-bottom:1px solid #EEEEEE;}
+.ProductPickerPage .loadingSpinner{background-color:#FFFFFF;position:absolute;top:0;width:100%;height:100%;margin-left:-1px}
+.ProductPickerPage .selectButton{position:relative;}
+.ProductPickerPage #cartSection .loadingSpinner{background-color:#FFFFFF;height:50%;left:25%;position:absolute;top:25%;width:50%;}
+.ProductPickerPage .selectButton .loadingSpinner img{margin-top:0.714286em;}
+.ProductPickerPage #dr_QuickView .dr_header{margin:0 auto;width:95%;}
+.ProductPickerPage #cartSection .expand-product-list{border-bottom:medium none;border-top:medium none;margin-bottom:0;padding:0;}
+.ProductPickerPage #cartSection .hiddenItems{margin-top:28px;}
+.ProductPickerPage .visibleCart{margin-bottom:5px;}
+/***** END:ProductPickerPage styles *****/
+
+.dr_site_msjp #dr_ThreePgCheckoutShoppingCart #dr_siteButtons{width: 100%;}
+.dr_site_msjp #dr_ThreePgCheckoutShoppingCart #dr_siteButtons #dr_checkoutButton{width: 20%; margin-left:0;}
+.dr_site_msjp #dr_ThreePgCheckoutShoppingCart #dr_siteButtons .checkoutBtnMsg{width: 79%;}
+.dr_site_msjp #dr_ThreePgCheckoutShoppingCart #dr_siteButtons .checkoutBtnMsg div{float: left; text-align: left;}
+.dr_site_msjp #dr_ThreePgCheckoutShoppingCart #dr_siteButtons .checkoutBtnMsg .msgDiv{width: 95%;}
+.dr_site_msjp #dr_ThreePgCheckoutShoppingCart #dr_siteButtons .checkoutBtnMsg .imgDiv{margin-top: 9px;width: 5%;text-align:right;}
+
+/***** BEGIN: Right to Left (ar_EG, ar_BH, iw_IL) positioning fix styles *****/
+.mstResponsive.rtlanguage header.slim-header .global-navigation .search-form .search-submit {
+  right: auto;
+  left: 1px;
+}
+.mstResponsive.rtlanguage .product-row .grid-container .heading--large a {
+  float: none;
+}
+/***** BEGIN: Footer positioning fix styles *****/
+.mstResponsive.site-flow.rtlanguage footer.site-footer .legalwrapper{text-align: left;}
+.mstResponsive.pcf-flow.rtlanguage .rwd .responsive-footer ul{float: left;}
+.mstResponsive.pcf-flow.rtlanguage .rwd .responsive-footer ul .footer-legal-1{float: right;}
+.mstResponsive.pcf-flow.rtlanguage .rwd .responsive-footer ul .footer-legal-2{float: right;}
+.mstResponsive.pcf-flow.rtlanguage .rwd .responsive-footer ul .footer-legal-3{float: right;}
+.mstResponsive.pcf-flow.rtlanguage .rwd .responsive-footer ul .footer-legal-4{float: right;}
+.mstResponsive.pcf-flow.rtlanguage .rwd .responsive-footer ul .footer-legal-5{float: right;}
+/***** END: Footer positioning fix styles *****/
+
+/***** BEGIN: PDP positioning fix styles *****/
+.mstResponsive.site-flow.rtlanguage .social-media li{float: right;}
+.mstResponsive.site-flow.rtlanguage .buy-box .product-additional-info .promo-text{float: right;}
+/***** END: PDP positioning fix styles *****/
+
+/***** BEGIN: Category Product List/Category List Page positioning fix styles *****/
+.mstResponsive.site-flow.rtlanguage .dr_pagination .dr_viewing{float: left;}
+/***** END: Product List Page positioning fix styles *****/
+
+/***** BEGIN: PCF positioning fix styles *****/
+.mstResponsive.pcf-flow.rtlanguage #dr_ThreePgCheckoutAddressPaymentInfo .continueButtonTop{left: 7.653%;right: auto;}
+.mstResponsive.pcf-flow.rtlanguage .paymentInstrumentList .addPayment, .mstResponsive.pcf-flow.rtlanguage .paymentInstrumentList .editPayment{float: right;}
+.mstResponsive.pcf-flow.rtlanguage #dr_CheckoutCart .cart-total{float: left;}
+.mstResponsive.pcf-flow.rtlanguage #dr_ThreePgCheckoutAddressPaymentInfo .spliter{float: right;}
+.mstResponsive.pcf-flow.rtlanguage .editLink, .mstResponsive.site-flow.rtlanguage .editLink{float: right;}
+.mstResponsive.pcf-flow.rtlanguage #dr_CheckoutPayment #dr_optInEmail label{float: left;}
+.mstResponsive.pcf-flow.rtlanguage .continueButtonBottom{text-align: left;}
+.mstResponsive.pcf-flow.rtlanguage #dr_CheckoutCart .cartHeader .dr_orderID{clear: right;float: right;}
+.mstResponsive.pcf-flow.rtlanguage #dr_CheckoutCart .cartHeader h1.heading--medium{float: right;}
+.mstResponsive.pcf-flow.rtlanguage .align-left{text-align: right;}
+.mstResponsive.pcf-flow.rtlanguage .align-right{text-align: left;}
+.mstResponsive.pcf-flow.rtlanguage .column-3 .colspan-2 .grid-unit:first-child{float: right;margin-right: 0;}
+.mstResponsive.pcf-flow.rtlanguage .column-3 .colspan-2 .grid-unit{float: right;margin-left: 0;}
+.mstResponsive.pcf-flow.rtlanguage .reference-number .continue-shopping.grid-unit, .mstResponsive.pcf-flow.rtlanguage .reference-number #dr_checkoutButton.grid-unit{float: right; margin-right: 2% !important;margin-left: 0 !important;}
+.mstResponsive.rtlanguage #dr_siteButtons #dr_checkoutButton{float: left;}
+.mstResponsive.pcf-flow.rtlanguage #dr_cartTbl td.dr_couponCode{text-align: right;}
+.mstResponsive.pcf-flow.rtlanguage .coupon-code label.heading--small{margin-left: 2.25em;}
+.mstResponsive.pcf-flow.rtlanguage .dr_button.blue{margin-right: 8px;}
+.mstResponsive.pcf-flow.rtlanguage .coupon-code input.box[type="submit"]{padding: 0.2625em 1.25em 0.2em;}
+.mstResponsive.pcf-flow.rtlanguage #dr_ConfirmOrder .submitButtonTop{left: 7.653%;}
+.mstResponsive.pcf-flow.rtlanguage #dr_TermsOfSaleAcceptance input, .mstResponsive.pcf-flow.rtlanguage #dr_MobileTermsAndConditionsAcceptance input{float: right;}
+.mstResponsive.pcf-flow.rtlanguage #dr_ConfirmOrder .secureLogo{float: right;}
+.mstResponsive.pcf-flow.rtlanguage #dr_siteButtons, .mstResponsive.pcf-flow.rtlanguage .dr_siteButtons{float: right;}
+.mstResponsive.pcf-flow.rtlanguage #dr_ConfirmOrder #dr_siteButtons, .mstResponsive.pcf-flow.rtlanguage .dr_siteButtons{float: left;}
+.mstResponsive.pcf-flow.rtlanguage #dr_CheckoutCart table .dr_price, .mstResponsive.pcf-flow.rtlanguage #dr_CheckoutCart table .dr_totals{text-align: left;}
+.mstResponsive.pcf-flow.rtlanguage #dr_cartTbl tr td.dr_price{text-align: left;}
+.mstResponsive.pcf-flow.rtlanguage #dr_cartTbl .dr_cartLable{text-align: left;}
+.mstResponsive.pcf-flow.rtlanguage .breadcrumbs .steps{float: right;}
+.mstResponsive.pcf-flow.rtlanguage .breadcrumbs .steps > span{float: right;}
+.mstResponsive.pcf-flow.rtlanguage .breadcrumbs .liner{float: right;}
+.mstResponsive.rtlanguage.pcf-flow #dr_ConfirmOrder #load_image{float: left !important;}
+.mstResponsive.rtlanguage.pcf-flow .TYcontinueShopping{float:left;}
+.mstResponsive.rtlanguage.pcf-flow .grid-row .grid-unit.table-cell, .mstResponsive.rtlanguage.pcf-flow .grid-row .grid-unit .table-cell{float: none;}
+.mstResponsive.rtlanguage.pcf-flow #dr_ThreePgCheckoutAddressPaymentInfo .grid-row.column-3 > .grid-unit,
+.mstResponsive.rtlanguage.pcf-flow #dr_ConfirmOrder .grid-row.column-3 > .grid-unit,
+.mstResponsive.rtlanguage.pcf-flow #dr_ThreePgCheckoutCollectPaymentInfo .grid-row.column-3 > .grid-unit {
+  margin:0 10.169% 0 0;
+}
+.mstResponsive.rtlanguage.pcf-flow #dr_ThreePgCheckoutAddressPaymentInfo .grid-row.column-3 > .grid-unit.colspan-2,
+.mstResponsive.rtlanguage.pcf-flow #dr_ConfirmOrder .grid-row.column-3 > .grid-unit.colspan-2,
+.mstResponsive.rtlanguage.pcf-flow #dr_ThreePgCheckoutCollectPaymentInfo .grid-row.column-3 > .grid-unit.colspan-2{
+  margin-right:0;
+}
+.mstResponsive.rtlanguage.pcf-flow .spinnerMain {
+  margin-right:-1.5625em;
+  margin-left: 0;
+}
+.mstResponsive.rtlanguage.pcf-flow .spinner {
+  float:right;
+  margin-left:1.6875em;
+  margin-right:0;
+}
+.mstResponsive.rtlanguage.pcf-flow .spinner img {
+  right:.3125em;
+  left:auto;
+}
+.mstResponsive.rtlanguage.pcf-flow .greyCircle {
+  padding-right:1.4375em;
+  padding-left:0;
+}
+.mstResponsive.rtlanguage.pcf-flow .greyCircle img {
+  padding-left:3.75em;
+  padding-right:0;
+}
+.mstResponsive.rtlanguage.lt-ie9 #dr_ThreePgCheckoutAddressPaymentInfo > .grid-row.column-3 > .grid-unit:first-child,
+  #dr_ThreePgCheckoutAddressPaymentInfo > .grid-row.column-3 > .grid-unit:first-child {
+  margin-right:0;
+}
+.mstResponsive.rtlanguage.lt-ie9 #dr_ThreePgCheckoutAddressPaymentInfo > .grid-row.column-3 > .grid-unit{
+  margin-right:7%;
+}
+.mstResponsive.rtlanguage.lt-ie9 #dr_ThreePgCheckoutAddressPaymentInfo .continueButtonTop{
+  left:5.263%;
+  right:auto;
+}
+.rtlanguage #dr_TermsOfSaleAcceptance,#dr_MobileTermsAndConditionsAcceptance {
+text-align:right;
+float:none;
+}
+.mstResponsive.rtlanguage .passive #dr_TermsOfSaleAcceptance{
+	text-align: right;
+}
+.rtlanguage #dr_TermsOfSaleAcceptance input,#dr_MobileTermsAndConditionsAcceptance input {
+float:right;
+margin-left:.625em;
+margin-right:0;
+}
+.mstResponsive.rtlanguage #dr_ConfirmOrder .checkoutText {
+float:left;
+text-align:left;
+}
+.mstResponsive.rtlanguage #dr_ThankYou td.dr_price{
+  text-align: left;
+}
+.mstResponsive.rtlanguage #dr_invoiceTbl  td.dr_price {
+  padding-left: 0;
+  padding-right: 1em;
+  text-align: left;
+}
+.mstResponsive.rtlanguage #dr_invoiceTbl  td.dr_unitPrice {
+  text-align: left;
+}
+.mstResponsive.rtlanguage #dr_invoiceBottom {
+  float: right;
+}
+select.dr_selectBinarySet {
+direction: ltr;
+}
+.mstResponsive.rtlanguage.ThreePgCheckoutShoppingCartPage a.dr_forceAveVerifyAndCheckout{
+  float: left;
+}
+/***** END: PCF positioning fix styles *****/
+
+/***** BEGIN: Account Pages positioning fix styles *****/
+.mstResponsive.site-flow.rtlanguage #acctNavRight{float: left;text-align: }
+.mstResponsive.site-flow.rtlanguage #acctNavRight ul{margin: 0.625em 0;float: left;}
+.mstResponsive.site-flow.rtlanguage #acctNavRight ul li{padding: 0.4375em 0 0.4375em 1.25em; text-align: left; float: left;}
+.mstResponsive.site-flow.rtlanguage #acctNavRight .rightPointer{background: url("//dri1.img.digitalrivercontent.net/Storefront/Site/mscommon/cm/images/MicrosoftInternational/right_facing_arrow_red.gif") no-repeat scroll 0 13px transparent;}
+.mstResponsive.site-flow.rtlanguage #optIn{float: right;}
+.mstResponsive.site-flow.rtlanguage .addEditAddress{float: right;}
+.mstResponsive.site-flow.rtlanguage.EditProfilePage .optionalText{right: -252px;}
+.mstResponsive.site-flow.rtlanguage.EditProfilePage .dr_myAccountSiteButtons{float: right;}
+.mstResponsive.site-flow.rtlanguage #dr_DownloadList .dr_pagination{float: right;}
+.mstResponsive.site-flow.rtlanguage .column-4 .colspan-3 .colspan-2{width: 65.815%;}
+.mstResponsive.site-flow.rtlanguage .column-4 .colspan-3 .dr_downloadInfoRightColumn{margin-right: 2.555%}
+.mstResponsive.site-flow.rtlanguage .pagination a, .mstResponsive.site-flow.rtlanguage .pagination span {float:right;}
+.mstResponsive.site-flow.rtlanguage .pagination em {float:right;}
+.mstResponsive.site-flow.rtlanguage .column-4 .colspan-3 .grid-unit.dr_orderInfoLeftColumn {margin-right:0;}
+.mstResponsive.site-flow.rtlanguage .column-4 .colspan-3 .grid-unit .dr_orderItemDetails {margin-right:2%;}
+.mstResponsive.site-flow.rtlanguage .dr_orderItemImage {float: right;}
+/***** END: Account Pages positioning fix styles *****/
+
+/*----------------------
+RWD Account Page related styles
+------------------------*/
+.lt-ie9 .rwd .hidden-md, .lt-ie9 .rwd .hidden-lg{
+  display:none !important;
+}
+.background-dark-grey {
+  background-color:#33333;
+}
+header.slim-header .header-links li {
+  padding: 0 .625em
+}
+header.slim-header .header-links li.signedIn {
+  padding: 0;
+}
+.signInOutLink.signedIn {
+  background: transparent;
+  color: #1570a6;
+  text-decoration: none;
+  cursor: pointer;
+}
+.signInOutLink.signedIn .hover-background:after {
+  font-family: 'mshp_iconsregular';
+  content: '\e007';
+  font-size:  .688em;
+  margin-left:  .35em;
+}
+.rtlanguage .signInOutLink.signedIn .hover-background:after {
+  margin-left: 0;
+  margin-right:  .35em;
+}
+.signInOutLink.signedIn .hover-background {
+  padding: 1.1em .625em;
+  margin-top: -2.2em;
+  font-size: .875em;
+}
+.signInOutLink.signedIn .hover-background .shopper-name {
+  font-size: 1em;
+  text-decoration: none;
+}
+.signInOutLink.signedIn.active .hover-background {
+  background: #f8f8f8;
+}
+.signInOutLink.signedIn .account-menu {
+  width: 12em;
+  text-align: left;
+  position: absolute;
+  background: #f8f8f8;
+  margin: 1em 0 0 -.625em;
+  z-index: 1001;
+  display: none;
+}
+.signInOutLink.signedIn .account-menu.active {
+  display: block;
+}
+.rtlanguage .signInOutLink.signedIn .account-menu {
+  margin: 1em -.625em 0 0;
+  text-align: right;
+}
+.signInOutLink.signedIn .shopper-name {
+  text-decoration: none;
+  font-size: 1em;
+}
+header.slim-header .header-links .signInOutLink.signedIn .account-menu li {
+  padding: 0;
+  width: 100%;
+  display: block;
+}
+header.slim-header .header-links .signInOutLink.signedIn .account-menu li:hover {
+  color: #fff;
+  background: #1570a5;
+}
+header.slim-header .header-links .signInOutLink.signedIn .account-menu li:hover a {
+  color:#fff;
+}
+header.slim-header .header-links .signInOutLink.signedIn .account-menu li.main {
+  font-weight:bold;
+}
+header.slim-header .header-links .signInOutLink.signedIn .account-menu li.main:hover, header.slim-header .header-links .signInOutLink.signedIn .account-menu li.main:hover a {
+  background: none;
+  color: #000;
+  cursor: default;
+}
+header.slim-header .header-links .signInOutLink.signedIn .account-menu li.sign-out {
+  border-top: 1px solid #d9d9d9;
+}
+header.slim-header .header-links .signInOutLink.signedIn .account-menu li a {
+  font-size:100%;
+  width: 100%;
+  color: #000;
+  text-decoration:none;
+  display: inline-block;
+  padding: .35em 0 .35em .625em;
+}
+.rtlanguage header.slim-header .header-links .signInOutLink.signedIn .account-menu li a {
+  padding: .35em .625em .35em 0;
+}
+.rwd .container-fluid .slider-tabs {
+  display: none;
+}
+@media screen and (min-width: 48.0625em) {
+  .rwd .container-fluid .slider-tabs {
+    display: block;
+  }
+  .rwd .account-nav-links {
+    display: none;
+  }
+  .lt-ie10 .col-md-4, .rwd .product3uplist .product-row {
+   width: 32%;
+  }
+}
+.lt-ie9 .rwd .container-fluid .slider-tabs {
+  display: block;
+}
+.lt-ie9 .rwd .account-nav-links {
+  display: none;
+}
+.lt-ie9 .col-md-4, .lt-ie9 .rwd .product3uplist .product-row {
+  width: 32%;
+}
+
+.rwd .account-3up {
+  margin-bottom: .75em;
+}
+.rwd .account-3up .heading--small {
+  font-weight: bold;
+  color: #1570a6;
+  margin-bottom: .75em;
+  margin-top: 1em;
+}
+.rwd .account-3up a.account-link {
+  display: block;
+  margin: 0 0 1em;
+  padding: 0;
+}
+.rwd .account-3up a.account-link {
+  text-decoration: none;
+}
+.rwd .account-3up a.account-link .call-to-action {
+  font-weight: bold;
+}
+.rwd .account-3up a.account-link .call-to-action:hover {
+  text-decoration: underline;
+}
+.rwd .account-3up a.account-link p {
+  color: #676767;
+  font-size: .85em;
+}
+@media screen and (min-width: 48.0625em) {
+  .rwd .account-3up {
+    margin-bottom: 3.75em;
+  }
+  .rwd .account-3up .row {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+  }
+  .rwd .account-3up a.account-link {
+    margin-left: 2%;
+    margin-right: 0;
+    text-decoration: none;
+    background:#f8f8f8;
+    min-height: 8em;
+    padding: .75em 1.25em;
+  }
+  .rtlanguage .rwd .account-3up a.account-link {
+    margin-left: 0;
+    margin-right: 2%;
+  }
+  .rwd .account-3up a.account-link:first-child {
+    margin-left: 0;
+  }
+  .rtlanguage .rwd .account-3up a.account-link:first-child {
+    margin-right: 0;
+  }
+  .rwd .account-3up a.account-link p {
+    color: #676767;
+    font-size: 1em;
+  }
+}
+.lt-ie9 .rwd .account-3up {
+  margin-bottom: 3.75em;
+}
+.lt-ie9 .rwd .account-3up .row {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+.lt-ie9 .rwd .account-3up a.account-link {
+  margin-left: 2%;
+  margin-right: 0;
+  text-decoration: none;
+  background:#f8f8f8;
+  min-height: 8em;
+  padding: .75em 1.25em;
+}
+.lt-ie9.rtlanguage .rwd .account-3up a.account-link {
+  margin-left: 0;
+  margin-right: 2%;
+}
+.lt-ie9 .rwd .account-3up a.account-link:first-child {
+  margin-left: 0;
+}
+.lt-ie9.rtlanguage .rwd .account-3up a.account-link:first-child {
+  margin-right: 0;
+}
+.lt-ie9 .rwd .account-3up a.account-link p {
+  color: #676767;
+  font-size: 1em;
+}
+
+.rwd .account-4up {
+  display: none;
+}
+@media screen and (min-width: 48.0625em) {
+  .lt-ie10 .rwd .row .col-md-3 {
+    width: 23%;
+  }
+  .rwd .account-4up {
+    display: block;
+    margin-bottom: 5em;
+  }
+  .rwd .account-4up .row {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+  }
+  .rwd .account-4up .heading--small {
+    font-size: 1.15em;
+  }
+  .rwd .account-4up a.account-link {
+    text-decoration: none;
+    color: #000;
+    margin-left: 2%;
+    padding-left: 0;
+  }
+  .rtlanguage .rwd .account-4up a.account-link {
+    margin-left: 0;
+    margin-right: 2%;
+    padding-left: auto;
+    padding-right: 0;
+  }
+  .rwd .account-4up a.account-link:first-child {
+    margin-left: 0;
+  }
+  .rtlanguage .rwd .account-4up a.account-link:first-child {
+    margin-left: auto;
+    margin-right: 0;
+  }
+  .rwd .account-4up a.account-link p {
+    margin: 1em 0 1.25em;
+    font-size: .85em;
+  }
+  .rwd .account-4up a.account-link .cta {
+    color: #1570a6;
+    font-size: .85em;
+  }
+}
+.lt-ie9 .rwd .row .col-md-3 {
+  width: 23%;
+}
+.lt-ie9 .rwd .account-4up {
+  display: block;
+  margin-bottom: 5em;
+}
+.lt-ie9 .rwd .account-4up .row {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+.lt-ie9 .rwd .account-4up .heading--small {
+  font-size: 1.15em;
+}
+.lt-ie9 .rwd .account-4up a.account-link {
+  text-decoration: none;
+  color: #000;
+  margin-left: 2%;
+  padding-left: 0;
+}
+.lt-ie9.rtlanguage .rwd .account-4up a.account-link {
+  margin-left: 0;
+  margin-right: 2%;
+  padding-left: auto;
+  padding-right: 0;
+}
+.lt-ie9 .rwd .account-4up a.account-link:first-child {
+  margin-left: 0;
+}
+.lt-ie9.rtlanguage .rwd .account-4up a.account-link:first-child {
+  margin-left: auto;
+  margin-right: 0;
+}
+.lt-ie9 .rwd .account-4up a.account-link p {
+  margin: 1em 0 1.25em;
+  font-size: .85em;
+}
+.lt-ie9 .rwd .account-4up a.account-link .cta {
+  color: #1570a6;
+  font-size: .85em;
+}
+.rwd #dr_AccountOrderList .dr_orderInfoLeftColumn div {
+  padding-bottom: 0;
+}
+.rwd #dr_AccountOrderList .dr_accountLabel, .rwd #dr_AccountReturnList .dr_accountLabel {
+  margin: 0;
+}
+.rwd #dr_AccountOrderList a, .rwd #dr_AccountReturnList a {
+  color: #1570a6;
+  display: inline-block;
+}
+.rwd #dr_AccountOrderList .missingImage_msSmall{ 
+  width:70% 
+}
+.rwd #dr_AccountOrderList .dr_orderInfoLeftColumn .row-set .row div{
+  word-wrap: break-word;
+}
+/*.rwd li .dr_myAccountSiteButtons, .rwd #dr_AccountOrderList li .dr_myAccountSiteButtons {
+  margin: 0;
+}*/
+.rwd .dr_UnlockCodeDisplay div, .rwd .dr_variationLanguage div, .rwd .dr_SNDisplay div {
+  display: inline-block;
+}
+.rwd .table-row.border-light-grey .table-cell {
+  border: 1px solid #cecece;
+  border-top: 0;
+  padding-top: 1em;
+}
+.rwd .table-row.border-light-grey:first-child .table-cell:first-child {
+  border-top: 1px solid #cecece;
+}
+.rwd .table-row-set {
+  margin: 1.25em 0;
+}
+.rwd .dr_accountLabel {
+  font-size: 1em;
+}
+.rwd .row-set {
+  margin: 0.5em 0;
+}
+.rwd .row-set div {
+  padding: 0;
+}
+.rwd .row-set li.list-unstyled {
+  float: left;
+  border-right: 1px solid #cecece;
+  margin-right: .5em; 
+  padding-right: .5em;
+}
+.rtlanguage .rwd .row-set li.list-unstyled {
+  float: right;
+  border-right: none;
+  border-left: 1px solid #cecece;
+  margin-right: 0;
+  margin-left: .5em;
+  padding-right: 0;
+  padding-left: .5em;
+}
+.rwd .row-set li.list-unstyled:last-child {
+  float: left;
+  border-right: none;
+  margin-right: 0;
+}
+.rtlanguage .rwd .row-set li.list-unstyled:last-child {
+  float: right;
+  border-left: none;
+  margin-right: auto;
+  margin-left: 0;
+}
+.rwd .accordion-list-section {
+  border-bottom: 1px solid #d2d2d2;
+  padding: .375em 0;
+  margin: 0;
+}
+.rwd .accordion-list-section:first-child {
+  border-top: 1px solid #d2d2d2;
+}
+.rwd .accordion-list-section .ms-accordion {
+  font-size: .875em;
+  position: relative;
+}
+.rwd .accordion-list-section .ms-accordion .heading {
+  font-weight: bold;
+  font-size: 1.15em;
+  position: relative;
+  padding-left: 1.75em;
+}
+.rtlanguage .rwd .accordion-list-section .ms-accordion .heading {
+  padding-left: 0;
+  padding-right: 1.75em;
+}
+.rwd .accordion-list-section .toggle-icon {
+  font-size: 1.5714285714em;
+  position: absolute;
+  top: -0.2em;
+}
+.rwd .accordion-list-section .accordion-panel {
+  display: none;
+  margin: 1em 0 0 0;
+}
+.rwd .accordion-list-section ol {
+  list-style: decimal;
+  padding-left: 3em;
+}
+.rtlanguage .rwd .accordion-list-section ol {
+  padding-left: 0;
+  padding-right: 3em;
+}
+
+@media screen and (min-width: 33.8125em) {
+  .rwd .table-row.border-light-grey .table-cell {
+    border: 1px solid #cecece;
+    border-left: none;
+    border-bottom: none;
+  }
+  .rtlanguage .rwd .table-row.border-light-grey .table-cell {
+    border: 1px solid #cecece;
+    border-right: none;
+  }
+  .rwd .table-row.border-light-grey .table-cell:first-child {
+    border-left: 1px solid #cecece;
+  }
+  .rtlanguage .rwd .table-row.border-light-grey .table-cell:first-child {
+    border-right: 1px solid #cecece;
+  }
+  .rwd .table-row.border-light-grey:last-child .table-cell {
+    border-bottom: 1px solid #cecece;
+  }
+  .rwd .table-row {
+    display: table;
+    width: 100%;
+  }
+  .rwd .table-row .table-cell {
+    display: table-cell;
+    float: none;
+  }
+  .rwd .row-set .item-list {
+    float: left;
+    margin-right: .5em;
+  }
+  .rtlanguage .rwd .row-set .item-list {
+    float: right;
+    margin-right: 0;
+    margin-left: .5em;
+  }
+}
+.lt-ie9 .rwd .table-row.border-light-grey .table-cell {
+  border: 1px solid #cecece;
+}
+.lt-ie9.rtlanguage .rwd .table-row.border-light-grey .table-cell {
+  border: 1px solid #cecece;
+}
+.lt-ie9 .rwd .table-row.border-light-grey .table-cell:first-child {
+  border-left: 1px solid #cecece;
+}
+.lt-ie9.rtlanguage .rwd .table-row.border-light-grey .table-cell:first-child {
+  border-right: 1px solid #cecece;
+}
+.lt-ie9 .rwd .table-row.border-light-grey:last-child .table-cell {
+  border-bottom: 1px solid #cecece;
+}
+.lt-ie9 .rwd .table-row {
+  display: table;
+  width: 100%;
+}
+.lt-ie9 .rwd .table-row .table-cell {
+  display: table-cell;
+  float: none;
+}
+.lt-ie9 .rwd .row-set .item-list {
+  float: left;
+  margin-right: .5em;
+}
+.lt-ie9.rtlanguage .rwd .row-set .item-list {
+  float: right;
+  margin-right: 0;
+  margin-left: .5em;
+}
+
+@media screen and (min-width: 48.0625em) {
+  .rwd .accordion-list-section {
+    border: 0;
+    padding: .375em 0;
+    margin: 0;
+  }
+  .rwd .accordion-list-section:first-child {
+    border-top: 0;
+  }
+  .rwd .accordion-list-section .accordion-panel {
+    display: block !important;
+  }
+  .rwd .accordion-list-section ol {
+    padding-left: 1.5em;
+  }
+  .rtlanguage .rwd .accordion-list-section ol {
+    padding-right: 1.5em;
+  }
+}
+.lt-ie9 .rwd .accordion-list-section {
+  border: 0;
+  padding: .375em 0;
+  margin: 0;
+}
+.lt-ie9 .rwd .accordion-list-section:first-child {
+  border-top: 0;
+}
+.lt-ie9 .rwd .accordion-list-section .accordion-panel {
+  display: block !important;
+}
+.lt-ie9 .rwd .accordion-list-section ol {
+  padding-left: 1.5em;
+}
+.lt-ie9.rtlanguage .rwd .accordion-list-section ol {
+  padding-right: 1.5em;
+}
+
+@media screen and (min-width: 33.8125em) {
+  .rwd .account-nav-links .grid-container .grid-row.column-3 .grid-unit {
+    width: 100%;
+    margin-right: 0;
+    margin-left: 0;
+    float: left;
+  }
+}
+.lt-ie9 .rwd .account-nav-links .grid-container .grid-row.column-3 .grid-unit {
+  width: 100%;
+  margin-right: 0;
+  margin-left: 0;
+  float: left;
+}
+.rwd .account-nav-links {
+  border-top: 1px solid #cecece;
+}
+.rwd .account-nav-links .grid-container {
+  width: 100%;
+}
+.rwd .account-nav-links .grid-container .grid-row .list-of-links .heading {
+  cursor: pointer;
+  font-size: 0.9375em;
+  margin-bottom: 0;
+  border-bottom: 1px solid #cecece;
+  padding: .75em;
+}
+.rwd .account-nav-links .grid-container .grid-row .list-of-links .heading a:hover, 
+.rwd .account-nav-links .grid-container .grid-row .list-of-links .heading a:focus, 
+.rwd .account-nav-links .grid-container .grid-row .list-of-links .heading a:active {
+  color: #1a1a1a;
+  cursor: pointer;
+  text-decoration: none;
+}
+.rwd .account-nav-links .grid-container .grid-row .list-of-links .heading.main,
+.rwd .account-nav-links .grid-container .grid-row .list-of-links .heading.main a {
+  cursor: default;
+}
+.rwd .account-nav-links .grid-container .grid-row .list-of-links ul {
+  padding: 0;
+  margin: 0;
+}
+.rwd .account-nav-links .grid-container .grid-row .list-of-links ul li {
+  border-bottom: 1px solid #cecece;
+  margin: 0;
+  font-size: 0.9375em;
+}
+.rwd .account-nav-links .grid-container .grid-row .list-of-links ul li a {
+  color: #1a1a1a;
+  padding: .75em 0;
+  display: block;
+  margin-left: 2em;
+}
+.rtlanguage .rwd .account-nav-links .grid-container .grid-row .list-of-links ul li a {
+  margin-left: 2em;
+  margin-right: 2em;
+}
+.rwd .back-link {
+  margin-top: 1em;
+}
+.rwd .slider-tabs .grid-container {
+  width: 100%;
+}
+.AddEditPaymentPage .rwd .slider-track .blue-slider {
+  left: 17%; width: 15%;
+}
+.AddEditPaymentPage.rtlanguage .rwd .slider-track .blue-slider {
+  right: 17%; width: 15%;
+}
+.AddEditPaymentPage .rwd .payment-page, .AddEditPaymentPage .rwd .add-payment {
+  margin-bottom: 2em;
+}
+.AddEditPaymentPage .rwd .payment-page a.pay {
+  width: 100%;
+  font-size: 1em;
+}
+@media screen and (min-width: 48.0625em) {
+  .AddEditPaymentPage .rwd .payment-page a.pay {
+      width: auto;
+    }
+}
+.lt-ie9.AddEditPaymentPage .rwd .payment-page a.pay {
+  width: auto;
+}
+.AddEditPaymentPage .rwd .col-md-5, .col-md-8, .col-md-12 {
+  padding: 0;
+}
+.AddEditPaymentPage .rwd .payment-info {
+  margin-bottom: 1em;
+  display: inline-block;
+  width: 100%;
+}
+.AddEditPaymentPage .rwd .payment-info .right .dr_error {
+  display: inline-block;
+}
+.AddEditPaymentPage .rwd .card-info .left {
+  float: left;
+  margin-right: 1em;
+  width: 60px;
+  display: table-cell;
+}
+.AddEditPaymentPage .rwd .card-info .right {
+  display: table-cell;
+}
+.AddEditPaymentPage .rwd .card-info .right .edit-link {
+  float: left;
+  padding-right: .5em;
+  border-right: 1px solid #cecece;
+}
+.AddEditPaymentPage .rwd .card-info .right .delete-link {
+  float: left;
+  padding-left: .5em;
+}
+.AddEditPaymentPage.rtlanguage  .rwd .card-info .right .edit-link {
+  padding-right: 0;
+  padding-left: .5em;
+  border-right: none;
+  border-left: 1px solid #cecece;
+  float: right;
+}
+.AddEditPaymentPage.rtlanguage .rwd .card-info .right .delete-link {
+  padding-left: 0;
+  padding-right: .5em;
+  float: right;
+}
+.AddEditPaymentPage .rwd .card-info .right span {
+  margin-right: 0.5em;
+}
+.AddEditPaymentPage.rtlanguage .rwd .card-info .left {
+  float: right;
+  margin-right: 0;
+  margin-left: 1em;
+}
+.EditProfilePage .rwd .slider-track .blue-slider {
+  left: 17%; width: 15%;
+}
+.EditProfilePage .rwd .slider-track .blue-slider.profile {
+  left: 34%; width: 15%;
+}
+.EditProfilePage .rwd .slider-track .blue-slider.addressbook {
+  left: 0%; width: 15%;
+}
+.EditProfilePage.rtlanguage .rwd .slider-track .blue-slider {
+  right: 17%; width: 15%;
+}
+.EditProfilePage.rtlanguage .rwd .slider-track .blue-slider.profile {
+  right: 34%; width: 15%;
+}
+.EditProfilePage.rtlanguage .rwd .slider-track .blue-slider.addressbook {
+  right: 0%; width: 15%;
+}
+.EditProfilePage .rwd .ship-to-page a.ship {
+  width: 100%;
+  cursor: pointer;
+}
+@media screen and (min-width: 48.0625em) {
+  .EditProfilePage .rwd .ship-to-page a.ship {
+      width: auto;
+    }
+}
+.lt-ie9.EditProfilePage .rwd .ship-to-page a.ship {
+  width: auto;
+}
+.EditProfilePage .rwd #new-address h1 {
+  float: left;
+  margin-top: 0;
+  margin-bottom: 0;
+  width: 75%;
+}
+.EditProfilePage.rtlanguage .rwd #new-address h1 {
+  float: right;
+}
+.EditProfilePage .rwd #new-address .dr_required_field_text {
+  float: left;
+  margin-top: 0.5em;
+}
+.EditProfilePage.rtlanguage .rwd #new-address .dr_required_field_text {
+  float: right;
+}
+.EditProfilePage .rwd .dr_profile_info_container2 h2 {
+  float: left;
+  margin-top: 0;
+  margin-bottom: 0;
+  width: 75%;
+  font-size: 1.5em;
+}
+.EditProfilePage.rtlanguage .rwd .dr_profile_info_container2 h2 {
+  float: right;
+}
+@media screen and (min-width: 48.0625em) {
+  .EditProfilePage .rwd .dr_profile_info_container2 h2 {
+      font-size: inherit;
+      font-weight: bold;
+    }
+}
+.lt-ie9.EditProfilePage .rwd .dr_profile_info_container2 h2 {
+  font-size: inherit;
+  font-weight: bold;
+}
+.EditProfilePage .rwd .dr_profile_info_container2 .dr_required_field_text {
+  float: left;
+  margin-top: 0.5em;
+}
+.EditProfilePage.rtlanguage .rwd .dr_profile_info_container2 .dr_required_field_text {
+  float: right;
+}
+.rwd .cart-redasterisk {
+  color: red;
+}
+.EditProfilePage .rwd fieldset {
+  clear: both;
+}
+.EditProfilePage .rwd fieldset .dr_formLine {
+  float: left;
+  padding: 0;
+}
+.EditProfilePage.rtlanguage .rwd fieldset .dr_formLine {
+  float: right;
+}
+.EditProfilePage .rwd .dr_formLine label{
+  font-weight: bold;
+}
+@media screen and (min-width: 48.0625em) {
+  .EditProfilePage .rwd .dr_formLine label {
+        font-weight: normal;
+    }
+  .EditProfilePage .rwd .dr_userNotice strong {
+        font-weight: normal;
+    }
+}
+.lt-ie9.EditProfilePage .rwd .dr_formLine label {
+    font-weight: normal;
+}
+.lt-ie9.EditProfilePage .rwd .dr_userNotice strong {
+    font-weight: normal;
+}
+.EditProfilePage .rwd .dr_profile_info_container2 .dr_formLine input, .EditProfilePage .rwd .dr_profile_info_container2 .dr_formLine select, .EditProfilePage .rwd #new-address .dr_formLine input, .EditProfilePage .rwd #new-address .dr_formLine select {
+  width: 100%;
+}
+.EditProfilePage .rwd #dr_AddressEntryFields .dr_formLine.odd {
+  margin-right: 7.3em;
+  clear: both;
+}
+.EditProfilePage.rtlanguage .rwd #dr_AddressEntryFields .dr_formLine.odd {
+  margin-right: 0;
+  margin-left: 7.3em;
+}
+.EditProfilePage .rwd fieldset.active .dr_profile_info_container2 .dr_formLine.odd {
+  margin-right: 7.3em;
+  clear: both;
+}
+.EditProfilePage.rtlanguage .rwd fieldset.active .dr_profile_info_container2 .dr_formLine.odd {
+  margin-right: 0;
+  margin-left: 7.3em;
+}
+.EditProfilePage .rwd fieldset .dr_formLine.country {
+  clear: both;
+}
+.EditProfilePage .rwd .dr_formLine.countryText {
+  clear: both;
+}
+.EditProfilePage .rwd .dr_myAccountSiteButtons input {
+  font-size: 1em;
+  width: 100%;
+}
+.EditProfilePage .rwd .dr_myAccountSiteButtons {
+  width: 100%;
+  margin: 1.0625em 0;
+}
+.EditProfilePage .rwd .optionalText {
+  position: absolute;
+  left: 10px;
+  top: 28px;
+}
+.EditProfilePage.rtlanguage .rwd .optionalText {
+  left: 0;
+  right: 10px;
+}
+.EditProfilePage .rwd #dr_AddEditAddress .dr_formLine .dr_ms_error {
+  position: relative;
+}
+@media screen and (min-width: 48.0625em) {
+  .EditProfilePage .rwd .dr_myAccountSiteButtons {
+      width: auto;
+    }
+}
+.lt-ie9.EditProfilePage .rwd .dr_myAccountSiteButtons {
+  width: auto;
+}
+.EditProfilePage .rwd #dr_myAccountColumn2Padding fieldset {
+  margin-top: 0;
+}
+.EditProfilePage .rwd #dr_myAccountColumn2Padding ul li fieldset {
+  margin-top: 0;
+}
+.EditProfilePage .rwd .address-list .default-address {
+  margin-bottom: 3em;
+}
+.EditProfilePage .rwd .back-link {
+  margin: 1em 0;
+}
+.EditProfilePage .rwd .col-md-5, .col-md-8, .col-md-12 {
+  padding: 0;
+}
+
+.EditProfilePage .rwd #dr_EditProfile .dr_required_field_text {
+  margin-top: 0;
+}
+.EditProfilePage .rwd #dr_EditProfile  #dr_optIn .dr_label {
+  float: left;
+  font-weight: normal;
+  width: 90%;
+}
+.EditProfilePage.rtlanguage .rwd #dr_EditProfile  #dr_optIn .dr_label {
+  float: right;
+}
+.EditProfilePage .rwd #dr_EditProfile  .dr_formLine input {
+  width: 100%;
+}
+@media screen and (min-width: 48.0625em) {
+  .EditProfilePage .rwd #dr_EditProfile  .dr_formLine input {
+      width: 30%;
+  }
+}
+.lt-ie9.EditProfilePage .rwd #dr_EditProfile  .dr_formLine input {
+    width: 30%;
+}
+.EditProfilePage .rwd #dr_EditProfile .dr_myAccountSiteButtons {
+  width: 100%;
+}
+@media screen and (min-width: 48.0625em) {
+  .EditProfilePage .rwd #dr_EditProfile .dr_myAccountSiteButtons {
+      width: 30%;
+  }
+}
+.lt-ie9.EditProfilePage .rwd #dr_EditProfile .dr_myAccountSiteButtons {
+    width: 30%;
+}
+.EditProfilePage .rwd #dr_EditProfile .dr_userNotice span {
+  font-weight: bold;
+}
+@media screen and (min-width: 48.0625em) {
+  .EditProfilePage .rwd #dr_EditProfile .dr_userNotice span {
+    font-weight: normal;
+  }
+}
+.lt-ie9.EditProfilePage .rwd #dr_EditProfile .dr_userNotice span {
+  font-weight: normal;
+}
+.EditProfilePage .rwd #dr_EditProfile  #dr_optIn .dr_formLine {
+  float:none;
+}
+.EditProfilePage .rwd #dr_EditProfile  #dr_optIn .dr_formLine input {
+  width: auto;
+}
+.AccountOrderListPage .rwd #accountOrderListContainer .bundle-return-link {
+  margin-left: 1em;
+}
+.AccountOrderListPage.rtlanguage .rwd #accountOrderListContainer .bundle-return-link {
+  margin-left: 0;
+  margin-right: 1em;
+}
+.AccountOrderListPage .rwd .slider-track .blue-slider {
+  left: 0%; width: 15%;
+}
+.AccountOrderListPage.rtlanguage .rwd .slider-track .blue-slider {
+  right: 0%; width: 15%;
+}
+.AccountOrderListPage #accountOrderListContainer .bundle-return-link {
+  margin-left: 1em;
+}
+.DownloadHistoryPage .rwd .slider-track .blue-slider {
+  left: 17%; width: 15%;
+}
+.DownloadHistoryPage.rtlanguage .rwd .slider-track .blue-slider {
+  right: 17%; width: 15%;
+}
+.DownloadHistoryPage .rwd .slider-track .blue-slider.with-return {
+  left: 34%; width: 15%;
+}
+.DownloadHistoryPage.rtlanguage .rwd .slider-track .blue-slider.with-return {
+  right: 34%; width: 15%;
+}
+.rwd #dr_DownloadList .missingImage_msSmall{ 
+  width:100% 
+}
+@media (min-width: 1200px) {
+  .rtlanguage .col-lg-8 {
+    width: 66.6666666667%;
+    float: right;
+  }
+}
+.InvoicePage .rwd h3,
+.InvoicePage .rwd #dr_invoiceBottom,
+.InvoicePage .rwd #dr_invoiceTbl {
+  width:100%;
+}
+.InvoicePage .rwd #dr_subTotal .first-merged-col{
+  width:50%;
+}
+.InvoicePage .rwd #dr_invoiceTbl td.dr_unitPrice, 
+.InvoicePage .rwd #dr_invoiceTbl td.dr_price{
+  text-align:right;
+}
+.InvoicePage.rtlanguage .rwd #dr_invoiceTbl  td.dr_price {
+  padding-left: 0;
+  padding-right: 1em;
+  text-align: left;
+}
+.InvoicePage.rtlanguage .rwd #dr_invoiceTbl  td.dr_unitPrice {
+  text-align: left;
+}
+.InvoicePage.rtlanguage .rwd #dr_invoiceBottom {
+  float: right;
+}
+.ReturnsPage .rwd .dr_orderInfoLeftColumn {
+  vertical-align: top;
+}
+.ReturnsPage .rwd .dr_orderInfoRightColumn .dr_orderItemDetailsSections span {
+  float: left;
+}
+.ReturnsPage .rwd .dr_orderInfoRightColumn .dr_orderItemDetails.comments {
+  padding: 0.5em;
+  border: 1px solid #cecece;
+  margin-bottom: 0.5em;
+  margin-left: 1em;
+}
+.ReturnsPage .rwd .dr_orderInfoRightColumn .dr_orderItemDetails select {
+  width: 95%;
+}
+.ReturnsPage .rwd .dr_orderInfoRightColumn .dr_orderItemDetails textarea {
+  width: 95%;
+  resize: none;
+}
+.ReturnsPage .rwd .container-fluid h1.heading--medium {
+  //float: left;
+}
+.ReturnsPage .rwd .container-fluid span.first {
+  clear: both;
+  display: block;      
+}
+#ReturnRequestForm {
+  clear:both;
+}
+@media screen and (min-width: 48.0625em) {
+  .ReturnsPage .rwd .container-fluid span.first {
+        float: right;
+        clear: none;
+        margin-top: -2.75em;
+    }
+}
+.ReturnsPage .dr_profile_info_container2 {
+  display:none;
+}
+.ReturnsPage .rwd .ship-to-page a.ship {
+  width: 100%;
+  cursor: pointer;
+}
+.ReturnsPage .rwd #dr_Return .ship-to-page a {
+  color: black;
+}
+@media screen and (min-width: 48.0625em) {
+  .ReturnsPage .rwd .ship-to-page a.ship {
+      width: auto;
+    }
+}
+.ReturnsPage .rwd #new-address h1 {
+  float: left;
+  margin-top: 0;
+  margin-bottom: 0;
+  width: 75%;
+}
+.ReturnsPage .rwd #new-address .dr_required_field_text {
+  float: left;
+  margin-top: 0.5em;
+}
+.ReturnsPage .rwd .dr_profile_info_container2 h2 {
+  float: left;
+  margin-top: 0;
+  margin-bottom: 0;
+  width: 75%;
+  font-size: 1.5em;
+}
+@media screen and (min-width: 48.0625em) {
+  .ReturnsPage .rwd .dr_profile_info_container2 h2 {
+      font-size: inherit;
+      font-weight: bold;
+    }
+}
+.ReturnsPage .rwd .dr_profile_info_container2 .dr_required_field_text {
+  float: left;
+  margin-top: 0.5em;
+}
+.ReturnsPage .rwd .cart-redasterisk {
+  color: red;
+}
+.ReturnsPage .rwd fieldset {
+  clear: both;
+}
+.ReturnsPage .rwd fieldset .dr_formLine {
+  float: left;
+  padding: 0;
+}
+.ReturnsPage .rwd fieldset .dr_formLine label{
+  font-weight: bold;
+}
+@media screen and (min-width: 48.0625em) {
+  .ReturnsPage .rwd fieldset .dr_formLine label {
+        font-weight: normal;
+    }
+}
+.ReturnsPage .rwd .dr_profile_info_container2 .dr_formLine input, .ReturnsPage .rwd .dr_profile_info_container2 .dr_formLine select, .ReturnsPage .rwd #new-address .dr_formLine input, .ReturnsPage .rwd #new-address .dr_formLine select {
+  width: 100%;
+}
+.ReturnsPage .rwd #dr_AddressEntryFields .dr_formLine.odd {
+  margin-right: 7.3em;
+  clear: both;
+}
+.ReturnsPage.rtlanguage .rwd #dr_AddressEntryFields .dr_formLine.odd {
+  margin-right: 0;
+  margin-left: 7.3em;
+}
+.ReturnsPage .rwd fieldset.active .dr_profile_info_container2 .dr_formLine.odd {
+  margin-right: 7.3em;
+  clear: both;
+}
+.ReturnsPage.rtlanguage .rwd fieldset.active .dr_profile_info_container2 .dr_formLine.odd {
+  margin-right: 0;
+  margin-left: 7.3em;
+}
+.ReturnsPage .rwd fieldset .dr_formLine.country {
+  clear: both;
+}
+.ReturnsPage .rwd .dr_formLine.countryText {
+  clear: both;
+}
+.ReturnsPage .rwd .dr_myAccountSiteButtons input {
+  font-size: 1em;
+  width: 100%;
+  margin-top: 1em;
+}
+@media screen and (min-width: 48.0625em) {
+  .ReturnsPage .rwd .dr_myAccountSiteButtons input {
+      width: auto;
+      margin-top: 0;
+    }
+}
+.ReturnsPage .rwd .dr_myAccountSiteButtons input.cancel {
+  color: #1a1a1a;
+  background-color: #dfdfdf;
+}
+.ReturnsPage .rwd .dr_myAccountSiteButtons input.cancel:hover {
+  color: #fff;
+  background-color: #3f3f3f;
+}
+.ReturnsPage .rwd .dr_myAccountSiteButtons {
+  width: 100%;
+  margin: 1.0625em 0;
+}
+.ReturnsPage .rwd .optionalText {
+  position: absolute;
+  left: 10px;
+  top: 28px;
+  color: #A2A2A2;
+}
+.ReturnsPage .rwd #dr_AddEditAddress .dr_formLine .dr_ms_error {
+  position: absolute;
+  top: -18px;
+}
+@media screen and (min-width: 48.0625em) {
+  .ReturnsPage .rwd .dr_myAccountSiteButtons {
+      width: auto;
+    }
+}
+.ReturnsPage .rwd #dr_myAccountColumn2Padding fieldset {
+  margin-top: 0;
+}
+.ReturnsPage #dr_myAccountColumn2Padding ul li fieldset {
+  margin-top: 0;
+}
+.ReturnsPage .rwd .address-list .default-address {
+  margin-bottom: 3em;
+}
+.ReturnsPage .rwd .back-link {
+  margin: 1em 0;
+}
+.ReturnsPage .rwd .col-md-5, .col-md-8, .col-md-12 {
+  padding: 0;
+}
+.ReturnsPage .dr_userInfo,.ReturnsPage .dr_required_field_text,.ReturnsPage .dr_formLine,.ReturnsPage .dr_formLine .state,.ReturnsPage .dr_formLine .phone {
+  margin:1.0625em 0 0;
+}
+.ReturnsPage #dr_Return .dr_myAccountSiteButtons:hover {
+  text-decoration: none;
+}
+.ReturnsPage #dr_AddEditAddress .dr_myAccountSiteButtons {
+  float: left;
+}
+.ReturnsPage #returnOrderListContainer .dr_orderInfoRightColumn .dr_orderItemImage a.removeLink {
+  cursor: pointer;
+}
+.ReturnsPage #returnOrderListContainer .dr_orderInfoRightColumn .additional-item {
+  padding: 0 15px;
+  margin-top: 1em;
+}
+.ReturnsPage #returnOrderListContainer .dr_orderInfoRightColumn .additional-item .header-row {
+  background-color: #f8f8f8;
+  border: 1px solid #cecece;
+  padding: 0.5em 0;
+}
+.ReturnsPage #returnOrderListContainer .dr_orderInfoRightColumn .additional-item .header-row input {
+  margin-right: 1em;
+  margin-left: 12px;
+}
+.ReturnsPage #returnOrderListContainer .dr_orderInfoRightColumn .additional-item .items input {
+  margin-left: 13px;
+}
+.ReturnsPage #returnOrderListContainer .dr_orderInfoRightColumn .additional-item .dr_orderItemDetails {
+  margin-top: 1em;
+}
+.ReturnsPage #returnOrderListContainer .dr_orderInfoRightColumn .additional-item .dr_orderItemDetails .row-set {
+  margin: 0;
+}
+.ReturnsPage #returnOrderListContainer .dr_orderInfoRightColumn .additional-item .items input {
+  float: left;
+  margin-top: 2.6em;
+}
+.ReturnsPage #returnOrderListContainer .dr_orderInfoRightColumn .additional-item .items .item-list span {
+  margin-right: 1em;
+}
+.ReturnsPage #returnOrderListContainer .agreement .content {
+  background-color: #f8f8f8;
+  border: 1px solid #cecece;
+  padding: 0 0 0.5em 1em;
+  max-height: 230px;
+  overflow-y: scroll;
+}
+.ReturnsPage #returnOrderListContainer .agreement .accept input {
+  margin-right: 1em;
+}
+.ReturnsPage #returnOrderListContainer .agreement .accept p {
+  margin-left: 1.5em;
+}
+.ReturnsPage #returnOrderListContainer .agreement div.error {
+  margin-left: 1.5em;
+  color: red;
+}
+.ReturnsPage #returnOrderListContainer input.error, .ReturnsPage #returnOrderListContainer select.error{
+  border-color: red;
+}
+.ReturnsPage #returnOrderListContainer .itemContent div.error {
+  color: red;
+}
+.ReturnsPage #dr_Return .form-error h1, .ReturnsPage #dr_Return .success h1 {
+  font-size: 2.5em;
+}
+.ReturnsPage #dr_Return .success ol {
+  list-style-type: decimal;
+  margin-left: 1.5em;
+}
+.AccountReturnListPage #accountReturnListContainer .dr_orderInfoLeftColumn {
+  vertical-align: top;
+}
+/***** BEGIN: Payment Pages positioning fix styles *****/
+.mstResponsive.site-flow.rtlanguage .editCard{ float:left;}
+/***** END: Payment Pages positioning fix styles *****/
+
+/***** BEGIN: CCT positioning fix styles *****/
+.mstResponsive.rtlanguage #dr_cartTbl td,.mstResponsive.rtlanguage #dr_cartTbl th,.mstResponsive.rtlanguage #dr_confirmTbl td,.mstResponsive.rtlanguage #dr_confirmTbl th,.mstResponsive.rtlanguage #dr_productTbl td,.mstResponsive.rtlanguage #dr_productTbl th{text-align:right;}
+.mstResponsive.rtlanguage #dr_cartTbl .dr_cartLable{text-align:left;}
+.mstResponsive.rtlanguage #dr_cartTbl tr td.dr_price{text-align:left;}
+.mstResponsive.rtlanguage #dr_siteButtons #dr_checkoutButton{float:left;}
+.mstResponsive.rtlanguage #dr_productTbl tr td.dr_qty{text-align:right;}
+.mstResponsive.rtlanguage #dr_cartTbl .dr_quantityText{float:right;}
+.mstResponsive.rtlanguage .dr_qtySelect{float:right;}
+/***** END: CCT positioning fix styles *****/
+
+/***** END: Right to Left (ar_EG, ar_BH, iw_IL) positioning fix styles *****/
+/***** BEGIN: PDP Custom Bundles fix styles *****/
+@media screen and (min-width: 33.8125em) {
+  .rwd .new-pdp-hero .buy-box #dr_customBundles{
+    margin-left: 51% !important;
+    width: 48.93617%;
+  }
+}
+@media screen and (min-width: 48.0625em) {
+  .rwd .new-pdp-hero .buy-box #dr_customBundles{
+    margin-left: 60% !important;
+    width: 40.42553%;
+  }
+}
+/***** END: PDP Custom Bundles fix styles *****/
+
+/*----------------------
+WLID Content Style
+------------------------*/
+body.WLIDContent {background-color:#FFF;}
+#WLIDContent {width:490px;color:#333;font-size:12px;line-height:150%;margin:0;padding-top:20px;}
+#WLIDContent h1 {font-size:27px;border:none;padding:0 0 8px;}
+.dr_locale_fr_FR #WLIDContent h1, .dr_locale_fr_CA #WLIDContent h1, .dr_locale_fr_BE #WLIDContent h1, .dr_locale_fr_CH #WLIDContent h1, .dr_locale_fr_LU #WLIDContent h1 {font-size:26px;}
+#WLIDContent .instructions {font-size:12px;}
+#WLIDContent h1,#WLIDContent .instructions {margin-left:10px;}
+#WLIDContent h2 {font-size:12px;font-weight:bold;}
+#WLIDContent #createAcctInfo {width:100%;margin-top:14px;}
+#WLIDContent #createAcctInfo a.dr_button.blue {display:none;}
+#WLIDContent #createAcctInfo table {
+  margin-bottom:15px;
+}
+#WLIDContent .acctBulletTextHead {
+  font-weight:bold;
+}
+#WLIDContent .leftColumn {
+  width:16px;
+}
+#WLIDContent .rightColumn {
+  width:20px;
+}
+.dr_button.blue {
+  margin-left:8px;
+}
+#WLIDContent #createAcctInfo td.acctBulletText {
+  padding-left:18px;
+  padding-top:4px;
+}
+#WLIDContent #createAcctInfo td {
+  margin:0;
+  vertical-align:middle;
+  padding:0 0 8px;
+}
+/***** BEGIN: fix for 27734-MSUK en_GB ESD 'return order' link requires a hyperlink *****/
+.hero-box.background-green .byline{color:#fff;}
+/***** END: fix for 27734-MSUK en_GB ESD 'return order' link requires a hyperlink *****/
+
+.rwd .shipping-information .state-and-zip .zip.zip-only {
+  float:left;
+}
+.rwd .order-totals p .desc {
+  width:60%
+}
+.rwd .order-totals p.total .desc {
+  width:auto;
+}
+.rwd .cart .cart-header .checkout, .lt-ie9 .rwd .cart .cart-header .checkout, .rwd .pcf-footer .right-footer-block .button-block .checkout-extended, .lt-ie9 .rwd .pcf-footer .right-footer-block .button-block .checkout-extended {
+  white-space:normal;
+}
+@media screen and (min-width: 33.8125em) {
+  .rwd .cart .cart-header .checkout, .rwd .pcf-footer .right-footer-block .button-block .checkout-extended {
+    white-space:normal;
+  }
+}
+@media screen and (min-width: 48.0625em) {
+  .rwd .cart .cart-header .checkout, .rwd .pcf-footer .right-footer-block .button-block .checkout-extended {
+    white-space:normal;
+  }
+}
+.rwd .pcf-footer .offer-terms #dr_TermsOfSaleAcceptance .terms-of-service {
+  float:left;
+  width:92%;
+}
+.rtlanguage .rwd .pcf-footer .offer-terms #dr_TermsOfSaleAcceptance .terms-of-service {
+  float:right;
+}
+.rwd .order-overview .order-item .price, .live_chat {
+  white-space:nowrap;
+}
+.rwd .checkout-steps .step h3 {
+  float:none;
+}
+.rwd .complete-order-item .price-and-quantity .price {
+  white-space:nowrap;
+}
+.rwd .check-box .text-label.no-float {
+  float:none;
+  width: 100%;
+  padding-left: 1.5em;
+}
+.rwd .check-box .text-label.no-float span{
+  display: inline-block;
+  margin-left: -1.5em;
+  margin-top: 1em;
+}
+
+/*----------------------
+Private Stores related styles
+------------------------*/
+.privateStore #content {float:left;}
+.privateStore .social-media .pinterest {margin-right:0px;}
+.privateStore #dr_PurchasePlanLanding .resultContainer a.product-control img {float:left;}
+.privateStore #dr_PurchasePlanLanding .resultContainer h3.heading--small {clear:both; padding-top: 1em;}
+.privateStore #dr_PurchasePlanLanding .category-offer.grid-unit.cta-blue-height {height : 10em;}
+.privateStore #dr_PurchasePlanLanding #dr_totalSize{float: right;padding: 1em;}
+.privateStore #dr_PurchasePlanLanding #dr_totalSize select{min-width: inherit;}
+.privateStore header.slim-header .logo {margin-top: 0.1em !important;}
+/*.privateStore header.slim-header .header-links .link-container, .privateStore header.slim-header .header-links{width: auto;}*/
+.PurchasePlanRegistrationPage .generic-hero .overlay {max-width:100%;top:2.5em}
+.PurchasePlanRegistrationPage .generic-hero .loginsection {max-width:50%;}
+.PurchasePlanRegistrationPage .generic-hero .loginsection input{font-size:1em;}
+.PurchasePlanRegistrationPage .loginsection {background-color:#FFF;color:#000;padding:1em 2em;}
+.PurchasePlanRegistrationPage .checkeligibility {margin:0.5em 0;}
+.rwd .registrationForm-form input[type="text"]{
+  border:none;
+}
+.registrationForm-form .input-wrapper{
+  background-color: #fff;
+  border: 2px solid #d2d2d2;
+  box-sizing: border-box;      
+  margin: 0;
+  position: relative;
+  width:70%;
+  float:left;
+}
+.registrationForm-form .input-submit{float:left;margin-top:1em;}
+.rwd .registrationForm-form input[type="text"]::-moz-placeholder {
+  color:#000;
+}
+.registrationForm-form .input-wrapper {
+  margin-right: 15px;
+  margin-top:1em;
+}
+.registrationForm-form .registrationForm-submit {
+  -moz-appearance: none;
+  background: none repeat scroll 0 0 transparent;
+  border: 0 none;
+  cursor: pointer;
+  display: block;
+  height: 28px;
+  line-height: 1.5;
+  padding: 0;
+  position: absolute;
+  right: 3px;
+  top: -1px;
+}
+.PurchasePlanRegistrationPage p.returningShopper {  
+  padding-top:1em;
+  clear:both;
+}
+.PurchasePlanRegistrationPage p.returningShopper a{
+  text-decoration:underline;
+}
+.PurchasePlanRegistrationPage .row-padded-small {
+  padding:2em 0;
+}
+.PurchasePlanRegistrationPage .heading--medium {
+  margin:0;
+}
+.PurchasePlanRegistrationPage #overlayPopUpWrap .overlayPopInner{
+  border:none;  
+  text-align:left;
+  padding:1em 0 1em 2em;    
+  max-width:35%;
+  min-width:212px;
+  width:100%;
+  left:10%;
+  top:10%;
+}
+.PurchasePlanRegistrationPage #overlayPopUpWrap .overlayPopUpClose {
+  float:left;
+  width:100%;
+}
+.PurchasePlanRegistrationPage #overlayPopUpWrap .overlayPopUpClose a.closeButton {
+  color: #fff;
+  left: 9px;
+  top: -65px;
+  text-decoration:none;
+  opacity:0.7;
+  font-size:25px;
+  height:30px;
+}
+.PurchasePlanRegistrationPage #overlayPopUpWrap .overlayPopUpClose a.closeButton:hover {
+  opacity:1;
+}
+.PurchasePlanRegistrationPage .overlayPopInnerContentLeft {      
+  float:left;  
+  margin-top:2em;
+}
+.PurchasePlanRegistrationPage .overlayPopInnerContentRight {      
+  float:right;
+}
+.registrationForm-form-error {
+  display:inline-block;
+  width:100%;
+  background-color:#fff;
+  padding-left:1em;
+}
+.PurchasePlanRegistrationPage .mfp-close-btn-in .mfp-close {top:0;}
+.mstResponsive.EditProfilePage .returnps{
+  padding:1em 0;
+  margin-top:1.5em;
+  background-color:#f9f9f9;
+  text-align:center;
+  font-weight:bold;
+  font-size:1.2em;
+}
+.ps-name {display:none}
+.ps-logo {float:left; margin-top:0;height:20px;}
+.logo .ps-logo {margin-left:2em;margin-top:0;}
+@media screen and (min-width: 48.0625em) {
+  .ps-logo {float:right;margin-top:0.4em;}
+  .ps-name {float:left; font-size:0.875em;display:block;}
+  .PurchasePlanRegistrationPage #overlayPopUpWrap .overlayPopInner{left:35%;top:25%;}
+  .PurchasePlanRegistrationPage .overlayPopInnerContentLeft {width:60%;}
+}
+/*----------------------
+BBY flow related styles
+------------------------*/
+iframe#whitelabelIframe {
+  border: 0 none;
+  height: 600px;
+  overflow-y: hidden;  
+  width: 100%;
+}
+iframe#whitelabelSmallIframe {
+  border: 0 none;
+  height: 450px;
+  overflow-y: hidden;  
+  width: 100%;
+}
+.whitelabelIframeWrapper {
+  margin-bottom:50px;
+}
+/***** BEGIN: fix for 28008-MCT - MSMY - ms_MY - StateProvine drop down box has no data for shipping address during checkout *****/
+.rwd .shipping-information .state-and-zip .state.textbox{
+  min-width: 0;
+}
+/***** END: fix for 28008-MCT - MSMY - ms_MY - StateProvine drop down box has no data for shipping address during checkout *****/
+/***** BEGIN: fix for 28026-MSJP Address input fields sequences need to re-order *****/
+.rwd .shipping-information .state-and-zip.re-ordered .zip {
+  float:left;
+}
+.rwd .shipping-information .state-and-zip.re-ordered .state {
+  float:right;
+}
+.EditProfilePage .dr_formLine.re-ordered .city {
+  margin:1.0625em 0 0;
+}
+.EditProfilePage .dr_formLine.re-ordered .state {
+  margin:auto;
+}
+/***** END: fix for 28026-MSJP Address input fields sequences need to re-order *****/
+.rwd .pdp-cta.add-to-cart a.box.grey.overrideButton, .rwd .pdp-cta.add-to-cart a.box.grey.overrideButton:hover {
+  background: #CCC;
+  color: #1a1a1a;
+  cursor: text;
+}
+/***** BEGIN: fix for 28420-MSJP surface addon text styling issue *****/
+.rwd .new-pdp-hero .buy-box .variation-container .addon a{
+  float: none;
+  clear: both;
+}
+/***** END: fix for 28420-MSJP surface addon text styling issue *****/
+/***** BEGIN: fix for 28416-PCF EU Directive text string additions *****/
+.pcf-eu-directive {
+  clear: both;
+}
+/***** END: fix for 28416-PCF EU Directive text string additions *****/
+/***** BEGIN: fix for 28456-MSEEA Ãƒâ€šÃ‚Â¡V cs_CZ Ãƒâ€šÃ‚Â¡V the color should not be changed when user hover the OOS button *****/
+.rwd .buy-box input[type=submit].box.buyBtn_outOfStock:hover, .rwd .buy-box a.box.buyBtn_outOfStock:hover {
+  background:#CCC;
+  color:#1a1a1a;
+  cursor:text;
+  margin:0;
+}
+/***** END: fix for 28456-MSEEA Ãƒâ€šÃ‚Â¡V cs_CZ Ãƒâ€šÃ‚Â¡V the color should not be changed when user hover the OOS button *****/
+/***** BEGIN: fix for 28540: CCT - Hide Shipping Country Dropdown *****/
+.dr_shippingEstimatorSelect:first-child {
+    display: none;
+}
+/***** END: fix for 28540: CCT - Hide Shipping Country Dropdown *****/
+/***** BEGIN: fix for 28548-Add responsive support to ProductCrossSellPage Interstitial *****/
+@media screen and (max-width: 33.8125em) {
+  .rwd .ProductCrossSellPage .affix-wrapper .checkout-btn-wrapper .btn-extended{
+    width: 100%;
+  }
+}
+/***** END: fix for 28548-Add responsive support to ProductCrossSellPage Interstitial *****/
+/***** BEGIN: fix for 28335: Monaco - There is a redundant space above the Other Microsoft sites in the footer of all the PDPs *****/
+.footer-links .grid-container .grid-row .list-of-links .new-other-microsoft-sites{
+  margin-top:3em;
+  display: block;
+}
+/***** END: fix for 28335: Monaco - There is a redundant space above the Other Microsoft sites in the footer of all the PDPs *****/
+/***** BEGIN: fix for msjp list page for max-width of the container (short term) *****/
+@media screen and (min-width: 33.8125em) { 
+  body.dr_site_msjp .rwd .product-list .category-products-wrapper {
+    max-width: 42.875em;
+  }
+}
+@media screen and (min-width: 48.0625em) {
+  body.dr_site_msjp .rwd .product-list .category-products-wrapper {
+    max-width: 82.75em;
+  }
+}
+/***** END: fix for msjp list page for max-width of the container (short term) *****/
+/***** BEGIN: fix for 28546-MSJP CCT Screen size issue Update button and Subtotal *****/
+.mstResponsive.CallCenterToolShoppingCartPage{
+  min-width:0;
+}
+.mstResponsive.CallCenterToolShoppingCartPage.dr_site_msjp #dr_shipMethod{
+  width:100%;
+}
+/***** END: fix for 28546-MSJP CCT Screen size issue Update button and Subtotal *****/
+.rwd .new-pdp-hero .buy-box .variation-container ul.product-colors li.hide{
+  display:none;
+}
+/***** BEGIN: fix for 28741-making icon sprite *****/
+.icon-sprite {
+  background: url("//dri1.img.digitalrivercontent.net/Storefront/Site/mscommon/cm/images/common_images/rwd_store_sprite.png") no-repeat;
+}
+.header-logo {
+  background-position: 0px 0px;
+  width: 94px;
+  height: 20px;
+  display: inline-block;
+}
+.footer-fb-icon {
+  background-position: 0px -36px;
+  width: 23px;
+  height: 22px;
+  display: inline-block;
+}
+.footer-tw-icon {
+  background-position: 0px -58px;
+  width: 23px;
+  height: 22px;
+  display: inline-block;
+}
+.logo-desktop-sprite, .logo-sprite {
+  background-position: 0px -20px;
+  width: 85px;
+  height: 16px;
+}
+.mstResponsive .grid-container .legalwrapper .logo-sprite {
+  display: none;
+}
+.mstResponsive .legal .grid-container .legalwrapper .logo-desktop-sprite  {
+  display: inline-block;
+}
+.rwd .legal .grid-container .legalwrapper  .logo-sprite {
+  display: inline-block;
+  margin-top: 1.1538461538em;
+}
+.rwd .legal .grid-container .legalwrapper .logo-desktop-sprite {
+  display: none;
+}
+@media screen and (min-width: 48.0625em) {
+  .rwd .legal .grid-container .legalwrapper .logo-sprite {
+    display: none;
+  }
+  .rwd .legal .grid-container .legalwrapper .logo-desktop-sprite {
+    display: block;
+    float: right;
+    margin-bottom: 0.2307692308em;
+  }
+  .rtlanguage .rwd .legal .grid-container .legalwrapper .logo-desktop-sprite {
+    float: left;
+  }
+}
+.gallery-icon.icon-sprite {
+  background-position: 0px -80px;
+  width: 39px;
+  height: 38px;
+  display: inline-block;
+}
+.arrow-left.icon-sprite {
+  background-position: 0px -118px;
+  width: 25px;
+  height: 30px;
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  float: left;
+  margin: auto auto auto 0;
+}
+.arrow-right.icon-sprite {
+  background-position: 0px -148px;
+  width: 25px;
+  height: 30px;
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  float: right;
+  margin: auto 0 auto auto;
+}
+/***** END: fix for 28741-making icon sprite *****/
+.rwd .category-nav-wrapper .title { white-space: nowrap; }
+.rwd .pay-with-page .new-payment-method, .rwd .pay-with-page .delete-payment-method { float:left; }
+.rwd .pay-with-page .delete-payment-method { clear:left; }
+.rwd .buy-box .product-data-container .product-additional-info-main { display:inline-block; }
+/***** 28956-Add My microstores to navigation *****/
+.micrositelinks{background-color:#fff;padding:0.5em 1em;}
+.micrositelinks a{color:#000;border:2px solid #656565;display:block;margin:0.5em 0em;padding-left:0.5em}
+.micrositelinks a:hover{text-decoration:none;color:#000;}
+.mfp-content .micrositelinks  .mfp-close {top:0;}
+.micrositelinks h1 {text-align:center}
+.micrositelinks ul {max-height:190px;overflow-y:auto}
+.main.microsites a { cursor:pointer!important;}
+ol.reg-ol-text {list-style-type:decimal;padding-left:1em}
