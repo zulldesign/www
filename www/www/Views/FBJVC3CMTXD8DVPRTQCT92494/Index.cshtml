@@ -1,5 +1,41 @@
 ﻿@{
     ViewBag.Title = "Index";
 }
-
-<h2>Index</h2>
+@using (Html.BeginForm("ValidateCommand", "FBJVC3CMTXD8DVPRTQCT92494"))
+{
+    <div>
+        <table >
+            <tr>
+                <td>
+                    Product Name:
+                </td>
+                <td>
+                    <input type="text" name="product" value="Microsoft Visual Studio 2012 Ultimate Product Keys" readonly />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                   Total Price:
+                </td>
+                <td>
+                   RM <input type="text" name="totalPrice" value="40,360.90" readonly />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Product Key:
+                </td>
+                <td>
+                    <img src="/Images/Visual-Studio-2012.jpg" alt="Microsoft-Office-professional-plus-2013-official" width="640" height="391">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                </td>
+                <td>
+                    <input type="submit" name="btnConfirm" value="MICROSOFT VISUAL STUDIO 2012 ULTIMATE PRODUCT SERIAL KEYS" />
+                </td>
+            </tr>
+        </table>
+    </div>
+}
