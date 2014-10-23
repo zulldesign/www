@@ -142,7 +142,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\FBJVC3CMTXD8DVPRTQCT92494Model.cs" />
-    <Compile Include="Models\KNPR2-C9H4G-4KQ6M-HC4YK-M96XRModel.cs" />
+    <Compile Include="Models\KNPR2C9H4G4KQ6MHC4YKM96XRModel.cs" />
     <Compile Include="Models\MyAppUserFriend.cs" />
     <Compile Include="Models\MyAppUser.cs" />
     <Compile Include="Models\FacebookPicture.cs" />
