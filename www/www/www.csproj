@@ -214,6 +214,7 @@
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Images\btn_subscribeCC_LG.gif" />
+    <Content Include="Images\icon-download.gif" />
     <Content Include="Images\Microsoft-Office-professional-plus-2013-official.png" />
     <Content Include="Images\Visual-Studio-2012.jpg" />
     <Content Include="packages.config" />
