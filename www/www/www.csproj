@@ -133,6 +133,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\FBJVC3CMTXD8DVPRTQCT92494Controller.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\KNPR2C9H4G4KQ6MHC4YKM96XRController.cs" />
     <Compile Include="Controllers\PayPalController.cs" />
@@ -140,6 +141,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\FBJVC3CMTXD8DVPRTQCT92494Model.cs" />
     <Compile Include="Models\KNPR2-C9H4G-4KQ6M-HC4YK-M96XRModel.cs" />
     <Compile Include="Models\MyAppUserFriend.cs" />
     <Compile Include="Models\MyAppUser.cs" />
@@ -255,6 +257,11 @@
     <Content Include="Views\KNPR2C9H4G4KQ6MHC4YKM96XR\CancelFromPaypal.cshtml" />
     <Content Include="Views\KNPR2C9H4G4KQ6MHC4YKM96XR\RedirectFromPaypal.cshtml" />
     <Content Include="Views\KNPR2C9H4G4KQ6MHC4YKM96XR\ValidateCommand.cshtml" />
+    <Content Include="Views\FBJVC3CMTXD8DVPRTQCT92494\Index.cshtml" />
+    <Content Include="Views\FBJVC3CMTXD8DVPRTQCT92494\NotifyFromPaypal.cshtml" />
+    <Content Include="Views\FBJVC3CMTXD8DVPRTQCT92494\CancelFromPaypal.cshtml" />
+    <Content Include="Views\FBJVC3CMTXD8DVPRTQCT92494\RedirectFromPaypal.cshtml" />
+    <Content Include="Views\FBJVC3CMTXD8DVPRTQCT92494\ValidateCommand.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <PropertyGroup>
