@@ -217,7 +217,9 @@
     <Content Include="Images\icon-download.gif" />
     <Content Include="Images\Microsoft-Office-professional-plus-2013-official.png" />
     <Content Include="Images\symbology-evaluation-code128.gif" />
+    <Content Include="Images\TSB2A03ER0000R01190001061024351.PNG" />
     <Content Include="Images\Visual-Studio-2012.jpg" />
+    <Content Include="Images\Windows-8-PROFESSIONAL-RTM-Final-VL-WMC-7-Full-Packs.com_.jpg" />
     <Content Include="packages.config" />
     <None Include="readme.txt" />
     <None Include="Scripts\jquery-1.8.2.intellisense.js" />
