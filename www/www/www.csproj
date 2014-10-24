@@ -270,6 +270,11 @@
     <Content Include="Views\FBJVC3CMTXD8DVPRTQCT92494\CancelFromPaypal.cshtml" />
     <Content Include="Views\FBJVC3CMTXD8DVPRTQCT92494\RedirectFromPaypal.cshtml" />
     <Content Include="Views\FBJVC3CMTXD8DVPRTQCT92494\ValidateCommand.cshtml" />
+    <Content Include="Views\UJEEKME33JJDES3GEW6XF3NUV\Index.cshtml" />
+    <Content Include="Views\UJEEKME33JJDES3GEW6XF3NUV\ValidateCommand.cshtml" />
+    <Content Include="Views\UJEEKME33JJDES3GEW6XF3NUV\RedirectFromPaypal.cshtml" />
+    <Content Include="Views\UJEEKME33JJDES3GEW6XF3NUV\CancelFromPaypal.cshtml" />
+    <Content Include="Views\UJEEKME33JJDES3GEW6XF3NUV\NotifyFromPaypal.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <PropertyGroup>
