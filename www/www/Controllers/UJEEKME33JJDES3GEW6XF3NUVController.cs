@@ -10,14 +10,6 @@ namespace www.Controllers
 {
     public class UJEEKME33JJDES3GEW6XF3NUVController : Controller
     {
-        //
-        // GET: /UJEEKME33JJDES3GEW6XF3NUV/
-
-        public ActionResult Index()
-        {
-            return View();
-        }
-
         //[Authorize(Roles="Customers")]
         public ActionResult ValidateCommand(string product, string totalPrice)
         {
@@ -44,6 +36,6 @@ namespace www.Controllers
             return View();
         }
 
-        //<add key="business" value="admin@zulldesign.ml" />
+        //<add key="business" value="asrce2_1311074442_biz@gmail.com" />
     }
 }
