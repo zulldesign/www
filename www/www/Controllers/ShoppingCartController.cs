@@ -1,9 +1,9 @@
 ﻿using System.Linq;
 using System.Web.Mvc;
-using www.Models;
-using www.ViewModels;
+using MvcMusicStore.Models;
+using MvcMusicStore.ViewModels;
 
-namespace www.Controllers
+namespace MvcMusicStore.Controllers
 {
     public class ShoppingCartController : Controller
     {
