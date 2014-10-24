@@ -134,6 +134,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\FBJVC3CMTXD8DVPRTQCT92494Controller.cs" />
+    <Compile Include="Controllers\HalamanUtamaController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\KNPR2C9H4G4KQ6MHC4YKM96XRController.cs" />
     <Compile Include="Controllers\PayPalController.cs" />
