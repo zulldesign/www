@@ -1,8 +1,7 @@
 ﻿using System.Configuration;
-
 namespace www.Models
 {
-    public class UJEEKME33JJDES3GEW6XF3NUVModel : Controller
+    public class UJEEKME33JJDES3GEW6XF3NUVModel
     {
         public string cmd { get; set; }
         public string business { get; set; }
