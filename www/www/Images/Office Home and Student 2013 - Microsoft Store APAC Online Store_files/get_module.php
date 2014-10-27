@@ -1,1 +1,0 @@
-_vdk.setParameters({"result":0,"result_code":"LOCALIZATION_NOT_ALLOWED","data":null})
