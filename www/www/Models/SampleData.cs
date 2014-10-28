@@ -4,11 +4,11 @@ using System.Linq;
 using System.Web;
 using System.Data.Entity;
 
-namespace mvcstore.Models
+namespace www.Models
 {
-    public class SampleData : DropCreateDatabaseIfModelChanges<MusicStoreEntities>
+    public class SampleData : DropCreateDatabaseIfModelChanges<DefaultConnection>
     {
-        protected override void Seed(MusicStoreEntities context)
+        protected override void Seed(DefaultConnection context)
         {
             var genres = new List<Genre>
             {
