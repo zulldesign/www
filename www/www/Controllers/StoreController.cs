@@ -18,16 +18,20 @@ namespace www.Controllers
             return "Hello from Store.Index()";
         }
         //
-        // GET: /Store/Browse
-        public string Browse()
+        // GET: /Store/Browse?genre=Disco
+        public string Browse(string genre)
         {
-            return "Hello from Store.Browse()";
+            string message = HttpUtility.HtmlEncode("Store.Browse, Genre = "
+        + genre);
+
+            return message;
         }
         //
-        // GET: /Store/Details
-        public string Details()
+        // GET: /Store/Details/5
+        public ActionResult Details(int id)
         {
-            return "Hello from Store.Details()";
+            var album = new Album { Title = "Album " + id };
+            return View(album);
         }
 
     }
