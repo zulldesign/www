@@ -8,7 +8,8 @@ using www.Models;
 namespace www.Controllers
 {
     public class StoreController : Controller
-    {        
+    {
+        DefaultConnection storeDB = new DefaultConnection();
 
         //
         // GET: /Store/
