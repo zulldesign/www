@@ -19,12 +19,10 @@ namespace www.Controllers
         }
         //
         // GET: /Store/Browse?genre=Disco
-        public string Browse(string genre)
+        public ActionResult Browse(string genre)
         {
-            string message = HttpUtility.HtmlEncode("Store.Browse, Genre = "
-        + genre);
-
-            return message;
+            var genreModel = new Genre { Name = genre };
+            return View(genreModel);
         }
         //
         // GET: /Store/Details/5
