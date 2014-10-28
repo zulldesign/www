@@ -14,34 +14,21 @@ namespace www.Controllers
         //
         // GET: /Store/
 
-        public ActionResult Index()
+        public string Index()
         {
-            var genres = new List<Genre> 
-            { 
-                new Genre { Name = "Disco"},
-                new Genre { Name = "Jazz"},
-                new Genre { Name = "Rock"}
-            };
-
-            return View(genres);
+            return "Hello from Store.Index()";
         }
-
         //
-        // GET: /Store/Browse?genre=Disco
-
-        public ActionResult Browse(string genre)
+        // GET: /Store/Browse
+        public string Browse()
         {
-            var genreModel = new Genre { Name = genre };
-            return View(genreModel);
+            return "Hello from Store.Browse()";
         }
-
         //
-        // GET: /Store/Details/5
-
-        public ActionResult Details(int id)
+        // GET: /Store/Details
+        public string Details()
         {
-            var album = new Album { Title = "Album " + id };
-            return View(album);
+            return "Hello from Store.Details()";
         }
 
     }
