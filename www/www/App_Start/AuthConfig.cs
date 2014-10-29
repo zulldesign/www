@@ -22,9 +22,9 @@ namespace www
             //    consumerKey: "",
             //    consumerSecret: "");
 
-            //OAuthWebSecurity.RegisterFacebookClient(
-            //    appId: "",
-            //    appSecret: "");
+            OAuthWebSecurity.RegisterFacebookClient(
+                appId: "106251549399031",
+                appSecret: "662cddbebad53885ede584b7dec28f2a");
 
             //OAuthWebSecurity.RegisterGoogleClient();
         }
