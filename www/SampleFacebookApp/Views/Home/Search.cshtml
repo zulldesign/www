@@ -1,0 +1,11 @@
+﻿@using System.Collections.Generic
+@using SampleFacebookApp.Models
+@{
+  ViewBag.Title = "Search";
+}
+@model IList<MyAppUserFriendSimple>
+
+<article class="intro">
+  <h3>Search results</h3>
+</article>
+@Html.DisplayFor(m => Model, "Friends")
