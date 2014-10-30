@@ -1,5 +1,20 @@
-﻿@{
-    ViewBag.Title = "Login";
+﻿@{  
+  ViewBag.Title = "Login Using Facebook";  
+}  
+<h2>Login Using Facebook</h2>  
+<p>  
+  Please click login to authenticate with facebiik.  
+</p>   
+@Html.ValidationSummary(true, "Login was unsuccessful. Please correct the errors and try again.")  
+@using (Html.BeginForm())  
+{  
+  <div>  
+    <fieldset>  
+      <legend>Account Information</legend>  
+      <div style="margin: 10px auto;">  
+        @*<input type="image" src="/Content/images/loginwithfb.png" alt="Submit" />  *@
+        <input type="submit" value="Login to facebook" />
+      </div>  
+    </fieldset>  
+  </div>  
 }
-
-<h2>Login</h2>

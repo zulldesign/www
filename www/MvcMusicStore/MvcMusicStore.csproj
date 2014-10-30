@@ -148,6 +148,7 @@
     <Content Include="Content\images\Icon1.png" />
     <Content Include="Content\images\Icon2.png" />
     <Content Include="Content\images\Icon3.png" />
+    <Content Include="Content\images\loginwithfb.png" />
     <Content Include="Content\site.css" />
     <Content Include="Global.asax" />
     <Content Include="Content\fonts\glyphicons-halflings-regular.eot" />
