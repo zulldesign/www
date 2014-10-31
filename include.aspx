@@ -4,3 +4,5 @@ dim user as string = "admin"
 dim pass as string = "1234"
 dim uploadpath as string = server.MapPath("images\")
 </script>
+
+

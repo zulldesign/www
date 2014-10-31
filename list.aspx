@@ -28,16 +28,14 @@
 	if homepage = 1 then
 		  'set all to 0 '
 	  	  Dim strSQL As String = "UPDATE tblPages SET homepage = 0;"
-	  	  Dim iConn As New OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0;user id=admin;password=1234;"_
-                        & "data source=" & Server.MapPath("acm2000.mdb")
+	  	  Dim iConn As New OleDbConnection("PROVIDER=Microsoft.Jet.OLEDB.4.0;DATA SOURCE=" & dbsource)
     	  Dim iCmd As New OleDbCommand(strSQL, iconn)
        	  iConn.Open()
           iCmd.ExecuteReader()
           iConn.Close()
 		 'set homepage '
 	  	  Dim strSQL2 As String = "UPDATE tblPages SET homepage = 1 where ID = " & homepageid & ";"
-	  	  Dim iConn2 As New OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0;user id=admin;password=1234;"_
-                        & "data source=" & Server.MapPath("acm2000.mdb")
+	  	  Dim iConn2 As New OleDbConnection("PROVIDER=Microsoft.Jet.OLEDB.4.0;DATA SOURCE=" & dbsource)
     	  Dim iCmd2 As New OleDbCommand(strSQL2, iconn2)
        	  iConn2.Open()
           iCmd2.ExecuteReader()
@@ -48,8 +46,7 @@
 	dim newpage as integer = request.querystring("newpage")
 	if newpage = 1 then
 	  	  Dim strSQL As String = "INSERT INTO tblPages(pagename, pagedata, homepage) VALUES('*new page description*', '<html>" & vbcrlf & "<head>" & vbcrlf & "<title>Untitled</title>" & vbcrlf & vbcrlf & "</head>" & vbcrlf & "<body>" & vbcrlf & vbcrlf & vbcrlf & "</body>" & vbcrlf & "</html>', 0);"
-	  	  Dim iConn As New OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0;user id=admin;password=1234;"_
-                        & "data source=" & Server.MapPath("acm2000.mdb")
+	  	  Dim iConn As New OleDbConnection("PROVIDER=Microsoft.Jet.OLEDB.4.0;DATA SOURCE=" & dbsource)
     	  Dim iCmd As New OleDbCommand(strSQL, iconn)
        	  iConn.Open()
           iCmd.ExecuteReader()
@@ -60,8 +57,7 @@
 	if deleteid > 0 then
 	      Dim queryvalue = Request.QueryString("deleteid")
 	  	  Dim strSQL As String = "DELETE FROM tblPages WHERE ID = " & queryvalue & ";"
-	  	  Dim dconn As New OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0;user id=admin;password=1234;"_
-                        & "data source=" & Server.MapPath("acm2000.mdb")
+	  	  Dim dconn As New OleDbConnection("PROVIDER=Microsoft.Jet.OLEDB.4.0;DATA SOURCE=" & dbsource)
     	  Dim iCmd As New OleDbCommand(strSQL, dconn)
        	  dconn.Open()
           iCmd.ExecuteReader()
@@ -69,8 +65,7 @@
 	end if
 
         Dim query As String = "Select pagename,id,homepage FROM tblpages order by pagename;"
-        Dim myConn As New OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0;user id=admin;password=1234;"_
-                        & "data source=" & Server.MapPath("acm2000.mdb")
+        Dim myConn As New OleDbConnection("PROVIDER=Microsoft.Jet.OLEDB.4.0;DATA SOURCE=" & dbsource & "")
         Dim Cmd as New OLEDBCommand(query,myConn)
         MyConn.Open()
         dim dbread
