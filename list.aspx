@@ -65,7 +65,7 @@
 	end if
 
         Dim query As String = "Select pagename,id,homepage FROM tblpages order by pagename;"
-        Dim myConn As New OleDbConnection("PROVIDER=Microsoft.Jet.OLEDB.4.0;DATA SOURCE=" & dbsource & "acm2000.mdb")
+        Dim myConn As New OleDbConnection("PROVIDER=Microsoft.Jet.OLEDB.4.0;DATA SOURCE=" & dbsource & "Server.MapPath("acm2000.mdb")")
         Dim Cmd as New OLEDBCommand(query,myConn)
         MyConn.Open()
         dim dbread
