@@ -200,6 +200,9 @@
     <Content Include="Scripts\jcarousellite_1.0.1.js" />
     <Content Include="Scripts\jquery-2.0.2.js" />
     <Content Include="Scripts\jquery-2.0.2.min.js" />
+    <Content Include="SlideImages\carousel1.jpg" />
+    <Content Include="SlideImages\carousel2.jpg" />
+    <Content Include="SlideImages\carousel3.jpg" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>

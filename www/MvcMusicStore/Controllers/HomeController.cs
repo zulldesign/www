@@ -13,6 +13,10 @@ namespace MvcMusicStore.Controllers
 
         public ActionResult Index()
         {
+            var imageList = new
+         System.IO.DirectoryInfo(Server.MapPath("/SlideImages/")).GetFiles();
+            ViewBag.ImageList = imageList;
+
             return View();
         }
 

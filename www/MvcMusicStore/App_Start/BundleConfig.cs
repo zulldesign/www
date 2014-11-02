@@ -31,6 +31,11 @@ namespace MvcMusicStore
                             .Include("~/Content/carousel.css")
                             .Include("~/Content/site.css"));
 
+            bundles.Add(new ScriptBundle("~/js")
+                            .Include("~/Scripts/jquery-{version}.js")
+                            .Include("~/Scripts/jquery-ui-{version}.js")
+                            .Include("~/Scripts/bootstrap.js"));
+
             bundles.Add(new StyleBundle("~/Content/css").Include("~/Content/site.css"));
 
             bundles.Add(new StyleBundle("~/Content/themes/base/css").Include(
