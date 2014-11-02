@@ -1,0 +1,52 @@
+﻿@model List<SampleFacebookApp.Models.RecommendedItem>
+
+@{
+  ViewBag.Title = "Recommend Presents";
+  string friendName = ViewBag.FriendName;
+}
+
+<article class="intro">
+  <h3>Recommended birthday presents for @friendName</h3>
+</article>
+@if (Model.Count > 0)
+{
+  <div class="container-fluid">
+    @foreach (var present in Model)
+    {
+      <div class="row-fluid">
+        <div class="span3">
+          @if (@present.Product.Images != null && @present.Product.Images.Length > 0)
+          {
+            <img src="@present.Product.Images[0].link" />
+          }
+          else
+          {
+            <p>Picture not available</p>
+          }
+        </div>
+        <div class="span9">
+          <dl>
+            <dt>@present.Product.Title</dt>
+            <dd>@present.Product.Description</dd>
+            <dt>Price</dt>
+            @if (@present.Product.Inventories != null && @present.Product.Inventories.Length > 0)
+            {
+              <dd class="price">@present.Product.Inventories[0].Price</dd>
+            }
+          </dl>
+          <a class="btn btn-success" target="_blank" href="@present.Product.Link">
+            <i class="icon-shopping-cart"></i>
+            Buy it
+          </a>
+          <p>
+            <small>Recommended because @friendName @present.Reason</small>
+          </p>
+        </div>
+      </div>
+    }
+  </div>
+}
+else
+{
+  <p>We don't know what @friendName likes. No recommendation can be given at the moment.</p>
+}

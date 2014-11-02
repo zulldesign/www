@@ -1,0 +1,23 @@
+﻿@using SampleFacebookApp.Models
+@using Microsoft.AspNet.Mvc.Facebook.Models
+@using Microsoft.AspNet.Mvc.Facebook
+@model MyAppUser
+@{
+  ViewBag.Title = "Home Page";
+}
+
+<article class="intro">
+  <span id="profilePicture">
+    @if (Model.ProfilePicture != null && Model.ProfilePicture.Data != null)
+    {
+      <img class="img-polaroid" src="@Model.ProfilePicture.Data.Url" />
+    }
+  </span>
+  <h3>Welcome @Model.Name</h3>
+  <label>Email: @Model.Email</label>
+</article>
+
+<article id="content">
+  <h4>Friends with upcoming birthdays</h4>
+  @Html.DisplayFor(m => m.Friends.Data, "Friends")
+</article>
