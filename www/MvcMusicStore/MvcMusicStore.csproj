@@ -197,6 +197,7 @@
     <Content Include="Scripts\BtJs\transition.js" />
     <Content Include="Scripts\BtJs\uglify.js" />
     <None Include="Scripts\jquery-2.0.2.intellisense.js" />
+    <Content Include="Scripts\jcarousellite_1.0.1.js" />
     <Content Include="Scripts\jquery-2.0.2.js" />
     <Content Include="Scripts\jquery-2.0.2.min.js" />
     <Content Include="Web.config">
