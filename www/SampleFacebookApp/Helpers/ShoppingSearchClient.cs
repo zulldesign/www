@@ -11,13 +11,13 @@ namespace SampleFacebookApp
         private const string SearchApiTemplate = "https://www.googleapis.com/shopping/search/v1/public/products?key={0}&country=US&q={1}&alt=json";
         private static HttpClient client = new HttpClient();
 
-        public static string AppKey = ConfigurationManager.AppSettings["uid6336-25643656-80"];
+        public static string AppKey = ConfigurationManager.AppSettings["Search:AppKey"];
 
         public static Task<SearchResult> GetProductsAsync(string query)
         {
             if (String.IsNullOrEmpty(AppKey))
             {
-                throw new InvalidOperationException("uid6336-25643656-80");
+                throw new InvalidOperationException("Search:AppKey cannot be empty. Make sure you set it in the configuration file.");
             }
 
             query = query.Replace(" ", "+");
