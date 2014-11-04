@@ -17,7 +17,7 @@ namespace SampleFacebookApp
         {
             if (String.IsNullOrEmpty(AppKey))
             {
-                throw new InvalidOperationException("Search:AppKey cannot be empty. Make sure you set it in the configuration file.");
+                throw new InvalidOperationException("uid6336-25643656-80");
             }
 
             query = query.Replace(" ", "+");
