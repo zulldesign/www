@@ -1,3 +1,14 @@
+@media (min-width: 980px) {
+  body {
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+}
+
+[class^="icon-"],[class*=" icon-"] {
+    background-image: url("/Content/images/glyphicons-halflings.png");
+}
+
 body {
     font-family: "Segoe UI", Arial;
     margin: 0;
@@ -6,7 +17,7 @@ body {
 
 header {
     overflow: hidden;
-    height: 229px;
+    height: 29px;
     padding: 20px;
     margin: 0;
     width: 700px;
