@@ -147,6 +147,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Helpers\BirthdayCalculator.cs" />
+    <Compile Include="Helpers\HtmlHelpers.cs" />
     <Compile Include="Helpers\RecommendationEngine.cs" />
     <Compile Include="Helpers\ShoppingSearchClient.cs" />
     <Compile Include="Models\MyAppUser.cs" />
@@ -246,9 +247,36 @@
     <None Include="Scripts\jquery-1.8.2.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\BtJs\affix.js" />
+    <Content Include="Scripts\BtJs\alert.js" />
+    <Content Include="Scripts\BtJs\application.js" />
+    <Content Include="Scripts\BtJs\button.js" />
+    <Content Include="Scripts\BtJs\carousel.js" />
+    <Content Include="Scripts\BtJs\collapse.js" />
+    <Content Include="Scripts\BtJs\customizer.js" />
+    <Content Include="Scripts\BtJs\dropdown.js" />
+    <Content Include="Scripts\BtJs\filesaver.js" />
+    <Content Include="Scripts\BtJs\holder.js" />
+    <Content Include="Scripts\BtJs\html5shiv.js" />
+    <Content Include="Scripts\BtJs\jquery.js" />
+    <Content Include="Scripts\BtJs\jszip.js" />
+    <Content Include="Scripts\BtJs\less.js" />
+    <Content Include="Scripts\BtJs\modal.js" />
+    <Content Include="Scripts\BtJs\popover.js" />
+    <Content Include="Scripts\BtJs\raw-files.js" />
+    <Content Include="Scripts\BtJs\respond.min.js" />
+    <Content Include="Scripts\BtJs\scrollspy.js" />
+    <Content Include="Scripts\BtJs\tab.js" />
+    <Content Include="Scripts\BtJs\tooltip.js" />
+    <Content Include="Scripts\BtJs\transition.js" />
+    <Content Include="Scripts\BtJs\uglify.js" />
     <Content Include="Scripts\jquery-1.8.2.js" />
     <Content Include="Scripts\jquery-1.8.2.min.js" />
+    <Content Include="Scripts\jquery-2.0.2.min.map" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <None Include="Scripts\jquery-2.0.2.intellisense.js" />
+    <Content Include="Scripts\jquery-2.0.2.js" />
+    <Content Include="Scripts\jquery-2.0.2.min.js" />
     <Content Include="Scripts\jquery-ui-1.9.2.js" />
     <Content Include="Scripts\jquery-ui-1.9.2.min.js" />
     <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
