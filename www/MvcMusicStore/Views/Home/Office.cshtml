@@ -23,6 +23,39 @@
             ref.parentNode.insertBefore(js, ref);
         }(document));
 </script>
+@{
+    ViewBag.Title = "Home Page";
+}
+@using (Html.BeginForm("ValidateCommand", "PayPal"))
+{
+    <div>
+        <table >
+            <tr>
+                <td>
+                    Product Name:
+                </td>
+                <td>
+                    <input type="text" name="product" value="Visual Studio 2013" readonly />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                   Total Price:
+                </td>
+                <td>
+                    RM<input type="text" name="totalPrice" value="20.00" readonly />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                </td>
+                <td>
+                    <input type="submit" name="btnConfirm" value="Check Out with Paypal" />
+                </td>
+            </tr>
+        </table>
+    </div>
+}
 <article class="intro">
     <span id="profilePicture">
         @if (Model.ProfilePicture != null && Model.ProfilePicture.Data != null)
