@@ -56,6 +56,10 @@
         </table>
     </div>
 }
+@section Carousel
+{
+    @Html.Partial("_Carousel")
+}
 <article class="intro">
     <span id="profilePicture">
         @if (Model.ProfilePicture != null && Model.ProfilePicture.Data != null)
