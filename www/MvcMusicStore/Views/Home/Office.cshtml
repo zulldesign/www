@@ -4,58 +4,6 @@
 @{
     ViewBag.Title = "Office";
 }
-<script>
-        window.fbAsyncInit = function () {
-            FB.init({
-                appId: '@Microsoft.AspNet.Mvc.Facebook.GlobalFacebookConfiguration.Configuration.AppId', // App ID
-                status: true, // check login status
-                cookie: true, // enable cookies to allow the server to access the session
-                xfbml: true  // parse XFBML
-            });
-        };
-
-        // Load the SDK Asynchronously
-        (function (d) {
-            var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];
-            if (d.getElementById(id)) { return; }
-            js = d.createElement('script'); js.id = id; js.async = true;
-            js.src = "//connect.facebook.net/en_US/all.js";
-            ref.parentNode.insertBefore(js, ref);
-        }(document));
-</script>
-@{
-    ViewBag.Title = "Home Page";
-}
-@using (Html.BeginForm("ValidateCommand", "PayPal"))
-{
-    <div>
-        <table >
-            <tr>
-                <td>
-                    Product Name:
-                </td>
-                <td>
-                    <input type="text" name="product" value="Visual Studio 2013" readonly />
-                </td>
-            </tr>
-            <tr>
-                <td>
-                   Total Price:
-                </td>
-                <td>
-                    RM<input type="text" name="totalPrice" value="20.00" readonly />
-                </td>
-            </tr>
-            <tr>
-                <td>
-                </td>
-                <td>
-                    <input type="submit" name="btnConfirm" value="Check Out with Paypal" />
-                </td>
-            </tr>
-        </table>
-    </div>
-}
 @section Carousel
 {
     @Html.Partial("_Carousel")
