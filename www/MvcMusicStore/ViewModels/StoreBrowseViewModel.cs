@@ -18,18 +18,14 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-using System.Web.Mvc;
+using MvcMusicStore.Models;
 
-namespace MvcMusicStore.Controllers
+namespace MvcMusicStore.ViewModels
 {
-    public class HomeController : Controller
+    public class StoreBrowseViewModel
     {
-        //
-        // GET: /Home/
+        public Genre Genre { get; set; }
 
-        public ActionResult Index()
-        {
-            return this.View();
-        }
+        public List<Album> Albums { get; set; }
     }
 }
