@@ -12,16 +12,16 @@ namespace MvcMusicStore.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class Album
+    public partial class Artist
     {
-        public int AlbumId { get; set; }
-        public int GenreId { get; set; }
-        public int ArtistId { get; set; }
-        public string Title { get; set; }
-        public decimal Price { get; set; }
-        public string AlbumArtUrl { get; set; }
+        public Artist()
+        {
+            this.Albums = new HashSet<Album>();
+        }
     
-        public virtual Artist Artist { get; set; }
-        public virtual Genre Genre { get; set; }
+        public int ArtistId { get; set; }
+        public string Name { get; set; }
+    
+        public virtual ICollection<Album> Albums { get; set; }
     }
 }
