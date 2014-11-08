@@ -14,18 +14,30 @@
 // places, or events is intended or should be inferred.
 // ----------------------------------------------------------------------------------
 
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Data.Entity;
+using System.Data.Entity.Infrastructure;
+
 namespace MvcMusicStore.Models
 {
-    using System.Collections.Generic;
-
-    public class Genre
+    public class MusicStoreEntities : DbContext
     {
-        public int GenreId { get; set; }
+        public DbSet<Genre> Genres { get; set; }
 
-        public string Name { get; set; }
+        public DbSet<Album> Albums { get; set; }
 
-        public string Description { get; set; }
+        public DbSet<Artist> Artists { get; set; }
 
-        public List<Album> Albums { get; set; }
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Genre>().ToTable("Genres");
+            modelBuilder.Entity<Album>().ToTable("Albums");
+            modelBuilder.Entity<Artist>().ToTable("Artists");
+
+            base.OnModelCreating(modelBuilder);
+        }
     }
 }

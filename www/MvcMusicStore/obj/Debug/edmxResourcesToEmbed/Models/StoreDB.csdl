@@ -1,7 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="MvcMusicStore.Model" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
   <EntityContainer Name="MusicStoreEntities" p1:LazyLoadingEnabled="true">
-    <EntitySet Name="C__MigrationHistory" EntityType="MvcMusicStore.Model.C__MigrationHistory" />
     <EntitySet Name="Albums" EntityType="MvcMusicStore.Model.Album" />
     <EntitySet Name="Artists" EntityType="MvcMusicStore.Model.Artist" />
     <EntitySet Name="Genres" EntityType="MvcMusicStore.Model.Genre" />
@@ -14,14 +13,6 @@
       <End Role="Albums" EntitySet="Albums" />
     </AssociationSet>
   </EntityContainer>
-  <EntityType Name="C__MigrationHistory">
-    <Key>
-      <PropertyRef Name="MigrationId" />
-    </Key>
-    <Property Name="MigrationId" Type="String" Nullable="false" MaxLength="255" Unicode="true" FixedLength="false" />
-    <Property Name="Model" Type="Binary" Nullable="false" MaxLength="Max" FixedLength="false" />
-    <Property Name="ProductVersion" Type="String" Nullable="false" MaxLength="32" Unicode="true" FixedLength="false" />
-  </EntityType>
   <EntityType Name="Album">
     <Key>
       <PropertyRef Name="AlbumId" />
@@ -29,9 +20,9 @@
     <Property Name="AlbumId" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
     <Property Name="GenreId" Type="Int32" Nullable="false" />
     <Property Name="ArtistId" Type="Int32" Nullable="false" />
-    <Property Name="Title" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Title" Type="String" Nullable="false" MaxLength="160" Unicode="true" FixedLength="false" />
     <Property Name="Price" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
-    <Property Name="AlbumArtUrl" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="AlbumArtUrl" Type="String" MaxLength="1024" Unicode="true" FixedLength="false" />
     <NavigationProperty Name="Artist" Relationship="MvcMusicStore.Model.FK_dbo_Albums_dbo_Artists_ArtistId" FromRole="Albums" ToRole="Artists" />
     <NavigationProperty Name="Genre" Relationship="MvcMusicStore.Model.FK_dbo_Albums_dbo_Genres_GenreId" FromRole="Albums" ToRole="Genres" />
   </EntityType>
