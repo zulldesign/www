@@ -12,16 +12,10 @@ namespace MvcMusicStore.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class Album
+    public partial class C__MigrationHistory
     {
-        public int AlbumId { get; set; }
-        public int GenreId { get; set; }
-        public int ArtistId { get; set; }
-        public string Title { get; set; }
-        public decimal Price { get; set; }
-        public string AlbumArtUrl { get; set; }
-    
-        public virtual Artist Artist { get; set; }
-        public virtual Genre Genre { get; set; }
+        public string MigrationId { get; set; }
+        public byte[] Model { get; set; }
+        public string ProductVersion { get; set; }
     }
 }
