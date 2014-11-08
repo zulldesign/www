@@ -12,17 +12,9 @@ namespace MvcMusicStore.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class Genre
+    public partial class EdmMetadata
     {
-        public Genre()
-        {
-            this.Albums = new HashSet<Album>();
-        }
-    
-        public int GenreId { get; set; }
-        public string Name { get; set; }
-        public string Description { get; set; }
-    
-        public virtual ICollection<Album> Albums { get; set; }
+        public int Id { get; set; }
+        public string ModelHash { get; set; }
     }
 }

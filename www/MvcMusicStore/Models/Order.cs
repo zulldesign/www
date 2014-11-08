@@ -12,24 +12,27 @@ namespace MvcMusicStore.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class Album
+    public partial class Order
     {
-        public Album()
+        public Order()
         {
-            this.Carts = new HashSet<Cart>();
             this.OrderDetails = new HashSet<OrderDetail>();
         }
     
-        public int AlbumId { get; set; }
-        public int GenreId { get; set; }
-        public int ArtistId { get; set; }
-        public string Title { get; set; }
-        public decimal Price { get; set; }
-        public string AlbumArtUrl { get; set; }
+        public int OrderId { get; set; }
+        public System.DateTime OrderDate { get; set; }
+        public string Username { get; set; }
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public string Address { get; set; }
+        public string City { get; set; }
+        public string State { get; set; }
+        public string PostalCode { get; set; }
+        public string Country { get; set; }
+        public string Phone { get; set; }
+        public string Email { get; set; }
+        public decimal Total { get; set; }
     
-        public virtual Artist Artist { get; set; }
-        public virtual ICollection<Cart> Carts { get; set; }
-        public virtual Genre Genre { get; set; }
         public virtual ICollection<OrderDetail> OrderDetails { get; set; }
     }
 }
