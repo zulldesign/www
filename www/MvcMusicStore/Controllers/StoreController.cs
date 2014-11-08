@@ -14,67 +14,63 @@
 // places, or events is intended or should be inferred.
 // ----------------------------------------------------------------------------------
 
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
-using MvcMusicStore.ViewModels;
-using MvcMusicStore.Models;
-
 namespace MvcMusicStore.Controllers
 {
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Web.Mvc;
+    using MvcMusicStore.Models;
+
     public class StoreController : Controller
     {
-        //
+        private MusicStoreEntities storeDB = new MusicStoreEntities();
+
         // GET: /Store/
+        public ActionResult Details(int id)
+        {
+            var album = new Album
+            {
+                Title = "Sample Album",
+                Genre = new Genre { Name = "Sample Genre" },
+                Artist = new Artist { Name = "Sample Artist" },
+                AlbumArtUrl = "~/Content/Images/placeholder.gif",
+                Price = 9.99M
+            };
+
+            if (album == null)
+            {
+                return this.HttpNotFound();
+            }
+
+            return this.View(album);
+        }
+
+        public ActionResult Browse(string genre)
+        {
+            // Retrieve Genre and its Associated Albums from database
+            var genreModel = new Genre
+            {
+                Name = genre,
+                Albums = this.storeDB.Albums.ToList()
+            };
+
+            return this.View(genreModel);
+        }
 
         public ActionResult Index()
         {
-            // Create a list of genres
-            var genres = new List<string> { "Rock", "Jazz", "Country", "Pop", "Disco" };
+            var genres = this.storeDB.Genres;
 
-            // Create our view model
-            var viewModel = new StoreIndexViewModel
-            {
-                NumberOfGenres = genres.Count(),
-                Genres = genres
-            };
-
-            ViewBag.Starred = new List<string> { "Rock", "Jazz" };
-
-            return this.View(viewModel);
+            return this.View(genres);
         }
 
-        // GET: /Store/Browse?genre=Disco
-        public ActionResult Browse(string genre)
+        // GET: /Store/GenreMenu
+        [ChildActionOnly]
+        public ActionResult GenreMenu()
         {
-            var genreModel = new Genre()
-            {
-                Name = genre
-            };
+            var genres = this.storeDB.Genres.Take(9).ToList(); 
 
-            var albums = new List<Album>()
-            {
-                new Album() { Title = genre + " Album 1" },
-                new Album() { Title = genre + " Album 2" }
-            };
-
-            var viewModel = new StoreBrowseViewModel()
-            {
-                Genre = genreModel,
-                Albums = albums
-            };
-
-            return this.View(viewModel);
-        }
-
-        // GET: /Store/Details/5
-        public ActionResult Details(int id)
-        {
-            var album = new Album { Title = "Sample Album" };
-
-            return this.View(album);
+            return this.PartialView(genres);
         }
     }
 }
