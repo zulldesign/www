@@ -12,16 +12,14 @@ namespace MvcMusicStore.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class Artist
+    public partial class Cart
     {
-        public Artist()
-        {
-            this.Albums = new HashSet<Album>();
-        }
+        public int RecordId { get; set; }
+        public string CartId { get; set; }
+        public int AlbumId { get; set; }
+        public int Count { get; set; }
+        public System.DateTime DateCreated { get; set; }
     
-        public int ArtistId { get; set; }
-        public string Name { get; set; }
-    
-        public virtual ICollection<Album> Albums { get; set; }
+        public virtual Album Album { get; set; }
     }
 }
