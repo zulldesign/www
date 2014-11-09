@@ -111,7 +111,6 @@
     <Compile Include="Models\Cart.cs">
       <DependentUpon>StoreDB.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\DefaultConnection.cs" />
     <Compile Include="Models\Genre.cs">
       <DependentUpon>StoreDB.tt</DependentUpon>
     </Compile>
