@@ -41,11 +41,16 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Data.Entity" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -135,14 +140,66 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\HelloController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\StoreController.cs" />
     <Compile Include="Controllers\UserRealtimeUpdateController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Album.cs">
+      <DependentUpon>StoreDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Application.cs">
+      <DependentUpon>StoreDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Artist.cs">
+      <DependentUpon>StoreDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Cart.cs">
+      <DependentUpon>StoreDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Genre.cs">
+      <DependentUpon>StoreDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Membership.cs">
+      <DependentUpon>StoreDB.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\MyAppUserFriend.cs" />
     <Compile Include="Models\MyAppUser.cs" />
     <Compile Include="Models\FacebookPicture.cs" />
     <Compile Include="Models\FacebookPhoto.cs" />
+    <Compile Include="Models\Order.cs">
+      <DependentUpon>StoreDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\OrderDetail.cs">
+      <DependentUpon>StoreDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Profile.cs">
+      <DependentUpon>StoreDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Role.cs">
+      <DependentUpon>StoreDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\StoreDB.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>StoreDB.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\StoreDB.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>StoreDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\StoreDB.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>StoreDB.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\User.cs">
+      <DependentUpon>StoreDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\UsersInRole.cs">
+      <DependentUpon>StoreDB.tt</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -205,6 +262,23 @@
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="packages.config" />
+    <EntityDeploy Include="Models\StoreDB.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>StoreDB.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\StoreDB.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>StoreDB.edmx</DependentUpon>
+      <LastGenOutput>StoreDB.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\StoreDB.edmx.diagram">
+      <DependentUpon>StoreDB.edmx</DependentUpon>
+    </Content>
+    <Content Include="Models\StoreDB.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>StoreDB.edmx</DependentUpon>
+      <LastGenOutput>StoreDB.cs</LastGenOutput>
+    </Content>
     <None Include="readme.txt" />
     <None Include="Scripts\jquery-1.8.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.8.2.js" />
@@ -239,9 +313,16 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Web.config" />
     <Content Include="Views\Hello\Index.cshtml" />
+    <Content Include="Views\Store\Browse.cshtml" />
+    <Content Include="Views\Store\Details.cshtml" />
+    <Content Include="Views\Store\GenreMenu.cshtml" />
+    <Content Include="Views\Store\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
