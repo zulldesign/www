@@ -35,30 +35,7 @@ namespace MvcMusicStore.Controllers
         {
             return View();
         }
-         
-        //<add key="business" value="asrce2_1311074442_biz@gmail.com" />
-        public ActionResult Index()
-        {
-            return View();
-        }
 
-        public ActionResult Software_Developer_Kit_untuk_ASPNet()
-        {
-            return View();
-        }
-
-        public ActionResult Flash_Filem_dalam_Visual_Studio()
-        {
-            return View();
-        }
-
-        public ActionResult Blog(string name, int numTimes = 1)
-        {
-            ViewBag.Message = " Blog " + name;
-            ViewBag.NumTimes = numTimes;
-
-            return View();
-        }        
-
+         //<add key="business" value="admin@zulldesign.ml" />
     }
 }
