@@ -9,6 +9,7 @@ using www.Models;
 
 namespace www.Controllers
 {
+    [Authorize(Roles = "Administrator")]
     public class MoviesController : Controller
     {
         private DefaultConnection db = new DefaultConnection();
