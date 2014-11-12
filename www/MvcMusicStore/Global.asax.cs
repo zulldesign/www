@@ -6,6 +6,7 @@ using System.Web.Http;
 using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
+using Microsoft.AspNet.Mvc.Facebook;
 
 namespace MvcMusicStore
 {
@@ -18,11 +19,11 @@ namespace MvcMusicStore
         {
             AreaRegistration.RegisterAllAreas();
 
+            FacebookConfig.Register(GlobalFacebookConfiguration.Configuration);
             WebApiConfig.Register(GlobalConfiguration.Configuration);
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
-            AuthConfig.RegisterAuth();
         }
     }
 }
