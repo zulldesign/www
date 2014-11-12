@@ -1,0 +1,249 @@
+C:\Users\User\Documents\Visual Studio 2012\Projects\www\www\bin\www.dll
+C:\Users\User\Documents\Visual Studio 2012\Projects\www\www\bin\www.pdb
+C:\Users\User\Documents\Visual Studio 2012\Projects\www\www\bin\Antlr3.Runtime.dll
+C:\Users\User\Documents\Visual Studio 2012\Projects\www\www\bin\DotNetOpenAuth.AspNet.dll
+C:\Users\User\Documents\Visual Studio 2012\Projects\www\www\bin\DotNetOpenAuth.Core.dll
+C:\Users\User\Documents\Visual Studio 2012\Projects\www\www\bin\DotNetOpenAuth.OAuth.Consumer.dll
+C:\Users\User\Documents\Visual Studio 2012\Projects\www\www\bin\DotNetOpenAuth.OAuth.dll
+C:\Users\User\Documents\Visual Studio 2012\Projects\www\www\bin\DotNetOpenAuth.OpenId.dll
+C:\Users\User\Documents\Visual Studio 2012\Projects\www\www\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+C:\Users\User\Documents\Visual Studio 2012\Projects\www\www\bin\EntityFramework.dll
+C:\Users\User\Documents\Visual Studio 2012\Projects\www\www\bin\Microsoft.Data.Edm.dll
+C:\Users\User\Documents\Visual Studio 2012\Projects\www\www\bin\Microsoft.Data.OData.dll
+C:\Users\User\Documents\Visual Studio 2012\Projects\www\www\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\User\Documents\Visual Studio 2012\Projects\www\www\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+C:\Users\User\Documents\Visual Studio 2012\Projects\www\www\bin\Microsoft.Web.WebPages.OAuth.dll
+C:\Users\User\Documents\Visual Studio 2012\Projects\www\www\bin\Newtonsoft.Json.dll
+C:\Users\User\Documents\Visual Studio 2012\Projects\www\www\bin\System.Net.Http.Formatting.dll
+C:\Users\User\Documents\Visual Studio 2012\Projects\www\www\bin\System.Spatial.dll
+C:\Users\User\Documents\Visual Studio 2012\Projects\www\www\bin\System.Web.Helpers.dll
+C:\Users\User\Documents\Visual Studio 2012\Projects\www\www\bin\System.Web.Http.dll
+C:\Users\User\Documents\Visual Studio 2012\Projects\www\www\bin\System.Web.Http.OData.dll
+C:\Users\User\Documents\Visual Studio 2012\Projects\www\www\bin\System.Web.Http.WebHost.dll
+C:\Users\User\Documents\Visual Studio 2012\Projects\www\www\bin\System.Web.Mvc.dll
+C:\Users\User\Documents\Visual Studio 2012\Projects\www\www\bin\System.Web.Optimization.dll
+C:\Users\User\Documents\Visual Studio 2012\Projects\www\www\bin\System.Web.Razor.dll
+C:\Users\User\Documents\Visual Studio 2012\Projects\www\www\bin\System.Web.WebPages.Deployment.dll
+C:\Users\User\Documents\Visual Studio 2012\Projects\www\www\bin\System.Web.WebPages.dll
+C:\Users\User\Documents\Visual Studio 2012\Projects\www\www\bin\System.Web.WebPages.Razor.dll
+C:\Users\User\Documents\Visual Studio 2012\Projects\www\www\bin\WebGrease.dll
+C:\Users\User\Documents\Visual Studio 2012\Projects\www\www\bin\WebMatrix.Data.dll
+C:\Users\User\Documents\Visual Studio 2012\Projects\www\www\bin\WebMatrix.WebData.dll
+C:\Users\User\Documents\Visual Studio 2012\Projects\www\www\bin\EntityFramework.xml
+C:\Users\User\Documents\Visual Studio 2012\Projects\www\www\bin\Newtonsoft.Json.xml
+C:\Users\User\Documents\Visual Studio 2012\Projects\www\www\bin\System.Net.Http.Formatting.xml
+C:\Users\User\Documents\Visual Studio 2012\Projects\www\www\bin\System.Web.Helpers.xml
+C:\Users\User\Documents\Visual Studio 2012\Projects\www\www\bin\System.Web.Http.xml
+C:\Users\User\Documents\Visual Studio 2012\Projects\www\www\bin\System.Web.Http.WebHost.xml
+C:\Users\User\Documents\Visual Studio 2012\Projects\www\www\bin\System.Web.Mvc.xml
+C:\Users\User\Documents\Visual Studio 2012\Projects\www\www\bin\System.Web.Razor.xml
+C:\Users\User\Documents\Visual Studio 2012\Projects\www\www\bin\System.Web.WebPages.xml
+C:\Users\User\Documents\Visual Studio 2012\Projects\www\www\bin\System.Web.WebPages.Deployment.xml
+C:\Users\User\Documents\Visual Studio 2012\Projects\www\www\bin\System.Web.WebPages.Razor.xml
+C:\Users\User\Documents\Visual Studio 2012\Projects\www\www\bin\WebMatrix.Data.xml
+C:\Users\User\Documents\Visual Studio 2012\Projects\www\www\bin\Microsoft.Web.WebPages.OAuth.xml
+C:\Users\User\Documents\Visual Studio 2012\Projects\www\www\bin\WebMatrix.WebData.xml
+C:\Users\User\Documents\Visual Studio 2012\Projects\www\www\bin\DotNetOpenAuth.AspNet.xml
+C:\Users\User\Documents\Visual Studio 2012\Projects\www\www\bin\DotNetOpenAuth.Core.xml
+C:\Users\User\Documents\Visual Studio 2012\Projects\www\www\bin\DotNetOpenAuth.OAuth.Consumer.xml
+C:\Users\User\Documents\Visual Studio 2012\Projects\www\www\bin\DotNetOpenAuth.OAuth.xml
+C:\Users\User\Documents\Visual Studio 2012\Projects\www\www\bin\DotNetOpenAuth.OpenId.xml
+C:\Users\User\Documents\Visual Studio 2012\Projects\www\www\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+C:\Users\User\Documents\Visual Studio 2012\Projects\www\www\bin\System.Web.Http.OData.xml
+C:\Users\User\Documents\Visual Studio 2012\Projects\www\www\bin\Microsoft.Data.Edm.xml
+C:\Users\User\Documents\Visual Studio 2012\Projects\www\www\bin\Microsoft.Data.OData.xml
+C:\Users\User\Documents\Visual Studio 2012\Projects\www\www\bin\System.Spatial.xml
+C:\Users\User\Documents\Visual Studio 2012\Projects\www\www\bin\de\Microsoft.Data.Edm.resources.dll
+C:\Users\User\Documents\Visual Studio 2012\Projects\www\www\bin\es\Microsoft.Data.Edm.resources.dll
+C:\Users\User\Documents\Visual Studio 2012\Projects\www\www\bin\fr\Microsoft.Data.Edm.resources.dll
+C:\Users\User\Documents\Visual Studio 2012\Projects\www\www\bin\it\Microsoft.Data.Edm.resources.dll
+C:\Users\User\Documents\Visual Studio 2012\Projects\www\www\bin\ja\Microsoft.Data.Edm.resources.dll
+C:\Users\User\Documents\Visual Studio 2012\Projects\www\www\bin\ko\Microsoft.Data.Edm.resources.dll
+C:\Users\User\Documents\Visual Studio 2012\Projects\www\www\bin\ru\Microsoft.Data.Edm.resources.dll
+C:\Users\User\Documents\Visual Studio 2012\Projects\www\www\bin\zh-Hans\Microsoft.Data.Edm.resources.dll
+C:\Users\User\Documents\Visual Studio 2012\Projects\www\www\bin\zh-Hant\Microsoft.Data.Edm.resources.dll
+C:\Users\User\Documents\Visual Studio 2012\Projects\www\www\bin\de\Microsoft.Data.OData.resources.dll
+C:\Users\User\Documents\Visual Studio 2012\Projects\www\www\bin\es\Microsoft.Data.OData.resources.dll
+C:\Users\User\Documents\Visual Studio 2012\Projects\www\www\bin\fr\Microsoft.Data.OData.resources.dll
+C:\Users\User\Documents\Visual Studio 2012\Projects\www\www\bin\it\Microsoft.Data.OData.resources.dll
+C:\Users\User\Documents\Visual Studio 2012\Projects\www\www\bin\ja\Microsoft.Data.OData.resources.dll
+C:\Users\User\Documents\Visual Studio 2012\Projects\www\www\bin\ko\Microsoft.Data.OData.resources.dll
+C:\Users\User\Documents\Visual Studio 2012\Projects\www\www\bin\ru\Microsoft.Data.OData.resources.dll
+C:\Users\User\Documents\Visual Studio 2012\Projects\www\www\bin\zh-Hans\Microsoft.Data.OData.resources.dll
+C:\Users\User\Documents\Visual Studio 2012\Projects\www\www\bin\zh-Hant\Microsoft.Data.OData.resources.dll
+C:\Users\User\Documents\Visual Studio 2012\Projects\www\www\bin\de\System.Spatial.resources.dll
+C:\Users\User\Documents\Visual Studio 2012\Projects\www\www\bin\es\System.Spatial.resources.dll
+C:\Users\User\Documents\Visual Studio 2012\Projects\www\www\bin\fr\System.Spatial.resources.dll
+C:\Users\User\Documents\Visual Studio 2012\Projects\www\www\bin\it\System.Spatial.resources.dll
+C:\Users\User\Documents\Visual Studio 2012\Projects\www\www\bin\ja\System.Spatial.resources.dll
+C:\Users\User\Documents\Visual Studio 2012\Projects\www\www\bin\ko\System.Spatial.resources.dll
+C:\Users\User\Documents\Visual Studio 2012\Projects\www\www\bin\ru\System.Spatial.resources.dll
+C:\Users\User\Documents\Visual Studio 2012\Projects\www\www\bin\zh-Hans\System.Spatial.resources.dll
+C:\Users\User\Documents\Visual Studio 2012\Projects\www\www\bin\zh-Hant\System.Spatial.resources.dll
+C:\Users\User\Documents\Visual Studio 2012\Projects\www\www\obj\Debug\www.dll
+C:\Users\User\Documents\Visual Studio 2012\Projects\www\www\obj\Debug\www.pdb
+C:\Users\User\Documents\Visual Studio 2012\Projects\www\www\obj\Debug\www.csprojResolveAssemblyReference.cache
+C:\Users\User\Workspace\www - Copy111\www\www\bin\www.dll
+C:\Users\User\Workspace\www - Copy111\www\www\bin\www.pdb
+C:\Users\User\Workspace\www - Copy111\www\www\bin\Antlr3.Runtime.dll
+C:\Users\User\Workspace\www - Copy111\www\www\bin\DotNetOpenAuth.AspNet.dll
+C:\Users\User\Workspace\www - Copy111\www\www\bin\DotNetOpenAuth.Core.dll
+C:\Users\User\Workspace\www - Copy111\www\www\bin\DotNetOpenAuth.OAuth.Consumer.dll
+C:\Users\User\Workspace\www - Copy111\www\www\bin\DotNetOpenAuth.OAuth.dll
+C:\Users\User\Workspace\www - Copy111\www\www\bin\DotNetOpenAuth.OpenId.dll
+C:\Users\User\Workspace\www - Copy111\www\www\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+C:\Users\User\Workspace\www - Copy111\www\www\bin\EntityFramework.dll
+C:\Users\User\Workspace\www - Copy111\www\www\bin\Microsoft.Data.Edm.dll
+C:\Users\User\Workspace\www - Copy111\www\www\bin\Microsoft.Data.OData.dll
+C:\Users\User\Workspace\www - Copy111\www\www\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\User\Workspace\www - Copy111\www\www\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+C:\Users\User\Workspace\www - Copy111\www\www\bin\Microsoft.Web.WebPages.OAuth.dll
+C:\Users\User\Workspace\www - Copy111\www\www\bin\Newtonsoft.Json.dll
+C:\Users\User\Workspace\www - Copy111\www\www\bin\System.Net.Http.Formatting.dll
+C:\Users\User\Workspace\www - Copy111\www\www\bin\System.Spatial.dll
+C:\Users\User\Workspace\www - Copy111\www\www\bin\System.Web.Helpers.dll
+C:\Users\User\Workspace\www - Copy111\www\www\bin\System.Web.Http.dll
+C:\Users\User\Workspace\www - Copy111\www\www\bin\System.Web.Http.OData.dll
+C:\Users\User\Workspace\www - Copy111\www\www\bin\System.Web.Http.WebHost.dll
+C:\Users\User\Workspace\www - Copy111\www\www\bin\System.Web.Mvc.dll
+C:\Users\User\Workspace\www - Copy111\www\www\bin\System.Web.Optimization.dll
+C:\Users\User\Workspace\www - Copy111\www\www\bin\System.Web.Razor.dll
+C:\Users\User\Workspace\www - Copy111\www\www\bin\System.Web.WebPages.Deployment.dll
+C:\Users\User\Workspace\www - Copy111\www\www\bin\System.Web.WebPages.dll
+C:\Users\User\Workspace\www - Copy111\www\www\bin\System.Web.WebPages.Razor.dll
+C:\Users\User\Workspace\www - Copy111\www\www\bin\WebGrease.dll
+C:\Users\User\Workspace\www - Copy111\www\www\bin\WebMatrix.Data.dll
+C:\Users\User\Workspace\www - Copy111\www\www\bin\WebMatrix.WebData.dll
+C:\Users\User\Workspace\www - Copy111\www\www\bin\EntityFramework.xml
+C:\Users\User\Workspace\www - Copy111\www\www\bin\Newtonsoft.Json.xml
+C:\Users\User\Workspace\www - Copy111\www\www\bin\System.Net.Http.Formatting.xml
+C:\Users\User\Workspace\www - Copy111\www\www\bin\System.Web.Helpers.xml
+C:\Users\User\Workspace\www - Copy111\www\www\bin\System.Web.Http.xml
+C:\Users\User\Workspace\www - Copy111\www\www\bin\System.Web.Http.WebHost.xml
+C:\Users\User\Workspace\www - Copy111\www\www\bin\System.Web.Mvc.xml
+C:\Users\User\Workspace\www - Copy111\www\www\bin\System.Web.Razor.xml
+C:\Users\User\Workspace\www - Copy111\www\www\bin\System.Web.WebPages.xml
+C:\Users\User\Workspace\www - Copy111\www\www\bin\System.Web.WebPages.Deployment.xml
+C:\Users\User\Workspace\www - Copy111\www\www\bin\System.Web.WebPages.Razor.xml
+C:\Users\User\Workspace\www - Copy111\www\www\bin\WebMatrix.Data.xml
+C:\Users\User\Workspace\www - Copy111\www\www\bin\Microsoft.Web.WebPages.OAuth.xml
+C:\Users\User\Workspace\www - Copy111\www\www\bin\WebMatrix.WebData.xml
+C:\Users\User\Workspace\www - Copy111\www\www\bin\DotNetOpenAuth.AspNet.xml
+C:\Users\User\Workspace\www - Copy111\www\www\bin\DotNetOpenAuth.Core.xml
+C:\Users\User\Workspace\www - Copy111\www\www\bin\DotNetOpenAuth.OAuth.Consumer.xml
+C:\Users\User\Workspace\www - Copy111\www\www\bin\DotNetOpenAuth.OAuth.xml
+C:\Users\User\Workspace\www - Copy111\www\www\bin\DotNetOpenAuth.OpenId.xml
+C:\Users\User\Workspace\www - Copy111\www\www\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+C:\Users\User\Workspace\www - Copy111\www\www\bin\System.Web.Http.OData.xml
+C:\Users\User\Workspace\www - Copy111\www\www\bin\Microsoft.Data.Edm.xml
+C:\Users\User\Workspace\www - Copy111\www\www\bin\Microsoft.Data.OData.xml
+C:\Users\User\Workspace\www - Copy111\www\www\bin\System.Spatial.xml
+C:\Users\User\Workspace\www - Copy111\www\www\bin\de\Microsoft.Data.Edm.resources.dll
+C:\Users\User\Workspace\www - Copy111\www\www\bin\es\Microsoft.Data.Edm.resources.dll
+C:\Users\User\Workspace\www - Copy111\www\www\bin\fr\Microsoft.Data.Edm.resources.dll
+C:\Users\User\Workspace\www - Copy111\www\www\bin\it\Microsoft.Data.Edm.resources.dll
+C:\Users\User\Workspace\www - Copy111\www\www\bin\ja\Microsoft.Data.Edm.resources.dll
+C:\Users\User\Workspace\www - Copy111\www\www\bin\ko\Microsoft.Data.Edm.resources.dll
+C:\Users\User\Workspace\www - Copy111\www\www\bin\ru\Microsoft.Data.Edm.resources.dll
+C:\Users\User\Workspace\www - Copy111\www\www\bin\zh-Hans\Microsoft.Data.Edm.resources.dll
+C:\Users\User\Workspace\www - Copy111\www\www\bin\zh-Hant\Microsoft.Data.Edm.resources.dll
+C:\Users\User\Workspace\www - Copy111\www\www\bin\de\Microsoft.Data.OData.resources.dll
+C:\Users\User\Workspace\www - Copy111\www\www\bin\es\Microsoft.Data.OData.resources.dll
+C:\Users\User\Workspace\www - Copy111\www\www\bin\fr\Microsoft.Data.OData.resources.dll
+C:\Users\User\Workspace\www - Copy111\www\www\bin\it\Microsoft.Data.OData.resources.dll
+C:\Users\User\Workspace\www - Copy111\www\www\bin\ja\Microsoft.Data.OData.resources.dll
+C:\Users\User\Workspace\www - Copy111\www\www\bin\ko\Microsoft.Data.OData.resources.dll
+C:\Users\User\Workspace\www - Copy111\www\www\bin\ru\Microsoft.Data.OData.resources.dll
+C:\Users\User\Workspace\www - Copy111\www\www\bin\zh-Hans\Microsoft.Data.OData.resources.dll
+C:\Users\User\Workspace\www - Copy111\www\www\bin\zh-Hant\Microsoft.Data.OData.resources.dll
+C:\Users\User\Workspace\www - Copy111\www\www\bin\de\System.Spatial.resources.dll
+C:\Users\User\Workspace\www - Copy111\www\www\bin\es\System.Spatial.resources.dll
+C:\Users\User\Workspace\www - Copy111\www\www\bin\fr\System.Spatial.resources.dll
+C:\Users\User\Workspace\www - Copy111\www\www\bin\it\System.Spatial.resources.dll
+C:\Users\User\Workspace\www - Copy111\www\www\bin\ja\System.Spatial.resources.dll
+C:\Users\User\Workspace\www - Copy111\www\www\bin\ko\System.Spatial.resources.dll
+C:\Users\User\Workspace\www - Copy111\www\www\bin\ru\System.Spatial.resources.dll
+C:\Users\User\Workspace\www - Copy111\www\www\bin\zh-Hans\System.Spatial.resources.dll
+C:\Users\User\Workspace\www - Copy111\www\www\bin\zh-Hant\System.Spatial.resources.dll
+C:\Users\User\Workspace\www - Copy111\www\www\obj\Debug\www.csprojResolveAssemblyReference.cache
+C:\Users\User\Workspace\www - Copy111\www\www\obj\Debug\www.dll
+C:\Users\User\Workspace\www - Copy111\www\www\obj\Debug\www.pdb
+C:\Users\User\Workspace\www\www\www\bin\www.dll
+C:\Users\User\Workspace\www\www\www\bin\www.pdb
+C:\Users\User\Workspace\www\www\www\bin\Antlr3.Runtime.dll
+C:\Users\User\Workspace\www\www\www\bin\DotNetOpenAuth.AspNet.dll
+C:\Users\User\Workspace\www\www\www\bin\DotNetOpenAuth.Core.dll
+C:\Users\User\Workspace\www\www\www\bin\DotNetOpenAuth.OAuth.Consumer.dll
+C:\Users\User\Workspace\www\www\www\bin\DotNetOpenAuth.OAuth.dll
+C:\Users\User\Workspace\www\www\www\bin\DotNetOpenAuth.OpenId.dll
+C:\Users\User\Workspace\www\www\www\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+C:\Users\User\Workspace\www\www\www\bin\EntityFramework.dll
+C:\Users\User\Workspace\www\www\www\bin\Microsoft.Data.Edm.dll
+C:\Users\User\Workspace\www\www\www\bin\Microsoft.Data.OData.dll
+C:\Users\User\Workspace\www\www\www\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\User\Workspace\www\www\www\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+C:\Users\User\Workspace\www\www\www\bin\Microsoft.Web.WebPages.OAuth.dll
+C:\Users\User\Workspace\www\www\www\bin\Newtonsoft.Json.dll
+C:\Users\User\Workspace\www\www\www\bin\System.Spatial.dll
+C:\Users\User\Workspace\www\www\www\bin\System.Web.Helpers.dll
+C:\Users\User\Workspace\www\www\www\bin\System.Web.Http.OData.dll
+C:\Users\User\Workspace\www\www\www\bin\System.Web.Mvc.dll
+C:\Users\User\Workspace\www\www\www\bin\System.Web.Optimization.dll
+C:\Users\User\Workspace\www\www\www\bin\System.Web.Razor.dll
+C:\Users\User\Workspace\www\www\www\bin\System.Web.WebPages.Deployment.dll
+C:\Users\User\Workspace\www\www\www\bin\System.Web.WebPages.dll
+C:\Users\User\Workspace\www\www\www\bin\System.Web.WebPages.Razor.dll
+C:\Users\User\Workspace\www\www\www\bin\WebGrease.dll
+C:\Users\User\Workspace\www\www\www\bin\WebMatrix.Data.dll
+C:\Users\User\Workspace\www\www\www\bin\WebMatrix.WebData.dll
+C:\Users\User\Workspace\www\www\www\bin\EntityFramework.xml
+C:\Users\User\Workspace\www\www\www\bin\Newtonsoft.Json.xml
+C:\Users\User\Workspace\www\www\www\bin\System.Web.Helpers.xml
+C:\Users\User\Workspace\www\www\www\bin\System.Web.Mvc.xml
+C:\Users\User\Workspace\www\www\www\bin\System.Web.Razor.xml
+C:\Users\User\Workspace\www\www\www\bin\System.Web.WebPages.xml
+C:\Users\User\Workspace\www\www\www\bin\System.Web.WebPages.Deployment.xml
+C:\Users\User\Workspace\www\www\www\bin\System.Web.WebPages.Razor.xml
+C:\Users\User\Workspace\www\www\www\bin\WebMatrix.Data.xml
+C:\Users\User\Workspace\www\www\www\bin\Microsoft.Web.WebPages.OAuth.xml
+C:\Users\User\Workspace\www\www\www\bin\WebMatrix.WebData.xml
+C:\Users\User\Workspace\www\www\www\bin\DotNetOpenAuth.AspNet.xml
+C:\Users\User\Workspace\www\www\www\bin\DotNetOpenAuth.Core.xml
+C:\Users\User\Workspace\www\www\www\bin\DotNetOpenAuth.OAuth.Consumer.xml
+C:\Users\User\Workspace\www\www\www\bin\DotNetOpenAuth.OAuth.xml
+C:\Users\User\Workspace\www\www\www\bin\DotNetOpenAuth.OpenId.xml
+C:\Users\User\Workspace\www\www\www\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+C:\Users\User\Workspace\www\www\www\bin\System.Web.Http.OData.xml
+C:\Users\User\Workspace\www\www\www\bin\Microsoft.Data.Edm.xml
+C:\Users\User\Workspace\www\www\www\bin\Microsoft.Data.OData.xml
+C:\Users\User\Workspace\www\www\www\bin\System.Spatial.xml
+C:\Users\User\Workspace\www\www\www\bin\de\Microsoft.Data.Edm.resources.dll
+C:\Users\User\Workspace\www\www\www\bin\es\Microsoft.Data.Edm.resources.dll
+C:\Users\User\Workspace\www\www\www\bin\fr\Microsoft.Data.Edm.resources.dll
+C:\Users\User\Workspace\www\www\www\bin\it\Microsoft.Data.Edm.resources.dll
+C:\Users\User\Workspace\www\www\www\bin\ja\Microsoft.Data.Edm.resources.dll
+C:\Users\User\Workspace\www\www\www\bin\ko\Microsoft.Data.Edm.resources.dll
+C:\Users\User\Workspace\www\www\www\bin\ru\Microsoft.Data.Edm.resources.dll
+C:\Users\User\Workspace\www\www\www\bin\zh-Hans\Microsoft.Data.Edm.resources.dll
+C:\Users\User\Workspace\www\www\www\bin\zh-Hant\Microsoft.Data.Edm.resources.dll
+C:\Users\User\Workspace\www\www\www\bin\de\Microsoft.Data.OData.resources.dll
+C:\Users\User\Workspace\www\www\www\bin\es\Microsoft.Data.OData.resources.dll
+C:\Users\User\Workspace\www\www\www\bin\fr\Microsoft.Data.OData.resources.dll
+C:\Users\User\Workspace\www\www\www\bin\it\Microsoft.Data.OData.resources.dll
+C:\Users\User\Workspace\www\www\www\bin\ja\Microsoft.Data.OData.resources.dll
+C:\Users\User\Workspace\www\www\www\bin\ko\Microsoft.Data.OData.resources.dll
+C:\Users\User\Workspace\www\www\www\bin\ru\Microsoft.Data.OData.resources.dll
+C:\Users\User\Workspace\www\www\www\bin\zh-Hans\Microsoft.Data.OData.resources.dll
+C:\Users\User\Workspace\www\www\www\bin\zh-Hant\Microsoft.Data.OData.resources.dll
+C:\Users\User\Workspace\www\www\www\bin\de\System.Spatial.resources.dll
+C:\Users\User\Workspace\www\www\www\bin\es\System.Spatial.resources.dll
+C:\Users\User\Workspace\www\www\www\bin\fr\System.Spatial.resources.dll
+C:\Users\User\Workspace\www\www\www\bin\it\System.Spatial.resources.dll
+C:\Users\User\Workspace\www\www\www\bin\ja\System.Spatial.resources.dll
+C:\Users\User\Workspace\www\www\www\bin\ko\System.Spatial.resources.dll
+C:\Users\User\Workspace\www\www\www\bin\ru\System.Spatial.resources.dll
+C:\Users\User\Workspace\www\www\www\bin\zh-Hans\System.Spatial.resources.dll
+C:\Users\User\Workspace\www\www\www\bin\zh-Hant\System.Spatial.resources.dll
+C:\Users\User\Workspace\www\www\www\obj\Debug\www.csprojResolveAssemblyReference.cache
+C:\Users\User\Workspace\www\www\www\obj\Debug\www.dll
+C:\Users\User\Workspace\www\www\www\obj\Debug\www.pdb
