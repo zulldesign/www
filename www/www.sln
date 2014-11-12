@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcMovie", "MvcMovie\MvcMovie.csproj", "{1E33C0EF-3C99-46E2-9C48-A65548B6A75D}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{7500057A-BA2D-4BFD-9802-4EF3AF934E6D}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{3BC3D213-55AB-4108-9064-1BF7E666060E}"
 	ProjectSection(SolutionItems) = preProject
 		..\..\..\APPDATA\LOCAL\MICROSOFT\VISUALSTUDIO\11.0\EXTENSIONS\KO4QO5NF.E5Z\description.html = ..\..\..\APPDATA\LOCAL\MICROSOFT\VISUALSTUDIO\11.0\EXTENSIONS\KO4QO5NF.E5Z\description.html
 	EndProjectSection
