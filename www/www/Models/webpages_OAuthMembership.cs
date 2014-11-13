@@ -12,12 +12,10 @@ namespace www.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class Movie
+    public partial class webpages_OAuthMembership
     {
-        public int ID { get; set; }
-        public string Title { get; set; }
-        public System.DateTime ReleaseDate { get; set; }
-        public string Genre { get; set; }
-        public decimal Price { get; set; }
+        public string Provider { get; set; }
+        public string ProviderUserId { get; set; }
+        public int UserId { get; set; }
     }
 }

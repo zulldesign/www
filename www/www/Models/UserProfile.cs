@@ -12,12 +12,16 @@ namespace www.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class Movie
+    public partial class UserProfile
     {
-        public int ID { get; set; }
-        public string Title { get; set; }
-        public System.DateTime ReleaseDate { get; set; }
-        public string Genre { get; set; }
-        public decimal Price { get; set; }
+        public UserProfile()
+        {
+            this.webpages_Roles = new HashSet<webpages_Roles>();
+        }
+    
+        public int UserId { get; set; }
+        public string UserName { get; set; }
+    
+        public virtual ICollection<webpages_Roles> webpages_Roles { get; set; }
     }
 }

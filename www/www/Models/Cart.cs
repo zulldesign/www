@@ -12,12 +12,14 @@ namespace www.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class Movie
+    public partial class Cart
     {
-        public int ID { get; set; }
-        public string Title { get; set; }
-        public System.DateTime ReleaseDate { get; set; }
-        public string Genre { get; set; }
-        public decimal Price { get; set; }
+        public int RecordId { get; set; }
+        public string CartId { get; set; }
+        public int AlbumId { get; set; }
+        public int Count { get; set; }
+        public System.DateTime DateCreated { get; set; }
+    
+        public virtual Album Album { get; set; }
     }
 }

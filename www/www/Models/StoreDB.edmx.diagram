@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="ad606f095ca947e08faa5522aef7d824" Name="Diagram1">
+        <EntityTypeShape EntityType="www.Models.Album" Width="1.5" PointX="3" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="www.Models.Artist" Width="1.5" PointX="0.75" PointY="4.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="www.Models.Cart" Width="1.5" PointX="5.25" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="www.Models.Genre" Width="1.5" PointX="0.75" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="www.Models.Movie" Width="1.5" PointX="7.75" PointY="2" IsExpanded="true" />
+        <EntityTypeShape EntityType="www.Models.Order" Width="1.5" PointX="3" PointY="7.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="www.Models.OrderDetail" Width="1.5" PointX="5.25" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="www.Models.UserProfile" Width="1.5" PointX="8" PointY="7.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="www.Models.webpages_Membership" Width="1.5" PointX="5.75" PointY="10" IsExpanded="true" />
+        <EntityTypeShape EntityType="www.Models.webpages_OAuthMembership" Width="1.5" PointX="7.75" PointY="10" IsExpanded="true" />
+        <EntityTypeShape EntityType="www.Models.webpages_Roles" Width="1.5" PointX="5.75" PointY="7.125" IsExpanded="true" />
+        <AssociationConnector Association="www.Models.FK__Album__ArtistId__276EDEB3" ManuallyRouted="false" />
+        <AssociationConnector Association="www.Models.FK_Album_Genre" ManuallyRouted="false" />
+        <AssociationConnector Association="www.Models.FK_Cart_Album" ManuallyRouted="false" />
+        <AssociationConnector Association="www.Models.FK_InvoiceLine_Album" ManuallyRouted="false" />
+        <AssociationConnector Association="www.Models.FK__InvoiceLi__Invoi__2F10007B" ManuallyRouted="false" />
+        <AssociationConnector Association="www.Models.webpages_UsersInRoles" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

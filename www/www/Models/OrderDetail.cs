@@ -12,12 +12,15 @@ namespace www.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class Movie
+    public partial class OrderDetail
     {
-        public int ID { get; set; }
-        public string Title { get; set; }
-        public System.DateTime ReleaseDate { get; set; }
-        public string Genre { get; set; }
-        public decimal Price { get; set; }
+        public int OrderDetailId { get; set; }
+        public int OrderId { get; set; }
+        public int AlbumId { get; set; }
+        public int Quantity { get; set; }
+        public decimal UnitPrice { get; set; }
+    
+        public virtual Album Album { get; set; }
+        public virtual Order Order { get; set; }
     }
 }
