@@ -26,15 +26,16 @@ namespace MvcMusicStore.Models
         }
     
         public DbSet<Album> Albums { get; set; }
+        public DbSet<Application> Applications { get; set; }
         public DbSet<Artist> Artists { get; set; }
         public DbSet<Cart> Carts { get; set; }
         public DbSet<Genre> Genres { get; set; }
+        public DbSet<Membership> Memberships { get; set; }
         public DbSet<Movie> Movies { get; set; }
         public DbSet<Order> Orders { get; set; }
         public DbSet<OrderDetail> OrderDetails { get; set; }
-        public DbSet<UserProfile> UserProfiles { get; set; }
-        public DbSet<webpages_Membership> webpages_Membership { get; set; }
-        public DbSet<webpages_OAuthMembership> webpages_OAuthMembership { get; set; }
-        public DbSet<webpages_Roles> webpages_Roles { get; set; }
+        public DbSet<Profile> Profiles { get; set; }
+        public DbSet<Role> Roles { get; set; }
+        public DbSet<User> Users { get; set; }
     }
 }
