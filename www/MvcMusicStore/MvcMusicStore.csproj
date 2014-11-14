@@ -162,10 +162,6 @@
     <Compile Include="Models\Genre.cs">
       <DependentUpon>StoreDB.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\MyAppUserFriend.cs" />
-    <Compile Include="Models\MyAppUser.cs" />
-    <Compile Include="Models\FacebookPicture.cs" />
-    <Compile Include="Models\FacebookPhoto.cs" />
     <Compile Include="Models\Order.cs">
       <DependentUpon>StoreDB.tt</DependentUpon>
     </Compile>
