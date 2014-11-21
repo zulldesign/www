@@ -190,33 +190,6 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountModels.cs" />
-    <Compile Include="Models\StoreDB.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>StoreDB.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\StoreDB.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>StoreDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\StoreDB.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>StoreDB.edmx</DependentUpon>
-    </Compile>
-    <Compile Include="Models\UserProfile.cs">
-      <DependentUpon>StoreDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\webpages_Membership.cs">
-      <DependentUpon>StoreDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\webpages_OAuthMembership.cs">
-      <DependentUpon>StoreDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\webpages_Roles.cs">
-      <DependentUpon>StoreDB.tt</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -276,23 +249,6 @@
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
-    <EntityDeploy Include="Models\StoreDB.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>StoreDB.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <Content Include="Models\StoreDB.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>StoreDB.edmx</DependentUpon>
-      <LastGenOutput>StoreDB.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="Models\StoreDB.edmx.diagram">
-      <DependentUpon>StoreDB.edmx</DependentUpon>
-    </Content>
-    <Content Include="Models\StoreDB.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>StoreDB.edmx</DependentUpon>
-      <LastGenOutput>StoreDB.cs</LastGenOutput>
-    </Content>
     <None Include="Scripts\jquery-1.8.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.8.2.js" />
     <Content Include="Scripts\jquery-1.8.2.min.js" />
