@@ -6,9 +6,9 @@ using System.Data.Entity;
 
 namespace www.Models
 {
-    public class SampleData : DropCreateDatabaseIfModelChanges<DefaultConnection>
+    public class SampleData : DropCreateDatabaseIfModelChanges<MusicStoreEntities>
     {
-        protected override void Seed(DefaultConnection context)
+        protected override void Seed(MusicStoreEntities context)
         {
             var genres = new List<Genre>
             {
