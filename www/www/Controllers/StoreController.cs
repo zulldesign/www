@@ -9,7 +9,7 @@ namespace www.Controllers
 {
     public class StoreController : Controller
     {
-        DefaultConnection storeDB = new DefaultConnection();
+        MusicStoreEntities storeDB = new MusicStoreEntities();
 
         //
         // GET: /Store/
