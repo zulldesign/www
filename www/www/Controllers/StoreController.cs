@@ -9,6 +9,7 @@ namespace www.Controllers
 {
     public class StoreController : Controller
     {
+        MusicStoreEntities storeDB = new MusicStoreEntities();
         //
         // GET: /Store/
         public ActionResult Index()
