@@ -9,23 +9,50 @@ namespace www.Controllers
 {
     public class StoreController : Controller
     {
+        MusicStoreEntities storeDB = new MusicStoreEntities();
+
         //
         // GET: /Store/
-        public string Index()
+
+        public ActionResult Index()
         {
-            return "Hello from Store.Index()";
+            var genres = storeDB.Genres.ToList();
+
+            return View(genres);
         }
+
         //
-        // GET: /Store/Browse
-        public string Browse()
+        // GET: /Store/Browse?genre=Disco
+
+        public ActionResult Browse(string genre)
         {
-            return "Hello from Store.Browse()";
+            // Retrieve Genre and its Associated Albums from database
+            var genreModel = storeDB.Genres.Include("Albums")
+                .Single(g => g.Name == genre);
+
+            return View(genreModel);
         }
+
         //
-        // GET: /Store/Details
-        public string Details()
+        // GET: /Store/Details/5
+
+        public ActionResult Details(int id)
         {
-            return "Hello from Store.Details()";
+            var album = storeDB.Albums.Find(id);
+
+            return View(album);
         }
+
+        //
+        // GET: /Store/GenreMenu
+
+        [ChildActionOnly]
+        public ActionResult GenreMenu()
+        {
+            var genres = storeDB.Genres.ToList();
+
+            return PartialView(genres);
+        }
+
     }
 }
