@@ -17,8 +17,9 @@ namespace www
         protected void Application_Start()
         {
             System.Data.Entity.Database.SetInitializer(new www.Models.SampleData());
-
             AreaRegistration.RegisterAllAreas();
+            FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
+            RouteConfig.RegisterRoutes(RouteTable.Routes);
 
             WebApiConfig.Register(GlobalConfiguration.Configuration);
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
