@@ -21,7 +21,10 @@ namespace www.Controllers
         // GET: /Store/Browse?genre=Disco
         public ActionResult Browse(string genre)
         {
-            var genreModel = new Genre { Name = genre };
+            // Retrieve Genre and its Associated Albums from database
+            var genreModel = storeDB.Genres.Include("Albums")
+                .Single(g => g.Name == genre);
+
             return View(genreModel);
         }
         //
