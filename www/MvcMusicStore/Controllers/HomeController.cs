@@ -1,7 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 using MvcMusicStore.Models;
 
@@ -9,50 +7,28 @@ namespace MvcMusicStore.Controllers
 {
     public class HomeController : Controller
     {
-        MusicStoreEntities storeDB = new MusicStoreEntities();
-
         //
-        // GET: /Store/
+        // GET: /Home/
+
+        MusicStoreEntities storeDB = new MusicStoreEntities();
 
         public ActionResult Index()
         {
-            var genres = storeDB.Genres.ToList();
+            // Get most popular albums
+            var albums = GetTopSellingAlbums(5);
 
-            return View(genres);
+            return View(albums);
         }
 
-        //
-        // GET: /Store/Browse?genre=Disco
-
-        public ActionResult Browse(string genre)
+        private List<Album> GetTopSellingAlbums(int count)
         {
-            // Retrieve Genre and its Associated Albums from database
-            var genreModel = storeDB.Genres.Include("Albums")
-                .Single(g => g.Name == genre);
+            // Group the order details by album and return
+            // the albums with the highest count
 
-            return View(genreModel);
+            return storeDB.Albums
+                .OrderByDescending(a => a.OrderDetails.Count())
+                .Take(count)
+                .ToList();
         }
-
-        //
-        // GET: /Store/Details/5
-
-        public ActionResult Details(int id)
-        {
-            var album = storeDB.Albums.Find(id);
-
-            return View(album);
-        }
-
-        //
-        // GET: /Store/GenreMenu
-
-        [ChildActionOnly]
-        public ActionResult GenreMenu()
-        {
-            var genres = storeDB.Genres.ToList();
-
-            return PartialView(genres);
-        }
-
     }
 }
