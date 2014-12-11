@@ -18,6 +18,13 @@ namespace MvcMusicStore.Controllers
             var albums = GetTopSellingAlbums(5);
 
             return View(albums);
+        }        
+
+        public ActionResult About()
+        {
+            ViewBag.Message = "Your app description page.";
+
+            return View();
         }
 
         private List<Album> GetTopSellingAlbums(int count)
