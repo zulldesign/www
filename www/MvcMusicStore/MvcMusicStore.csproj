@@ -101,6 +101,7 @@
     <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\CheckoutController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\PhotoController.cs" />
     <Compile Include="Controllers\ShoppingCartController.cs" />
     <Compile Include="Controllers\StoreController.cs" />
     <Compile Include="Controllers\StoreManagerController.cs" />
@@ -127,6 +128,7 @@
     <Compile Include="Models\OrderDetail.cs">
       <DependentUpon>StoreDB.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\Photo.cs" />
     <Compile Include="Models\ShoppingCart.cs" />
     <Compile Include="Models\StoreDB.Context.cs">
       <AutoGen>True</AutoGen>
@@ -209,7 +211,16 @@
       <DependentUpon>StoreDB.edmx</DependentUpon>
       <LastGenOutput>StoreDB.cs</LastGenOutput>
     </Content>
+    <Content Include="App_Data\Photos.json" />
     <None Include="Scripts\jquery-1.7.1.intellisense.js" />
+    <Content Include="Photos\Chrysanthemum.jpg" />
+    <Content Include="Photos\Desert.jpg" />
+    <Content Include="Photos\Hydrangeas.jpg" />
+    <Content Include="Photos\Jellyfish.jpg" />
+    <Content Include="Photos\Koala.jpg" />
+    <Content Include="Photos\Lighthouse.jpg" />
+    <Content Include="Photos\Penguins.jpg" />
+    <Content Include="Photos\Tulips.jpg" />
     <Content Include="Scripts\jquery-1.7.1.js" />
     <Content Include="Scripts\jquery-1.7.1.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
@@ -264,9 +275,7 @@
     <Content Include="Views\Admin\UploadFile.cshtml" />
     <Content Include="Views\Admin\Index.cshtml" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="App_Data\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="packages.config" />
   </ItemGroup>
