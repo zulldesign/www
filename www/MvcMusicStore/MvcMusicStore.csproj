@@ -262,6 +262,7 @@
     <Content Include="Views\Store\GenreMenu.cshtml" />
     <Content Include="Views\Store\Index.cshtml" />
     <Content Include="Views\Admin\UploadFile.cshtml" />
+    <Content Include="Views\Admin\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
