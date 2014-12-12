@@ -146,8 +146,11 @@
     <Compile Include="ViewModels\ShoppingCartViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\Images\728x90-xtudent.jpg" />
     <Content Include="Content\Images\Carry.On.000.gif" />
+    <Content Include="Content\Images\eseed-v3-468x60.jpg" />
     <Content Include="Content\Images\For.Those.About.To.Rock.We.Salute.You.gif" />
+    <Content Include="Content\Images\Greatest.Hits.000.gif" />
     <Content Include="Content\Images\home-showcase.png" />
     <Content Include="Content\Images\Let.There.Be.Rock.gif" />
     <Content Include="Content\Images\logo.png" />
