@@ -28,5 +28,10 @@ namespace MvcMusicStore.Controllers
         {
             return this.File("~/App_Data/Photos.json", "application/json");
         }
+
+        public ActionResult Index()
+        {
+            return View();
+        }
     }
 }
