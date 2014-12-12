@@ -36,6 +36,11 @@ namespace MvcMusicStore.Controllers
             return View();
         }
 
+        public ActionResult Index()
+        {
+            return View();
+        }
+
          //<add key="business" value="admin@zulldesign.ml" />
     }
 }
