@@ -28,8 +28,8 @@ namespace MvcMusicStore.Controllers
                 /*Geting the file name*/
                 string filename = System.IO.Path.GetFileName(file.FileName);
                 /*Saving the file in server folder*/
-                file.SaveAs(Server.MapPath("~/Content/Images/" + filename));
-                string filepathtosave = "Content/Images/" + filename;
+                file.SaveAs(Server.MapPath("~/Images/" + filename));
+                string filepathtosave = "Images/" + filename;
                 /*Storing image path to show preview*/
                 ViewBag.ImageURL = filepathtosave;
                 /*
