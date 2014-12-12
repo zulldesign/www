@@ -1,21 +1,8 @@
 ﻿@{
-    ViewBag.Title = "UploadFile";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "Admin";
 }
 
-<h2>UploadFile</h2>
-@using (Html.BeginForm("UploadFile", "Admin", FormMethod.Post, new { enctype = "multipart/form-data" }))
-{
-<table>
-<tr>
-<td>
-<label>Tittle</label>
-</td>
-<td><input type="text" id="Title" name="Title"style="width:240px;"/></td>
-</tr>
-<tr><td>Upload File: </td><td><input type="file" name="file" id="file" style="width:240px;"/></td></tr>
-<tr><td></td><td><input  type="submit" id="btnSubmit" value="Upload"/></td></tr>
-<tr>@if (ViewData["Success"] != "")
-    { <td><label> @ViewData["Success"]</label></td>}</tr>
-</table>
-}
+<h2>About</h2>
+<p>
+     Put content here.
+</p>
