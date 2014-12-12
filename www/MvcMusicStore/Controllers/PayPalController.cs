@@ -36,11 +36,12 @@ namespace MvcMusicStore.Controllers
             return View();
         }
 
+         //<add key="business" value="asrce2_1311074442_biz@gmail.com" />
         public ActionResult Index()
         {
+            ViewBag.Message = "Modify this template to jump-start your ASP.NET MVC application.";
+
             return View();
         }
-
-         //<add key="business" value="admin@zulldesign.ml" />
     }
 }
