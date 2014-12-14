@@ -152,7 +152,6 @@
     <Compile Include="Models\Product.cs" />
     <Compile Include="Models\Register.cs" />
     <Compile Include="Models\ShoppingCart.cs" />
-    <Compile Include="Models\StoreContext.cs" />
     <Compile Include="Models\StoreDB.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
