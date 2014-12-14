@@ -173,11 +173,8 @@
     <Compile Include="ViewModels\ShoppingCartViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\Store.mdf" />
+    <Content Include="App_Data\aspnet-www-20140918085555.mdf" />
     <Content Include="App_Data\Store.sdf" />
-    <Content Include="App_Data\Store_log.ldf">
-      <DependentUpon>Store.mdf</DependentUpon>
-    </Content>
     <Content Include="Content\Images\728x90-xtudent.jpg" />
     <Content Include="Content\Images\Carry.On.000.gif" />
     <Content Include="Content\Images\eseed-v3-468x60.jpg" />
