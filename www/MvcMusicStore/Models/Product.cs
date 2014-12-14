@@ -12,7 +12,7 @@ namespace MvcMusicStore.Models
         public decimal Price { get; set; }
     }
 
-    public class StoresContext : DbContext
+    public class StoreContext : DbContext
     {
         public DbSet<Product> Products { get; set; }
     }
