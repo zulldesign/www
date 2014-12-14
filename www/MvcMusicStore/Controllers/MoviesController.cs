@@ -11,7 +11,7 @@ namespace MvcMusicStore.Controllers
 { 
     public class MoviesController : Controller
     {
-        private MovieDBContext db = new MovieDBContext();
+        private DefaultConnection db = new DefaultConnection();
 
         //
         // GET: /Movies/
