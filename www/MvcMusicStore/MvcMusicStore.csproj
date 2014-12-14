@@ -101,7 +101,6 @@
     <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\CheckoutController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\PayPalController.cs" />
     <Compile Include="Controllers\ShoppingCartController.cs" />
     <Compile Include="Controllers\StoreController.cs" />
     <Compile Include="Controllers\StoreManagerController.cs" />
@@ -128,7 +127,7 @@
     <Compile Include="Models\OrderDetail.cs">
       <DependentUpon>StoreDB.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\PayPalModel.cs" />
+    <Compile Include="Models\Paypal.cs" />
     <Compile Include="Models\ShoppingCart.cs" />
     <Compile Include="Models\StoreDB.Context.cs">
       <AutoGen>True</AutoGen>
@@ -265,11 +264,6 @@
     <Content Include="Views\Store\Index.cshtml" />
     <Content Include="Views\Admin\Index.cshtml" />
     <Content Include="Views\Admin\UploadFile.cshtml" />
-    <Content Include="Views\PayPal\CancelFromPaypal.cshtml" />
-    <Content Include="Views\PayPal\Index.cshtml" />
-    <Content Include="Views\PayPal\NotifyFromPaypal.cshtml" />
-    <Content Include="Views\PayPal\RedirectFromPaypal.cshtml" />
-    <Content Include="Views\PayPal\ValidateCommand.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
