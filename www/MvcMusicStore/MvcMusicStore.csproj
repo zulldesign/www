@@ -176,10 +176,6 @@
     <Compile Include="ViewModels\ShoppingCartViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\Movies.mdf" />
-    <Content Include="App_Data\Movies_log.ldf">
-      <DependentUpon>Movies.mdf</DependentUpon>
-    </Content>
     <Content Include="App_Data\MvcMusicStoreProducts.mdf" />
     <Content Include="App_Data\MvcMusicStoreProducts_log.ldf">
       <DependentUpon>MvcMusicStoreProducts.mdf</DependentUpon>
