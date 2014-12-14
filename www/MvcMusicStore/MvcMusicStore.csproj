@@ -118,6 +118,7 @@
     <Compile Include="Controllers\CheckoutController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Controllers\MoviesController.cs" />
     <Compile Include="Controllers\RegisterController.cs" />
     <Compile Include="Controllers\ShoppingCartController.cs" />
     <Compile Include="Controllers\StoreController.cs" />
@@ -141,6 +142,7 @@
     </Compile>
     <Compile Include="Models\Leedhar_UploadFile.cs" />
     <Compile Include="Models\Login.cs" />
+    <Compile Include="Models\Movie.cs" />
     <Compile Include="Models\Order.cs">
       <DependentUpon>StoreDB.tt</DependentUpon>
     </Compile>
@@ -173,8 +175,10 @@
     <Compile Include="ViewModels\ShoppingCartViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\aspnet-www-20140918085555.mdf" />
-    <Content Include="App_Data\Store.sdf" />
+    <Content Include="App_Data\Movies.mdf" />
+    <Content Include="App_Data\Movies_log.ldf">
+      <DependentUpon>Movies.mdf</DependentUpon>
+    </Content>
     <Content Include="Content\Images\728x90-xtudent.jpg" />
     <Content Include="Content\Images\Carry.On.000.gif" />
     <Content Include="Content\Images\eseed-v3-468x60.jpg" />
@@ -303,6 +307,11 @@
     <Content Include="Views\Categories\Index.cshtml" />
     <Content Include="Views\Categories\_CreateOrEdit.cshtml" />
     <Content Include="Views\Home\PostToPayPal.cshtml" />
+    <Content Include="Views\Movies\Index.cshtml" />
+    <Content Include="Views\Movies\Details.cshtml" />
+    <Content Include="Views\Movies\Create.cshtml" />
+    <Content Include="Views\Movies\Edit.cshtml" />
+    <Content Include="Views\Movies\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.5">
