@@ -1,4 +1,4 @@
-﻿@model MvcMusicStore.Models.Category
+﻿@model MvcMusicStore.Models.Product
 
 @{
     ViewBag.Title = "Details";
@@ -7,11 +7,11 @@
 <h2>Details</h2>
 
 <fieldset>
-    <legend>Category</legend>
+    <legend>Product</legend>
 
-    <div class="display-label">CategoryName</div>
+    <div class="display-label">ProductName</div>
     <div class="display-field">
-        @Html.DisplayFor(model => model.CategoryName)
+        @Html.DisplayFor(model => model.ProductName)
     </div>
 </fieldset>
 <p>

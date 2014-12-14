@@ -1,4 +1,4 @@
-﻿@model MvcMusicStore.Models.Category
+﻿@model MvcMusicStore.Models.Product
 
 @{
     ViewBag.Title = "Edit";
@@ -12,16 +12,16 @@
 @using (Html.BeginForm()) {
     @Html.ValidationSummary(true)
     <fieldset>
-        <legend>Category</legend>
+        <legend>Product</legend>
 
         @Html.HiddenFor(model => model.Id)
 
         <div class="editor-label">
-            @Html.LabelFor(model => model.CategoryName)
+            @Html.LabelFor(model => model.ProductName)
         </div>
         <div class="editor-field">
-            @Html.EditorFor(model => model.CategoryName)
-            @Html.ValidationMessageFor(model => model.CategoryName)
+            @Html.EditorFor(model => model.ProductName)
+            @Html.ValidationMessageFor(model => model.ProductName)
         </div>
 
         <p>

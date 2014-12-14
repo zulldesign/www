@@ -11,7 +11,7 @@ namespace MvcMusicStore.Controllers
 { 
     public class ProductsController : Controller
     {
-        private StoreContext db = new StoreContext();
+        private StoresContext db = new StoresContext();
 
         //
         // GET: /Products/

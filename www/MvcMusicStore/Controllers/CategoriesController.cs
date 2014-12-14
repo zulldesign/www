@@ -11,14 +11,14 @@ namespace MvcMusicStore.Controllers
 { 
     public class CategoriesController : Controller
     {
-        private StoreContext db = new StoreContext();
+        private StoresContext db = new StoresContext();
 
         //
         // GET: /Categories/
 
         public ViewResult Index()
         {
-            return View(db.Categories.ToList());
+            return View(db.Products.ToList());
         }
 
         //
@@ -26,8 +26,8 @@ namespace MvcMusicStore.Controllers
 
         public ViewResult Details(int id)
         {
-            Category category = db.Categories.Find(id);
-            return View(category);
+            Product product = db.Products.Find(id);
+            return View(product);
         }
 
         //
@@ -42,16 +42,16 @@ namespace MvcMusicStore.Controllers
         // POST: /Categories/Create
 
         [HttpPost]
-        public ActionResult Create(Category category)
+        public ActionResult Create(Product product)
         {
             if (ModelState.IsValid)
             {
-                db.Categories.Add(category);
+                db.Products.Add(product);
                 db.SaveChanges();
                 return RedirectToAction("Index");  
             }
 
-            return View(category);
+            return View(product);
         }
         
         //
@@ -59,23 +59,23 @@ namespace MvcMusicStore.Controllers
  
         public ActionResult Edit(int id)
         {
-            Category category = db.Categories.Find(id);
-            return View(category);
+            Product product = db.Products.Find(id);
+            return View(product);
         }
 
         //
         // POST: /Categories/Edit/5
 
         [HttpPost]
-        public ActionResult Edit(Category category)
+        public ActionResult Edit(Product product)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(category).State = EntityState.Modified;
+                db.Entry(product).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            return View(category);
+            return View(product);
         }
 
         //
@@ -83,8 +83,8 @@ namespace MvcMusicStore.Controllers
  
         public ActionResult Delete(int id)
         {
-            Category category = db.Categories.Find(id);
-            return View(category);
+            Product product = db.Products.Find(id);
+            return View(product);
         }
 
         //
@@ -93,8 +93,8 @@ namespace MvcMusicStore.Controllers
         [HttpPost, ActionName("Delete")]
         public ActionResult DeleteConfirmed(int id)
         {            
-            Category category = db.Categories.Find(id);
-            db.Categories.Remove(category);
+            Product product = db.Products.Find(id);
+            db.Products.Remove(product);
             db.SaveChanges();
             return RedirectToAction("Index");
         }
