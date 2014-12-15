@@ -1,17 +1,16 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.ComponentModel.DataAnnotations;
+using System.Data.Entity;
 
 namespace MvcMusicStore.Models
 {
     public class Upload
     {
-        [Key]
-        public virtual int Upload_id { get; set; }
-        [Required]
-        public virtual string Title { get; set; }
+        public int Upload_id { get; set; }
+        public string Title { get; set; }
+    }
 
+    public class Leedhar_UploadFile : DbContext
+    {
+        public DbSet<Upload> Uploads { get; set; }
     }
 }
