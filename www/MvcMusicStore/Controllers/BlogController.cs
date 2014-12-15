@@ -11,7 +11,7 @@ namespace MvcMusicStore.Controllers
 { 
     public class BlogController : Controller
     {
-        private BlogEntities db = new BlogEntities();
+        private BlogContext db = new BlogContext();
 
         //
         // GET: /Blog/
