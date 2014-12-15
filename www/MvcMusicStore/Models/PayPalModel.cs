@@ -13,7 +13,7 @@ namespace MvcMusicStore.Models
         public string item_name { get; set; }
         public string amount { get; set; }
         public string actionURL { get; set; }
-        
+
         public PayPalModel(bool useSandbox)
         {
             this.cmd = "_xclick";
