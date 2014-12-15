@@ -139,6 +139,7 @@
     <Compile Include="Models\Genre.cs">
       <DependentUpon>StoreDB.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\Leedhar_UploadFile.cs" />
     <Compile Include="Models\Login.cs" />
     <Compile Include="Models\Movie.cs" />
     <Compile Include="Models\Order.cs">
@@ -166,6 +167,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>StoreDB.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Models\Upload.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModels\ShoppingCartRemoveViewModel.cs" />
     <Compile Include="ViewModels\ShoppingCartViewModel.cs" />
