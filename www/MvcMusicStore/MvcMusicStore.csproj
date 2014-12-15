@@ -114,7 +114,6 @@
   <ItemGroup>
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\AdminController.cs" />
-    <Compile Include="Controllers\BlogController.cs" />
     <Compile Include="Controllers\CheckoutController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
@@ -134,29 +133,8 @@
     <Compile Include="Models\Artist.cs">
       <DependentUpon>StoreDB.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\Blog.cs">
-      <DependentUpon>BlogModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\BlogModel.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>BlogModel.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\BlogModel.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>BlogModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\BlogModel.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>BlogModel.edmx</DependentUpon>
-    </Compile>
     <Compile Include="Models\Cart.cs">
       <DependentUpon>StoreDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Comment.cs">
-      <DependentUpon>BlogModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Genre.cs">
       <DependentUpon>StoreDB.tt</DependentUpon>
@@ -171,9 +149,6 @@
       <DependentUpon>StoreDB.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Paypal.cs" />
-    <Compile Include="Models\Post.cs">
-      <DependentUpon>BlogModel.tt</DependentUpon>
-    </Compile>
     <Compile Include="Models\Product.cs" />
     <Compile Include="Models\Register.cs" />
     <Compile Include="Models\ShoppingCart.cs" />
@@ -264,23 +239,6 @@
       <DependentUpon>StoreDB.edmx</DependentUpon>
       <LastGenOutput>StoreDB.cs</LastGenOutput>
     </Content>
-    <EntityDeploy Include="Models\BlogModel.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>BlogModel.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <Content Include="Models\BlogModel.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>BlogModel.edmx</DependentUpon>
-      <LastGenOutput>BlogModel.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="Models\BlogModel.edmx.diagram">
-      <DependentUpon>BlogModel.edmx</DependentUpon>
-    </Content>
-    <Content Include="Models\BlogModel.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>BlogModel.edmx</DependentUpon>
-      <LastGenOutput>BlogModel.cs</LastGenOutput>
-    </Content>
     <None Include="Scripts\jquery-1.7.1.intellisense.js" />
     <None Include="Scripts\jquery-1.5.1-vsdoc.js" />
     <Content Include="Scripts\jquery-1.5.1.js" />
@@ -353,11 +311,6 @@
     <Content Include="Views\Products\Create.cshtml" />
     <Content Include="Views\Products\Edit.cshtml" />
     <Content Include="Views\Products\Delete.cshtml" />
-    <Content Include="Views\Blog\Index.cshtml" />
-    <Content Include="Views\Blog\Details.cshtml" />
-    <Content Include="Views\Blog\Create.cshtml" />
-    <Content Include="Views\Blog\Edit.cshtml" />
-    <Content Include="Views\Blog\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.5">
