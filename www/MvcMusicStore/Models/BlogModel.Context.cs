@@ -13,10 +13,10 @@ namespace MvcMusicStore.Models
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class dbc1d58df3021849f5a187a3e60050cbcaEntities : DbContext
+    public partial class BlogEntities : DbContext
     {
-        public dbc1d58df3021849f5a187a3e60050cbcaEntities()
-            : base("name=dbc1d58df3021849f5a187a3e60050cbcaEntities")
+        public BlogEntities()
+            : base("name=BlogEntities")
         {
         }
     

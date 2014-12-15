@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="MvcMusicStore.Models" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
-  <EntityContainer Name="dbc1d58df3021849f5a187a3e60050cbcaEntities1" p1:LazyLoadingEnabled="true">
+  <EntityContainer Name="BlogEntities" p1:LazyLoadingEnabled="true">
     <EntitySet Name="Blogs" EntityType="MvcMusicStore.Models.Blog" />
     <EntitySet Name="Comments" EntityType="MvcMusicStore.Models.Comment" />
     <EntitySet Name="Posts" EntityType="MvcMusicStore.Models.Post" />

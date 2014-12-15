@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-  <EntityContainerMapping StorageEntityContainer="MvcMusicStoreModelsStoreContainer" CdmEntityContainer="dbc1d58df3021849f5a187a3e60050cbcaEntities1">
+  <EntityContainerMapping StorageEntityContainer="MvcMusicStoreModelsStoreContainer" CdmEntityContainer="BlogEntities">
     <EntitySetMapping Name="Blogs">
       <EntityTypeMapping TypeName="MvcMusicStore.Models.Blog">
         <MappingFragment StoreEntitySet="Blogs">

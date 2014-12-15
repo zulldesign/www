@@ -42,7 +42,7 @@
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="MvcMusicStore.Models" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
-        <EntityContainer Name="dbc1d58df3021849f5a187a3e60050cbcaEntities" p1:LazyLoadingEnabled="true">
+        <EntityContainer Name="BlogEntities" p1:LazyLoadingEnabled="true">
           <EntitySet Name="Blogs" EntityType="MvcMusicStore.Models.Blog" />
           <EntitySet Name="Comments" EntityType="MvcMusicStore.Models.Comment" />
           <EntitySet Name="Posts" EntityType="MvcMusicStore.Models.Post" />
@@ -79,7 +79,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="MvcMusicStoreModelsStoreContainer" CdmEntityContainer="dbc1d58df3021849f5a187a3e60050cbcaEntities">
+        <EntityContainerMapping StorageEntityContainer="MvcMusicStoreModelsStoreContainer" CdmEntityContainer="BlogEntities">
           <EntitySetMapping Name="Blogs">
             <EntityTypeMapping TypeName="MvcMusicStore.Models.Blog">
               <MappingFragment StoreEntitySet="Blogs">
