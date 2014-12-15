@@ -114,6 +114,7 @@
   <ItemGroup>
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\AdminController.cs" />
+    <Compile Include="Controllers\BankController.cs" />
     <Compile Include="Controllers\CheckoutController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
@@ -141,6 +142,7 @@
     </Compile>
     <Compile Include="Models\Leedhar_UploadFile.cs" />
     <Compile Include="Models\Login.cs" />
+    <Compile Include="Models\Bank.cs" />
     <Compile Include="Models\Movie.cs" />
     <Compile Include="Models\Order.cs">
       <DependentUpon>StoreDB.tt</DependentUpon>
@@ -309,6 +311,11 @@
     <Content Include="Views\Products\Create.cshtml" />
     <Content Include="Views\Products\Edit.cshtml" />
     <Content Include="Views\Products\Delete.cshtml" />
+    <Content Include="Views\Bank\Index.cshtml" />
+    <Content Include="Views\Bank\Details.cshtml" />
+    <Content Include="Views\Bank\Create.cshtml" />
+    <Content Include="Views\Bank\Edit.cshtml" />
+    <Content Include="Views\Bank\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.5">
