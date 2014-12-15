@@ -101,6 +101,12 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountModels.cs" />
+    <Compile Include="Models\Category.cs" />
+    <Compile Include="Models\Login.cs" />
+    <Compile Include="Models\Paypal.cs" />
+    <Compile Include="Models\Product.cs" />
+    <Compile Include="Models\Register.cs" />
+    <Compile Include="Models\StoreContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
