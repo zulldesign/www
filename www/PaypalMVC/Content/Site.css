@@ -103,9 +103,9 @@ header h1, #header h1 {
 #main {
     padding: 30px 30px 15px 30px;
     background-color: #fff;
+    border-radius: 4px 0 0 0;
     -webkit-border-radius: 4px 0 0 0;
     -moz-border-radius: 4px 0 0 0;
-    border-radius: 4px 0 0 0;
 }
 
 footer, 
@@ -117,9 +117,9 @@ footer,
     line-height: normal;
     margin: 0 0 30px 0;
     font-size: .9em;
+    border-radius: 0 0 4px 4px;
     -webkit-border-radius: 0 0 4px 4px;
     -moz-border-radius: 0 0 4px 4px;
-    border-radius: 0 0 4px 4px;
 }
 
 /* TAB MENU   
@@ -152,9 +152,9 @@ ul#menu li a {
     line-height: 2.8em;
     background-color: #e8eef4;
     color: #034af3;
+    border-radius: 4px 4px 0 0;
     -webkit-border-radius: 4px 4px 0 0;
     -moz-border-radius: 4px 4px 0 0;
-    border-radius: 4px 4px 0 0;
 }
 
 ul#menu li a:hover {

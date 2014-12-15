@@ -218,7 +218,10 @@
     <Content Include="Views\Categories\_CreateOrEdit.cshtml" />
     <Content Include="Views\Home\PostToPayPal.cshtml" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Content\Default\" />
+    <Folder Include="Content\Red\" />
+  </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
   </ItemGroup>
