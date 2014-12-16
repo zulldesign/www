@@ -1,42 +1,30 @@
 ﻿@model MvcMusicStore.Models.Blog
 
 @{
-    ViewBag.Title = "Details";
+    ViewBag.Title = "Blog - " + Model.Title;
 }
 
-<h2>Details</h2>
+<h2>@Model.Title</h2>
+
 <p>
     <img alt="@Model.Title" src="@Model.BlogArtUrl" />
 </p>
-<fieldset>
-    <legend>Blog</legend>
 
-    <div class="display-label">Category</div>
-    <div class="display-field">
-        @Html.DisplayFor(model => model.Category.Name)
-    </div>
-
-    <div class="display-label">Product</div>
-    <div class="display-field">
-        @Html.DisplayFor(model => model.Product.Name)
-    </div>
-
-    <div class="display-label">Title</div>
-    <div class="display-field">
-        @Html.DisplayFor(model => model.Title)
-    </div>
-
-    <div class="display-label">Price</div>
-    <div class="display-field">
-        @Html.DisplayFor(model => model.Price)
-    </div>
-
-    <div class="display-label">BlogArtUrl</div>
-    <div class="display-field">
-        @Html.DisplayFor(model => model.BlogArtUrl)
-    </div>
-</fieldset>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id=Model.BlogId }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>
+<div id="blog-details">
+    <p>
+        <em>Category:</em>
+        @Model.Category.Name
+    </p>
+    <p>
+        <em>Product:</em>
+        @Model.Product.Name
+    </p>
+    <p>
+        <em>Price:</em>
+        @String.Format("{0:F}", Model.Price)
+    </p>
+    <p class="button">
+        @Html.ActionLink("Add to cart", "AddToCart", 
+        "ShoppingCart", new { id = Model.BlogId }, "")
+    </p>
+</div>
