@@ -105,6 +105,7 @@
     <Compile Include="Controllers\OrderController.cs" />
     <Compile Include="Controllers\OrderDetailController.cs" />
     <Compile Include="Controllers\ProductController.cs" />
+    <Compile Include="Controllers\BlogController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -285,6 +286,10 @@
     <Content Include="Views\BlogManager\Create.cshtml" />
     <Content Include="Views\BlogManager\Edit.cshtml" />
     <Content Include="Views\BlogManager\Delete.cshtml" />
+    <Content Include="Views\Blog\Browse.cshtml" />
+    <Content Include="Views\Blog\Details.cshtml" />
+    <Content Include="Views\Blog\CategoryMenu.cshtml" />
+    <Content Include="Views\Blog\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -1,60 +1,15 @@
-﻿@model IEnumerable<MvcMusicStore.Models.Blog>
-
-@helper Truncate(string input, int length)
-{
-    if (input.Length <= length) {
-        @input
-    } else {
-        @input.Substring(0, length)<text>...</text>
-    }
-}
-
+﻿@model IEnumerable<MvcMusicStore.Models.Category>
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Blog";
 }
 
-<h2>Index</h2>
+<h3>Browse Categories</h3>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table>
-    <tr>
-        <th>
-            Category
-        </th>
-        <th>
-            Product
-        </th>
-        <th>
-            Title
-        </th>
-        <th>
-            Price
-        </th>
-        <th></th>
-    </tr>
-
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Category.Name)
-        </td>
-        <td>
-            @Truncate(item.Product.Name, 25)
-        </td>
-        <td>
-            @Truncate(item.Title, 25)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Price)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.BlogId }) |
-            @Html.ActionLink("Details", "Details", new { id=item.BlogId }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.BlogId })
-        </td>
-    </tr>
-}
-
-</table>
+    Select from @Model.Count() categories:</p>
+<ul>
+    @foreach (var category in Model)
+    {
+        <li>@Html.ActionLink(category.Name, "Browse", new { category = category.Name })</li>
+    }
+</ul>
