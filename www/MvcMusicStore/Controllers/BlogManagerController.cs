@@ -18,7 +18,7 @@ namespace MvcMusicStore.Controllers
 
         public ViewResult Index()
         {
-            var blogs = db.Blogs.Include(b => b.Product).Include(b => b.Category);
+            var blogs = db.Blogs.Include(a => a.Product).Include(a => a.Category);
             return View(blogs.ToList());
         }
 
