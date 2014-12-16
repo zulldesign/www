@@ -1,14 +1,5 @@
 ﻿@model IEnumerable<MvcMusicStore.Models.Blog>
 
-@helper Truncate(string input, int length)
-{
-    if (input.Length <= length) {
-        @input
-    } else {
-        @input.Substring(0, length)<text>...</text>
-    }
-}
-
 @{
     ViewBag.Title = "Index";
 }
@@ -32,6 +23,9 @@
         <th>
             Price
         </th>
+        <th>
+            BlogArtUrl
+        </th>
         <th></th>
     </tr>
 
@@ -41,13 +35,16 @@
             @Html.DisplayFor(modelItem => item.Category.Name)
         </td>
         <td>
-            @Truncate(item.Product.Name, 25)
+            @Html.DisplayFor(modelItem => item.Product.Name)
         </td>
         <td>
-            @Truncate(item.Title, 25)
+            @Html.DisplayFor(modelItem => item.Title)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.Price)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BlogArtUrl)
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.BlogId }) |
