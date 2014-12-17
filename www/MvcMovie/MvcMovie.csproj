@@ -307,10 +307,6 @@
     <Content Include="Views\Movies\Details.cshtml" />
     <Content Include="Views\Movies\Edit.cshtml" />
     <Content Include="Views\Movies\Index.cshtml" />
-    <Content Include="Views\Checkout\AddressAndPayment.cshtml" />
-    <Content Include="Views\Checkout\Complete.cshtml" />
-    <Content Include="Views\ShoppingCart\CartSummary.cshtml" />
-    <Content Include="Views\ShoppingCart\Index.cshtml" />
     <Content Include="Views\StoreManager\Create.cshtml" />
     <Content Include="Views\StoreManager\Delete.cshtml" />
     <Content Include="Views\StoreManager\Details.cshtml" />
