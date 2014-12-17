@@ -169,6 +169,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\HelloWorldController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MoviesController.cs" />
@@ -191,7 +192,9 @@
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\Leedhar_MvcMovie.cs" />
     <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\Upload.cs" />
     <Compile Include="Models\Movie.cs" />
     <Compile Include="Models\PayPalModel.cs" />
     <Compile Include="Models\Product.cs" />
@@ -199,9 +202,15 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\CommonDataBase.mdf" />
+    <Content Include="App_Data\CommonDataBase_log.ldf">
+      <DependentUpon>CommonDataBase.mdf</DependentUpon>
+    </Content>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\TextFile1.txt" />
+    <Content Include="documents\Files\1.txt" />
+    <Content Include="documents\Files\2.bmp" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -220,6 +229,14 @@
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\_references.js" />
+    <Content Include="Upload_Files\173_7373_1024x768.jpg" />
+    <Content Include="Upload_Files\389807_304852796222253_371344580_n.jpg" />
+    <Content Include="Upload_Files\77.jpg" />
+    <Content Include="Upload_Files\arms008.jpg" />
+    <Content Include="Upload_Files\arms020.jpg" />
+    <Content Include="Upload_Files\birds-147a.jpg" />
+    <Content Include="Upload_Files\birds-151a.jpg" />
+    <Content Include="Upload_Files\birds-152a.jpg" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -264,10 +281,10 @@
     <Content Include="Views\Products\Details.cshtml" />
     <Content Include="Views\Products\Edit.cshtml" />
     <Content Include="Views\Products\Index.cshtml" />
+    <Content Include="Views\Admin\UploadFile.cshtml" />
+    <Content Include="Views\Admin\Index.cshtml" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="App_Data\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
