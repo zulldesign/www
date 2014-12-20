@@ -8,7 +8,8 @@ using System.Web.Mvc;
 using MvcMusicStore.Models;
 
 namespace MvcMusicStore.Controllers
-{ 
+{
+    [Authorize]
     public class ArtistController : Controller
     {
         private MusicStoreEntities db = new MusicStoreEntities();
