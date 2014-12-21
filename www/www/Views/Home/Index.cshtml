@@ -1,11 +1,20 @@
-﻿@{
-    ViewBag.Title = "Multiple file upload with asp.net mvc and HTML5";
+﻿@model List<www.Models.Album>
+@{
+    ViewBag.Title = "ASP.NET MVC Music Store";
 }
+<div id="promotion">
+</div>
 
-@using (Html.BeginForm("Index", "Home", FormMethod.Post, new { enctype = "multipart/form-data" }))
-{
-    <h3>Multiple File Upload With Asp.Net MVC2/MVC3/MVC4/MVC5, C# and HTML5</h3>
-    <input type="file" name="files" value="" multiple="multiple"/>
-    <input type="submit" value="Upload You Image"  title="Uplad"/>
-    <div style="color:Red;font-size:14px">@ViewBag.Message</div>
-}
+<h3><em>Fresh</em> off the grill</h3>
+
+<ul id="album-list">
+    @foreach (var album in Model)
+    {
+        <li><a href="@Url.Action("Details", "Store",
+                new { id = album.AlbumId })">
+
+            <img alt="@album.Title" src="@album.AlbumArtUrl" />
+            <span>@album.Title</span> </a>
+        </li>
+    }
+</ul>
