@@ -11,22 +11,14 @@ namespace www.Controllers
     public class HomeController : Controller
     {
         MusicStoreEntities storeDB = new MusicStoreEntities();
-        /// <summary>
-        /// Multiple file upload with asp.net mvc and HTML5
-        /// </summary>
-        /// <returns></returns>
+        
         public ActionResult Index()
         {
             // Get most popular albums
             var albums = GetTopSellingAlbums(5);
 
             return View(albums);
-        }
-
-        public ActionResult About()
-        {
-            return View();
-        }
+        }        
 
         private List<Album> GetTopSellingAlbums(int count)
         {
@@ -37,6 +29,11 @@ namespace www.Controllers
                 .OrderByDescending(a => a.OrderDetails.Count())
                 .Take(count)
                 .ToList();
+        }
+
+        public ActionResult About()
+        {
+            return View();
         }
         /// <summary>
         /// Post method for uploading files

@@ -6,7 +6,13 @@
 </div>
 
 <h3><em>Fresh</em> off the grill</h3>
-
+@using (Html.BeginForm("Index", "Home", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    <h3>ASP.NET MVC Music Store</h3>
+    <input type="file" name="files" value="" multiple="multiple"/>
+    <input type="submit" value="Upload You Image"  title="Uplad"/>
+    <div style="color:Red;font-size:14px">@ViewBag.Message</div>
+}
 <ul id="album-list">
     @foreach (var album in Model)
     {
@@ -18,11 +24,3 @@
         </li>
     }
 </ul>
-
-@using (Html.BeginForm("Index", "Home", FormMethod.Post, new { enctype = "multipart/form-data" }))
-{
-    <h3>ASP.NET MVC Music Store</h3>
-    <input type="file" name="files" value="" multiple="multiple"/>
-    <input type="submit" value="Upload You Image"  title="Uplad"/>
-    <div style="color:Red;font-size:14px">@ViewBag.Message</div>
-}
