@@ -3,12 +3,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using www.Models;
 
 namespace www.Controllers
 {
     public class HomeController : Controller
     {
-	    MusicStoreEntities storeDB = new MusicStoreEntities();
+        //
+        // GET: /Home/
+
+        MusicStoreEntities storeDB = new MusicStoreEntities();
 
         public ActionResult Index()
         {
@@ -28,19 +32,12 @@ namespace www.Controllers
                 .Take(count)
                 .ToList();
         }
-        /// <summary>
-        /// Multiple file upload with asp.net mvc and HTML5
-        /// </summary>
-        /// <returns></returns>
+
         public ActionResult About()
         {
             return View();
         }
-        /// <summary>
-        /// Post method for uploading files
-        /// </summary>
-        /// <param name="files"></param>
-        /// <returns></returns>
+       
         [HttpPost]
         public ActionResult About(HttpPostedFileBase[] files)
         {
@@ -65,6 +62,5 @@ namespace www.Controllers
             }
             return View();
         }
-
     }
 }
