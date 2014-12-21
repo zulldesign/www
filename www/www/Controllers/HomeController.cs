@@ -35,13 +35,9 @@ namespace www.Controllers
         {
             return View();
         }
-        /// <summary>
-        /// Post method for uploading files
-        /// </summary>
-        /// <param name="files"></param>
-        /// <returns></returns>
+        
         [HttpPost]
-        public ActionResult Index(HttpPostedFileBase[] files)
+        public ActionResult About(HttpPostedFileBase[] files)
         {
             try
             {
