@@ -17,7 +17,26 @@ namespace www.Controllers
         /// <returns></returns>
         public ActionResult Index()
         {
+            // Get most popular albums
+            var albums = GetTopSellingAlbums(5);
+
+            return View(albums);
+        }
+
+        public ActionResult About()
+        {
             return View();
+        }
+
+        private List<Album> GetTopSellingAlbums(int count)
+        {
+            // Group the order details by album and return
+            // the albums with the highest count
+
+            return storeDB.Albums
+                .OrderByDescending(a => a.OrderDetails.Count())
+                .Take(count)
+                .ToList();
         }
         /// <summary>
         /// Post method for uploading files
