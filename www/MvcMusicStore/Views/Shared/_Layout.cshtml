@@ -4,7 +4,7 @@
     <title>@ViewBag.Title</title>
     <link href="@Url.Content("~/Content/Site.css")" rel="stylesheet" 
         type="text/css" />
-    <script src="@Url.Content("~/Scripts/jquery-1.4.4.min.js")" 
+    <script src="@Url.Content("~/Scripts/jquery-1.7.1.min.js")" 
         type="text/javascript"></script>
 </head>
 <body>
@@ -14,7 +14,8 @@
             <li class="first"><a href="@Url.Content("~")" id="current">Home</a></li>
             <li><a href="@Url.Content("~/Store/")">Store</a></li>
             <li>@{Html.RenderAction("CartSummary", "ShoppingCart");}</li>
-            <li><a href="@Url.Content("~/StoreManager/")">Admin</a></li>
+            <li><a href="@Url.Content("~/Account/LogOn/")">LogOn</a></li>
+            <li><a href="@Url.Content("~/account/Register/")">Register</a></li>
         </ul>        
     </div>
 
