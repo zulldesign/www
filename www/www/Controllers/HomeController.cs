@@ -53,8 +53,8 @@ namespace www.Controllers
                     /*Geting the file name*/
                     string filename = System.IO.Path.GetFileName(file.FileName);
                     /*Saving the file in server folder*/
-                    file.SaveAs(Server.MapPath("~/Images/" + filename));
-                    string filepathtosave = "Images/" + filename;
+                    file.SaveAs(Server.MapPath("~/Content/Images/" + filename));
+                    string filepathtosave = "Content/Images/" + filename;
                     /*HERE WILL BE YOUR CODE TO SAVE THE FILE DETAIL IN DATA BASE*/
                 }
 
