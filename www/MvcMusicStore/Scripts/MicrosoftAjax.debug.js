@@ -6019,7 +6019,7 @@ Sys.Net.XMLHttpExecutor = function Sys$Net$XMLHttpExecutor() {
         }
         if (verb.toLowerCase() === "post") {
             if ((headers === null) || !headers['Content-Type']) {
-                this._xmlHttpRequest.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=utf-8');
+                this._xmlHttpRequest.setRequestHeader('Content-Type', 'application/x-MvcMusicStore-form-urlencoded; charset=utf-8');
             }
             if (!body) {
                 body = "";
@@ -6123,7 +6123,7 @@ Sys.Net.XMLHttpExecutor = function Sys$Net$XMLHttpExecutor() {
         else if (navigator.userAgent.indexOf('MSIE') !== -1) {
             xml.setProperty('SelectionLanguage', 'XPath');
         }
-        if (xml.documentElement.namespaceURI === "http://www.mozilla.org/newlayout/xml/parsererror.xml" &&
+        if (xml.documentElement.namespaceURI === "http://MvcMusicStore.mozilla.org/newlayout/xml/parsererror.xml" &&
             xml.documentElement.tagName === "parsererror") {
             return null;
         }
