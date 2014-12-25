@@ -4,17 +4,7 @@
 }
 <div id="promotion">
 </div>
-
-<h3><em>Fresh</em> off the grill</h3>
-
-<ul id="album-list">
-    @foreach (var album in Model)
-    {
-        <li><a href="@Url.Action("Details", "Store",
-                new { id = album.AlbumId })">
-
-            <img alt="@album.Title" src="@album.AlbumArtUrl" />
-            @using (Html.BeginForm("PostToPaypal", "Home"))
+@using (Html.BeginForm("PostToPaypal", "Home"))
 {
 <div>
     <table border="0" cellpadding="0" cellspacing="0">
@@ -23,7 +13,7 @@
                 Item Name:
             </td>
             <td>
-                <input type="text" name="item" value="book" readonly />
+                <input type="text" name="item" value="Reclaiming Satu Jalan Asphalt (RM150)" readonly />
             </td>
         </tr>
         <tr>
@@ -31,7 +21,7 @@
                 Price:
             </td>
             <td>
-                $<input type="text" name="amount" value="200" readonly />
+                RM<input type="text" name="amount" value="150" readonly />
             </td>
         </tr>
         <tr>
@@ -44,6 +34,15 @@
     </table>
 </div>
 }
+<h3><em>Fresh</em> off the grill</h3>
+
+<ul id="album-list">
+    @foreach (var album in Model)
+    {
+        <li><a href="@Url.Action("Details", "Store",
+                new { id = album.AlbumId })">
+
+            <img alt="@album.Title" src="@album.AlbumArtUrl" />
             <span>@album.Title</span> </a>
         </li>
     }
