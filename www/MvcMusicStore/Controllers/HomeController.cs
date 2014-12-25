@@ -76,7 +76,7 @@ namespace MvcMusicStore.Controllers
 
             bool useSandbox = Convert.ToBoolean(ConfigurationManager.AppSettings["UseSandbox"]);
             if (useSandbox)
-                ViewBag.actionURl = "https://www.sandbox.paypal.com/cgi-bin/webscr";
+                ViewBag.actionURl = "https://www.paypal.com/cgi-bin/webscr";
             else
                 ViewBag.actionURl = "https://www.paypal.com/cgi-bin/webscr";
 
