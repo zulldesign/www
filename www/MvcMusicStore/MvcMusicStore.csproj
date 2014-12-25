@@ -102,6 +102,7 @@
     <Compile Include="Controllers\CheckoutController.cs" />
     <Compile Include="Controllers\GenreController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\PayPalController.cs" />
     <Compile Include="Controllers\ShoppingCartController.cs" />
     <Compile Include="Controllers\StoreController.cs" />
     <Compile Include="Controllers\StoreManagerController.cs" />
@@ -127,6 +128,7 @@
     <Compile Include="Models\OrderDetail.cs">
       <DependentUpon>StoreDB.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\PayPalModel.cs" />
     <Compile Include="Models\ShoppingCart.cs" />
     <Compile Include="Models\StoreDB.Context.cs">
       <AutoGen>True</AutoGen>
@@ -185,6 +187,26 @@
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>StoreDB.Designer.cs</LastGenOutput>
     </EntityDeploy>
+    <Content Include="Images\Bark.at.the.Moon.jpg" />
+    <Content Include="Images\Best.of.Ozz.jpg" />
+    <Content Include="Images\Carry.On.jpg" />
+    <Content Include="Images\Compositores.jpg" />
+    <Content Include="Images\Folder.jpg" />
+    <Content Include="Images\For.Those.About.To.Rock.We.Salute.You.gif" />
+    <Content Include="Images\Greatest.Hits.jpg" />
+    <Content Include="Images\Heart.of.the.Night.jpg" />
+    <Content Include="Images\Let.There.Be.Rock.gif" />
+    <Content Include="Images\Miles.Ahead.jpg" />
+    <Content Include="Images\Misplaced.Childhood.jpg" />
+    <Content Include="Images\Morning.Dance.jpg" />
+    <Content Include="Images\Nevermind.jpg" />
+    <Content Include="Images\Quanta.Gente.Veio.ver.jpg" />
+    <Content Include="Images\Quiet.Songs.jpg" />
+    <Content Include="Images\The.Best.Of.Billy.Cobham.jpg" />
+    <Content Include="Images\The.Best.Of.Men.At.Work.jpg" />
+    <Content Include="Images\The.Essential.Miles.Davis.jpg" />
+    <Content Include="Images\Warner.25.Anos.jpg" />
+    <Content Include="Images\Worlds.jpg" />
     <Content Include="Models\StoreDB.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>StoreDB.edmx</DependentUpon>
@@ -233,7 +255,6 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_LogOnPartial.cshtml" />
-    <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Web.config" />
     <Content Include="Views\Checkout\AddressAndPayment.cshtml" />
     <Content Include="Views\Checkout\Complete.cshtml" />
@@ -259,6 +280,12 @@
     <Content Include="Views\Genre\Edit.cshtml" />
     <Content Include="Views\Genre\Index.cshtml" />
     <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\PayPal\CancelFromPaypal.cshtml" />
+    <Content Include="Views\PayPal\NotifyFromPaypal.cshtml" />
+    <Content Include="Views\PayPal\RedirectFromPaypal.cshtml" />
+    <Content Include="Views\PayPal\ValidateCommand.cshtml" />
+    <Content Include="Views\PayPal\Index.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
