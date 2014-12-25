@@ -278,11 +278,6 @@
     <Content Include="Views\Genre\Edit.cshtml" />
     <Content Include="Views\Genre\Index.cshtml" />
     <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\PayPal\CancelFromPaypal.cshtml" />
-    <Content Include="Views\PayPal\NotifyFromPaypal.cshtml" />
-    <Content Include="Views\PayPal\RedirectFromPaypal.cshtml" />
-    <Content Include="Views\PayPal\ValidateCommand.cshtml" />
-    <Content Include="Views\PayPal\Index.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
   </ItemGroup>
   <ItemGroup>
