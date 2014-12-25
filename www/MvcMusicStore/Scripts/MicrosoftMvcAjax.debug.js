@@ -275,7 +275,7 @@ Sys.Mvc.MvcHelpers._asyncRequest = function Sys_Mvc_MvcHelpers$_asyncRequest(url
     }
     request.set_body(requestBody);
     if (verb.toUpperCase() === 'PUT') {
-        request.get_headers()['Content-Type'] = 'application/x-MvcMusicStore-form-urlencoded;';
+        request.get_headers()['Content-Type'] = 'application/x-www-form-urlencoded;';
     }
     request.get_headers()['X-Requested-With'] = 'XMLHttpRequest';
     var updateElement = null;

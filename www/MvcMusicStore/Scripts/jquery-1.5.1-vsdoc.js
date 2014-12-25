@@ -2880,7 +2880,7 @@ function returnTrue() {
 }
 
 // jQuery.Event is based on DOM3 Events as specified by the ECMAScript Language Binding
-// http://MvcMusicStore.w3.org/TR/2003/WD-DOM-Level-3-Events-20030331/ecma-script-binding.html
+// http://www.w3.org/TR/2003/WD-DOM-Level-3-Events-20030331/ecma-script-binding.html
 jQuery.Event.prototype = {
 	preventDefault: function() {
 		this.isDefaultPrevented = returnTrue;
@@ -7268,7 +7268,7 @@ jQuery.extend({
 		url: location.href,
 		global: true,
 		type: "GET",
-		contentType: "application/x-MvcMusicStore-form-urlencoded",
+		contentType: "application/x-www-form-urlencoded",
 		processData: true,
 		async: true,
 		/*

@@ -7,7 +7,7 @@
 * which Microsoft distributed this file.
 *
 * Modernizr v1.7
-* http://MvcMusicStore.modernizr.com
+* http://www.modernizr.com
 *
 * Developed by: 
 * - Faruk Ates  http://farukat.es/
@@ -92,7 +92,7 @@ window.Modernizr = (function(window,document,undefined){
     // More here: http://github.com/Modernizr/Modernizr/issues/issue/21
     domPrefixes = 'Webkit Moz O ms Khtml'.split(' '),
 
-    ns = {'svg': 'http://MvcMusicStore.w3.org/2000/svg'},
+    ns = {'svg': 'http://www.w3.org/2000/svg'},
 
     tests = {},
     inputs = {},
@@ -668,7 +668,7 @@ window.Modernizr = (function(window,document,undefined){
     // Because we are forced to try/catch this, we'll go aggressive.
 
     // FWIW: IE8 Compat mode supports these features completely:
-    //   http://MvcMusicStore.quirksmode.org/dom/html5.html
+    //   http://www.quirksmode.org/dom/html5.html
     // But IE8 doesn't support either with local files
 
     tests['localstorage'] = function() {
@@ -730,7 +730,7 @@ window.Modernizr = (function(window,document,undefined){
         // Mike Taylr has created a comprehensive resource for testing these attributes
         //   when applied to all input types: 
         //   http://miketaylr.com/code/input-type-attr.html
-        // spec: http://MvcMusicStore.whatwg.org/specs/web-apps/current-work/multipage/the-input-element.html#input-type-attr-summary
+        // spec: http://www.whatwg.org/specs/web-apps/current-work/multipage/the-input-element.html#input-type-attr-summary
         ret['input'] = (function(props) {
             for (var i = 0, len = props.length; i<len; i++) {
                 attrs[ props[i] ] = !!(props[i] in inputElem);
