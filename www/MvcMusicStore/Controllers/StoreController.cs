@@ -52,7 +52,7 @@ namespace MvcMusicStore.Controllers
             var genres = storeDB.Genres.ToList();
 
             return PartialView(genres);
-        }
+        }        
 
     }
 }
