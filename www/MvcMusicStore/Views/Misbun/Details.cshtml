@@ -1,0 +1,30 @@
+﻿@model MvcMusicStore.Models.Banner
+
+@{
+    ViewBag.Tajuk = "Banner - " + Model.Tajuk;
+}
+
+<h2>@Model.Tajuk</h2>
+
+<p>
+    <img alt="@Model.Tajuk" src="@Model.BannerArtUrl" />
+</p>
+
+<div id="banner-details">
+    <p>
+        <em>Kategori:</em>
+        @Model.Kategori.Nama
+    </p>
+    <p>
+        <em>Affiliate:</em>
+        @Model.Affiliate.Nama
+    </p>
+    <p>
+        <em>Harga:</em>
+        @String.Format("{0:F}", Model.Harga)
+    </p>
+    <p class="button">
+        @Html.ActionLink("Add to cart", "AddToCart", 
+        "ShoppingCart", new { id = Model.BannerId }, "")
+    </p>
+</div>

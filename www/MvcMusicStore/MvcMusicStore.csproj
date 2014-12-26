@@ -102,6 +102,7 @@
     <Compile Include="Controllers\CheckoutController.cs" />
     <Compile Include="Controllers\GenreController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\MisbunController.cs" />
     <Compile Include="Controllers\ShoppingCartController.cs" />
     <Compile Include="Controllers\StoreController.cs" />
     <Compile Include="Controllers\StoreManagerController.cs" />
@@ -361,6 +362,10 @@
     <Content Include="Views\Genre\Edit.cshtml" />
     <Content Include="Views\Genre\Index.cshtml" />
     <Content Include="Views\Home\PostToPayPal.cshtml" />
+    <Content Include="Views\Misbun\Browse.cshtml" />
+    <Content Include="Views\Misbun\Details.cshtml" />
+    <Content Include="Views\Misbun\KategoriMenu.cshtml" />
+    <Content Include="Views\Misbun\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
