@@ -98,7 +98,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\ArtistController.cs" />
     <Compile Include="Controllers\CheckoutController.cs" />
+    <Compile Include="Controllers\GenreController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ShoppingCartController.cs" />
     <Compile Include="Controllers\StoreController.cs" />
@@ -155,6 +157,7 @@
     <Compile Include="Models\OrderDetail.cs">
       <DependentUpon>StoreDB.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\Paypal.cs" />
     <Compile Include="Models\Pesan.cs">
       <DependentUpon>MisbunDB.tt</DependentUpon>
     </Compile>
@@ -179,9 +182,33 @@
     <Compile Include="ViewModels\ShoppingCartViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\Images\Bark.at.the.Moon.jpg" />
+    <Content Include="Content\Images\Best.of.Ozz.jpg" />
+    <Content Include="Content\Images\Carry.On.000.gif" />
+    <Content Include="Content\Images\Carry.On.jpg" />
+    <Content Include="Content\Images\Compositores.jpg" />
+    <Content Include="Content\Images\Folder.jpg" />
+    <Content Include="Content\Images\For.Those.About.To.Rock.We.Salute.You.gif" />
+    <Content Include="Content\Images\Greatest.Hits.000.gif" />
+    <Content Include="Content\Images\Greatest.Hits.jpg" />
+    <Content Include="Content\Images\Heart.of.the.Night.jpg" />
     <Content Include="Content\Images\home-showcase.png" />
+    <Content Include="Content\Images\Let.There.Be.Rock.gif" />
     <Content Include="Content\Images\logo.png" />
+    <Content Include="Content\Images\Miles.Ahead.jpg" />
+    <Content Include="Content\Images\Misplaced.Childhood.jpg" />
+    <Content Include="Content\Images\Morning.Dance.jpg" />
+    <Content Include="Content\Images\Nevermind.gif" />
+    <Content Include="Content\Images\Nevermind.jpg" />
     <Content Include="Content\Images\placeholder.gif" />
+    <Content Include="Content\Images\Quanta.Gente.Veio.ver.jpg" />
+    <Content Include="Content\Images\Quiet.Songs.jpg" />
+    <Content Include="Content\Images\The.Best.Of.Billy.Cobham.jpg" />
+    <Content Include="Content\Images\The.Best.Of.Men.At.Work.gif" />
+    <Content Include="Content\Images\The.Best.Of.Men.At.Work.jpg" />
+    <Content Include="Content\Images\The.Essential.Miles.Davis.jpg" />
+    <Content Include="Content\Images\Warner.25.Anos.jpg" />
+    <Content Include="Content\Images\Worlds.jpg" />
     <Content Include="Content\Site.css" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
@@ -210,11 +237,32 @@
     <Content Include="Content\themes\base\jquery.ui.slider.css" />
     <Content Include="Content\themes\base\jquery.ui.tabs.css" />
     <Content Include="Content\themes\base\jquery.ui.theme.css" />
+    <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <EntityDeploy Include="Models\StoreDB.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>StoreDB.Designer.cs</LastGenOutput>
     </EntityDeploy>
+    <Content Include="Images\Bark.at.the.Moon.jpg" />
+    <Content Include="Images\Best.of.Ozz.jpg" />
+    <Content Include="Images\Carry.On.jpg" />
+    <Content Include="Images\Compositores.jpg" />
+    <Content Include="Images\Folder.jpg" />
+    <Content Include="Images\For.Those.About.To.Rock.We.Salute.You.gif" />
+    <Content Include="Images\Greatest.Hits.jpg" />
+    <Content Include="Images\Heart.of.the.Night.jpg" />
+    <Content Include="Images\Let.There.Be.Rock.gif" />
+    <Content Include="Images\Miles.Ahead.jpg" />
+    <Content Include="Images\Misplaced.Childhood.jpg" />
+    <Content Include="Images\Morning.Dance.jpg" />
+    <Content Include="Images\Nevermind.jpg" />
+    <Content Include="Images\Quanta.Gente.Veio.ver.jpg" />
+    <Content Include="Images\Quiet.Songs.jpg" />
+    <Content Include="Images\The.Best.Of.Billy.Cobham.jpg" />
+    <Content Include="Images\The.Best.Of.Men.At.Work.jpg" />
+    <Content Include="Images\The.Essential.Miles.Davis.jpg" />
+    <Content Include="Images\Warner.25.Anos.jpg" />
+    <Content Include="Images\Worlds.jpg" />
     <Content Include="Models\StoreDB.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>StoreDB.edmx</DependentUpon>
@@ -248,8 +296,13 @@
     <None Include="Scripts\jquery-1.5.1-vsdoc.js" />
     <Content Include="Scripts\jquery-1.5.1.js" />
     <Content Include="Scripts\jquery-1.5.1.min.js" />
+    <None Include="Scripts\jquery-1.7.1.intellisense.js" />
+    <Content Include="Scripts\jquery-1.7.1.js" />
+    <Content Include="Scripts\jquery-1.7.1.min.js" />
     <Content Include="Scripts\jquery-ui-1.8.11.js" />
     <Content Include="Scripts\jquery-ui-1.8.11.min.js" />
+    <Content Include="Scripts\jquery-ui-1.8.20.js" />
+    <Content Include="Scripts\jquery-ui-1.8.20.min.js" />
     <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
     <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
@@ -265,6 +318,7 @@
     <Content Include="Scripts\MicrosoftMvcValidation.js" />
     <Content Include="Scripts\modernizr-1.7.js" />
     <Content Include="Scripts\modernizr-1.7.min.js" />
+    <Content Include="Scripts\modernizr-2.5.3.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -296,6 +350,17 @@
     <Content Include="Views\Store\Details.cshtml" />
     <Content Include="Views\Store\GenreMenu.cshtml" />
     <Content Include="Views\Store\Index.cshtml" />
+    <Content Include="Views\Artist\Create.cshtml" />
+    <Content Include="Views\Artist\Delete.cshtml" />
+    <Content Include="Views\Artist\Details.cshtml" />
+    <Content Include="Views\Artist\Edit.cshtml" />
+    <Content Include="Views\Artist\Index.cshtml" />
+    <Content Include="Views\Genre\Create.cshtml" />
+    <Content Include="Views\Genre\Delete.cshtml" />
+    <Content Include="Views\Genre\Details.cshtml" />
+    <Content Include="Views\Genre\Edit.cshtml" />
+    <Content Include="Views\Genre\Index.cshtml" />
+    <Content Include="Views\Home\PostToPayPal.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
