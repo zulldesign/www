@@ -14,25 +14,18 @@ namespace MvcMusicStore.Models
     
     public partial class Order
     {
-        public Order()
-        {
-            this.OrderDetails = new HashSet<OrderDetail>();
-        }
-    
         public int OrderId { get; set; }
-        public System.DateTime OrderDate { get; set; }
-        public string Username { get; set; }
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
-        public string Address { get; set; }
-        public string City { get; set; }
-        public string State { get; set; }
-        public string PostalCode { get; set; }
-        public string Country { get; set; }
-        public string Phone { get; set; }
-        public string Email { get; set; }
-        public decimal Total { get; set; }
-    
-        public virtual ICollection<OrderDetail> OrderDetails { get; set; }
+        public System.DateTime OrderTarikh { get; set; }
+        public string NamaPengguna { get; set; }
+        public string NamaPertama { get; set; }
+        public string NamaAkhir { get; set; }
+        public string Alamat { get; set; }
+        public string Bandar { get; set; }
+        public string Negeri { get; set; }
+        public string Poskod { get; set; }
+        public string Negara { get; set; }
+        public string Telefon { get; set; }
+        public string Emel { get; set; }
+        public decimal Jumlah { get; set; }
     }
 }

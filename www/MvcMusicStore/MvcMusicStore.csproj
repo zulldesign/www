@@ -109,20 +109,50 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountModels.cs" />
+    <Compile Include="Models\Affiliate.cs">
+      <DependentUpon>MisbunDB.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\Album.cs">
       <DependentUpon>StoreDB.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Artist.cs">
       <DependentUpon>StoreDB.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\Banner.cs">
+      <DependentUpon>MisbunDB.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\Cart.cs">
       <DependentUpon>StoreDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Carta.cs">
+      <DependentUpon>MisbunDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DetailOrder.cs">
+      <DependentUpon>MisbunDB.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Genre.cs">
       <DependentUpon>StoreDB.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\Kategori.cs">
+      <DependentUpon>MisbunDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MisbunDB.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MisbunDB.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MisbunDB.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MisbunDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MisbunDB.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MisbunDB.edmx</DependentUpon>
+    </Compile>
     <Compile Include="Models\Order.cs">
-      <DependentUpon>StoreDB.tt</DependentUpon>
+      <DependentUpon>MisbunDB.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\OrderDetail.cs">
       <DependentUpon>StoreDB.tt</DependentUpon>
@@ -222,6 +252,23 @@
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>StoreDB.edmx</DependentUpon>
       <LastGenOutput>StoreDB.cs</LastGenOutput>
+    </Content>
+    <EntityDeploy Include="Models\MisbunDB.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>MisbunDB.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\MisbunDB.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>MisbunDB.edmx</DependentUpon>
+      <LastGenOutput>MisbunDB.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\MisbunDB.edmx.diagram">
+      <DependentUpon>MisbunDB.edmx</DependentUpon>
+    </Content>
+    <Content Include="Models\MisbunDB.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>MisbunDB.edmx</DependentUpon>
+      <LastGenOutput>MisbunDB.cs</LastGenOutput>
     </Content>
     <None Include="Scripts\jquery-1.5.1-vsdoc.js" />
     <Content Include="Scripts\jquery-1.5.1.js" />
