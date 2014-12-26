@@ -365,10 +365,6 @@
     <Content Include="Views\Genre\Index.cshtml" />
     <Content Include="Views\Home\PostToPayPal.cshtml" />
     <Content Include="Views\Misbun\Index.cshtml" />
-    <Content Include="Views\Misbun\Details.cshtml" />
-    <Content Include="Views\Misbun\Create.cshtml" />
-    <Content Include="Views\Misbun\Edit.cshtml" />
-    <Content Include="Views\Misbun\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
