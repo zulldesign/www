@@ -11,12 +11,13 @@ namespace MvcMusicStore.Controllers {
         //
         // GET: /Store/
 
-        public ActionResult Details() 
+        public ActionResult Details()
         {
             return View();
         }
 
-        public ActionResult Browse() {
+        public ActionResult Browse()
+        {
             return View();
         }
 
@@ -31,7 +32,7 @@ namespace MvcMusicStore.Controllers {
         // GET: /Store/GenreMenu
 
         [ChildActionOnly]
-        public ActionResult KategoriMenu()
+        public ActionResult GenreMenu()
         {
             var kategoris = misbunDB.Kategoris.Take(9).ToList();
 

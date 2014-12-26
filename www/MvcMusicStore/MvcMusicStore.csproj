@@ -371,6 +371,8 @@
     <Content Include="Views\KategoriMisbun\Create.cshtml" />
     <Content Include="Views\KategoriMisbun\Edit.cshtml" />
     <Content Include="Views\KategoriMisbun\Delete.cshtml" />
+    <Content Include="Views\Misbun\Details.cshtml" />
+    <Content Include="Views\Misbun\GenreMenu.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

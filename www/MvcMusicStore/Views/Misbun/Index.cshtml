@@ -2,15 +2,15 @@
 @{
     ViewBag.Title = "Misbun";
 }
-<h3>Browse Kategori</h3>
+<h3>Carian Kategori</h3>
 
 <p>
-    Select from @Model.Count() kategori:</p>
+    Pilih daripada @Model.Count() kategori:</p>
 <ul>
 <ul>
     @foreach (var kategori in Model)
     {
-        <li>@Html.ActionLink(kategori.Nama, "Browse", new { kategori = kategori.Nama })</li>
+        <li>@Html.ActionLink(kategori.Nama, "Details", new { kategori = kategori.Nama })</li>
     }
 </ul>
 
