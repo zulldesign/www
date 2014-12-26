@@ -320,7 +320,9 @@
     <Content Include="Scripts\modernizr-1.7.js" />
     <Content Include="Scripts\modernizr-1.7.min.js" />
     <Content Include="Scripts\modernizr-2.5.3.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -362,6 +364,11 @@
     <Content Include="Views\Genre\Edit.cshtml" />
     <Content Include="Views\Genre\Index.cshtml" />
     <Content Include="Views\Home\PostToPayPal.cshtml" />
+    <Content Include="Views\Misbun\Index.cshtml" />
+    <Content Include="Views\Misbun\Details.cshtml" />
+    <Content Include="Views\Misbun\Create.cshtml" />
+    <Content Include="Views\Misbun\Edit.cshtml" />
+    <Content Include="Views\Misbun\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

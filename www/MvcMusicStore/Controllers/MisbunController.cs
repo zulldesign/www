@@ -1,58 +1,108 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Data.Entity;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using MvcMusicStore.Models;
 
 namespace MvcMusicStore.Controllers
-{
+{ 
     public class MisbunController : Controller
     {
-        MisbunEntities misbunDB = new MisbunEntities();
+        private MisbunEntities db = new MisbunEntities();
 
         //
-        // DAPATKAN: /Misbun/
+        // GET: /Misbun/
 
-        public ActionResult Index()
+        public ViewResult Index()
         {
-            var kategoris = misbunDB.Kategoris.ToList();
-
-            return View(kategoris);
+            return View(db.Kategoris.ToList());
         }
 
         //
-        // DAPATKAN: /Misbun/Browse?kategori=Duit
+        // GET: /Misbun/Details/5
 
-        public ActionResult Browse(string kategori)
+        public ViewResult Details(int id)
         {
-            // Ambil Kategori dan Banner Associated dari pangkalan data
-            var kategoriModel = misbunDB.Kategoris.Include("Banners")
-                .Single(g => g.Nama == kategori);
-
-            return View(kategoriModel);
+            Kategori kategori = db.Kategoris.Find(id);
+            return View(kategori);
         }
 
         //
-        // DAPATKAN: /Misbun/Details/5
+        // GET: /Misbun/Create
 
-        public ActionResult Details(int id)
+        public ActionResult Create()
         {
-            var banner = misbunDB.Banners.Find(id);
+            return View();
+        } 
 
-            return View(banner);
+        //
+        // POST: /Misbun/Create
+
+        [HttpPost]
+        public ActionResult Create(Kategori kategori)
+        {
+            if (ModelState.IsValid)
+            {
+                db.Kategoris.Add(kategori);
+                db.SaveChanges();
+                return RedirectToAction("Index");  
+            }
+
+            return View(kategori);
+        }
+        
+        //
+        // GET: /Misbun/Edit/5
+ 
+        public ActionResult Edit(int id)
+        {
+            Kategori kategori = db.Kategoris.Find(id);
+            return View(kategori);
         }
 
         //
-        // DAPATKAN: /Misbun/KategoriMenu
+        // POST: /Misbun/Edit/5
 
-        [ChildActionOnly]
-        public ActionResult KategoriMenu()
+        [HttpPost]
+        public ActionResult Edit(Kategori kategori)
         {
-            var kategoris = misbunDB.Kategoris.ToList();
-
-            return PartialView(kategoris);
+            if (ModelState.IsValid)
+            {
+                db.Entry(kategori).State = EntityState.Modified;
+                db.SaveChanges();
+                return RedirectToAction("Index");
+            }
+            return View(kategori);
         }
 
+        //
+        // GET: /Misbun/Delete/5
+ 
+        public ActionResult Delete(int id)
+        {
+            Kategori kategori = db.Kategoris.Find(id);
+            return View(kategori);
+        }
+
+        //
+        // POST: /Misbun/Delete/5
+
+        [HttpPost, ActionName("Delete")]
+        public ActionResult DeleteConfirmed(int id)
+        {            
+            Kategori kategori = db.Kategoris.Find(id);
+            db.Kategoris.Remove(kategori);
+            db.SaveChanges();
+            return RedirectToAction("Index");
+        }
+
+        protected override void Dispose(bool disposing)
+        {
+            db.Dispose();
+            base.Dispose(disposing);
+        }
     }
 }
