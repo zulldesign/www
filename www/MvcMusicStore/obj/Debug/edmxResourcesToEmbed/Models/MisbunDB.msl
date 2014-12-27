@@ -9,6 +9,26 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="Albums">
+      <EntityTypeMapping TypeName="MvcMusicStore.Models.Album">
+        <MappingFragment StoreEntitySet="Album">
+          <ScalarProperty Name="AlbumId" ColumnName="AlbumId" />
+          <ScalarProperty Name="GenreId" ColumnName="GenreId" />
+          <ScalarProperty Name="ArtistId" ColumnName="ArtistId" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="AlbumArtUrl" ColumnName="AlbumArtUrl" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Artists">
+      <EntityTypeMapping TypeName="MvcMusicStore.Models.Artist">
+        <MappingFragment StoreEntitySet="Artist">
+          <ScalarProperty Name="ArtistId" ColumnName="ArtistId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <EntitySetMapping Name="Banners">
       <EntityTypeMapping TypeName="MvcMusicStore.Models.Banner">
         <MappingFragment StoreEntitySet="Banner">
@@ -18,6 +38,28 @@
           <ScalarProperty Name="Tajuk" ColumnName="Tajuk" />
           <ScalarProperty Name="Harga" ColumnName="Harga" />
           <ScalarProperty Name="BannerArtUrl" ColumnName="BannerArtUrl" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ButiranPesanans">
+      <EntityTypeMapping TypeName="MvcMusicStore.Models.ButiranPesanan">
+        <MappingFragment StoreEntitySet="ButiranPesanan">
+          <ScalarProperty Name="ButiranPesananId" ColumnName="ButiranPesananId" />
+          <ScalarProperty Name="PesananId" ColumnName="PesananId" />
+          <ScalarProperty Name="BannerId" ColumnName="BannerId" />
+          <ScalarProperty Name="Kuantiti" ColumnName="Kuantiti" />
+          <ScalarProperty Name="UnitHarga" ColumnName="UnitHarga" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Carts">
+      <EntityTypeMapping TypeName="MvcMusicStore.Models.Cart">
+        <MappingFragment StoreEntitySet="Cart">
+          <ScalarProperty Name="RecordId" ColumnName="RecordId" />
+          <ScalarProperty Name="CartId" ColumnName="CartId" />
+          <ScalarProperty Name="AlbumId" ColumnName="AlbumId" />
+          <ScalarProperty Name="Count" ColumnName="Count" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -32,14 +74,12 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="DetailPesans">
-      <EntityTypeMapping TypeName="MvcMusicStore.Models.DetailPesan">
-        <MappingFragment StoreEntitySet="DetailPesan">
-          <ScalarProperty Name="DetailPesanId" ColumnName="DetailPesanId" />
-          <ScalarProperty Name="PesanId" ColumnName="PesanId" />
-          <ScalarProperty Name="BannerId" ColumnName="BannerId" />
-          <ScalarProperty Name="Kuantiti" ColumnName="Kuantiti" />
-          <ScalarProperty Name="UnitHarga" ColumnName="UnitHarga" />
+    <EntitySetMapping Name="Genres">
+      <EntityTypeMapping TypeName="MvcMusicStore.Models.Genre">
+        <MappingFragment StoreEntitySet="Genre">
+          <ScalarProperty Name="GenreId" ColumnName="GenreId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -52,11 +92,41 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="Pesans">
-      <EntityTypeMapping TypeName="MvcMusicStore.Models.Pesan">
-        <MappingFragment StoreEntitySet="Pesan">
-          <ScalarProperty Name="PesanId" ColumnName="PesanId" />
-          <ScalarProperty Name="PesanTarikh" ColumnName="PesanTarikh" />
+    <EntitySetMapping Name="Orders">
+      <EntityTypeMapping TypeName="MvcMusicStore.Models.Order">
+        <MappingFragment StoreEntitySet="Order">
+          <ScalarProperty Name="OrderId" ColumnName="OrderId" />
+          <ScalarProperty Name="OrderDate" ColumnName="OrderDate" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="PostalCode" ColumnName="PostalCode" />
+          <ScalarProperty Name="Country" ColumnName="Country" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Total" ColumnName="Total" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OrderDetails">
+      <EntityTypeMapping TypeName="MvcMusicStore.Models.OrderDetail">
+        <MappingFragment StoreEntitySet="OrderDetail">
+          <ScalarProperty Name="OrderDetailId" ColumnName="OrderDetailId" />
+          <ScalarProperty Name="OrderId" ColumnName="OrderId" />
+          <ScalarProperty Name="AlbumId" ColumnName="AlbumId" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="UnitPrice" ColumnName="UnitPrice" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Pesanans">
+      <EntityTypeMapping TypeName="MvcMusicStore.Models.Pesanan">
+        <MappingFragment StoreEntitySet="Pesanan">
+          <ScalarProperty Name="PesananId" ColumnName="PesananId" />
+          <ScalarProperty Name="PesananTarikh" ColumnName="PesananTarikh" />
           <ScalarProperty Name="NamaPengguna" ColumnName="NamaPengguna" />
           <ScalarProperty Name="NamaPertama" ColumnName="NamaPertama" />
           <ScalarProperty Name="NamaAkhir" ColumnName="NamaAkhir" />

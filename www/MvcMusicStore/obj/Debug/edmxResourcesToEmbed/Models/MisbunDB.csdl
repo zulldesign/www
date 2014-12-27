@@ -2,11 +2,17 @@
 <Schema Namespace="MvcMusicStore.Models" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
   <EntityContainer Name="MisbunEntities" p1:LazyLoadingEnabled="true">
     <EntitySet Name="Affiliates" EntityType="MvcMusicStore.Models.Affiliate" />
+    <EntitySet Name="Albums" EntityType="MvcMusicStore.Models.Album" />
+    <EntitySet Name="Artists" EntityType="MvcMusicStore.Models.Artist" />
     <EntitySet Name="Banners" EntityType="MvcMusicStore.Models.Banner" />
+    <EntitySet Name="ButiranPesanans" EntityType="MvcMusicStore.Models.ButiranPesanan" />
+    <EntitySet Name="Carts" EntityType="MvcMusicStore.Models.Cart" />
     <EntitySet Name="Cartas" EntityType="MvcMusicStore.Models.Carta" />
-    <EntitySet Name="DetailPesans" EntityType="MvcMusicStore.Models.DetailPesan" />
+    <EntitySet Name="Genres" EntityType="MvcMusicStore.Models.Genre" />
     <EntitySet Name="Kategoris" EntityType="MvcMusicStore.Models.Kategori" />
-    <EntitySet Name="Pesans" EntityType="MvcMusicStore.Models.Pesan" />
+    <EntitySet Name="Orders" EntityType="MvcMusicStore.Models.Order" />
+    <EntitySet Name="OrderDetails" EntityType="MvcMusicStore.Models.OrderDetail" />
+    <EntitySet Name="Pesanans" EntityType="MvcMusicStore.Models.Pesanan" />
   </EntityContainer>
   <EntityType Name="Affiliate">
     <Key>
@@ -14,6 +20,24 @@
     </Key>
     <Property Name="AffiliateId" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
     <Property Name="Nama" Type="String" MaxLength="120" Unicode="true" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="Album">
+    <Key>
+      <PropertyRef Name="AlbumId" />
+    </Key>
+    <Property Name="AlbumId" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="GenreId" Type="Int32" Nullable="false" />
+    <Property Name="ArtistId" Type="Int32" Nullable="false" />
+    <Property Name="Title" Type="String" Nullable="false" MaxLength="160" Unicode="true" FixedLength="false" />
+    <Property Name="Price" Type="Decimal" Nullable="false" Precision="10" Scale="2" />
+    <Property Name="AlbumArtUrl" Type="String" MaxLength="1024" Unicode="true" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="Artist">
+    <Key>
+      <PropertyRef Name="ArtistId" />
+    </Key>
+    <Property Name="ArtistId" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="120" Unicode="true" FixedLength="false" />
   </EntityType>
   <EntityType Name="Banner">
     <Key>
@@ -26,6 +50,26 @@
     <Property Name="Harga" Type="Decimal" Nullable="false" Precision="10" Scale="2" />
     <Property Name="BannerArtUrl" Type="String" MaxLength="1024" Unicode="true" FixedLength="false" />
   </EntityType>
+  <EntityType Name="ButiranPesanan">
+    <Key>
+      <PropertyRef Name="ButiranPesananId" />
+    </Key>
+    <Property Name="ButiranPesananId" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="PesananId" Type="Int32" Nullable="false" />
+    <Property Name="BannerId" Type="Int32" Nullable="false" />
+    <Property Name="Kuantiti" Type="Int32" Nullable="false" />
+    <Property Name="UnitHarga" Type="Decimal" Nullable="false" Precision="10" Scale="2" />
+  </EntityType>
+  <EntityType Name="Cart">
+    <Key>
+      <PropertyRef Name="RecordId" />
+    </Key>
+    <Property Name="RecordId" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="CartId" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="AlbumId" Type="Int32" Nullable="false" />
+    <Property Name="Count" Type="Int32" Nullable="false" />
+    <Property Name="DateCreated" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
   <EntityType Name="Carta">
     <Key>
       <PropertyRef Name="RekodId" />
@@ -36,15 +80,13 @@
     <Property Name="Count" Type="Int32" Nullable="false" />
     <Property Name="Tarikh" Type="DateTime" Nullable="false" Precision="3" />
   </EntityType>
-  <EntityType Name="DetailPesan">
+  <EntityType Name="Genre">
     <Key>
-      <PropertyRef Name="DetailPesanId" />
+      <PropertyRef Name="GenreId" />
     </Key>
-    <Property Name="DetailPesanId" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
-    <Property Name="PesanId" Type="Int32" Nullable="false" />
-    <Property Name="BannerId" Type="Int32" Nullable="false" />
-    <Property Name="Kuantiti" Type="Int32" Nullable="false" />
-    <Property Name="UnitHarga" Type="Decimal" Nullable="false" Precision="10" Scale="2" />
+    <Property Name="GenreId" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="120" Unicode="true" FixedLength="false" />
+    <Property Name="Description" Type="String" MaxLength="4000" Unicode="true" FixedLength="false" />
   </EntityType>
   <EntityType Name="Kategori">
     <Key>
@@ -54,12 +96,40 @@
     <Property Name="Nama" Type="String" MaxLength="120" Unicode="true" FixedLength="false" />
     <Property Name="Penerangan" Type="String" MaxLength="4000" Unicode="true" FixedLength="false" />
   </EntityType>
-  <EntityType Name="Pesan">
+  <EntityType Name="Order">
     <Key>
-      <PropertyRef Name="PesanId" />
+      <PropertyRef Name="OrderId" />
     </Key>
-    <Property Name="PesanId" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
-    <Property Name="PesanTarikh" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="OrderId" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="OrderDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Username" Type="String" MaxLength="256" Unicode="true" FixedLength="false" />
+    <Property Name="FirstName" Type="String" MaxLength="160" Unicode="true" FixedLength="false" />
+    <Property Name="LastName" Type="String" MaxLength="160" Unicode="true" FixedLength="false" />
+    <Property Name="Address" Type="String" MaxLength="70" Unicode="true" FixedLength="false" />
+    <Property Name="City" Type="String" MaxLength="40" Unicode="true" FixedLength="false" />
+    <Property Name="State" Type="String" MaxLength="40" Unicode="true" FixedLength="false" />
+    <Property Name="PostalCode" Type="String" MaxLength="10" Unicode="true" FixedLength="false" />
+    <Property Name="Country" Type="String" MaxLength="40" Unicode="true" FixedLength="false" />
+    <Property Name="Phone" Type="String" MaxLength="24" Unicode="true" FixedLength="false" />
+    <Property Name="Email" Type="String" MaxLength="160" Unicode="true" FixedLength="false" />
+    <Property Name="Total" Type="Decimal" Nullable="false" Precision="10" Scale="2" />
+  </EntityType>
+  <EntityType Name="OrderDetail">
+    <Key>
+      <PropertyRef Name="OrderDetailId" />
+    </Key>
+    <Property Name="OrderDetailId" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="OrderId" Type="Int32" Nullable="false" />
+    <Property Name="AlbumId" Type="Int32" Nullable="false" />
+    <Property Name="Quantity" Type="Int32" Nullable="false" />
+    <Property Name="UnitPrice" Type="Decimal" Nullable="false" Precision="10" Scale="2" />
+  </EntityType>
+  <EntityType Name="Pesanan">
+    <Key>
+      <PropertyRef Name="PesananId" />
+    </Key>
+    <Property Name="PesananId" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="PesananTarikh" Type="DateTime" Nullable="false" Precision="3" />
     <Property Name="NamaPengguna" Type="String" MaxLength="256" Unicode="true" FixedLength="false" />
     <Property Name="NamaPertama" Type="String" MaxLength="160" Unicode="true" FixedLength="false" />
     <Property Name="NamaAkhir" Type="String" MaxLength="160" Unicode="true" FixedLength="false" />
