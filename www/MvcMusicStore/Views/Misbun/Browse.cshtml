@@ -1,19 +1,19 @@
-﻿@model MvcMusicStore.Models.Kategori
+﻿@model MvcMusicStore.Models.Genre
  
 @{
-    ViewBag.Tajuk = "Browse Banners";
+    ViewBag.Title = "Browse Albums";
 }
  
-<div class="kategori">
-    <h3><em>@Model.Nama</em> Banners</h3>
+<div class="genre">
+    <h3><em>@Model.Name</em> Albums</h3>
  
-    <ul id="banner-list">
-        @foreach (var banner in Model.Banners)
+    <ul id="album-list">
+        @foreach (var album in Model.Albums)
         {
             <li>
-                <a href="@Url.Action("Details", new { id = banner.BannerId })">
-                    <img alt="@banner.Tajuk" src="@banner.BannerArtUrl" />
-                    <span>@banner.Tajuk</span>
+                <a href="@Url.Action("Details", new { id = album.AlbumId })">
+                    <img alt="@album.Title" src="@album.AlbumArtUrl" />
+                    <span>@album.Title</span>
                 </a>
             </li>
         }

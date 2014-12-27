@@ -1,11 +1,11 @@
-﻿@model IEnumerable<MvcMusicStore.Models.Kategori>
+﻿@model IEnumerable<MvcMusicStore.Models.Genre>
 
 <ul id="categories">
-    @foreach (var kategori in Model)
+    @foreach (var genre in Model)
     {
-        <li>@Html.ActionLink(kategori.Nama, 
-                "Browse", "Misbun", 
-                new { Kategori = kategori.Nama }, null)
+        <li>@Html.ActionLink(genre.Name, 
+                "Browse", "Store", 
+                new { Genre = genre.Name }, null)
         </li>
     }
 </ul>

@@ -1,17 +1,14 @@
-﻿@model IEnumerable<MvcMusicStore.Models.Kategori>
+﻿@model IEnumerable<MvcMusicStore.Models.Genre>
 @{
     ViewBag.Title = "Misbun";
 }
-<h3>Carian Kategori</h3>
+<h3>Browse Genres</h3>
 
 <p>
-    Pilih daripada @Model.Count() kategori:</p>
+    Select from @Model.Count() genres:</p>
 <ul>
-<ul>
-    @foreach (var kategori in Model)
+    @foreach (var genre in Model)
     {
-        <li>@Html.ActionLink(kategori.Nama, "Details", new { kategori = kategori.Nama })</li>
+        <li>@Html.ActionLink(genre.Name, "Browse", new { genre = genre.Name })</li>
     }
-</ul>
-
 </ul>

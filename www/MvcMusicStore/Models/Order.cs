@@ -14,11 +14,6 @@ namespace MvcMusicStore.Models
     
     public partial class Order
     {
-        public Order()
-        {
-            this.OrderDetails = new HashSet<OrderDetail>();
-        }
-    
         public int OrderId { get; set; }
         public System.DateTime OrderDate { get; set; }
         public string Username { get; set; }
@@ -32,7 +27,5 @@ namespace MvcMusicStore.Models
         public string Phone { get; set; }
         public string Email { get; set; }
         public decimal Total { get; set; }
-    
-        public virtual ICollection<OrderDetail> OrderDetails { get; set; }
     }
 }

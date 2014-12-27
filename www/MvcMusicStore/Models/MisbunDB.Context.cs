@@ -26,10 +26,16 @@ namespace MvcMusicStore.Models
         }
     
         public DbSet<Affiliate> Affiliates { get; set; }
+        public DbSet<Album> Albums { get; set; }
+        public DbSet<Artist> Artists { get; set; }
         public DbSet<Banner> Banners { get; set; }
+        public DbSet<ButiranPesanan> ButiranPesanans { get; set; }
+        public DbSet<Cart> Carts { get; set; }
         public DbSet<Carta> Cartas { get; set; }
-        public DbSet<DetailPesan> DetailPesans { get; set; }
+        public DbSet<Genre> Genres { get; set; }
         public DbSet<Kategori> Kategoris { get; set; }
-        public DbSet<Pesan> Pesans { get; set; }
+        public DbSet<Order> Orders { get; set; }
+        public DbSet<OrderDetail> OrderDetails { get; set; }
+        public DbSet<Pesanan> Pesanans { get; set; }
     }
 }

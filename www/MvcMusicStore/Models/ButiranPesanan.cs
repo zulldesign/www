@@ -12,9 +12,12 @@ namespace MvcMusicStore.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class Artist
+    public partial class ButiranPesanan
     {
-        public int ArtistId { get; set; }
-        public string Name { get; set; }
+        public int ButiranPesananId { get; set; }
+        public int PesananId { get; set; }
+        public int BannerId { get; set; }
+        public int Kuantiti { get; set; }
+        public decimal UnitHarga { get; set; }
     }
 }
