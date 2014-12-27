@@ -1,0 +1,255 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="MvcMusicStore.Models.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityContainer Name="MvcMusicStoreModelsStoreContainer">
+          <EntitySet Name="Affiliate" EntityType="MvcMusicStore.Models.Store.Affiliate" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Banner" EntityType="MvcMusicStore.Models.Store.Banner" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Carta" EntityType="MvcMusicStore.Models.Store.Carta" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="DetailPesan" EntityType="MvcMusicStore.Models.Store.DetailPesan" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Kategori" EntityType="MvcMusicStore.Models.Store.Kategori" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Pesan" EntityType="MvcMusicStore.Models.Store.Pesan" store:Type="Tables" Schema="dbo" />
+        </EntityContainer>
+        <EntityType Name="Affiliate">
+          <Key>
+            <PropertyRef Name="AffiliateId" />
+          </Key>
+          <Property Name="AffiliateId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Nama" Type="nvarchar" MaxLength="120" />
+        </EntityType>
+        <EntityType Name="Banner">
+          <Key>
+            <PropertyRef Name="BannerId" />
+          </Key>
+          <Property Name="BannerId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="KategoriId" Type="int" Nullable="false" />
+          <Property Name="AffiliateId" Type="int" Nullable="false" />
+          <Property Name="Tajuk" Type="nvarchar" Nullable="false" MaxLength="160" />
+          <Property Name="Harga" Type="numeric" Nullable="false" Precision="10" Scale="2" />
+          <Property Name="BannerArtUrl" Type="nvarchar" MaxLength="1024" />
+        </EntityType>
+        <EntityType Name="Carta">
+          <Key>
+            <PropertyRef Name="RekodId" />
+          </Key>
+          <Property Name="RekodId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="CartaId" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="BannerId" Type="int" Nullable="false" />
+          <Property Name="Count" Type="int" Nullable="false" />
+          <Property Name="Tarikh" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="DetailPesan">
+          <Key>
+            <PropertyRef Name="DetailPesanId" />
+          </Key>
+          <Property Name="DetailPesanId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="PesanId" Type="int" Nullable="false" />
+          <Property Name="BannerId" Type="int" Nullable="false" />
+          <Property Name="Kuantiti" Type="int" Nullable="false" />
+          <Property Name="UnitHarga" Type="numeric" Nullable="false" Precision="10" Scale="2" />
+        </EntityType>
+        <EntityType Name="Kategori">
+          <Key>
+            <PropertyRef Name="KategoriId" />
+          </Key>
+          <Property Name="KategoriId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Nama" Type="nvarchar" MaxLength="120" />
+          <Property Name="Penerangan" Type="nvarchar" />
+        </EntityType>
+        <EntityType Name="Pesan">
+          <Key>
+            <PropertyRef Name="PesanId" />
+          </Key>
+          <Property Name="PesanId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="PesanTarikh" Type="datetime" Nullable="false" />
+          <Property Name="NamaPengguna" Type="nvarchar" MaxLength="256" />
+          <Property Name="NamaPertama" Type="nvarchar" MaxLength="160" />
+          <Property Name="NamaAkhir" Type="nvarchar" MaxLength="160" />
+          <Property Name="Alamat" Type="nvarchar" MaxLength="70" />
+          <Property Name="Bandar" Type="nvarchar" MaxLength="40" />
+          <Property Name="Negeri" Type="nvarchar" MaxLength="40" />
+          <Property Name="Poskod" Type="nvarchar" MaxLength="10" />
+          <Property Name="Negara" Type="nvarchar" MaxLength="40" />
+          <Property Name="Telefon" Type="nvarchar" MaxLength="24" />
+          <Property Name="Emel" Type="nvarchar" MaxLength="160" />
+          <Property Name="Jumlah" Type="numeric" Nullable="false" Precision="10" Scale="2" />
+        </EntityType>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="MvcMusicStore.Models" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="MisbunEntities" p1:LazyLoadingEnabled="true">
+          <EntitySet Name="Affiliates" EntityType="MvcMusicStore.Models.Affiliate" />
+          <EntitySet Name="Banners" EntityType="MvcMusicStore.Models.Banner" />
+          <EntitySet Name="Cartas" EntityType="MvcMusicStore.Models.Carta" />
+          <EntitySet Name="DetailPesans" EntityType="MvcMusicStore.Models.DetailPesan" />
+          <EntitySet Name="Kategoris" EntityType="MvcMusicStore.Models.Kategori" />
+          <EntitySet Name="Pesans" EntityType="MvcMusicStore.Models.Pesan" />
+        </EntityContainer>
+        <EntityType Name="Affiliate">
+          <Key>
+            <PropertyRef Name="AffiliateId" />
+          </Key>
+          <Property Name="AffiliateId" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="Nama" Type="String" MaxLength="120" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="Banner">
+          <Key>
+            <PropertyRef Name="BannerId" />
+          </Key>
+          <Property Name="BannerId" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="KategoriId" Type="Int32" Nullable="false" />
+          <Property Name="AffiliateId" Type="Int32" Nullable="false" />
+          <Property Name="Tajuk" Type="String" Nullable="false" MaxLength="160" Unicode="true" FixedLength="false" />
+          <Property Name="Harga" Type="Decimal" Nullable="false" Precision="10" Scale="2" />
+          <Property Name="BannerArtUrl" Type="String" MaxLength="1024" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="Carta">
+          <Key>
+            <PropertyRef Name="RekodId" />
+          </Key>
+          <Property Name="RekodId" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="CartaId" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="BannerId" Type="Int32" Nullable="false" />
+          <Property Name="Count" Type="Int32" Nullable="false" />
+          <Property Name="Tarikh" Type="DateTime" Nullable="false" Precision="3" />
+        </EntityType>
+        <EntityType Name="DetailPesan">
+          <Key>
+            <PropertyRef Name="DetailPesanId" />
+          </Key>
+          <Property Name="DetailPesanId" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="PesanId" Type="Int32" Nullable="false" />
+          <Property Name="BannerId" Type="Int32" Nullable="false" />
+          <Property Name="Kuantiti" Type="Int32" Nullable="false" />
+          <Property Name="UnitHarga" Type="Decimal" Nullable="false" Precision="10" Scale="2" />
+        </EntityType>
+        <EntityType Name="Kategori">
+          <Key>
+            <PropertyRef Name="KategoriId" />
+          </Key>
+          <Property Name="KategoriId" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="Nama" Type="String" MaxLength="120" Unicode="true" FixedLength="false" />
+          <Property Name="Penerangan" Type="String" MaxLength="4000" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="Pesan">
+          <Key>
+            <PropertyRef Name="PesanId" />
+          </Key>
+          <Property Name="PesanId" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="PesanTarikh" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="NamaPengguna" Type="String" MaxLength="256" Unicode="true" FixedLength="false" />
+          <Property Name="NamaPertama" Type="String" MaxLength="160" Unicode="true" FixedLength="false" />
+          <Property Name="NamaAkhir" Type="String" MaxLength="160" Unicode="true" FixedLength="false" />
+          <Property Name="Alamat" Type="String" MaxLength="70" Unicode="true" FixedLength="false" />
+          <Property Name="Bandar" Type="String" MaxLength="40" Unicode="true" FixedLength="false" />
+          <Property Name="Negeri" Type="String" MaxLength="40" Unicode="true" FixedLength="false" />
+          <Property Name="Poskod" Type="String" MaxLength="10" Unicode="true" FixedLength="false" />
+          <Property Name="Negara" Type="String" MaxLength="40" Unicode="true" FixedLength="false" />
+          <Property Name="Telefon" Type="String" MaxLength="24" Unicode="true" FixedLength="false" />
+          <Property Name="Emel" Type="String" MaxLength="160" Unicode="true" FixedLength="false" />
+          <Property Name="Jumlah" Type="Decimal" Nullable="false" Precision="10" Scale="2" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="MvcMusicStoreModelsStoreContainer" CdmEntityContainer="MisbunEntities">
+          <EntitySetMapping Name="Affiliates">
+            <EntityTypeMapping TypeName="MvcMusicStore.Models.Affiliate">
+              <MappingFragment StoreEntitySet="Affiliate">
+                <ScalarProperty Name="AffiliateId" ColumnName="AffiliateId" />
+                <ScalarProperty Name="Nama" ColumnName="Nama" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Banners">
+            <EntityTypeMapping TypeName="MvcMusicStore.Models.Banner">
+              <MappingFragment StoreEntitySet="Banner">
+                <ScalarProperty Name="BannerId" ColumnName="BannerId" />
+                <ScalarProperty Name="KategoriId" ColumnName="KategoriId" />
+                <ScalarProperty Name="AffiliateId" ColumnName="AffiliateId" />
+                <ScalarProperty Name="Tajuk" ColumnName="Tajuk" />
+                <ScalarProperty Name="Harga" ColumnName="Harga" />
+                <ScalarProperty Name="BannerArtUrl" ColumnName="BannerArtUrl" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Cartas">
+            <EntityTypeMapping TypeName="MvcMusicStore.Models.Carta">
+              <MappingFragment StoreEntitySet="Carta">
+                <ScalarProperty Name="RekodId" ColumnName="RekodId" />
+                <ScalarProperty Name="CartaId" ColumnName="CartaId" />
+                <ScalarProperty Name="BannerId" ColumnName="BannerId" />
+                <ScalarProperty Name="Count" ColumnName="Count" />
+                <ScalarProperty Name="Tarikh" ColumnName="Tarikh" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DetailPesans">
+            <EntityTypeMapping TypeName="MvcMusicStore.Models.DetailPesan">
+              <MappingFragment StoreEntitySet="DetailPesan">
+                <ScalarProperty Name="DetailPesanId" ColumnName="DetailPesanId" />
+                <ScalarProperty Name="PesanId" ColumnName="PesanId" />
+                <ScalarProperty Name="BannerId" ColumnName="BannerId" />
+                <ScalarProperty Name="Kuantiti" ColumnName="Kuantiti" />
+                <ScalarProperty Name="UnitHarga" ColumnName="UnitHarga" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Kategoris">
+            <EntityTypeMapping TypeName="MvcMusicStore.Models.Kategori">
+              <MappingFragment StoreEntitySet="Kategori">
+                <ScalarProperty Name="KategoriId" ColumnName="KategoriId" />
+                <ScalarProperty Name="Nama" ColumnName="Nama" />
+                <ScalarProperty Name="Penerangan" ColumnName="Penerangan" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Pesans">
+            <EntityTypeMapping TypeName="MvcMusicStore.Models.Pesan">
+              <MappingFragment StoreEntitySet="Pesan">
+                <ScalarProperty Name="PesanId" ColumnName="PesanId" />
+                <ScalarProperty Name="PesanTarikh" ColumnName="PesanTarikh" />
+                <ScalarProperty Name="NamaPengguna" ColumnName="NamaPengguna" />
+                <ScalarProperty Name="NamaPertama" ColumnName="NamaPertama" />
+                <ScalarProperty Name="NamaAkhir" ColumnName="NamaAkhir" />
+                <ScalarProperty Name="Alamat" ColumnName="Alamat" />
+                <ScalarProperty Name="Bandar" ColumnName="Bandar" />
+                <ScalarProperty Name="Negeri" ColumnName="Negeri" />
+                <ScalarProperty Name="Poskod" ColumnName="Poskod" />
+                <ScalarProperty Name="Negara" ColumnName="Negara" />
+                <ScalarProperty Name="Telefon" ColumnName="Telefon" />
+                <ScalarProperty Name="Emel" ColumnName="Emel" />
+                <ScalarProperty Name="Jumlah" ColumnName="Jumlah" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

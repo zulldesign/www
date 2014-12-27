@@ -1,0 +1,17 @@
+﻿@model IEnumerable<MvcMusicStore.Models.Kategori>
+@{
+    ViewBag.Title = "Misbun";
+}
+<h3>Carian Kategori</h3>
+
+<p>
+    Pilih daripada @Model.Count() kategori:</p>
+<ul>
+<ul>
+    @foreach (var kategori in Model)
+    {
+        <li>@Html.ActionLink(kategori.Nama, "Details", new { kategori = kategori.Nama })</li>
+    }
+</ul>
+
+</ul>
