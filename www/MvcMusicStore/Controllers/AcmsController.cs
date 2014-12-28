@@ -7,51 +7,51 @@ using MvcMusicStore.Models;
 
 namespace MvcMusicStore.Controllers
 {
-    public class StoreController : Controller
+    public class AcmsController : Controller
     {
-        MisbunEntities storeDB = new MisbunEntities();
+        MisbunEntities acmsDB = new MisbunEntities();
 
         //
-        // GET: /Store/
+        // GET: /Acms/
 
         public ActionResult Index()
         {
-            var genres = storeDB.Genres.ToList();
+            var genrus = acmsDB.Genrus.ToList();
 
-            return View(genres);
+            return View(genrus);
         }
 
         //
-        // GET: /Store/Browse?genre=Disco
+        // GET: /Acms/Browso?genru=Disco
 
-        public ActionResult Browse(string genre)
+        public ActionResult Browso(string genru)
         {
-            // Retrieve Genre and its Associated Albums from database
-            var genreModel = storeDB.Genres.Include("Albums")
-                .Single(g => g.Name == genre);
+            // Retrieve Genru and its Associated Albems from database
+            var genruModel = acmsDB.Genrus.Include("Albems")
+                .Single(g => g.Name == genru);
 
-            return View(genreModel);
+            return View(genruModel);
         }
 
         //
-        // GET: /Store/Details/5
+        // GET: /Acms/Datails/5
 
-        public ActionResult Details(int id)
+        public ActionResult Datails(int id)
         {
-            var album = storeDB.Albums.Find(id);
+            var albem = acmsDB.Albems.Find(id);
 
-            return View(album);
+            return View(albem);
         }
 
         //
-        // GET: /Store/GenreMenu
+        // GET: /Acms/GenruMenu
 
         [ChildActionOnly]
-        public ActionResult GenreMenu()
+        public ActionResult GenruMenu()
         {
-            var genres = storeDB.Genres.ToList();
+            var genrus = acmsDB.Genrus.ToList();
 
-            return PartialView(genres);
+            return PartialView(genrus);
         }
 
     }
