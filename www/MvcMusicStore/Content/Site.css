@@ -60,13 +60,13 @@ ul
 	font-size: 14px;
 }
 
-ul#album-list
+ul#blog-list
 {
 	list-style: none;
 	margin-left: 0px;
 }
 
-ul#album-list li
+ul#blog-list li
 {
 	height: 130px;
 	width: 100px;
@@ -75,13 +75,13 @@ ul#album-list li
 	text-align: center;
 }
 
-ul#album-list li a, ul#album-list li .button
+ul#blog-list li a, ul#blog-list li .button
 {
 	font-size: 13px;
 	float: left;
 }
 
-ul#album-list li a span
+ul#blog-list li a span
 {
 	color: #9b9993;
 	text-decoration: underline;
@@ -231,7 +231,7 @@ a:active
 	color: #F46739;
 }
 
-div#album-details p
+div#blog-details p
 {
 	margin-bottom: 5px;
 	color: #5e5b54;
@@ -271,25 +271,25 @@ input[type=text], input[type=password], select
 
 /* Styles for validation helpers */
 .field-validation-error {
-    color: #ff0000;
+	color: #ff0000;
 }
 
 .field-validation-valid {
-    display: none;
+	display: none;
 }
 
 .input-validation-error {
-    border: 1px solid #ff0000;
-    background-color: #ffeeee;
+	border: 1px solid #ff0000;
+	background-color: #ffeeee;
 }
 
 .validation-summary-errors {
-    font-weight: bold;
-    color: #ff0000;
+	font-weight: bold;
+	color: #ff0000;
 }
 
 .validation-summary-valid {
-    display: none;
+	display: none;
 }
 
 /* Tables */
