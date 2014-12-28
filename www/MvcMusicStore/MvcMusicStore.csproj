@@ -146,6 +146,35 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\Images\Bark.at.the.Moon.jpg" />
+    <Content Include="Content\Images\Best.of.Ozz.jpg" />
+    <Content Include="Content\Images\Blogspot.to.Minisite.gif" />
+    <Content Include="Content\Images\Carry.On.jpg" />
+    <Content Include="Content\Images\Compositores.jpg" />
+    <Content Include="Content\Images\EnglishSkript.jpg" />
+    <Content Include="Content\Images\Folder.jpg" />
+    <Content Include="Content\Images\For.Those.About.To.Rock.We.Salute.You.gif" />
+    <Content Include="Content\Images\Greatest.Hits.jpg" />
+    <Content Include="Content\Images\Heart.of.the.Night.jpg" />
+    <Content Include="Content\Images\home-showcase.png" />
+    <Content Include="Content\Images\Imagesforskript.jpg" />
+    <Content Include="Content\Images\Let.There.Be.Rock.gif" />
+    <Content Include="Content\Images\logo.png" />
+    <Content Include="Content\Images\Miles.Ahead.jpg" />
+    <Content Include="Content\Images\Misplaced.Childhood.jpg" />
+    <Content Include="Content\Images\Morning.Dance.jpg" />
+    <Content Include="Content\Images\Nevermind.jpg" />
+    <Content Include="Content\Images\placeholder.gif" />
+    <Content Include="Content\Images\Quanta.Gente.Veio.ver.jpg" />
+    <Content Include="Content\Images\Quiet.Songs.jpg" />
+    <Content Include="Content\Images\Rahsia.Emas.jpg" />
+    <Content Include="Content\Images\Seni.Adwords.gif" />
+    <Content Include="Content\Images\The.Best.Of.Billy.Cobham.jpg" />
+    <Content Include="Content\Images\The.Best.Of.Men.At.Work.jpg" />
+    <Content Include="Content\Images\The.Essential.Miles.Davis.jpg" />
+    <Content Include="Content\Images\Walking.Into.Clarksdale.jpg" />
+    <Content Include="Content\Images\Warner.25.Anos.jpg" />
+    <Content Include="Content\Images\Worlds.jpg" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
