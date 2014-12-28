@@ -18,7 +18,14 @@
     <p>
         <em>Produk:</em>
         @Model.Product.Name
-    </p>     
+    </p>
+    <fieldset>
+    <legend>Blog</legend>
+    <div class="display-label">Description</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Description)
+    </div>    
+</fieldset>     
     <p>
         <em>Harga RM:</em>
         @String.Format("{0:F}", Model.Price)
