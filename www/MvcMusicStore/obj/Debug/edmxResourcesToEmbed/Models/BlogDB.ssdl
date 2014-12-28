@@ -1,12 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="MvcMusicStore.Models.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
   <EntityContainer Name="MvcMusicStoreModelsStoreContainer">
+    <EntitySet Name="__MigrationHistory" EntityType="MvcMusicStore.Models.Store.__MigrationHistory" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="Blog" EntityType="MvcMusicStore.Models.Store.Blog" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="Cart" EntityType="MvcMusicStore.Models.Store.Cart" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="Category" EntityType="MvcMusicStore.Models.Store.Category" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="Order" EntityType="MvcMusicStore.Models.Store.Order" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="OrderDetail" EntityType="MvcMusicStore.Models.Store.OrderDetail" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="Product" EntityType="MvcMusicStore.Models.Store.Product" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Products" EntityType="MvcMusicStore.Models.Store.Products" store:Type="Tables" Schema="dbo" />
     <AssociationSet Name="FK__Blog__ProductId__276EDEB3" Association="MvcMusicStore.Models.Store.FK__Blog__ProductId__276EDEB3">
       <End Role="Product" EntitySet="Product" />
       <End Role="Blog" EntitySet="Blog" />
@@ -28,6 +30,16 @@
       <End Role="OrderDetail" EntitySet="OrderDetail" />
     </AssociationSet>
   </EntityContainer>
+  <EntityType Name="__MigrationHistory">
+    <Key>
+      <PropertyRef Name="MigrationId" />
+      <PropertyRef Name="ContextKey" />
+    </Key>
+    <Property Name="MigrationId" Type="nvarchar" Nullable="false" MaxLength="150" />
+    <Property Name="ContextKey" Type="nvarchar" Nullable="false" MaxLength="300" />
+    <Property Name="Model" Type="varbinary(max)" Nullable="false" />
+    <Property Name="ProductVersion" Type="nvarchar" Nullable="false" MaxLength="32" />
+  </EntityType>
   <EntityType Name="Blog">
     <Key>
       <PropertyRef Name="BlogId" />
@@ -37,6 +49,7 @@
     <Property Name="ProductId" Type="int" Nullable="false" />
     <Property Name="Title" Type="nvarchar" Nullable="false" MaxLength="160" />
     <Property Name="Price" Type="numeric" Nullable="false" Precision="10" Scale="2" />
+    <Property Name="Description" Type="nvarchar" />
     <Property Name="BlogArtUrl" Type="nvarchar" MaxLength="1024" />
   </EntityType>
   <EntityType Name="Cart">
@@ -91,6 +104,16 @@
     </Key>
     <Property Name="ProductId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
     <Property Name="Name" Type="nvarchar" MaxLength="120" />
+  </EntityType>
+  <EntityType Name="Products">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="nvarchar(max)" />
+    <Property Name="ReleaseDate" Type="datetime" Nullable="false" />
+    <Property Name="Category" Type="nvarchar(max)" />
+    <Property Name="Price" Type="decimal" Nullable="false" Scale="2" />
   </EntityType>
   <Association Name="FK__Blog__ProductId__276EDEB3">
     <End Role="Product" Type="MvcMusicStore.Models.Store.Product" Multiplicity="1" />
