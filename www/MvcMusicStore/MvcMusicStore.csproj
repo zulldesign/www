@@ -137,6 +137,9 @@
     <Compile Include="Models\Category.cs">
       <DependentUpon>BlogDB.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\C__MigrationHistory.cs">
+      <DependentUpon>BlogDB.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\Order.cs">
       <DependentUpon>BlogDB.tt</DependentUpon>
     </Compile>
@@ -144,6 +147,9 @@
       <DependentUpon>BlogDB.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Product.cs">
+      <DependentUpon>BlogDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Product1.cs">
       <DependentUpon>BlogDB.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\ShoppingCart.cs" />

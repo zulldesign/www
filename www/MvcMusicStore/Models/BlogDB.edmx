@@ -6,12 +6,14 @@
     <edmx:StorageModels>
       <Schema Namespace="MvcMusicStore.Models.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityContainer Name="MvcMusicStoreModelsStoreContainer">
+          <EntitySet Name="__MigrationHistory" EntityType="MvcMusicStore.Models.Store.__MigrationHistory" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="Blog" EntityType="MvcMusicStore.Models.Store.Blog" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="Cart" EntityType="MvcMusicStore.Models.Store.Cart" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="Category" EntityType="MvcMusicStore.Models.Store.Category" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="Order" EntityType="MvcMusicStore.Models.Store.Order" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="OrderDetail" EntityType="MvcMusicStore.Models.Store.OrderDetail" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="Product" EntityType="MvcMusicStore.Models.Store.Product" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Products" EntityType="MvcMusicStore.Models.Store.Products" store:Type="Tables" Schema="dbo" />
           <AssociationSet Name="FK__Blog__ProductId__276EDEB3" Association="MvcMusicStore.Models.Store.FK__Blog__ProductId__276EDEB3">
             <End Role="Product" EntitySet="Product" />
             <End Role="Blog" EntitySet="Blog" />
@@ -33,6 +35,16 @@
             <End Role="OrderDetail" EntitySet="OrderDetail" />
           </AssociationSet>
         </EntityContainer>
+        <EntityType Name="__MigrationHistory">
+          <Key>
+            <PropertyRef Name="MigrationId" />
+            <PropertyRef Name="ContextKey" />
+          </Key>
+          <Property Name="MigrationId" Type="nvarchar" Nullable="false" MaxLength="150" />
+          <Property Name="ContextKey" Type="nvarchar" Nullable="false" MaxLength="300" />
+          <Property Name="Model" Type="varbinary(max)" Nullable="false" />
+          <Property Name="ProductVersion" Type="nvarchar" Nullable="false" MaxLength="32" />
+        </EntityType>
         <EntityType Name="Blog">
           <Key>
             <PropertyRef Name="BlogId" />
@@ -42,6 +54,7 @@
           <Property Name="ProductId" Type="int" Nullable="false" />
           <Property Name="Title" Type="nvarchar" Nullable="false" MaxLength="160" />
           <Property Name="Price" Type="numeric" Nullable="false" Precision="10" Scale="2" />
+          <Property Name="Description" Type="nvarchar" />
           <Property Name="BlogArtUrl" Type="nvarchar" MaxLength="1024" />
         </EntityType>
         <EntityType Name="Cart">
@@ -96,6 +109,16 @@
           </Key>
           <Property Name="ProductId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
           <Property Name="Name" Type="nvarchar" MaxLength="120" />
+        </EntityType>
+        <EntityType Name="Products">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="nvarchar(max)" />
+          <Property Name="ReleaseDate" Type="datetime" Nullable="false" />
+          <Property Name="Category" Type="nvarchar(max)" />
+          <Property Name="Price" Type="decimal" Nullable="false" Scale="2" />
         </EntityType>
         <Association Name="FK__Blog__ProductId__276EDEB3">
           <End Role="Product" Type="MvcMusicStore.Models.Store.Product" Multiplicity="1" />
@@ -163,12 +186,14 @@
     <edmx:ConceptualModels>
       <Schema Namespace="MvcMusicStore.Models" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityContainer Name="BlogEntities" p1:LazyLoadingEnabled="true">
+          <EntitySet Name="C__MigrationHistory" EntityType="MvcMusicStore.Models.C__MigrationHistory" />
           <EntitySet Name="Blogs" EntityType="MvcMusicStore.Models.Blog" />
           <EntitySet Name="Carts" EntityType="MvcMusicStore.Models.Cart" />
           <EntitySet Name="Categories" EntityType="MvcMusicStore.Models.Category" />
           <EntitySet Name="Orders" EntityType="MvcMusicStore.Models.Order" />
           <EntitySet Name="OrderDetails" EntityType="MvcMusicStore.Models.OrderDetail" />
           <EntitySet Name="Products" EntityType="MvcMusicStore.Models.Product" />
+          <EntitySet Name="Products1" EntityType="MvcMusicStore.Models.Product1" />
           <AssociationSet Name="FK__Blog__ProductId__276EDEB3" Association="MvcMusicStore.Models.FK__Blog__ProductId__276EDEB3">
             <End Role="Product" EntitySet="Products" />
             <End Role="Blog" EntitySet="Blogs" />
@@ -190,6 +215,16 @@
             <End Role="OrderDetail" EntitySet="OrderDetails" />
           </AssociationSet>
         </EntityContainer>
+        <EntityType Name="C__MigrationHistory">
+          <Key>
+            <PropertyRef Name="MigrationId" />
+            <PropertyRef Name="ContextKey" />
+          </Key>
+          <Property Name="MigrationId" Type="String" Nullable="false" MaxLength="150" Unicode="true" FixedLength="false" />
+          <Property Name="ContextKey" Type="String" Nullable="false" MaxLength="300" Unicode="true" FixedLength="false" />
+          <Property Name="Model" Type="Binary" Nullable="false" MaxLength="Max" FixedLength="false" />
+          <Property Name="ProductVersion" Type="String" Nullable="false" MaxLength="32" Unicode="true" FixedLength="false" />
+        </EntityType>
         <EntityType Name="Blog">
           <Key>
             <PropertyRef Name="BlogId" />
@@ -199,6 +234,7 @@
           <Property Name="ProductId" Type="Int32" Nullable="false" />
           <Property Name="Title" Type="String" Nullable="false" MaxLength="160" Unicode="true" FixedLength="false" />
           <Property Name="Price" Type="Decimal" Nullable="false" Precision="10" Scale="2" />
+          <Property Name="Description" Type="String" MaxLength="4000" Unicode="true" FixedLength="false" />
           <Property Name="BlogArtUrl" Type="String" MaxLength="1024" Unicode="true" FixedLength="false" />
           <NavigationProperty Name="Product" Relationship="MvcMusicStore.Models.FK__Blog__ProductId__276EDEB3" FromRole="Blog" ToRole="Product" />
           <NavigationProperty Name="Category" Relationship="MvcMusicStore.Models.FK_Blog_Category" FromRole="Blog" ToRole="Category" />
@@ -263,6 +299,16 @@
           <Property Name="ProductId" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
           <Property Name="Name" Type="String" MaxLength="120" Unicode="true" FixedLength="false" />
           <NavigationProperty Name="Blogs" Relationship="MvcMusicStore.Models.FK__Blog__ProductId__276EDEB3" FromRole="Product" ToRole="Blog" />
+        </EntityType>
+        <EntityType Name="Product1">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="ReleaseDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Category" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="Price" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
         </EntityType>
         <Association Name="FK__Blog__ProductId__276EDEB3">
           <End Role="Product" Type="MvcMusicStore.Models.Product" Multiplicity="1" />
@@ -330,6 +376,16 @@
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
         <EntityContainerMapping StorageEntityContainer="MvcMusicStoreModelsStoreContainer" CdmEntityContainer="BlogEntities">
+          <EntitySetMapping Name="C__MigrationHistory">
+            <EntityTypeMapping TypeName="MvcMusicStore.Models.C__MigrationHistory">
+              <MappingFragment StoreEntitySet="__MigrationHistory">
+                <ScalarProperty Name="MigrationId" ColumnName="MigrationId" />
+                <ScalarProperty Name="ContextKey" ColumnName="ContextKey" />
+                <ScalarProperty Name="Model" ColumnName="Model" />
+                <ScalarProperty Name="ProductVersion" ColumnName="ProductVersion" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="Blogs">
             <EntityTypeMapping TypeName="MvcMusicStore.Models.Blog">
               <MappingFragment StoreEntitySet="Blog">
@@ -338,6 +394,7 @@
                 <ScalarProperty Name="ProductId" ColumnName="ProductId" />
                 <ScalarProperty Name="Title" ColumnName="Title" />
                 <ScalarProperty Name="Price" ColumnName="Price" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
                 <ScalarProperty Name="BlogArtUrl" ColumnName="BlogArtUrl" />
               </MappingFragment>
             </EntityTypeMapping>
@@ -397,6 +454,17 @@
               <MappingFragment StoreEntitySet="Product">
                 <ScalarProperty Name="ProductId" ColumnName="ProductId" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Products1">
+            <EntityTypeMapping TypeName="MvcMusicStore.Models.Product1">
+              <MappingFragment StoreEntitySet="Products">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ReleaseDate" ColumnName="ReleaseDate" />
+                <ScalarProperty Name="Category" ColumnName="Category" />
+                <ScalarProperty Name="Price" ColumnName="Price" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
