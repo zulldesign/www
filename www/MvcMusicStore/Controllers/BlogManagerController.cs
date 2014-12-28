@@ -9,7 +9,7 @@ using MvcMusicStore.Models;
 
 namespace MvcMusicStore.Controllers
 {
-    [Authorize(Roles = "Administrator")]
+    [Authorize]
     public class BlogManagerController : Controller
     {
         private BlogEntities db = new BlogEntities();
