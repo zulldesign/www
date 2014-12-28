@@ -18,18 +18,18 @@
     <p>
         <em>Produk:</em>
         @Model.Product.Name
-    </p>
-    <fieldset>
-    <legend>Blog</legend>
-    <div class="display-label">Description</div>
-    <div class="display-field">
-        @Html.DisplayFor(model => model.Description)
-    </div>    
-</fieldset>     
+    </p>         
     <p>
         <em>Harga RM:</em>
         @String.Format("{0:F}", Model.Price)
     </p>
+    <fieldset>
+    <legend>KETERANGAN PRODUK</legend>
+    <div class="display-label">Blok</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Description)
+    </div>    
+    </fieldset>
     <p class="button">
         @Html.ActionLink("Add to cart", "AddToCart", 
         "ShoppingCart", new { id = Model.BlogId }, "")
