@@ -109,23 +109,56 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountModels.cs" />
+    <Compile Include="Models\achey.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>achey.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\achey.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>achey.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\achey.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>achey.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Albem.cs">
+      <DependentUpon>achey.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\Album.cs">
       <DependentUpon>StoreDB.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Artist.cs">
       <DependentUpon>StoreDB.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\Artost.cs">
+      <DependentUpon>achey.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\Cart.cs">
       <DependentUpon>StoreDB.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\Cert.cs">
+      <DependentUpon>achey.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\Genre.cs">
       <DependentUpon>StoreDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Genru.cs">
+      <DependentUpon>achey.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Order.cs">
       <DependentUpon>StoreDB.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\OrderDetail.cs">
       <DependentUpon>StoreDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Ordir.cs">
+      <DependentUpon>achey.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\OrdirDatail.cs">
+      <DependentUpon>achey.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Paypal.cs" />
     <Compile Include="Models\ShoppingCart.cs" />
@@ -242,6 +275,23 @@
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>StoreDB.edmx</DependentUpon>
       <LastGenOutput>StoreDB.cs</LastGenOutput>
+    </Content>
+    <EntityDeploy Include="Models\achey.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>achey.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\achey.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>achey.edmx</DependentUpon>
+      <LastGenOutput>achey.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\achey.edmx.diagram">
+      <DependentUpon>achey.edmx</DependentUpon>
+    </Content>
+    <Content Include="Models\achey.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>achey.edmx</DependentUpon>
+      <LastGenOutput>achey.cs</LastGenOutput>
     </Content>
     <None Include="Scripts\jquery-1.5.1-vsdoc.js" />
     <Content Include="Scripts\jquery-1.5.1.js" />
