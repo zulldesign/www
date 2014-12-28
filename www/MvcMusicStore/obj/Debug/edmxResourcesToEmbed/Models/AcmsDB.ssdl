@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="MvcMusicStore.Models.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="MvcMusicStoreModelsStoreContainer">
+    <EntitySet Name="Albem" EntityType="MvcMusicStore.Models.Store.Albem" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Artost" EntityType="MvcMusicStore.Models.Store.Artost" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Cert" EntityType="MvcMusicStore.Models.Store.Cert" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Genra" EntityType="MvcMusicStore.Models.Store.Genra" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Ordir" EntityType="MvcMusicStore.Models.Store.Ordir" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="OrdirDatail" EntityType="MvcMusicStore.Models.Store.OrdirDatail" store:Type="Tables" Schema="dbo" />
+  </EntityContainer>
+  <EntityType Name="Albem">
+    <Key>
+      <PropertyRef Name="AlbemId" />
+    </Key>
+    <Property Name="AlbemId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="GenraId" Type="int" Nullable="false" />
+    <Property Name="ArtostId" Type="int" Nullable="false" />
+    <Property Name="Title" Type="nvarchar" Nullable="false" MaxLength="160" />
+    <Property Name="Price" Type="numeric" Nullable="false" Precision="10" Scale="2" />
+    <Property Name="AlbemArtUrl" Type="nvarchar" MaxLength="1024" />
+  </EntityType>
+  <EntityType Name="Artost">
+    <Key>
+      <PropertyRef Name="ArtostId" />
+    </Key>
+    <Property Name="ArtostId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="nvarchar" MaxLength="120" />
+  </EntityType>
+  <EntityType Name="Cert">
+    <Key>
+      <PropertyRef Name="RecordId" />
+    </Key>
+    <Property Name="RecordId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="CertId" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="AlbemId" Type="int" Nullable="false" />
+    <Property Name="Count" Type="int" Nullable="false" />
+    <Property Name="DateCreated" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Genra">
+    <Key>
+      <PropertyRef Name="GenraId" />
+    </Key>
+    <Property Name="GenraId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="nvarchar" MaxLength="120" />
+    <Property Name="Description" Type="nvarchar" />
+  </EntityType>
+  <EntityType Name="Ordir">
+    <Key>
+      <PropertyRef Name="OrdirId" />
+    </Key>
+    <Property Name="OrdirId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="OrdirDate" Type="datetime" Nullable="false" />
+    <Property Name="Username" Type="nvarchar" MaxLength="256" />
+    <Property Name="FirstName" Type="nvarchar" MaxLength="160" />
+    <Property Name="LastName" Type="nvarchar" MaxLength="160" />
+    <Property Name="Address" Type="nvarchar" MaxLength="70" />
+    <Property Name="City" Type="nvarchar" MaxLength="40" />
+    <Property Name="State" Type="nvarchar" MaxLength="40" />
+    <Property Name="PostalCode" Type="nvarchar" MaxLength="10" />
+    <Property Name="Country" Type="nvarchar" MaxLength="40" />
+    <Property Name="Phone" Type="nvarchar" MaxLength="24" />
+    <Property Name="Email" Type="nvarchar" MaxLength="160" />
+    <Property Name="Total" Type="numeric" Nullable="false" Precision="10" Scale="2" />
+  </EntityType>
+  <EntityType Name="OrdirDatail">
+    <Key>
+      <PropertyRef Name="OrdirDatailId" />
+    </Key>
+    <Property Name="OrdirDatailId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="OrdirId" Type="int" Nullable="false" />
+    <Property Name="AlbemId" Type="int" Nullable="false" />
+    <Property Name="Quantity" Type="int" Nullable="false" />
+    <Property Name="UnitPrice" Type="numeric" Nullable="false" Precision="10" Scale="2" />
+  </EntityType>
+</Schema>

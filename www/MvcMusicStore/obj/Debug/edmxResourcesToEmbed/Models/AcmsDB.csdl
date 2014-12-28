@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="MvcMusicStore.Models" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="MisbunEntities" p1:LazyLoadingEnabled="true">
+    <EntitySet Name="Albems" EntityType="MvcMusicStore.Models.Albem" />
+    <EntitySet Name="Artosts" EntityType="MvcMusicStore.Models.Artost" />
+    <EntitySet Name="Certs" EntityType="MvcMusicStore.Models.Cert" />
+    <EntitySet Name="Genras" EntityType="MvcMusicStore.Models.Genra" />
+    <EntitySet Name="Ordirs" EntityType="MvcMusicStore.Models.Ordir" />
+    <EntitySet Name="OrdirDatails" EntityType="MvcMusicStore.Models.OrdirDatail" />
+  </EntityContainer>
+  <EntityType Name="Albem">
+    <Key>
+      <PropertyRef Name="AlbemId" />
+    </Key>
+    <Property Name="AlbemId" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="GenraId" Type="Int32" Nullable="false" />
+    <Property Name="ArtostId" Type="Int32" Nullable="false" />
+    <Property Name="Title" Type="String" Nullable="false" MaxLength="160" Unicode="true" FixedLength="false" />
+    <Property Name="Price" Type="Decimal" Nullable="false" Precision="10" Scale="2" />
+    <Property Name="AlbemArtUrl" Type="String" MaxLength="1024" Unicode="true" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="Artost">
+    <Key>
+      <PropertyRef Name="ArtostId" />
+    </Key>
+    <Property Name="ArtostId" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="120" Unicode="true" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="Cert">
+    <Key>
+      <PropertyRef Name="RecordId" />
+    </Key>
+    <Property Name="RecordId" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="CertId" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="AlbemId" Type="Int32" Nullable="false" />
+    <Property Name="Count" Type="Int32" Nullable="false" />
+    <Property Name="DateCreated" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="Genra">
+    <Key>
+      <PropertyRef Name="GenraId" />
+    </Key>
+    <Property Name="GenraId" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="120" Unicode="true" FixedLength="false" />
+    <Property Name="Description" Type="String" MaxLength="4000" Unicode="true" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="Ordir">
+    <Key>
+      <PropertyRef Name="OrdirId" />
+    </Key>
+    <Property Name="OrdirId" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="OrdirDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Username" Type="String" MaxLength="256" Unicode="true" FixedLength="false" />
+    <Property Name="FirstName" Type="String" MaxLength="160" Unicode="true" FixedLength="false" />
+    <Property Name="LastName" Type="String" MaxLength="160" Unicode="true" FixedLength="false" />
+    <Property Name="Address" Type="String" MaxLength="70" Unicode="true" FixedLength="false" />
+    <Property Name="City" Type="String" MaxLength="40" Unicode="true" FixedLength="false" />
+    <Property Name="State" Type="String" MaxLength="40" Unicode="true" FixedLength="false" />
+    <Property Name="PostalCode" Type="String" MaxLength="10" Unicode="true" FixedLength="false" />
+    <Property Name="Country" Type="String" MaxLength="40" Unicode="true" FixedLength="false" />
+    <Property Name="Phone" Type="String" MaxLength="24" Unicode="true" FixedLength="false" />
+    <Property Name="Email" Type="String" MaxLength="160" Unicode="true" FixedLength="false" />
+    <Property Name="Total" Type="Decimal" Nullable="false" Precision="10" Scale="2" />
+  </EntityType>
+  <EntityType Name="OrdirDatail">
+    <Key>
+      <PropertyRef Name="OrdirDatailId" />
+    </Key>
+    <Property Name="OrdirDatailId" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="OrdirId" Type="Int32" Nullable="false" />
+    <Property Name="AlbemId" Type="Int32" Nullable="false" />
+    <Property Name="Quantity" Type="Int32" Nullable="false" />
+    <Property Name="UnitPrice" Type="Decimal" Nullable="false" Precision="10" Scale="2" />
+  </EntityType>
+</Schema>
