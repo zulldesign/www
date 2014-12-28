@@ -16,6 +16,5 @@ C:\Users\User\Workspace\www\www\MvcMusicStore\bin\System.Web.Razor.xml
 C:\Users\User\Workspace\www\www\MvcMusicStore\bin\System.Web.WebPages.xml
 C:\Users\User\Workspace\www\www\MvcMusicStore\bin\System.Web.WebPages.Deployment.xml
 C:\Users\User\Workspace\www\www\MvcMusicStore\bin\System.Web.WebPages.Razor.xml
-C:\Users\User\Workspace\www\www\MvcMusicStore\obj\Debug\MvcMusicStore.csprojResolveAssemblyReference.cache
 C:\Users\User\Workspace\www\www\MvcMusicStore\obj\Debug\MvcMusicStore.dll
 C:\Users\User\Workspace\www\www\MvcMusicStore\obj\Debug\MvcMusicStore.pdb
