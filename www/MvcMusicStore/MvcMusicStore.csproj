@@ -98,6 +98,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\AcmsController.cs" />
     <Compile Include="Controllers\ArtistController.cs" />
     <Compile Include="Controllers\CheckoutController.cs" />
     <Compile Include="Controllers\GenreController.cs" />
@@ -109,23 +110,23 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountModels.cs" />
-    <Compile Include="Models\achey.Context.cs">
+    <Compile Include="Models\AcmsDB.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>achey.Context.tt</DependentUpon>
+      <DependentUpon>AcmsDB.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\achey.cs">
+    <Compile Include="Models\AcmsDB.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>achey.tt</DependentUpon>
+      <DependentUpon>AcmsDB.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\achey.Designer.cs">
+    <Compile Include="Models\AcmsDB.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>achey.edmx</DependentUpon>
+      <DependentUpon>AcmsDB.edmx</DependentUpon>
     </Compile>
     <Compile Include="Models\Albem.cs">
-      <DependentUpon>achey.tt</DependentUpon>
+      <DependentUpon>AcmsDB.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Album.cs">
       <DependentUpon>StoreDB.tt</DependentUpon>
@@ -134,19 +135,19 @@
       <DependentUpon>StoreDB.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Artost.cs">
-      <DependentUpon>achey.tt</DependentUpon>
+      <DependentUpon>AcmsDB.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Cart.cs">
       <DependentUpon>StoreDB.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Cert.cs">
-      <DependentUpon>achey.tt</DependentUpon>
+      <DependentUpon>AcmsDB.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Genre.cs">
       <DependentUpon>StoreDB.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Genru.cs">
-      <DependentUpon>achey.tt</DependentUpon>
+      <DependentUpon>AcmsDB.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Order.cs">
       <DependentUpon>StoreDB.tt</DependentUpon>
@@ -155,10 +156,10 @@
       <DependentUpon>StoreDB.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Ordir.cs">
-      <DependentUpon>achey.tt</DependentUpon>
+      <DependentUpon>AcmsDB.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\OrdirDatail.cs">
-      <DependentUpon>achey.tt</DependentUpon>
+      <DependentUpon>AcmsDB.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Paypal.cs" />
     <Compile Include="Models\ShoppingCart.cs" />
@@ -276,22 +277,22 @@
       <DependentUpon>StoreDB.edmx</DependentUpon>
       <LastGenOutput>StoreDB.cs</LastGenOutput>
     </Content>
-    <EntityDeploy Include="Models\achey.edmx">
+    <EntityDeploy Include="Models\AcmsDB.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>achey.Designer.cs</LastGenOutput>
+      <LastGenOutput>AcmsDB.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <Content Include="Models\achey.Context.tt">
+    <Content Include="Models\AcmsDB.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>achey.edmx</DependentUpon>
-      <LastGenOutput>achey.Context.cs</LastGenOutput>
+      <DependentUpon>AcmsDB.edmx</DependentUpon>
+      <LastGenOutput>AcmsDB.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="Models\achey.edmx.diagram">
-      <DependentUpon>achey.edmx</DependentUpon>
+    <Content Include="Models\AcmsDB.edmx.diagram">
+      <DependentUpon>AcmsDB.edmx</DependentUpon>
     </Content>
-    <Content Include="Models\achey.tt">
+    <Content Include="Models\AcmsDB.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>achey.edmx</DependentUpon>
-      <LastGenOutput>achey.cs</LastGenOutput>
+      <DependentUpon>AcmsDB.edmx</DependentUpon>
+      <LastGenOutput>AcmsDB.cs</LastGenOutput>
     </Content>
     <None Include="Scripts\jquery-1.5.1-vsdoc.js" />
     <Content Include="Scripts\jquery-1.5.1.js" />
