@@ -364,6 +364,10 @@
     <Content Include="Views\Genre\Edit.cshtml" />
     <Content Include="Views\Genre\Index.cshtml" />
     <Content Include="Views\Home\PostToPayPal.cshtml" />
+    <Content Include="Views\Acms\Browso.cshtml" />
+    <Content Include="Views\Acms\Datails.cshtml" />
+    <Content Include="Views\Acms\GenruMenu.cshtml" />
+    <Content Include="Views\Acms\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
