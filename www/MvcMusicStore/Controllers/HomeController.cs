@@ -3,16 +3,31 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using MvcMusicStore.Models;
 
 namespace MvcMusicStore.Controllers
 {
     public class HomeController : Controller
     {
+        BlogEntities blogDB = new BlogEntities();
+
         public ActionResult Index()
         {
-            ViewBag.Message = "Welcome to ASP.NET MVC!";
+            // Get most popular blogs
+            var blogs = GetTopSellingBlogs(5);
 
-            return View();
+            return View(blogs);
+        }
+
+        private List<Blog> GetTopSellingBlogs(int count)
+        {
+            // Group the order details by blog and return
+            // the blogs with the highest count
+
+            return blogDB.Blogs
+                .OrderByDescending(a => a.OrderDetails.Count())
+                .Take(count)
+                .ToList();
         }
 
         public ActionResult About()
