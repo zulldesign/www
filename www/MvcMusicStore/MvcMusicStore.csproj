@@ -98,6 +98,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\BlogEditorController.cs" />
     <Compile Include="Controllers\BlogManagerController.cs" />
     <Compile Include="Controllers\CartController.cs" />
     <Compile Include="Controllers\CategoryController.cs" />
@@ -343,6 +344,11 @@
     <Content Include="Views\Checkout\Complete.cshtml" />
     <Content Include="Views\ShoppingCart\CartSummary.cshtml" />
     <Content Include="Views\ShoppingCart\Index.cshtml" />
+    <Content Include="Views\BlogEditor\Index.cshtml" />
+    <Content Include="Views\BlogEditor\Details.cshtml" />
+    <Content Include="Views\BlogEditor\Create.cshtml" />
+    <Content Include="Views\BlogEditor\Edit.cshtml" />
+    <Content Include="Views\BlogEditor\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
