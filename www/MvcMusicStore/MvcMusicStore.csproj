@@ -98,14 +98,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\AccountController.cs" />
-    <Compile Include="Controllers\AffiliateMisbunController.cs" />
     <Compile Include="Controllers\ArtistController.cs" />
-    <Compile Include="Controllers\BannerMisbunController.cs" />
     <Compile Include="Controllers\CheckoutController.cs" />
     <Compile Include="Controllers\GenreController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\KategoriMisbunController.cs" />
-    <Compile Include="Controllers\MisbunController.cs" />
     <Compile Include="Controllers\ShoppingCartController.cs" />
     <Compile Include="Controllers\StoreController.cs" />
     <Compile Include="Controllers\StoreManagerController.cs" />
@@ -113,47 +109,17 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountModels.cs" />
-    <Compile Include="Models\Affiliate.cs">
-      <DependentUpon>MisbunDB.tt</DependentUpon>
-    </Compile>
     <Compile Include="Models\Album.cs">
       <DependentUpon>StoreDB.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Artist.cs">
       <DependentUpon>StoreDB.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\Banner.cs">
-      <DependentUpon>MisbunDB.tt</DependentUpon>
-    </Compile>
     <Compile Include="Models\Cart.cs">
       <DependentUpon>StoreDB.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\Carta.cs">
-      <DependentUpon>MisbunDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\DetailPesan.cs">
-      <DependentUpon>MisbunDB.tt</DependentUpon>
-    </Compile>
     <Compile Include="Models\Genre.cs">
       <DependentUpon>StoreDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Kategori.cs">
-      <DependentUpon>MisbunDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\MisbunDB.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>MisbunDB.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\MisbunDB.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>MisbunDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\MisbunDB.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>MisbunDB.edmx</DependentUpon>
     </Compile>
     <Compile Include="Models\Order.cs">
       <DependentUpon>StoreDB.tt</DependentUpon>
@@ -162,9 +128,6 @@
       <DependentUpon>StoreDB.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Paypal.cs" />
-    <Compile Include="Models\Pesan.cs">
-      <DependentUpon>MisbunDB.tt</DependentUpon>
-    </Compile>
     <Compile Include="Models\ShoppingCart.cs" />
     <Compile Include="Models\StoreDB.Context.cs">
       <AutoGen>True</AutoGen>
@@ -280,23 +243,6 @@
       <DependentUpon>StoreDB.edmx</DependentUpon>
       <LastGenOutput>StoreDB.cs</LastGenOutput>
     </Content>
-    <EntityDeploy Include="Models\MisbunDB.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>MisbunDB.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <Content Include="Models\MisbunDB.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>MisbunDB.edmx</DependentUpon>
-      <LastGenOutput>MisbunDB.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="Models\MisbunDB.edmx.diagram">
-      <DependentUpon>MisbunDB.edmx</DependentUpon>
-    </Content>
-    <Content Include="Models\MisbunDB.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>MisbunDB.edmx</DependentUpon>
-      <LastGenOutput>MisbunDB.cs</LastGenOutput>
-    </Content>
     <None Include="Scripts\jquery-1.5.1-vsdoc.js" />
     <Content Include="Scripts\jquery-1.5.1.js" />
     <Content Include="Scripts\jquery-1.5.1.min.js" />
@@ -367,24 +313,6 @@
     <Content Include="Views\Genre\Edit.cshtml" />
     <Content Include="Views\Genre\Index.cshtml" />
     <Content Include="Views\Home\PostToPayPal.cshtml" />
-    <Content Include="Views\Misbun\Index.cshtml" />
-    <Content Include="Views\KategoriMisbun\Index.cshtml" />
-    <Content Include="Views\KategoriMisbun\Details.cshtml" />
-    <Content Include="Views\KategoriMisbun\Create.cshtml" />
-    <Content Include="Views\KategoriMisbun\Edit.cshtml" />
-    <Content Include="Views\KategoriMisbun\Delete.cshtml" />
-    <Content Include="Views\Misbun\Details.cshtml" />
-    <Content Include="Views\Misbun\GenreMenu.cshtml" />
-    <Content Include="Views\AffiliateMisbun\Index.cshtml" />
-    <Content Include="Views\AffiliateMisbun\Details.cshtml" />
-    <Content Include="Views\AffiliateMisbun\Create.cshtml" />
-    <Content Include="Views\AffiliateMisbun\Edit.cshtml" />
-    <Content Include="Views\AffiliateMisbun\Delete.cshtml" />
-    <Content Include="Views\BannerMisbun\Index.cshtml" />
-    <Content Include="Views\BannerMisbun\Details.cshtml" />
-    <Content Include="Views\BannerMisbun\Create.cshtml" />
-    <Content Include="Views\BannerMisbun\Edit.cshtml" />
-    <Content Include="Views\BannerMisbun\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
