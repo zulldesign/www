@@ -188,6 +188,9 @@
     <Content Include="Content\Images\Walking.Into.Clarksdale.jpg" />
     <Content Include="Content\Images\Warner.25.Anos.jpg" />
     <Content Include="Content\Images\Worlds.jpg" />
+    <Content Include="Content\jqueryslidemenu\css\jqueryslidemenu.css" />
+    <Content Include="Content\jqueryslidemenu\img\down.gif" />
+    <Content Include="Content\jqueryslidemenu\img\right.gif" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
@@ -274,6 +277,7 @@
     <Content Include="Scripts\jquery-ui-1.8.20.min.js" />
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jqueryslidemenu\js\jqueryslidemenu.js" />
     <Content Include="Scripts\modernizr-1.7.js" />
     <Content Include="Scripts\modernizr-1.7.min.js" />
     <Content Include="Scripts\modernizr-2.5.3.js" />
