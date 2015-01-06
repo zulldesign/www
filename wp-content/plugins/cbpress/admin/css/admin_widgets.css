@@ -1,0 +1,8 @@
+div.widget[id*="cbpress"] .widget-title h4{
+ padding-left:25px;background-image:url('../images/icon.png') !important;background-repeat:no-repeat;background-position:left center;
+}
+.cbpress_widget{border:2px solid #0a246a;padding:10px;}
+
+.cbpress_widget select,.cbpress_widget input[type="text"]{width:95%;border:1px solid #989898 !important;}
+
+.cbpress_widget label{font-weight:bold;color:#0a246a;}

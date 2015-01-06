@@ -1,0 +1,342 @@
+
+/*------------------------------------------------*/
+/* marketplace paged results  */
+/*------------------------------------------------*/
+
+.result_info a {
+color:#0069ba !important;
+text-decoration:none !important;
+}
+
+.result_info a:hover {
+color:#005698 !important;
+}
+
+.result_info {
+font-family:"Helvetica Neue", Helvetica, Arial, sans-serif !important;
+color:#555 !important;
+padding:0 10px 0 0 !important;
+font-size:1.25em !important;
+}
+
+.result_info b {
+color:#111 !important;
+}
+
+.result_info a,.result_info span {
+font-size:13px !important;
+color:#fff !important;
+background-color:#686868 !important;
+padding:3px 8px !important;
+margin-right:5px !important;
+text-decoration:none !important;
+}
+
+.result_info a:hover,.result_info .active {
+color:#fff !important;
+background-color:#c00 !important;
+}
+
+.result_info .cbnext,.result_info .cbnext .inactive {
+padding-right:19px !important;
+background:#686868 url(arrow_next.png) no-repeat right center !important;
+}
+
+.result_info .cbprev,.result_info .cbprev .inactive {
+padding-left:18px !important;
+background:#686868 url(arrow_prev.png) no-repeat 0 center !important;
+}
+
+.result_info .inactive {
+background-color:#aaa !important;
+color:#eee !important;
+cursor:default !important;
+}
+
+.stick {
+width:100% !important;
+position:fixed !important;
+top:0 !important;
+z-index:9000 !important;
+background:transparent url(result_info_bg.png) repeat-x !important;
+}
+
+.hover {
+border:1px solid #777 !important;
+}
+
+/*---------------------------------------------------*/
+/* sidebar marketplace cat navigation widget  */
+/*---------------------------------------------------*/
+
+
+.cbpresscats {
+	margin:0;
+	padding:0;
+}
+
+.cbpresscats a {
+text-decoration:underline !important;
+}
+
+.cbpresscats .currcat {
+text-decoration:underline !important;
+color:red !important;
+}
+
+
+/*------------------------------------------------------------------*/
+/* marketplace shortcode [cbpress]  or  [cbpress root="5"]  */
+/*------------------------------------------------------------------*/
+
+
+.cbpressmall {
+margin:20px 0;
+border:1px dotted #989898;
+line-height:1.2em;
+padding:0;
+}
+
+.cbpressmall .item {
+border-bottom:1px dotted #989898;
+margin:0 !important;
+padding:15px 20px;
+}
+
+.cbpressmall .item:hover {
+background:#f1f1f1 !important;
+}
+
+.cbpressmall .item.last {
+border-bottom-width:0;
+}
+
+.cbpressmall .item .title a {
+font:bold 16px/1.4 Arial, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+font-family:'Droid Sans', Arial, Helvetica, sans-serif;
+text-decoration:none;
+display:block;
+}
+
+.cbpressmall .item .text {
+font-size:82%;
+}
+
+.cbpressmall .item,
+.cbpresslist .item,
+.cbpressitem .item,
+.cbpresscat .item {
+cursor:pointer;
+}
+
+/*-------------------------------------------------------------*/
+/* custom list  [cbpress list="5"]  or list widget */
+/*-------------------------------------------------------------*/
+
+.cbpresslist {
+	padding:0 !important;
+	margin:10px 0 !important;
+}
+
+.cbpresslist div.item {
+	margin:0 !important;
+}
+
+.cbpresslist .item {
+	margin-bottom: 2px !important;
+	padding-top: 8px !important;
+	padding-bottom: 8px !important;
+}
+
+.cbpresslist .item:hover {
+}
+
+.cbpresslist .title {
+	margin:0 !important;
+	margin-bottom:5px !important;
+	padding:0 !important;
+	font-weight:bold !important;
+}
+
+.cbpresslist .title a {
+	margin:0 !important;
+	padding:0 !important;
+	font-weight:bold !important;
+	text-decoration:underline !important;
+}
+
+/*--------------------------------------------------------------------------*/
+/* single item [cbpress product="5"]  or  [cbpress vendor="cbengine"] */
+/*--------------------------------------------------------------------------*/
+
+
+.cbpressitem {
+clear:both;
+font-family:'Droid Sans', Arial, Helvetica, sans-serif !important;
+border:0 solid #15589b !important;
+padding:0 !important;
+cursor:pointer !important;
+margin-top:1em !important;
+margin-bottom:1em !important;
+	  border:0px solid #aaa  !important;
+	  -moz-border-radius: 8px;  
+	  -webkit-border-radius: 8px;  
+	  border-radius: 8px;
+}
+
+.cbpressitem .item {
+border:0 solid #206ebd !important;
+}
+
+.cbpressitem .title {
+font-size:13px !important;
+margin:0 !important;
+background:#eee !important;
+	  border:1px solid #aaa  !important;
+	  border-width: 1px 1px 0px 1px !important;
+
+	  -moz-border-radius-topleft: 8px; 
+	  -webkit-border-top-left-radius: 8px; 
+	  border-top-left-radius: 8px;
+	  
+	  -moz-border-radius-topright: 8px; 
+	  -webkit-border-top-right-radius: 8px; 
+	  border-top-right-radius: 8px;
+	  
+}
+
+.cbpressitem .title a {
+	padding:0 !important;
+	font-weight:bold !important;
+	text-decoration:none !important;
+	color:#062e56 !important;
+	display:block !important;
+	margin-top:0 !important;
+	margin-bottom:0 !important;
+	padding:2px 6px 2px 6px !important;
+}
+
+.cbpressitem .text {
+	padding:4px 6px 4px 6px !important;
+	font-size:12px !important;
+	color:#15589b !important;
+	background:#ffffff !important;
+	  border:1px solid #aaa  !important;
+	  border-width: 0px 1px 1px 1px !important;
+	  
+	  -moz-border-radius-bottomleft: 8px; 
+	  -webkit-border-bottom-left-radius: 8px; 
+	  border-bottom-left-radius: 8px;
+	  
+	  -moz-border-radius-bottomright: 8px; 
+	  -webkit-border-bottom-right-radius: 8px; 
+	  border-bottom-right-radius: 8px;
+}
+
+
+/*----------------------------------------------------------*/
+/* featured category, [cbpress category=5] shortcode  */
+/*----------------------------------------------------------*/
+
+.cbpresscat .item {
+font-family:'Droid Sans', Arial, Helvetica, sans-serif;
+margin:0 !important;
+padding:2px 0;
+}
+
+.cbpressfeatured,.cbpresscat {
+border:1px solid #ccc;
+display:block;
+padding:10px !important;
+margin:10px auto !important;
+	  -moz-border-radius: 8px;  
+	  -webkit-border-radius: 8px;  
+	  border-radius: 8px;
+}
+
+.cbpressfeatured a,.cbpresscat a {
+display:block !important;
+font-size:12px !important;
+font-weight:bold !important;
+}
+
+.cbpressfeatured ul,.cbpresscat ul {
+list-style: outside !important;
+}
+
+.cbpressfeatured ul li,.cbpresscat ul li {
+list-style-type:disc !important;
+}
+
+/*--------------------------------------------------*/
+/* breadcrumbs and catbox  */
+/*--------------------------------------------------*/
+
+.cbp_breadcrumbs {
+padding:5px 0;
+margin:0 0 10px;
+}
+
+.cbp_breadcrumbs a {
+padding-right:10px;
+background:url(../images/b-arrow.gif) no-repeat right center;
+}
+
+.cbp_catbox ul {
+margin-left:0 !important;
+list-style:none;
+}
+
+.cbp_catbox ul li {
+list-style: none !important;
+line-height:16px !important;
+padding-top:4px !important;
+}
+
+.cbp_catbox {
+margin:10px 0 !important;
+padding:5px 0 10px !important;
+}
+
+.cbp_catbox .catboxlabel {
+font-weight:bold;
+text-align:left !important;
+line-height:30px;
+font-family:'Droid Sans', Verdana, Arial, Helvetica, sans-serif;
+}
+
+
+
+
+/*------------------------------------------*/
+/* cbpress internal */
+/*------------------------------------------*/
+
+.cbpress-backlink {
+margin:25px 0;
+}
+
+.cbpress-backlink span {
+display:none;
+}
+
+.cbpress-backlink a {
+clear:both !important;
+display:inline-block !important;
+background:#122430 url(../images/cbp-white.png) no-repeat center center !important;
+width:79px !important;
+height:14px !important;
+padding:4px 3px 2px !important;
+}
+
+.cbpress-alertbox {
+margin:15px 0 !important;
+padding:4px 10px 4px 30px !important;
+font-size:13px !important;
+font-family:'Droid Sans', Arial, Helvetica, sans-serif !important;
+display:block !important;
+background:#515659 !important;
+color:#eee !important;
+min-height:18px !important;
+border:1px solid #7e858a !important;
+}
