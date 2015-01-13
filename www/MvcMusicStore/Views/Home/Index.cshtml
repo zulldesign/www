@@ -12,7 +12,8 @@
     {
         <li><a href="@Url.Action("Details", "Blog",
                 new { id = blog.BlogId })">
-            
+
+            <img alt="@blog.Title" src="@blog.BlogArtUrl" />
             <object width="550" height="400">
             <param name="movie" value="somefilename.swf">
             <embed src="/Images/index.swf" width="702" height="300">
