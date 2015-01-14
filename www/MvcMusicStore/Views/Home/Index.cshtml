@@ -13,12 +13,19 @@
         <li><a href="@Url.Action("Details", "Blog",
                 new { id = blog.BlogId })">
 
-            <img alt="@blog.Title" src="@blog.BlogArtUrl" />                   
-            <iframe width="560" 
-                height="315" 
-                src="https://www.apphb.com/Content/Images/Index.swf" 
-                frameborder="0" 
-                allowfullscreen></iframe>
+            <img alt="@blog.Title" src="@blog.BlogArtUrl" />   
+            <body>
+    @Video.Flash(path: "https://www.apphb.com/Content/Images/Index.swf",
+                 width: "400",
+                 height: "600",
+                 play: true,
+                 loop: true,
+                 menu:  false,
+                 bgColor: "red",
+                 quality: "medium",
+                 scale: "exactfit",
+                 windowMode: "transparent")
+            </body>       
 
             <span>@blog.Title</span> </a>
         </li>
