@@ -14,11 +14,15 @@
                 new { id = blog.BlogId })">
 
             <img alt="@blog.Title" src="@blog.BlogArtUrl" />
-            <object width="550" height="400">
-            <param name="movie" value="somefilename.swf">
-            <embed src="/Images/index.swf" width="702" height="300">
-            </embed>
-            </object>
+            <body>
+        <h1>Embedded Video Example</h1>
+        <p>The following video provides an introduction to WebMatrix:</p>
+        <iframe width="560" 
+                height="315" 
+                src="http://www.youtube.com/embed/fxCEcPxUbYA" 
+                frameborder="0" 
+                allowfullscreen></iframe>
+</body>
 
             <span>@blog.Title</span> </a>
         </li>
