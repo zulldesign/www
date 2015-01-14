@@ -183,6 +183,7 @@
     <Content Include="Content\Images\Quiet.Songs.jpg" />
     <Content Include="Content\Images\Rahsia.Emas.jpg" />
     <Content Include="Content\Images\Seni.Adwords.gif" />
+    <Content Include="Content\Images\sms13999.swf" />
     <Content Include="Content\Images\The.Best.Of.Billy.Cobham.jpg" />
     <Content Include="Content\Images\The.Best.Of.Men.At.Work.jpg" />
     <Content Include="Content\Images\The.Essential.Miles.Davis.jpg" />
@@ -192,6 +193,7 @@
     <Content Include="Content\jqueryslidemenu\css\jqueryslidemenu.css" />
     <Content Include="Content\jqueryslidemenu\img\down.gif" />
     <Content Include="Content\jqueryslidemenu\img\right.gif" />
+    <Content Include="Content\themes\base\images\index.swf" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
