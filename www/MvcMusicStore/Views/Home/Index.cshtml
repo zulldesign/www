@@ -13,19 +13,7 @@
         <li><a href="@Url.Action("Details", "Blog",
                 new { id = blog.BlogId })">
 
-            <img alt="@blog.Title" src="@blog.BlogArtUrl" />   
-            <body>
-    @Video.Flash(path: "/Content/Images/Index.swf",
-                 width: "400",
-                 height: "600",
-                 play: true,
-                 loop: true,
-                 menu:  false,
-                 bgColor: "red",
-                 quality: "medium",
-                 scale: "exactfit",
-                 windowMode: "transparent")
-            </body>       
+            <img alt="@blog.Title" src="@blog.BlogArtUrl" />                   
 
             <span>@blog.Title</span> </a>
         </li>
