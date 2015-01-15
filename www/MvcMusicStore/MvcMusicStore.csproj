@@ -109,6 +109,7 @@
     <Compile Include="Controllers\ProductController.cs" />
     <Compile Include="Controllers\BlogController.cs" />
     <Compile Include="Controllers\ShoppingCartController.cs" />
+    <Compile Include="Controllers\UploadifyController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -366,6 +367,7 @@
     <Content Include="Views\BlogEditor\Create.cshtml" />
     <Content Include="Views\BlogEditor\Edit.cshtml" />
     <Content Include="Views\BlogEditor\Delete.cshtml" />
+    <Content Include="Views\Uploadify\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
