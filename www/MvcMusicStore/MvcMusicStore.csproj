@@ -109,6 +109,7 @@
     <Compile Include="Controllers\ProductController.cs" />
     <Compile Include="Controllers\BlogController.cs" />
     <Compile Include="Controllers\ShoppingCartController.cs" />
+    <Compile Include="Controllers\UploadifyController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -274,6 +275,9 @@
     <Content Include="Scripts\jquery-1.7.1.js" />
     <Content Include="Scripts\jquery-1.7.1.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <None Include="Scripts\jquery-1.8.1-vsdoc.js" />
+    <Content Include="Scripts\jquery-1.8.1.js" />
+    <Content Include="Scripts\jquery-1.8.1.min.js" />
     <Content Include="Scripts\jquery-ui-1.8.11.js" />
     <Content Include="Scripts\jquery-ui-1.8.11.min.js" />
     <Content Include="Scripts\jquery-ui-1.8.20.js" />
@@ -284,6 +288,11 @@
     <Content Include="Scripts\modernizr-1.7.js" />
     <Content Include="Scripts\modernizr-1.7.min.js" />
     <Content Include="Scripts\modernizr-2.5.3.js" />
+    <Content Include="Scripts\uploadify-v3.1\jquery.uploadify-3.1.js" />
+    <Content Include="Scripts\uploadify-v3.1\jquery.uploadify-3.1.min.js" />
+    <Content Include="Scripts\uploadify-v3.1\uploadify-cancel.png" />
+    <Content Include="Scripts\uploadify-v3.1\uploadify.css" />
+    <Content Include="Scripts\uploadify-v3.1\uploadify.swf" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -358,6 +367,7 @@
     <Content Include="Views\BlogEditor\Create.cshtml" />
     <Content Include="Views\BlogEditor\Edit.cshtml" />
     <Content Include="Views\BlogEditor\Delete.cshtml" />
+    <Content Include="Views\Uploadify\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
