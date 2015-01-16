@@ -1,0 +1,952 @@
+/*
+Theme Name: NewMedia
+Theme URI: http://gamerpotion.blogspot.co.uk/2014/05/newmedia.html
+Author: GamerPotion
+Author URI: http://gamerpotion.blogspot.co.uk
+Description: A content-rich theme. Perfect for bloggers and magazine sites who wish to display extra content. You can choose to display 1 or 2 sidebars or even no sidebars and the content will automatically adapt to your choice. This theme features 2 Sidebars, 3 Footer widgets, 2 Menus, Custom logo, Custom background, and Neat typography. NewMedia uses NewTek theme as a base.
+Version: 1.1.1
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: light, white, gray, one-column, two-columns, three-columns, left-sidebar, right-sidebar, full-width-template, custom-header, custom-background, fixed-layout, featured-images, editor-style
+Text Domain: newmedia
+This theme, like WordPress, is licensed under the GPL.
+Font: https://www.google.com/fonts/specimen/News+Cycle
+NewMedia Wordpress Theme Copyright (c) 2014 GamerPotion.
+*/
+
+
+/**
+ * Table of Contents
+ *
+ * 1.0 Body
+ * 2.0 Headings
+ * 3.0 Layout
+ * 4.0 Title and Logo
+ * 5.0 Content area
+ *  5.1 Content Post title
+ *  5.2 Content Continue Reading text
+ *  5.3 Content Comments, Categories, Tags area
+ *  5.4 Content Gallery, Captions and Post images
+ *  5.5 Author block
+ * 6.0 Content Comments
+ *  6.1 Content Comments text
+ *  6.2 Content Comments numbers
+ * 7.0 Sidebars
+ *  7.1 Sidebar Widget titles
+ *  7.2 Additional Sidebar items
+ * 8.0 Footer Widgets
+ *  8.1 Footer Widgets title
+ * 9.0 Delimiter for clearing both
+ * 10.0 Pagination
+ * 11.0 Footer Copyright area
+ * 12.0 Search form
+ * 13.0 Navigation menu
+ *  13.1 Top menu
+ * 14.0 Media queries
+ * ------------------
+ */
+
+
+/**
+ * 1.0 Body
+ * ------------------
+ */
+
+body { font-family: 'News Cycle', sans-serif; background-color:#cecece; color: #141414; margin: 0 auto; padding:0; font-size:12pt; padding-top:20px; padding-bottom:20px; }
+
+body a { font-family: 'News Cycle', sans-serif; text-decoration:none; color:#808080; font-size:12pt; }
+
+body a:hover { font-family: 'News Cycle', sans-serif; text-decoration:underline; color:#b63030; font-size:12pt; }
+
+a:link { text-decoration:none; font-family: 'News Cycle', sans-serif; }
+
+a:visited { text-decoration:none; font-family: 'News Cycle', sans-serif; }
+
+a:hover { text-decoration:underline; font-family: 'News Cycle', sans-serif; }
+
+a:active { text-decoration:underline; font-family: 'News Cycle', sans-serif; }
+
+
+/**
+ * 2.0 Headings
+ * ------------------
+ */
+
+h1 { font-family: 'News Cycle', sans-serif; font-size: 15pt; color:#141414; }
+
+h2 { font-family: 'News Cycle', sans-serif; font-size: 14pt; color:#141414; }
+
+h3 { font-family: 'News Cycle', sans-serif; font-size: 13pt; color:#141414; }
+
+h4 { font-family: 'News Cycle', sans-serif; font-size: 12pt; color:#141414; }
+
+h5 { font-family: 'News Cycle', sans-serif; font-size: 11pt; color:#141414; }
+
+h6 { font-family: 'News Cycle', sans-serif; font-size: 10pt; color:#141414; }
+
+
+/**
+ * 3.0 Layout - Container 1 is logo area, Container 2 is in footer, Container 3 is the navigation menu
+ * ------------------
+ */
+
+#wrapper { font-family: 'News Cycle', sans-serif; display: block; width:960px; margin:auto; background-color:#ffffff; padding: 0px 20px 5px 20px; clear: both; box-shadow: 0 2px 6px rgba(100, 100, 100, 0.3); }
+
+#wrapper a { font-family: 'News Cycle', sans-serif; text-decoration:none; }
+
+#header { text-align: center; margin: 0 auto; width: 960px; clear: both; }
+
+#container { font-family: 'News Cycle', sans-serif; text-align:center; width:960px; height: auto; overflow:hidden; clear: both; margin: 0 auto; background-color:#ffffff; padding: 10px 0px 10px 0px; }
+
+#container2 { font-family: 'News Cycle', sans-serif; text-align:center; width:960px; background-color:#ffffff;  clear: both;  border-top: 1px solid #dddddd; padding: 20px 0px 20px 0px; overflow:hidden; }
+
+#container3 { font-family: 'News Cycle', sans-serif; text-align:center; width:960px; background-color:#2d2d2d; margin: 0 auto; display:block;  padding: 0px 0px 0px 0px; }
+
+#footer { text-align: center; margin: 0 auto; width: 960px; clear: both; padding-bottom:20px; }
+
+
+/**
+ * 4.0 Title and Logo
+ * ------------------
+ */
+
+.site-title { font-family: 'News Cycle', sans-serif; color: #2d2d2d; margin:0 auto; font-size: 50pt; font-weight:300; padding:0px 0px 0px 0px; max-width:100% !important; word-wrap: break-word; }
+
+.site-title a { font-family: 'News Cycle', sans-serif; color: #2d2d2d; font-size: 50pt; font-weight:300; max-width:100% !important; word-wrap: break-word; }
+
+.site-title a:hover { font-family: 'News Cycle', sans-serif; color: #2d2d2d; font-size: 50pt; text-decoration:none; font-weight:300; max-width:100% !important; word-wrap: break-word; }
+
+.site-description { font-family: 'News Cycle', sans-serif; margin:0 auto; font-size: 11pt; color:#777777; text-transform: none; padding:0px 0px 10px 0px; word-wrap: break-word; }
+
+.site-logo { margin:0 auto; padding:10px 0px 0px 0px; }
+
+
+/**
+ * 5.0 Content area
+ * ------------------
+ */
+
+#main { display:block; height: auto; font-family: 'News Cycle', sans-serif; }
+
+#content { font-family: 'News Cycle', sans-serif; width:50%; margin:0 auto; padding-top:20px; float:left; background-color:#ffffff; color:#000000; font-size:12pt; word-wrap: break-word; }
+
+#content-wide { font-family: 'News Cycle', sans-serif; width:75%; padding-top:20px; float:left; background-color:#ffffff; color:#000000; font-size:12pt; word-wrap: break-word; }
+
+#content-widest { font-family: 'News Cycle', sans-serif; width:100%; padding-top:20px; float:left; background-color:#ffffff; color:#000000; font-size:12pt; word-wrap: break-word; }
+
+#content a { font-family: 'News Cycle', sans-serif; text-decoration:none; }
+
+#content a:hover { font-family: 'News Cycle', sans-serif; text-decoration:underline; }
+
+#content-wide a { font-family: 'News Cycle', sans-serif; text-decoration:none; }
+
+#content-wide a:hover { font-family: 'News Cycle', sans-serif; text-decoration:underline; }
+
+#content-widest a { font-family: 'News Cycle', sans-serif; text-decoration:none; }
+
+#content-widest a:hover { font-family: 'News Cycle', sans-serif; text-decoration:underline; }
+
+.sticky { font-family: 'News Cycle', sans-serif; text-decoration:none; margin: auto; padding: 5px 10px 5px 10px; border-width:1px; border-style:dotted; border-color:#353535; }
+
+blockquote {
+	margin: 1em 3em;
+	padding: .5em;
+        color: #2d2d2d;
+	background-color: #eaeaea;
+        font-family: 'News Cycle', sans-serif;
+        border: none; outline:none; }
+
+blockquote p {
+	margin: 0;
+        border: none; outline:none; }
+
+#content iframe { max-width:480px !important; max-height: 250px !important; }
+
+#content-wide iframe { max-width:480px !important; max-height: 250px !important; }
+
+#content-widest iframe { max-width:480px !important; max-height: 250px !important; }
+
+.post a {
+  color: #808080;
+  text-decoration: none;
+  font-family: 'News Cycle', sans-serif;
+}
+
+.post a:hover {
+  color: #b63030;
+  text-decoration: underline;
+  font-family: 'News Cycle', sans-serif;
+}
+
+hr {
+  border: 0;
+  width: 80%;
+  background-color: #2d2d2d;
+  height: 2px;
+}
+
+.size-auto,
+.size-full,
+.size-large,
+.size-medium,
+.size-thumbnail {
+	max-width: 100%;
+	height: auto;
+}
+
+table,
+th,
+td { border: 1px solid #bbbbbb; }
+
+table {	border-collapse: separate;
+	border-spacing: 0;
+	border-width: 1px 0 0 1px;
+	margin-bottom: 20px;
+	width: 100%; }
+
+.post-navigation { display:block; padding: 20px 0px 0px 0px; }
+
+.previous-post { float:left; word-wrap: break-word; font-family: 'News Cycle', sans-serif; max-width:220px; padding:0; margin:0; }
+
+.next-post { float:right; word-wrap: break-word; font-family: 'News Cycle', sans-serif; max-width:220px; padding:0; margin:0; }
+
+.archivetek { background-color: #f5f5f5; font-size:11pt; padding:0px 0px 0px 5px; }
+
+
+/**
+ * 5.1 Content Post title
+ * ------------------
+ */
+
+.post-title { font-weight:200; max-width:480px !important; height:auto; white-space: pre-wrap; word-wrap: break-word; font-family: 'News Cycle', sans-serif; }
+
+.post-title a { font-family: 'News Cycle', sans-serif; font-size: 17pt; color: #1d1d1d; text-transform: none; font-weight:200; }
+
+.post-title a:hover { font-family: 'News Cycle', sans-serif; font-size: 17pt; color: #1d1d1d; text-transform: none; font-weight:200; }
+
+.post-date { font-family: 'News Cycle', sans-serif; font-size: 10pt; color: #bbbbbb; }
+
+.post-date a { font-family: 'News Cycle', sans-serif; font-size: 10pt; color: #808080; }
+
+.post-date a:hover { font-family: 'News Cycle', sans-serif; font-size: 10pt; color: #b63030; }
+
+
+/**
+ * 5.2 Content Continue Reading text
+ * ------------------
+ */
+
+a.more-link { font-family: 'News Cycle', sans-serif;
+	color: #808080;	text-decoration:none; }
+
+a:hover.more-link { font-family: 'News Cycle', sans-serif;
+	color: #b63030;	text-decoration:none; }
+
+.post a.more-link { font-family: 'News Cycle', sans-serif;
+	color: #808080;	text-decoration:none; }
+
+.post a:hover.more-link { font-family: 'News Cycle', sans-serif;
+	color: #b63030;	text-decoration:none; }
+
+
+/**
+ * 5.3 Content Comments, Categories, Tags area
+ * ------------------
+ */
+
+.commentstext { text-decoration:none; clear: both; display: block; font-family: 'News Cycle', sans-serif; font-size: 10pt; border-bottom: 1px solid #dddddd; padding-bottom: 10px; border-top: 1px solid #dddddd; padding-top: 10px; }
+
+.commentstext a { text-decoration:none;  font-family: 'News Cycle', sans-serif; font-size: 10pt; }
+
+.commentstext a:hover { text-decoration:underline;  font-family: 'News Cycle', sans-serif; font-size: 10pt; }
+
+.bypostauthor { font-family: 'News Cycle', sans-serif; text-decoration:none; }
+
+
+/**
+ * 5.4 Content Gallery, Captions and Post images
+ * ------------------
+ */
+
+.gallery-caption { font-family: 'News Cycle', sans-serif; text-decoration:none; color:#888888; }
+
+a, img {
+    border:none;
+}
+
+#content img {
+    border:none;
+    max-width:480px !important;
+    height:auto;
+}
+
+#content img a {
+    border:none;
+    max-width:480px !important;
+    height:auto;
+}
+
+#content-wide img {
+    border:none;
+    max-width:480px !important;
+    height:auto;
+}
+
+#content-wide img a {
+    border:none;
+    max-width:480px !important;
+    height:auto;
+}
+
+#content-widest img {
+    border:none;
+    max-width:480px !important;
+    height:auto;
+}
+
+#content-widest img a {
+    border:none;
+    max-width:480px !important;
+    height:auto;
+}
+
+pre, code { max-width:480px !important; height:auto; white-space: pre-wrap; word-wrap: break-word; font-family: 'News Cycle', sans-serif; }
+
+pre { margin: 1em 3em;
+	padding: .5em;
+        color: #2d2d2d;
+	background-color: #eaeaea; 
+        font-family: 'News Cycle', sans-serif;
+        border: none; outline:none; }
+
+.alignnone {
+    margin: 10px 20px 5px 0;
+    max-width:480px !important;
+    height:auto;
+}
+
+.aligncenter,
+div.aligncenter {
+    display: block;
+    margin: 5px auto 5px auto;
+    max-width:480px !important;
+    height:auto;
+}
+
+.alignright {
+    float:right;
+    margin: 5px 0 20px 20px;
+    max-width:480px !important;
+    height:auto;
+}
+
+.alignleft {
+    float: left;
+    display: block;
+    margin: 5px 20px 20px 0;
+    max-width:480px !important;
+    height:auto;
+}
+
+.aligncenter {
+    display: block;
+    margin: 5px auto 5px auto;
+    max-width:480px !important;
+    height:auto;
+}
+
+a img.alignright {
+    float: right;
+    margin: 5px 0 20px 20px;
+    max-width:480px !important;
+    height:auto;
+}
+
+a img.alignnone {
+    margin: 10px 20px 5px 0;
+    max-width:480px !important;
+    height:auto;
+}
+
+a img.alignleft {
+    float: left;
+    margin: 10px 20px 20px 0;
+    max-width:480px !important;
+    height:auto;
+}
+
+a img.aligncenter {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width:480px !important;
+    height:auto;
+}
+
+.wp-caption {
+    max-width: 96%; /* Image does not overflow the content area */
+    padding: 0px 0px 0px;
+    text-align: center;
+    font-family: 'News Cycle', sans-serif;
+    background-color:transparent;
+    border-width:0px;
+}
+
+.wp-caption.alignnone {
+    margin: 0px 0px 0px 0;
+}
+
+.wp-caption.alignleft {
+    margin: 0px 10px 0px 0;
+}
+
+.wp-caption.alignright {
+    margin: 0px 0 0px 10px;
+}
+
+.wp-caption img {
+    border: none;
+    height: auto;
+    max-width:480px !important;
+    height:auto;
+}
+
+.wp-caption p.wp-caption-text {
+    font-size: 11px;
+    line-height: 17px;
+    margin: 0;
+    padding: 0 0px 0px;
+    color:#141414;
+    font-family: 'News Cycle', sans-serif;
+}
+
+.post img {
+max-width:480px !important;
+height:auto;
+}
+
+
+/**
+ * 5.5 Author block - To hide this block in posts, add 'display:none;' to .authortek
+ * ------------------
+ */
+
+.authortek {
+background: #f5f5f5;
+border: 1px solid #dddddd;
+padding: 10px;
+width:460px;
+overflow:hidden;
+color: #333333;
+margin-bottom:20px;
+}
+
+.authortek h3 {
+font-size: 15px;
+color:#333333;
+margin:0;
+padding:5px 5px 5px 5px;
+}
+
+.authortek h3 a {
+text-decoration:none;
+color: #808080;
+font-weight: bold;
+}
+
+.authortek img {
+margin:0;
+padding:5px;
+float:left;
+border: 1px solid #dddddd;
+width: 80px;
+height: 80px;
+}
+
+.authortek p {
+color:#333333;
+margin:0;
+padding:0px 5px 5px 5px;
+}
+
+.authortek p a {
+color:#808080;
+}
+
+.authortekinfo {
+padding-left:120px;
+}
+
+
+/**
+ * 6.0 Content Comments
+ * ------------------
+ */
+
+#comment { font-family: 'News Cycle', sans-serif; background-color: #f5f5f5; color:#141414; border-width:1px; border-color:#bbbbbb; border-style:solid; outline:none; width:470px; display:block; clear:both; padding:5px 5px 5px 5px; }
+
+#author { font-family: 'News Cycle', sans-serif; background-color: #f5f5f5; color:#141414; border-width:1px; border-color:#bbbbbb; border-style:solid; outline:none; width:470px; display:block; clear:both; padding:5px 5px 5px 5px; }
+
+#email { font-family: 'News Cycle', sans-serif; background-color: #f5f5f5; color:#141414; border-width:1px; border-color:#bbbbbb; border-style:solid; outline:none; width:470px; display:block; clear:both; padding:5px 5px 5px 5px; }
+
+#url { font-family: 'News Cycle', sans-serif; background-color: #f5f5f5; color:#141414; border-width:1px; border-color:#bbbbbb; border-style:solid; outline:none; width:470px; display:block; clear:both; padding:5px 5px 5px 5px; }
+
+#comment #submit { text-decoration:none; color: #f5f5f5; background: #777777; border: none; font-family: 'News Cycle', sans-serif; outline:none; }
+
+#comment #submit:hover { text-decoration:none; color: #f5f5f5; background: #777777; border: none; font-family: 'News Cycle', sans-serif; outline:none; text-decoration:underline; }
+
+.reply { padding: 0px 0px 40px 0px; border: none; outline:none; }
+
+.reply a { text-decoration:none; color: #f5f5f5; background: #777777; border: none; font-family: 'News Cycle', sans-serif; outline:none; padding: 5px 10px 5px 10px; } 
+
+.reply a:hover { text-decoration:none; color: #f5f5f5; background: #777777; border: none; font-family: 'News Cycle', sans-serif; outline:none; padding: 5px 10px 5px 10px; }
+
+#submit { text-decoration:none; color: #f5f5f5; background: #777777; border: none; font-family: 'News Cycle', sans-serif; outline:none; padding: 5px 10px 5px 10px; }
+
+#submit:hover { text-decoration:none; color: #f5f5f5; background: #777777; border: none; font-family: 'News Cycle', sans-serif; outline:none; padding: 5px 10px 5px 10px; text-decoration:underline; } 
+
+
+/**
+ * 6.1 Content Comments text - Hides allowed text description under comments text box. Delete display:none to show.
+ * ------------------
+ */
+
+.form-allowed-tags { font-family: 'News Cycle', sans-serif; font-size:12pt; display:none; }
+
+
+/**
+ * 6.2 Content Comments numbers - Hides comment list numbers. Delete below section to show list numbers.
+ * ------------------
+ */
+
+ol.comment-list {
+	list-style-type:none;
+	margin: 0;
+}
+
+ol.children {
+	list-style-type:none;
+	margin: 0;
+}
+
+
+/**
+ * 7.0 Sidebars
+ * ------------------
+ */
+
+#sidebar { font-family: 'News Cycle', sans-serif; width: 22%; float: left; background-color:#ffffff; color:#141414; padding: 20px 26px 0px 0px; }
+
+#sidebar-right { width:22%; float:left; padding: 20px 0px 0px 26px; }
+
+#sidebar ul li a { font-family: 'News Cycle', sans-serif; text-decoration:none; font-size: 12pt; color:#808080; }
+
+#sidebar ul li a:hover { font-family: 'News Cycle', sans-serif; text-decoration:underline; font-size: 12pt; color:#b63030; }
+
+#sidebar ul { font-family: 'News Cycle', sans-serif; text-decoration:none; clear:both; }
+
+#sidebar li { font-family: 'News Cycle', sans-serif; list-style-type: none;
+        list-style-position:inside;
+        margin:0;
+        padding:0; word-wrap: break-word; }
+
+#sidebar .menu li { font-family: 'News Cycle', sans-serif; list-style-type: none; }
+
+#sidebar ul .sub-menu { list-style-type: none; }
+
+#sidebar li ul { list-style-type: none; padding-left:5px; }
+
+#sidebar li ul li { list-style-type: none; }
+
+#sidebar li ul .sub-menu { list-style-type: none; }
+
+#sidebar ul .sub-menu li { list-style-type: none; }
+
+#sidebar-right ul li a { font-family: 'News Cycle', sans-serif; text-decoration:none; font-size: 12pt; color:#808080; }
+
+#sidebar-right ul li a:hover { font-family: 'News Cycle', sans-serif; text-decoration:underline; font-size: 12pt; color:#b63030; }
+
+#sidebar-right ul { font-family: 'News Cycle', sans-serif; text-decoration:none; clear:both; }
+
+#sidebar-right li { font-family: 'News Cycle', sans-serif; list-style-type: none;
+        list-style-position:inside;
+        margin:0;
+        padding:0; word-wrap: break-word; }
+
+#sidebar-right .menu li { font-family: 'News Cycle', sans-serif; list-style-type: none; }
+
+#sidebar-right ul .sub-menu { list-style-type: none; }
+
+#sidebar-right li ul { list-style-type: none; padding-left:5px; }
+
+#sidebar-right li ul li { list-style-type: none; }
+
+#sidebar-right li ul .sub-menu { list-style-type: none; }
+
+#sidebar-right ul .sub-menu li { list-style-type: none; }
+
+
+/**
+ * 7.1 Sidebar Widget titles
+ * ------------------
+ */
+
+.sidebarhd { font-family: 'News Cycle', sans-serif;
+text-decoration:none;
+margin-top:5px; margin-bottom:5px;
+font-size: 12pt;
+font-weight: 400;
+padding: 2px 0px 2px 5px;
+/*background-color:#f5f5f5;*/
+border-bottom: 1px solid #999999;
+color: #2d2d2d;
+text-align:left; clear:both;
+word-wrap: break-word; }
+
+.sidebarhd a { font-family: 'News Cycle', sans-serif; text-decoration:none; color: #b63030; }
+
+.sidebarhd a:hover { font-family: 'News Cycle', sans-serif; text-decoration:none; color: #b63030; }
+
+sidebar.sidebarhd { width:100%; max-width:100% !important; height:auto; white-space: pre-wrap; word-wrap: break-word; }
+
+
+/**
+ * 7.2 Additional Sidebar items
+ * ------------------
+ */
+
+.rsswidget { font-family: 'News Cycle', sans-serif; text-decoration:none; color: #808080; }
+
+.rssSummary { font-family: 'News Cycle', sans-serif; text-decoration:none; color: #808080; word-wrap: break-word; margin: 0 auto; padding-right:20px; max-width:90% !important; }
+
+.textwidget { font-family: 'News Cycle', sans-serif; list-style: circle; padding: 0px 10px 5px 10px; max-width:99% !important; word-wrap: break-word; }
+
+.textwidget iframe { max-width:99% !important; max-height: 99% !important; }
+
+.textwidget img { max-width:99% !important; max-height: 99% !important; }
+
+.textwidget img a { max-width:99% !important; max-height: 99% !important; }
+
+.textwidget select { width:90%; max-width:98% !important; word-wrap: break-word; margin:0px 10px 0px 10px; padding:0; text-align: left; }
+
+select { width:90%; max-width:98% !important; word-wrap: break-word; margin:10px 10px 10px 10px; padding:0; text-align: left; }
+
+.tagcloud { font-family: 'News Cycle', sans-serif; list-style: circle; padding: 0px 5px 0px 0px; }
+
+#calendar_wrap table { margin: 0 auto; width:95%; padding:0; text-align: center; }
+
+table#wp-calendar { margin:0 auto; }
+
+#sidebar ul { list-style-type: none;
+        list-style-position:inside;
+        margin:0;
+        padding:0;
+        word-wrap: break-word; }
+
+#sidebar li { list-style-type: none;
+        list-style-position:inside;
+        margin:0;
+        padding:0;
+        word-wrap: break-word; }
+
+#sidebar ul li { list-style-type: none;
+        list-style-position:inside;
+        margin:0;
+        padding:0;
+        word-wrap: break-word; }
+
+#sidebar-right ul { list-style-type: none;
+        list-style-position:inside;
+        margin:0;
+        padding:0;
+        word-wrap: break-word; }
+
+#sidebar-right li { list-style-type: none;
+        list-style-position:inside;
+        margin:0;
+        padding:0;
+        word-wrap: break-word; }
+
+#sidebar-right ul li { list-style-type: none;
+        list-style-position:inside;
+        margin:0;
+        padding:0;
+        word-wrap: break-word; }
+
+
+/**
+ * 8.0 Footer Widgets
+ * ------------------
+ */
+
+#footer-sidebar aside {
+width: 30%;
+display: inline-block;
+vertical-align:top;
+padding: 0px 0px 20px 0px;
+margin: 0px 10px 0px 10px;
+text-align:left;
+clear:both;
+}
+
+#footer-sidebar aside a { color:#808080; }
+
+#footer-sidebar aside a:hover { text-decoration:underline; color:#b63030; }
+
+#footer-sidebar li { list-style-type: none;
+        list-style-position:inside;
+        margin:0;
+        padding:0;
+        word-wrap: break-word; }
+
+#footer-sidebar ul .sub-menu { list-style-type: none; }
+
+#footer-sidebar li ul { list-style-type: none;
+        padding-left:10px; }
+
+#footer-sidebar li ul li { list-style-type: none; }
+
+#footer-sidebar li ul .sub-menu { list-style-type: none; }
+
+#footer-sidebar ul .sub-menu li { list-style-type: none; }
+
+#footer-sidebar .tagcloud { font-family: 'News Cycle', sans-serif; list-style: circle; padding: 10px 40px 10px 40px; }
+
+li { word-wrap: break-word; }
+
+ul li { word-wrap: break-word; }
+
+#footer-sidebar .rsswidget { font-family: 'News Cycle', sans-serif; text-decoration:none; color: #3b5998; }
+
+#footer-sidebar .rssSummary { font-family: 'News Cycle', sans-serif; text-decoration:none; color: #808080; word-wrap: break-word; margin: 0 auto; padding:0px 40px 0px 40px; max-width:90% !important; }
+
+#footer-sidebar .textwidget { font-family: 'News Cycle', sans-serif; list-style: circle; padding: 10px 40px 10px 40px; max-width:99% !important; word-wrap: break-word; }
+
+#footer-sidebar .textwidget iframe { max-width:99% !important; max-height: 99% !important; padding: 10px 40px 10px 40px; }
+
+#footer-sidebar .textwidget img { max-width:99% !important; max-height: 99% !important; }
+
+#footer-sidebar .textwidget img a { max-width:99% !important; max-height: 99% !important; }
+
+#footer-sidebar .textwidget select { width:80%; max-width:80% !important; word-wrap: break-word; margin:10px 40px 10px 40px; text-align: left; float:left; }
+
+#footer-sidebar select { width:80%; max-width:80% !important; word-wrap: break-word; margin:10px 40px 10px 40px; padding:0; text-align: left; float:left; }
+
+#footer-sidebar .tagcloud { font-family: 'News Cycle', sans-serif; list-style: circle; padding: 10px 40px 10px 40px; }
+
+#footer-sidebar #calendar_wrap table { margin: 0 auto; width:95%; padding: 10px 40px 10px 40px; text-align: center; border:none; }
+
+#footer-sidebar table#wp-calendar { margin:0 auto; }
+
+#footer-sidebar #search { max-width:90%; padding: 10px 40px 10px 40px; }
+
+#footer-sidebar #searchform { max-width:90%; padding: 10px 40px 10px 40px; }
+
+#footer-sidebar #recentcomments { text-align:left; width:80%; }
+
+#footer-sidebar .recentcomments { text-align:left; width:80%; }
+
+
+/**
+ * 8.1 Footer Widgets title
+ * ------------------
+ */
+
+.sidebarhd2 { font-family: 'News Cycle', sans-serif; 
+text-decoration:none; margin:5px 0px 0px 40px; font-size: 14pt;
+color: #000000;
+text-align:left;
+font-weight:400;
+word-wrap: break-word; }
+
+#footer-sidebar .sidebarhd { font-family: 'News Cycle', sans-serif; 
+text-decoration:none; margin:5px 0px 0px 40px; font-size: 14pt;
+color: #000000;
+text-align:left;
+font-weight:400;
+word-wrap: break-word; }
+
+
+/**
+ * 9.0 Delimiter for clearing both
+ * ------------------
+ */
+
+.delimiter { clear: both; }
+
+.breaker { padding-top:20px; padding-bottom:20px; clear:both; }
+
+.linebreaker { border: 1px dashed #cccccc; padding:0; margin-top:20px; margin-bottom:20px; clear:both; }
+
+
+/**
+ * 10.0 Pagination
+ * ------------------
+ */
+
+.pagi { font-family: 'News Cycle', sans-serif; color: #808080; text-transform: uppercase; }
+
+.pagi a { font-family: 'News Cycle', sans-serif; color: #808080; text-transform: uppercase; }
+
+.pagi a:hover { font-family: 'News Cycle', sans-serif; color:#b63030; text-transform: uppercase; }
+
+
+/**
+ * 11.0 Footer Copyright area
+ * ------------------
+ */
+
+.footer-copyright { font-size:11pt; font-family: 'News Cycle', sans-serif; color: #111111; float:left; clear:both; max-width:900px; word-wrap: break-word; }
+
+.footer-copyright a { font-size:11pt; font-family: 'News Cycle', sans-serif; color: #808080; clear:both; }
+
+.footer-copyright a:hover { font-size:11pt; font-family: 'News Cycle', sans-serif; color: #b63030; clear:both; }
+
+.toplink a { font-size:11pt; font-family: 'News Cycle', sans-serif; background-color:#2d2d2d; color: #f5f5f5; float:right; padding:1px 5px 1px 5px; }
+
+.toplink a:hover { font-size:11pt; font-family: 'News Cycle', sans-serif; background-color:#2d2d2d; color: #f5f5f5; float:right; padding:1px 5px 1px 5px; }
+
+
+/**
+ * 12.0 Search form
+ * ------------------
+ */
+
+#search { float: right; width: 400px; height:auto; padding: 30px 0px 10px 0px; }
+
+#searchsubmit { text-decoration:none; color: #f5f5f5; background: #2d2d2d; border: none; font-family: 'News Cycle', sans-serif; outline:none; }
+
+#searchform { text-align:center; font-family: 'News Cycle', sans-serif; outline:none; }
+
+#searchform input#s { font-family: 'News Cycle', sans-serif; background-color: #ffffff; color:#808080; border-width:1px; border-color:#c3c3c3; border-style:solid; outline:none; width:90%; }
+
+#s { padding:5px 5px 5px 5px; }
+
+
+/**
+ * 13.0 Navigation menu
+ * ------------------
+ */
+
+.navtop { width: 960px; margin:0 auto; }
+
+.navmenu { margin:0 auto; font-family: 'News Cycle', sans-serif; font-size: 11pt; color: #ffffff; }
+
+.navmenu ul { padding:0; margin:0 auto; line-height: 1; font-family: 'News Cycle', sans-serif; font-size: 11pt; color: #ffffff; }
+
+.navmenu ul li { padding:0; margin:0 auto; line-height: 1; font-family: 'News Cycle', sans-serif; font-size: 11pt; color: #ffffff; }
+
+.navmenu ul li a { padding:0; margin:0 auto; line-height: 1; font-family: 'News Cycle', sans-serif; font-size: 11pt; color: #ffffff; }
+
+.navmenu:before { content: ''; display: table; }
+
+.navmenu:after { content: ''; display: table; }
+
+.navmenu > ul:before { content: ''; display: table; }
+
+.navmenu > ul:after { content: ''; display: table; }
+
+.navmenu:after { clear: both; }
+
+.navmenu > ul:after { clear: both; }
+
+.navmenu ul { background: #2d2d2d; }
+
+.navmenu ul > li { float: left; list-style: none; }
+
+.navmenu ul > li > a { display: block; text-decoration: none; padding: 7px 20px 7px 20px; position: relative; }
+
+.navmenu ul > li > a:hover { color: #2d2d2d; background-color:#f5f5f5; }
+
+.navmenu ul > li > a:hover:before { content: ''; z-index: 2; position: absolute; border-top: 0; border-bottom: 0; border-right: 0; width: 100%; height: 100%; top: 0; left: -1px; }
+
+.navmenu ul > li > a:hover:after { content: ''; z-index: 2; position: absolute; border-top: 0; border-bottom: 0; border-left: 0; width: 100%; height: 100%; top: 0; right: -1px; }
+
+.navmenu > ul > li > ul { opacity: 0; visibility: hidden; position: absolute; }
+
+.navmenu > ul > li:hover > ul { opacity: 1; visibility: visible; position: absolute; box-shadow: none; z-index: 2; }
+
+.navmenu > ul > li > ul { width: 150px; position: absolute; text-align:left; }
+
+.navmenu > ul > li > ul > li { float: none; position: relative; }
+
+.navmenu > ul > li > ul > li > ul { opacity: 0; visibility: hidden; position: absolute; }
+
+.navmenu > ul > li > ul > li:hover > ul { opacity: 1; visibility: visible; position: absolute; z-index: 2; }
+
+.navmenu > ul > li > ul > li > ul { left: 150px; top: 0px; width: 150px; text-align:left; }
+
+.navmenu > ul > li > ul > li > ul > li { float: none; }
+
+.navmenu .current_page_item > a,
+.navmenu .current_page_ancestor > a,
+.navmenu .current-menu-item > a,
+.navmenu .current-menu-ancestor > a {
+	color: #f5f5f5; background-color:#000000; }
+
+
+/**
+ * 13.1 Top menu
+ * ------------------
+ */
+
+.topmenutop { width: 960px; margin:0; float:left; }
+
+.topmenu { margin:0; font-family: 'News Cycle', sans-serif; font-size: 11pt; color: #111111; clear:both; }
+
+.topmenu ul { padding:0; margin:0 auto; line-height: 1; font-family: 'News Cycle', sans-serif; font-size: 11pt; color: #111111; }
+
+.topmenu ul li { padding:0; margin:0 auto; line-height: 1; font-family: 'News Cycle', sans-serif; font-size: 11pt; color: #111111; }
+
+.topmenu ul li a { padding:0; margin:0 auto; line-height: 1; font-family: 'News Cycle', sans-serif; font-size: 11pt; color: #111111; }
+
+.topmenu:before { content: ''; display: table; }
+
+.topmenu:after { content: ''; display: table; }
+
+.topmenu > ul:before { content: ''; display: table; }
+
+.topmenu > ul:after { content: ''; display: table; }
+
+.topmenu:after { clear: both; }
+
+.topmenu > ul:after { clear: both; }
+
+.topmenu ul { border-bottom:1px solid #dddddd; }
+
+.topmenu ul > li { float: left; list-style: none; }
+
+.topmenu ul > li > a { display: block; text-decoration: none; padding: 7px 20px 7px 20px; position: relative; }
+
+.topmenu ul > li > a:hover { color: #f5f5f5; background-color:#2d2d2d; }
+
+.topmenu ul > li > a:hover:before { content: ''; z-index: 2; position: absolute; border-top: 0; border-bottom: 0; border-right: 0; width: 100%; height: 100%; top: 0; left: -1px; }
+
+.topmenu ul > li > a:hover:after { content: ''; z-index: 2; position: absolute; border-top: 0; border-bottom: 0; border-left: 0; width: 100%; height: 100%; top: 0; right: -1px; }
+
+.topmenu > ul > li > ul { opacity: 0; visibility: hidden; position: absolute; }
+
+.topmenu > ul > li:hover > ul { opacity: 1; visibility: visible; position: absolute; box-shadow: none; background-color:#f5f5f5; z-index: 2; }
+
+.topmenu > ul > li > ul { width: 150px; position: absolute; text-align:left; }
+
+.topmenu > ul > li > ul > li { float: none; position: relative; }
+
+.topmenu > ul > li > ul > li > ul { opacity: 0; visibility: hidden; position: absolute; }
+
+.topmenu > ul > li > ul > li:hover > ul { opacity: 1; visibility: visible; position: absolute; background-color:#f5f5f5; z-index: 2; }
+
+.topmenu > ul > li > ul > li > ul { left: 150px; top: 0px; width: 150px; text-align:left; }
+
+.topmenu > ul > li > ul > li > ul > li { float: none; }
+
+
+/**
+ * 14.0 Media queries - Add more things here for mobile friendliness.
+ * ------------------
+ */
+
+@media screen and (max-width: 768px) {
+body { padding:0; background-image: none !important; }
+#wrapper { width:960px; }
+}
