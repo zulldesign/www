@@ -1,0 +1,129 @@
+@charset "utf-8";
+
+#japkin_settings {
+	width: 400px;
+	margin: 20px auto 0;
+	font-family: Arial, Sans-serif;
+	font-size: 14px;
+	text-align: Center;
+}
+
+	#japkin_settings .logo { width: 250px; margin-left: -12px; }
+
+	#japkin_settings .top {
+		background: url( '../images/bg_top.png' ) no-repeat;
+		width: 400px;
+		height: 30px;
+		padding-top: 30px;
+		font-weight: Bold;
+		color: White;
+	}
+	
+	#japkin_settings .middle {
+		background: url( '../images/bg_mid.png' ) repeat-y;
+		width: 400px;
+	}
+	
+		#japkin_settings .middle .label {
+			font-weight: Bold;
+			color: #0A84C1;
+			padding: 20px 0 5px;
+		}
+		
+		#japkin_settings .middle .input input {
+			background-color: #FFFFFF;
+			-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+			   -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+			        box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+			-webkit-transition: border linear 0.2s, box-shadow linear 0.2s;
+			   -moz-transition: border linear 0.2s, box-shadow linear 0.2s;
+			     -o-transition: border linear 0.2s, box-shadow linear 0.2s;
+			        transition: border linear 0.2s, box-shadow linear 0.2s;
+			height: 20px !important;
+			padding: 4px 6px;
+			font-size: 14px;
+			line-height: 20px;
+			color: #555555;
+			vertical-align: middle;
+			-webkit-border-radius: 4px;
+			   -moz-border-radius: 4px;
+			        border-radius: 4px;
+			width: 300px;
+			height: 20px;
+			padding: 4px;
+			border: 1px Solid #DDDDDD;
+			text-align: Center;
+			box-sizing: inherit;
+		}
+			#japkin_settings .middle .input.settings input { color: Black !important; }
+		
+		#japkin_settings .options {
+			text-align: Left;
+			margin-top: 20px;
+			width: 312px;
+			display: inline-block;
+		}
+		
+			#japkin_settings .options .header {
+				margin-bottom: 10px;
+				color: #0A84C1;
+				font-weight: Bold
+			}
+			
+				#japkin_settings .options .option { }
+					#japkin_settings .options .option.disabled span { color: Red; }
+					#japkin_settings .options .option.enabled span { color: Green; }
+					
+					#japkin_settings .options .option .check {
+						background: url( '../images/sprite_checkbox.png' );
+						width: 13px;
+						height: 13px;
+						display: inline-block;
+						margin-right: 10px;
+						position: relative;
+						top: 2px;
+						cursor: pointer;
+					}
+						#japkin_settings .options .option.enabled .check { background-position: -13px 0; }
+				
+		#japkin_settings .middle .message {
+			margin: 10px 0;
+			min-height: 15px;
+			color: Green;
+			font-size: 12px;
+		}
+			#japkin_settings .middle .message a { color: Green !important; }		
+			#japkin_settings .middle .message.fail, #japkin_settings .message.fail a { color: Red !important; }
+			#japkin_settings .message a:hover { text-decoration: Underline; }
+		
+		#japkin_settings .actions .button {
+			background: none;
+			border: none;
+			padding: 0;
+			margin: 0 0 10px;
+		}
+		
+			#japkin_settings .actions .button .mid { width: 290px; }
+		
+		#japkin_settings .actions .links {
+			padding: 0 0 10px;
+			text-align: Center;
+			font-size: 12px;
+			font-weight: Bold;
+			color: #0A84C1;
+		}
+			#japkin_settings .actions .links a { color: #0A84C1 !important; outline: 0; border: 0; }
+			#japkin_settings .actions .links a:hover { text-decoration: Underline; }
+	
+	#japkin_settings .bottom {
+		background: url( '../images/bg_bottom.png' ) no-repeat;
+		width: 400px;
+		height: 18px;
+	}
+
+.button { cursor: Pointer; }
+	.button.small { height: 30px; font-size: 14px !important; display: inline-block; text-decoration: none; white-space: nowrap; line-height: 23px; }
+		.button.small * { float: left; height: 30px; }
+		.button.small .left { width: 3px; background: url( '../images/btn_small_left.png' ) no-repeat; }
+		.button.small .mid { height: 26px; padding: 4px 8px 0; color: White; background: url( '../images/btn_small_mid.png' ) repeat-x; }
+		.button.small .right { width: 3px; background: url( '../images/btn_small_right.png' ) no-repeat; }
