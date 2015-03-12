@@ -1,0 +1,35 @@
+﻿@model MvcMusicStore.Models.Cart
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Cart</legend>
+
+    <div class="display-label">RecordId</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.RecordId)
+    </div>
+
+    <div class="display-label">Blog</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Blog.Title)
+    </div>
+
+    <div class="display-label">Count</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Count)
+    </div>
+
+    <div class="display-label">DateCreated</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DateCreated)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.CartId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
