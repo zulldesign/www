@@ -1,0 +1,21 @@
+﻿@model List<MvcMusicStore.Models.Blog>
+@{
+    ViewBag.Title = "ASP.NET MVC Music Store";
+}
+<div id="promotion">
+</div>
+
+<h3><em>Angel</em> <a href="http://angel.exabytes.com.my/idevaffiliate.php?id=3203564">Affiliate Program</a></h3>
+
+<ul id="blog-list">
+    @foreach (var blog in Model)
+    {
+        <li><a href="@Url.Action("Details", "Blog",
+                new { id = blog.BlogId })">
+
+            <img alt="@blog.Title" src="@blog.BlogArtUrl" />                   
+
+            <span>@blog.Title</span> </a>
+        </li>
+    }
+</ul>

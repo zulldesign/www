@@ -1,0 +1,11 @@
+﻿@{
+    ViewBag.Title = "Multiple file upload with asp.net mvc and HTML5";
+}
+
+@using (Html.BeginForm("About", "Home", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    <h3>Multiple File Upload With Asp.Net MVC2/MVC3/MVC4/MVC5, C# and HTML5</h3>
+    <input type="file" name="files" value="" multiple="multiple"/>
+    <input type="submit" value="Upload You Image"  title="Uplad"/>
+    <div style="color:Red;font-size:14px">@ViewBag.Message</div>
+}
