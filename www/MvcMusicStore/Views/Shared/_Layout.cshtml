@@ -1,0 +1,113 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<base target="main">
+	<title>@ViewBag.Title</title>
+	<link href="@Url.Content("~/Content/Site.css")" rel="stylesheet" type="text/css" />
+	<link href="@Url.Content("~/Content/jqueryslidemenu/css/jqueryslidemenu.css")" rel="stylesheet" type="text/css" />    
+	<script src="@Url.Content("~/Scripts/jquery-1.7.1.min.js")" type="text/javascript"></script>
+	<script src="@Url.Content("~/Scripts/modernizr-2.5.3.js")" type="text/javascript"></script>
+	<script src="@Url.Content("~/Scripts/jqueryslidemenu/js/jqueryslidemenu.js")" type="text/javascript"></script>
+</head>
+<link rel="stylesheet" type="text/css" href="jqueryslidemenu.css" />
+
+<!--[if lte IE 7]>
+<style type="text/css">
+html .jqueryslidemenu{height: 1%;} /*Holly Hack for IE7 and below*/
+</style>
+<![endif]-->
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.min.js"></script>
+<script type="text/javascript" src="jqueryslidemenu.js"></script>
+<div id="myslidemenu" class="jqueryslidemenu">
+<ul>
+<li><a href="https://www.apphb.com">APPHB</a></li>
+<li><a href="#">JOMNIAGA</a>
+		<ul>
+			<li><a href="/Blog/Browse?Category=Kecantikan%20%26%20Kesihatan">Kecantikan & Kesihatan</a></li>
+			<li><a href="/Blog/Browse?Category=Pakaian%20%26%20Fesyen">Pakaian & Fesyen</a></li>
+			<li><a href="/Blog/Browse?Category=Cinta%20%26%20Perhubungan">Cinta & Perhubungan</a></li>
+			<li><a href="/Blog/Browse?Category=Keluarga%20%26%20Kanak-Kanak">Keluarga & Kanak-Kanak</a></li>
+			<li><a href="/Blog/Browse?Category=Masakan%20%26%20Makanan">Masakan & Makanan</a></li>
+			<li><a href="/Blog/Browse?Category=Pendidikan%20%26%20Pekerjaan">Pendidikan & Pekerjaan</a></li>
+			<li><a href="/Blog/Browse?Category=Bahasa%20%26%20Pembelajaran">Bahasa & Pembelajaran</a></li>
+			<li><a href="/Blog/Browse?Category=Muzik%20%26%20Seni">Muzik & Seni</a></li>
+			<li><a href="/Blog/Browse?Category=Komputer%20%26%20Alat">Komputer & Alat</a></li>
+			<li><a href="/Blog/Browse?Category=Kereta%20%26%20Automobil">Kereta & Automobil</a></li>
+			<li><a href="/Blog/Browse?Category=Perniagaan%20%26%20Kewangan">Perniagaan & Kewangan</a></li>
+			<li><a href="/Blog/Browse?Category=E-dagang%20%26%20Pemasaran%20Online">E-dagang & Pemasaran Online</a></li>
+			<li><a href="/Blog/Browse?Category=Agama%20%26%20Kerohanian">Agama & Kerohanian</a></li>
+			<li><a href="/Blog/Browse?Category=Kraf%20%26%20Hobi">Kraf & Hobi</a></li>
+			<li><a href="/Blog/Browse?Category=Travel%20%26%20Rekreasi">Travel & Rekreasi</a></li>
+			<li><a href="/Blog/Browse?Category=e-Shopping%20Mall%20Umum">e-Shopping Mall Umum</a></li>
+			<li><a href="/Blog/Browse?Category=Rumah%20%26%20Kediaman">Rumah & Kediaman</a></li>
+			<li><a href="/Blog/Browse?Category=Sukan%20%26%20Luar">Sukan & Luar</a></li>
+			<li><a href="/Blog/Browse?Category=Lain-Lain">Lain-Lain</a></li>			
+		</ul>
+	</li>
+<li><a href="#">AUDIO</a>
+  <ul>
+  <li><a href="/Blog/Browse?Category=Rock">Rock</a></li>
+  <li><a href="/Blog/Browse?Category=Jazz">Jazz</a></li>
+  <li><a href="/Blog/Browse?Category=Metal">Metal</a></li>
+  <li><a href="/Blog/Browse?Category=Alternative">Alternative</a></li>
+  <li><a href="/Blog/Browse?Category=Disco">Disco</a></li>
+  <li><a href="/Blog/Browse?Category=Blues">Blues</a></li>
+  <li><a href="/Blog/Browse?Category=Latin">Latin</a></li>
+  <li><a href="/Blog/Browse?Category=Reggae">Reggae</a></li>
+  <li><a href="/Blog/Browse?Category=Pop">Pop</a></li>
+  <li><a href="/Blog/Browse?Category=Classical">Classical</a></li>  
+  </ul>
+</li>
+<li><a href="#">VIDEO</a></li>
+<li><a href="https://blogspot.apphb.com">BLOGSPOT</a>
+  <ul>
+  <li><a href="https://webs.apphb.com">WEBS</a></li>
+  <li><a href="https://eservices.apphb.com">ESERVICES</a>
+	<ul>
+	<li><a href="#">Sub Item 2.1.1</a></li>
+	<li><a href="#">Sub Item 2.1.2</a></li>
+	<li><a href="#">Folder 3.1.1</a>
+		<ul>
+			<li><a href="#">Sub Item 3.1.1.1</a></li>
+			<li><a href="#">Sub Item 3.1.1.2</a></li>
+			<li><a href="#">Sub Item 3.1.1.3</a></li>
+			<li><a href="#">Sub Item 3.1.1.4</a></li>
+			<li><a href="#">Sub Item 3.1.1.5</a></li>
+		</ul>
+	</li>
+	<li><a href="#">Sub Item 2.1.4</a></li>
+	</ul>
+  </li>
+  </ul>
+</li>
+<li><a href="https://www.apphb.com">MUSIC</a></li>
+<li><a href="http://www.apphbaffiliate.ml">Affiliate</a></li>
+</ul>
+<br style="clear: left" />
+</div>
+
+<body>
+	<div id="header">
+		<h1><a href="/">ASP.NET MVC MUSIC STORE</a></h1>
+		<ul id="navlist">
+			<li class="first"><a href="@Url.Content("~")" id="current">Home</a></li>
+			<li><a href="@Url.Content("~/Blog/")">Blog</a></li>
+			<li>@{Html.RenderAction("CartSummary", "ShoppingCart");}</li>
+			<li><a href="@Url.Content("~/Account/LogOn/")">LogOn</a></li>
+			<li><a href="@Url.Content("~/account/Register/")">Register</a></li>
+		</ul>        
+	</div>
+
+	@{Html.RenderAction("CategoryMenu", "Blog");}
+
+	<div id="main">
+		@RenderBody()
+	</div>
+
+	<div id="footer">
+		built with <a href="http://asp.net/mvc">ASP.NET MVC 3</a>
+	</div>
+</body>
+</html>

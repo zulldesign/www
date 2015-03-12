@@ -1,0 +1,20 @@
+﻿@model MvcMusicStore.Models.Category
+ 
+@{
+    ViewBag.Title = "Browse Blogs";
+} 
+<div class="category">
+    <h3><em>@Model.Name</em> Blogs</h3>
+ 
+    <ul id="blog-list">
+        @foreach (var blog in Model.Blogs)
+        {
+            <li>
+                <a href="@Url.Action("Details", new { id = blog.BlogId })">
+                    <img alt="@blog.Title" src="@blog.BlogArtUrl" />
+                    <span>@blog.Title</span>
+                </a>
+            </li>
+        }
+    </ul>
+</div>
