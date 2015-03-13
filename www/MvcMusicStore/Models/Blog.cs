@@ -11,6 +11,8 @@ namespace MvcMusicStore.Models
 {
     using System;
     using System.Collections.Generic;
+    using System.ComponentModel.DataAnnotations;
+    using System.Web.Mvc;
     
     public partial class Blog
     {
@@ -25,6 +27,11 @@ namespace MvcMusicStore.Models
         public int ProductId { get; set; }
         public string Title { get; set; }
         public decimal Price { get; set; }
+
+        [Required]
+        [AllowHtml]
+        [UIHint("tinymce_full_compressed")]
+        [Display(Name = "Page Content")]
         public string Description { get; set; }
         public string BlogArtUrl { get; set; }
     
