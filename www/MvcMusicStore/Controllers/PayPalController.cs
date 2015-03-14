@@ -1,31 +1,15 @@
-﻿using MvcMusicStore.Models;
-using System;
+﻿﻿using System;
 using System.Collections.Generic;
-using System.Configuration;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Configuration;
 
 namespace MvcMusicStore.Controllers
 {
-    public class PayPalController : Controller
+    public class PaypalController : Controller
     {
         //[Authorize(Roles="Customers")]
-        public ActionResult ValidateCommand(string product, string totalPrice)
-        {
-            bool useSandbox = Convert.ToBoolean(ConfigurationManager.AppSettings["IsSandbox"]);
-            var paypal = new PayPalModel(useSandbox);
-
-            paypal.item_name = product;
-            paypal.amount = totalPrice;
-            return View(paypal);
-        }
-
-        public ActionResult RedirectFromPaypal()
-        {
-            return View();
-        }
-
         public ActionResult CancelFromPaypal()
         {
             return View();
@@ -36,10 +20,32 @@ namespace MvcMusicStore.Controllers
             return View();
         }
 
-         //<add key="business" value="asrce2_1311074442_biz@gmail.com" />
         public ActionResult Index()
         {
             return View();
+        }
+
+        public ActionResult PostToPayPal(string item, string amount)
+        {
+            MvcMusicStore.Models.Paypal paypal = new Models.Paypal();
+            paypal.cmd = "_xclick";
+            paypal.business = ConfigurationManager.AppSettings["BusinessAccountKey"];
+
+            bool useSandbox = Convert.ToBoolean(ConfigurationManager.AppSettings["UseSandbox"]);
+            if (useSandbox)
+                ViewBag.actionURl = "https://www.sandbox.paypal.com/cgi-bin/webscr";
+            else
+                ViewBag.actionURl = "https://www.paypal.com/cgi-bin/webscr";
+
+            paypal.cancel_return = System.Configuration.ConfigurationManager.AppSettings["CancelURL"];
+            paypal.@return = ConfigurationManager.AppSettings["ReturnURL"]; //+"&PaymentId=1"; you can append your order Id here
+            paypal.notify_url = ConfigurationManager.AppSettings["NotifyURL"];// +"?PaymentId=1"; to maintain database logic 
+
+            paypal.currency_code = ConfigurationManager.AppSettings["CurrencyCode"];
+
+            paypal.item_name = item;
+            paypal.amount = amount;
+            return View(paypal);
         }
     }
 }
