@@ -1,5 +1,50 @@
 ﻿@{
-    ViewBag.Title = "RedirectFromPaypal";
+    ViewBag.Title = "Home Page";
 }
-
-<h2>RedirectFromPaypal</h2>
+@using (Html.BeginForm("PostToPaypal", "Paypal"))
+{
+    <div>
+        <table >
+            <tr>
+                <td>
+                    Product Name:
+                </td>
+                <td>
+                    <input type="text" name="product" value="APPHB STUDIO 2015 Express" readonly />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                   Total Price RM:
+                </td>
+                <td>
+                    <input type="text" name="totalPrice" value="150.00" readonly />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                </td>
+                <td>
+                    <input type="submit" name="btnConfirm" value="Pay with Paypal" />
+                </td>
+            </tr>
+        </table>
+    </div>
+    <p><b style="margin: 0px; padding: 0px; border: 0px; outline: 0px; font-size: 13.0080003738403px; vertical-align: baseline; color: #253340; font-family: 'Segoe UI', Tahoma, Arial, Helvetica, sans-serif; line-height: 19.0176963806152px; background: transparent;">Huraian Projek</b><br style="color: #253340; font-family: 'Segoe UI', Tahoma, Arial, Helvetica, sans-serif; font-size: 13.0080003738403px; line-height: 19.0176963806152px;" /><span color="#253340" face="Segoe UI, Tahoma, Arial, Helvetica, sans-serif" style="color: #253340; font-family: 'Segoe UI', Tahoma, Arial, Helvetica, sans-serif;"><span style="font-size: 13.0080003738403px; line-height: 19.0176963806152px;">APPHB STUDIO 2015 adalah aplikasi Adobe Flash dibina pada ASP.NET. Ia adalah satu sampel aplikasi ringan yang menunjukkan ASP.NET menggunakan Rangka Kerja Entiti.</span></span></p>
+<h2 style="font-size: 1.308em; padding: 1px 0px 3px 14px; color: #253340; margin-right: 0px; margin-left: 0px; border: 0px; outline: 0px; vertical-align: baseline; font-weight: normal; font-stretch: normal; line-height: 1.923em; font-family: 'Segoe UI Semibold', Segoe-Semibold, Tahoma, Arial, Helvetica, sans-serif; letter-spacing: 1px; width: 636px; height: 40px; margin-top: 20px !important; margin-bottom: 15px !important; background: #f0f1f4;">Overview</h2>
+<ul style="margin: 15px 0px 20px; padding: 0px 0px 0px 35px; list-style: none url('http://download-codeplex.sec.s-msft.com/Images/v20959/doublearrow.gif'); border: 0px; outline: 0px; font-size: 13.0080003738403px; vertical-align: baseline; color: #253340; font-family: 'Segoe UI', Tahoma, Arial, Helvetica, sans-serif; line-height: 19.0176963806152px; background: transparent;">
+<li style="margin: 0.3em 0px 0.3em 40px; padding: 0px; border: 0px; outline: 0px; font-size: 13.0080003738403px; vertical-align: middle; background: transparent;">Menunjukkan ASP.NET template, Data Anotasi, dan Pengesahan</li>
+<li style="margin: 0.3em 0px 0.3em 40px; padding: 0px; border: 0px; outline: 0px; font-size: 13.0080003738403px; vertical-align: middle; background: transparent;">Menunjukkan Razor sintaks dan ciri-ciri canggih</li>
+<li style="margin: 0.3em 0px 0.3em 40px; padding: 0px; border: 0px; outline: 0px; font-size: 13.0080003738403px; vertical-align: middle; background: transparent;">Menunjukkan Pelanggan-Side Pengesahan, jQuery, dan penggunaan kaedah penolong AJAX</li>
+<li style="margin: 0.3em 0px 0.3em 40px; padding: 0px; border: 0px; outline: 0px; font-size: 13.0080003738403px; vertical-align: middle; background: transparent;">Termasuk kedai semak imbas, membeli-belah cart, checkout, dan keahlian</li>
+<li style="margin: 0.3em 0px 0.3em 40px; padding: 0px; border: 0px; outline: 0px; font-size: 13.0080003738403px; vertical-align: middle; background: transparent;">Menunjukkan akses data melalui Rangka Kerja Entiti 4</li>
+<li style="margin: 0.3em 0px 0.3em 40px; padding: 0px; border: 0px; outline: 0px; font-size: 13.0080003738403px; vertical-align: middle; background: transparent;">Menggambarkan penggunaan ViewModels</li>
+<li style="margin: 0.3em 0px 0.3em 40px; padding: 0px; border: 0px; outline: 0px; font-size: 13.0080003738403px; vertical-align: middle; background: transparent;">Tutorial ini memerlukan <a href="https://downloadable.apphb.com/APPHB.zip" title="APPHB">APPHB STUDIO 2015</a>&nbsp;dan ASP.NET 4.0 (kedua-dua percuma) atau APPHB STUDIO 2015 <a href="https://downloadable.apphb.com/APPHB.zip" style="text-decoration: none; color: #2e8bcc; margin: 0px; padding: 0px; border: 0px; outline: 0px; font-size: 13.0080003738403px; vertical-align: baseline; background: transparent;">APPHB STUDIO 2015 Express</a></li>
+</ul>
+<p><br style="color: #253340; font-family: 'Segoe UI', Tahoma, Arial, Helvetica, sans-serif; font-size: 13.0080003738403px; line-height: 19.0176963806152px;" /><span style="color: #253340; font-family: 'Segoe UI', Tahoma, Arial, Helvetica, sans-serif; font-size: 13.0080003738403px; line-height: 19.0176963806152px;"></span><span color="#253340" face="Segoe UI, Tahoma, Arial, Helvetica, sans-serif" style="color: #253340; font-family: 'Segoe UI', Tahoma, Arial, Helvetica, sans-serif;"><span style="font-size: 13.0080003738403px; line-height: 19.0176963806152px;">Baca Tutorial Penuh Online </span></span><a href="https://www.apphb.com" style="text-decoration: none; color: #2e8bcc; margin: 0px; padding: 0px; border: 0px; outline: 0px; font-size: 13.0080003738403px; vertical-align: baseline; font-family: 'Segoe UI', Tahoma, Arial, Helvetica, sans-serif; line-height: 19.0176963806152px; background: transparent;" title="APPHB">Di Laman Web APPHB.COM</a><span style="color: #253340; font-family: 'Segoe UI', Tahoma, Arial, Helvetica, sans-serif; font-size: 13.0080003738403px; line-height: 19.0176963806152px;">.</span></p>
+<p><br style="color: #253340; font-family: 'Segoe UI', Tahoma, Arial, Helvetica, sans-serif; font-size: 13.0080003738403px; line-height: 19.0176963806152px;" /><i style="margin: 0px; padding: 0px; border: 0px; outline: 0px; font-size: 13.0080003738403px; vertical-align: baseline; color: #253340; font-family: 'Segoe UI', Tahoma, Arial, Helvetica, sans-serif; line-height: 19.0176963806152px; background: transparent;">Untuk Melihat Laman Pentadbiran Menggunakan Login Ini: Nama Pengguna = admin / kata laluan = repaircarizulf@apphbproject.ml</i><br style="color: #253340; font-family: 'Segoe UI', Tahoma, Arial, Helvetica, sans-serif; font-size: 13.0080003738403px; line-height: 19.0176963806152px;" /><i style="margin: 0px; padding: 0px; border: 0px; outline: 0px; font-size: 13.0080003738403px; vertical-align: baseline; color: #253340; font-family: 'Segoe UI', Tahoma, Arial, Helvetica, sans-serif; line-height: 19.0176963806152px; background: transparent;">Satu pangkalan data SQL Express adalah termasuk, tetapi jika anda memerlukan skrip SQL untuk mewujudkan pangkalan data mereka boleh didapati <a href="https://www.apphb.com" style="text-decoration: none; color: #2e8bcc; margin: 0px; padding: 0px; border: 0px; outline: 0px; font-size: 13.0080003738403px; vertical-align: baseline; background: transparent;" title="APPHB">di sini</a></i><br style="color: #253340; font-family: 'Segoe UI', Tahoma, Arial, Helvetica, sans-serif; font-size: 13.0080003738403px; line-height: 19.0176963806152px;" /><br style="color: #253340; font-family: 'Segoe UI', Tahoma, Arial, Helvetica, sans-serif; font-size: 13.0080003738403px; line-height: 19.0176963806152px;" /><a href="https://www.apphb.com" style="text-decoration: none; color: #2e8bcc; margin: 0px; padding: 0px; border: 0px; outline: 0px; font-size: 13.0080003738403px; vertical-align: baseline; font-family: 'Segoe UI', Tahoma, Arial, Helvetica, sans-serif; line-height: 19.0176963806152px; background: transparent;"><img src="http://download-codeplex.sec.s-msft.com/Download?ProjectName=mvcmusicstore&amp;DownloadId=119613" alt="MVC Music Store" title="MVC Music Store" style="margin: 0px; padding: 0px; outline: 0px; font-size: 13.0080003738403px; vertical-align: baseline; max-width: 100%; background: transparent;" /></a><br style="color: #253340; font-family: 'Segoe UI', Tahoma, Arial, Helvetica, sans-serif; font-size: 13.0080003738403px; line-height: 19.0176963806152px;" /><b style="margin: 0px; padding: 0px; border: 0px; outline: 0px; font-size: 13.0080003738403px; vertical-align: baseline; color: #253340; font-family: 'Segoe UI', Tahoma, Arial, Helvetica, sans-serif; line-height: 19.0176963806152px; background: transparent;">Termasuk PDF 160-halaman Walkthrough Tutorial di dalam fail ZIP!</b><br style="color: #253340; font-family: 'Segoe UI', Tahoma, Arial, Helvetica, sans-serif; font-size: 13.0080003738403px; line-height: 19.0176963806152px;" /><br style="color: #253340; font-family: 'Segoe UI', Tahoma, Arial, Helvetica, sans-serif; font-size: 13.0080003738403px; line-height: 19.0176963806152px;" /><img src="http://download-codeplex.sec.s-msft.com/Download?ProjectName=mvcmusicstore&amp;DownloadId=119579" alt="MVC Music Store" title="MVC Music Store" style="margin: 0px; padding: 0px; outline: 0px; font-size: 13.0080003738403px; vertical-align: baseline; max-width: 100%; color: #253340; font-family: 'Segoe UI', Tahoma, Arial, Helvetica, sans-serif; line-height: 19.0176963806152px; background: transparent;" /></p>
+<h2 style="font-size: 1.308em; padding: 1px 0px 3px 14px; color: #253340; margin-right: 0px; margin-left: 0px; border: 0px; outline: 0px; vertical-align: baseline; font-weight: normal; font-stretch: normal; line-height: 1.923em; font-family: 'Segoe UI Semibold', Segoe-Semibold, Tahoma, Arial, Helvetica, sans-serif; letter-spacing: 1px; width: 636px; height: 40px; margin-top: 20px !important; margin-bottom: 15px !important; background: #f0f1f4;">License</h2>
+<ul style="margin: 15px 0px 20px; padding: 0px 0px 0px 35px; list-style: none url('http://download-codeplex.sec.s-msft.com/Images/v20959/doublearrow.gif'); border: 0px; outline: 0px; font-size: 13.0080003738403px; vertical-align: baseline; color: #253340; font-family: 'Segoe UI', Tahoma, Arial, Helvetica, sans-serif; line-height: 19.0176963806152px; background: transparent;">
+<li style="margin: 0.3em 0px 0.3em 40px; padding: 0px; border: 0px; outline: 0px; font-size: 13.0080003738403px; vertical-align: middle; background: transparent;">Open Source Ms-PL license</li>
+</ul>
+}
