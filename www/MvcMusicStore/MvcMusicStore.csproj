@@ -106,6 +106,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\OrderController.cs" />
     <Compile Include="Controllers\OrderDetailController.cs" />
+    <Compile Include="Controllers\PayPalController.cs" />
     <Compile Include="Controllers\ProductController.cs" />
     <Compile Include="Controllers\BlogController.cs" />
     <Compile Include="Controllers\ShoppingCartController.cs" />
@@ -148,6 +149,7 @@
     <Compile Include="Models\OrderDetail.cs">
       <DependentUpon>BlogDB.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\PayPalModel.cs" />
     <Compile Include="Models\Product.cs">
       <DependentUpon>BlogDB.tt</DependentUpon>
     </Compile>
@@ -625,6 +627,11 @@
     <Content Include="Views\Shared\EditorTemplates\tinymce_full_compressed.cshtml" />
     <Content Include="Views\Shared\EditorTemplates\tinymce_full.cshtml" />
     <Content Include="Views\Shared\EditorTemplates\tinymce_jquery_full.cshtml" />
+    <Content Include="Views\PayPal\CancelFromPaypal.cshtml" />
+    <Content Include="Views\PayPal\NotifyFromPaypal.cshtml" />
+    <Content Include="Views\PayPal\RedirectFromPaypal.cshtml" />
+    <Content Include="Views\PayPal\ValidateCommand.cshtml" />
+    <Content Include="Views\PayPal\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
