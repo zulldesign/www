@@ -4,17 +4,55 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using System.Configuration;
+using MvcMusicStore.Models;
 
 namespace MvcMusicStore.Controllers
 {
     public class TekunController : Controller
     {
+        TekunEntities tekunDB = new TekunEntities();
+
         //
-        // GET: /Tekun/
+        // GET: /Tekun/        
 
         public ActionResult Index()
         {
-            return View();
+            var genres = tekunDB.Genres.ToList();
+
+            return View(genres);
+        }
+
+        //
+        // GET: /Tekun/Browse?genre=Disco        
+
+        public ActionResult Browse(string genre)
+        {
+            // Retrieve Genre and its Associated Albums from database
+            var genreModel = tekunDB.Genres.Include("Albums")
+                .Single(g => g.Name == genre);
+
+            return View(genreModel);
+        }
+
+        //
+        // GET: /Tekun/Details/5        
+
+        public ActionResult Details(int id)
+        {
+            var album = tekunDB.Albums.Find(id);
+
+            return View(album);
+        }
+
+        //
+        // GET: /Tekun/CategoryMenu        
+
+        [ChildActionOnly]
+        public ActionResult GenreMenu()
+        {
+            var genres = tekunDB.Genres.ToList();
+
+            return PartialView(genres);
         }
 
         public ActionResult PostToPayPal(string item, string amount)

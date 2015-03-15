@@ -12,14 +12,9 @@ namespace MvcMusicStore.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class Cart
+    public partial class EdmMetadata
     {
-        public int RecordId { get; set; }
-        public string CartId { get; set; }
-        public int AlbumId { get; set; }
-        public int Count { get; set; }
-        public System.DateTime DateCreated { get; set; }
-    
-        public virtual Album Album { get; set; }
+        public int Id { get; set; }
+        public string ModelHash { get; set; }
     }
 }

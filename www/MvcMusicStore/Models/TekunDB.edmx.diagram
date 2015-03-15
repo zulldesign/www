@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="96fb9e28b9734fe1b657c6d4e518e0b2" Name="Diagram1">
+        <EntityTypeShape EntityType="MvcMusicStore.Models.Album" Width="1.5" PointX="3" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MvcMusicStore.Models.Artist" Width="1.5" PointX="0.75" PointY="4.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="MvcMusicStore.Models.Cart" Width="1.5" PointX="5.25" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="MvcMusicStore.Models.EdmMetadata" Width="1.5" PointX="5.75" PointY="7" IsExpanded="true" />
+        <EntityTypeShape EntityType="MvcMusicStore.Models.Genre" Width="1.5" PointX="0.75" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="MvcMusicStore.Models.OrderDetail" Width="1.5" PointX="5.25" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MvcMusicStore.Models.Order" Width="1.5" PointX="3" PointY="7.375" IsExpanded="true" />
+        <AssociationConnector Association="MvcMusicStore.Models.Albums_Album_Artist" ManuallyRouted="false" />
+        <AssociationConnector Association="MvcMusicStore.Models.Albums_Genre_Albums" ManuallyRouted="false" />
+        <AssociationConnector Association="MvcMusicStore.Models.Carts_Cart_Album" ManuallyRouted="false" />
+        <AssociationConnector Association="MvcMusicStore.Models.OrderDetails_OrderDetail_Album" ManuallyRouted="false" />
+        <AssociationConnector Association="MvcMusicStore.Models.OrderDetails_Order_OrderDetails" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
