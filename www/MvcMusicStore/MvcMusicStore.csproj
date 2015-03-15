@@ -680,9 +680,6 @@
     <Content Include="Views\Paypal\Index.cshtml" />
     <Content Include="Views\Tekun\Index.cshtml" />
     <Content Include="Views\Tekun\PostToPayPal.cshtml" />
-    <Content Include="Views\Tekun\Browse.cshtml" />
-    <Content Include="Views\Tekun\CategoryMenu.cshtml" />
-    <Content Include="Views\Tekun\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
