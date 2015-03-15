@@ -1,0 +1,173 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="MvcMusicStore.Models.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="MvcMusicStoreModelsStoreContainer">
+    <EntitySet Name="Albums" EntityType="MvcMusicStore.Models.Store.Albums" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Artists" EntityType="MvcMusicStore.Models.Store.Artists" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Carts" EntityType="MvcMusicStore.Models.Store.Carts" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="EdmMetadata" EntityType="MvcMusicStore.Models.Store.EdmMetadata" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Genres" EntityType="MvcMusicStore.Models.Store.Genres" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="OrderDetails" EntityType="MvcMusicStore.Models.Store.OrderDetails" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Orders" EntityType="MvcMusicStore.Models.Store.Orders" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="Albums_Album_Artist" Association="MvcMusicStore.Models.Store.Albums_Album_Artist">
+      <End Role="Artists" EntitySet="Artists" />
+      <End Role="Albums" EntitySet="Albums" />
+    </AssociationSet>
+    <AssociationSet Name="Albums_Genre_Albums" Association="MvcMusicStore.Models.Store.Albums_Genre_Albums">
+      <End Role="Genres" EntitySet="Genres" />
+      <End Role="Albums" EntitySet="Albums" />
+    </AssociationSet>
+    <AssociationSet Name="Carts_Cart_Album" Association="MvcMusicStore.Models.Store.Carts_Cart_Album">
+      <End Role="Albums" EntitySet="Albums" />
+      <End Role="Carts" EntitySet="Carts" />
+    </AssociationSet>
+    <AssociationSet Name="OrderDetails_Order_OrderDetails" Association="MvcMusicStore.Models.Store.OrderDetails_Order_OrderDetails">
+      <End Role="Orders" EntitySet="Orders" />
+      <End Role="OrderDetails" EntitySet="OrderDetails" />
+    </AssociationSet>
+    <AssociationSet Name="OrderDetails_OrderDetail_Album" Association="MvcMusicStore.Models.Store.OrderDetails_OrderDetail_Album">
+      <End Role="Albums" EntitySet="Albums" />
+      <End Role="OrderDetails" EntitySet="OrderDetails" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Albums">
+    <Key>
+      <PropertyRef Name="AlbumId" />
+    </Key>
+    <Property Name="AlbumId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="GenreId" Type="int" Nullable="false" />
+    <Property Name="ArtistId" Type="int" Nullable="false" />
+    <Property Name="Title" Type="nvarchar" Nullable="false" MaxLength="160" />
+    <Property Name="Price" Type="numeric" Nullable="false" Scale="2" />
+    <Property Name="AlbumArtUrl" Type="nvarchar" MaxLength="1024" />
+  </EntityType>
+  <EntityType Name="Artists">
+    <Key>
+      <PropertyRef Name="ArtistId" />
+    </Key>
+    <Property Name="ArtistId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="nvarchar" />
+  </EntityType>
+  <EntityType Name="Carts">
+    <Key>
+      <PropertyRef Name="RecordId" />
+    </Key>
+    <Property Name="RecordId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="CartId" Type="nvarchar" />
+    <Property Name="AlbumId" Type="int" Nullable="false" />
+    <Property Name="Count" Type="int" Nullable="false" />
+    <Property Name="DateCreated" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="EdmMetadata">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ModelHash" Type="nvarchar" />
+  </EntityType>
+  <EntityType Name="Genres">
+    <Key>
+      <PropertyRef Name="GenreId" />
+    </Key>
+    <Property Name="GenreId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="nvarchar" />
+    <Property Name="Description" Type="nvarchar" />
+  </EntityType>
+  <EntityType Name="OrderDetails">
+    <Key>
+      <PropertyRef Name="OrderDetailId" />
+    </Key>
+    <Property Name="OrderDetailId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="OrderId" Type="int" Nullable="false" />
+    <Property Name="AlbumId" Type="int" Nullable="false" />
+    <Property Name="Quantity" Type="int" Nullable="false" />
+    <Property Name="UnitPrice" Type="numeric" Nullable="false" Scale="2" />
+  </EntityType>
+  <EntityType Name="Orders">
+    <Key>
+      <PropertyRef Name="OrderId" />
+    </Key>
+    <Property Name="OrderId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="OrderDate" Type="datetime" Nullable="false" />
+    <Property Name="Username" Type="nvarchar" />
+    <Property Name="FirstName" Type="nvarchar" Nullable="false" MaxLength="160" />
+    <Property Name="LastName" Type="nvarchar" Nullable="false" MaxLength="160" />
+    <Property Name="Address" Type="nvarchar" Nullable="false" MaxLength="70" />
+    <Property Name="City" Type="nvarchar" Nullable="false" MaxLength="40" />
+    <Property Name="State" Type="nvarchar" Nullable="false" MaxLength="40" />
+    <Property Name="PostalCode" Type="nvarchar" Nullable="false" MaxLength="10" />
+    <Property Name="Country" Type="nvarchar" Nullable="false" MaxLength="40" />
+    <Property Name="Phone" Type="nvarchar" Nullable="false" MaxLength="24" />
+    <Property Name="Email" Type="nvarchar" Nullable="false" />
+    <Property Name="Total" Type="numeric" Nullable="false" Scale="2" />
+  </EntityType>
+  <Association Name="Albums_Album_Artist">
+    <End Role="Artists" Type="MvcMusicStore.Models.Store.Artists" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Albums" Type="MvcMusicStore.Models.Store.Albums" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Artists">
+        <PropertyRef Name="ArtistId" />
+      </Principal>
+      <Dependent Role="Albums">
+        <PropertyRef Name="ArtistId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Albums_Genre_Albums">
+    <End Role="Genres" Type="MvcMusicStore.Models.Store.Genres" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Albums" Type="MvcMusicStore.Models.Store.Albums" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Genres">
+        <PropertyRef Name="GenreId" />
+      </Principal>
+      <Dependent Role="Albums">
+        <PropertyRef Name="GenreId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Carts_Cart_Album">
+    <End Role="Albums" Type="MvcMusicStore.Models.Store.Albums" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Carts" Type="MvcMusicStore.Models.Store.Carts" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Albums">
+        <PropertyRef Name="AlbumId" />
+      </Principal>
+      <Dependent Role="Carts">
+        <PropertyRef Name="AlbumId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="OrderDetails_Order_OrderDetails">
+    <End Role="Orders" Type="MvcMusicStore.Models.Store.Orders" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="OrderDetails" Type="MvcMusicStore.Models.Store.OrderDetails" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Orders">
+        <PropertyRef Name="OrderId" />
+      </Principal>
+      <Dependent Role="OrderDetails">
+        <PropertyRef Name="OrderId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="OrderDetails_OrderDetail_Album">
+    <End Role="Albums" Type="MvcMusicStore.Models.Store.Albums" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="OrderDetails" Type="MvcMusicStore.Models.Store.OrderDetails" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Albums">
+        <PropertyRef Name="AlbumId" />
+      </Principal>
+      <Dependent Role="OrderDetails">
+        <PropertyRef Name="AlbumId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

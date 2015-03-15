@@ -117,12 +117,6 @@
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountModels.cs" />
-    <Compile Include="Models\Album.cs">
-      <DependentUpon>TekunDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Artist.cs">
-      <DependentUpon>TekunDB.tt</DependentUpon>
-    </Compile>
     <Compile Include="Models\Blog.cs">
       <DependentUpon>BlogDB.tt</DependentUpon>
     </Compile>
@@ -141,26 +135,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>BlogDB.edmx</DependentUpon>
     </Compile>
-    <Compile Include="Models\Cart.cs">
-      <DependentUpon>TekunDB.tt</DependentUpon>
-    </Compile>
     <Compile Include="Models\Category.cs">
       <DependentUpon>BlogDB.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\C__MigrationHistory.cs">
       <DependentUpon>BlogDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\EdmMetadata.cs">
-      <DependentUpon>TekunDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Genre.cs">
-      <DependentUpon>TekunDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Order.cs">
-      <DependentUpon>TekunDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\OrderDetail.cs">
-      <DependentUpon>TekunDB.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Paypal.cs" />
     <Compile Include="Models\Product.cs">
@@ -171,21 +150,6 @@
     </Compile>
     <Compile Include="Models\ShoppingCart.cs" />
     <Compile Include="Models\Tekun.cs" />
-    <Compile Include="Models\TekunDB.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>TekunDB.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\TekunDB.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>TekunDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\TekunDB.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>TekunDB.edmx</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModels\ShoppingCartRemoveViewModel.cs" />
     <Compile Include="ViewModels\ShoppingCartViewModel.cs" />
@@ -298,23 +262,6 @@
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>BlogDB.edmx</DependentUpon>
       <LastGenOutput>BlogDB.cs</LastGenOutput>
-    </Content>
-    <EntityDeploy Include="Models\TekunDB.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>TekunDB.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <Content Include="Models\TekunDB.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>TekunDB.edmx</DependentUpon>
-      <LastGenOutput>TekunDB.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="Models\TekunDB.edmx.diagram">
-      <DependentUpon>TekunDB.edmx</DependentUpon>
-    </Content>
-    <Content Include="Models\TekunDB.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>TekunDB.edmx</DependentUpon>
-      <LastGenOutput>TekunDB.cs</LastGenOutput>
     </Content>
     <None Include="Scripts\jquery-1.7.1.intellisense.js" />
     <None Include="Scripts\jquery-1.5.1-vsdoc.js" />
@@ -680,9 +627,6 @@
     <Content Include="Views\Paypal\Index.cshtml" />
     <Content Include="Views\Tekun\Index.cshtml" />
     <Content Include="Views\Tekun\PostToPayPal.cshtml" />
-    <Content Include="Views\Tekun\Browse.cshtml" />
-    <Content Include="Views\Tekun\Details.cshtml" />
-    <Content Include="Views\Tekun\GenreMenu.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

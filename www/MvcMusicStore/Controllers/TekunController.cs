@@ -10,49 +10,49 @@ namespace MvcMusicStore.Controllers
 {
     public class TekunController : Controller
     {
-        TekunEntities tekunDB = new TekunEntities();
+        BlogEntities blogDB = new BlogEntities();
 
         //
-        // GET: /Tekun/        
+        // GET: /Blog/
 
         public ActionResult Index()
         {
-            var genres = tekunDB.Genres.ToList();
+            var categories = blogDB.Categories.ToList();
 
-            return View(genres);
+            return View(categories);
         }
 
         //
-        // GET: /Tekun/Browse?genre=Disco        
+        // GET: /Blog/Browse?genre=Disco
 
-        public ActionResult Browse(string genre)
+        public ActionResult Browse(string category)
         {
-            // Retrieve Genre and its Associated Albums from database
-            var genreModel = tekunDB.Genres.Include("Albums")
-                .Single(g => g.Name == genre);
+            // Retrieve Category and its Associated Blogs from database
+            var categoryModel = blogDB.Categories.Include("Blogs")
+                .Single(g => g.Name == category);
 
-            return View(genreModel);
+            return View(categoryModel);
         }
 
         //
-        // GET: /Tekun/Details/5        
+        // GET: /Blog/Details/5
 
         public ActionResult Details(int id)
         {
-            var album = tekunDB.Albums.Find(id);
+            var blog = blogDB.Blogs.Find(id);
 
-            return View(album);
+            return View(blog);
         }
 
         //
-        // GET: /Tekun/CategoryMenu        
+        // GET: /Blog/CategoryMenu
 
         [ChildActionOnly]
-        public ActionResult GenreMenu()
+        public ActionResult CategoryMenu()
         {
-            var genres = tekunDB.Genres.ToList();
+            var categories = blogDB.Categories.ToList();
 
-            return PartialView(genres);
+            return PartialView(categories);
         }
 
         public ActionResult PostToPayPal(string item, string amount)
