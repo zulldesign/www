@@ -25,9 +25,9 @@ namespace MvcMusicStore.Controllers
 
             bool useSandbox = Convert.ToBoolean(ConfigurationManager.AppSettings["UseSandbox"]);
             if (useSandbox)
-                ViewBag.actionURl = "https://MvcMusicStore.sandbox.paypal.com/cgi-bin/webscr";
+                ViewBag.actionURl = "https://www.sandbox.paypal.com/cgi-bin/webscr";
             else
-                ViewBag.actionURl = "https://MvcMusicStore.paypal.com/cgi-bin/webscr";
+                ViewBag.actionURl = "https://www.paypal.com/cgi-bin/webscr";
 
             paypal.cancel_return = System.Configuration.ConfigurationManager.AppSettings["CancelURL"];
             paypal.@return = ConfigurationManager.AppSettings["ReturnURL"]; //+"&PaymentId=1"; you can append your order Id here
