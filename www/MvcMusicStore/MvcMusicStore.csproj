@@ -110,7 +110,6 @@
     <Compile Include="Controllers\ProductController.cs" />
     <Compile Include="Controllers\BlogController.cs" />
     <Compile Include="Controllers\ShoppingCartController.cs" />
-    <Compile Include="Controllers\TekunController.cs" />
     <Compile Include="Controllers\UploadifyController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -149,7 +148,6 @@
       <DependentUpon>BlogDB.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\ShoppingCart.cs" />
-    <Compile Include="Models\Tekun.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModels\ShoppingCartRemoveViewModel.cs" />
     <Compile Include="ViewModels\ShoppingCartViewModel.cs" />
@@ -625,8 +623,6 @@
     <Content Include="Views\Paypal\CancelFromPaypal.cshtml" />
     <Content Include="Views\Paypal\NotifyFromPaypal.cshtml" />
     <Content Include="Views\Paypal\Index.cshtml" />
-    <Content Include="Views\Tekun\Index.cshtml" />
-    <Content Include="Views\Tekun\PostToPayPal.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
