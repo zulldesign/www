@@ -1,0 +1,36 @@
+﻿@model MvcMusicStore.Models.Blog
+
+@{
+    ViewBag.Title = "Blog - " + Model.Title;
+}
+
+<h2>@Model.Title</h2>
+
+<p>
+    <img alt="@Model.Title" src="@Model.BlogArtUrl" />
+</p>
+
+<div id="blog-details">
+    <p>
+        <em>Kategori:</em>
+        @Model.Category.Name
+    </p>
+    <p>
+        <em>Produk:</em>
+        @Model.Product.Name
+    </p>         
+    <p>
+        <em>Harga RM:</em>
+        @String.Format("{0:F}", Model.Price)
+    </p>
+    <fieldset>
+    <legend>KETERANGAN PRODUK</legend>    
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Description)
+    </div>    
+    </fieldset>
+    <p class="button">
+        @Html.ActionLink("Add to cart", "AddToCart", 
+        "ShoppingCart", new { id = Model.BlogId }, "")
+    </p>
+</div>

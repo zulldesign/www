@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="723ab10702ae40f887b132530c6e1cf9" Name="Diagram1">
+        <EntityTypeShape EntityType="MvcMusicStore.Models.C__MigrationHistory" Width="1.5" PointX="5.75" PointY="7" IsExpanded="true" />
+        <EntityTypeShape EntityType="MvcMusicStore.Models.Blog" Width="1.5" PointX="3" PointY="3.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="MvcMusicStore.Models.Cart" Width="1.5" PointX="5.25" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="MvcMusicStore.Models.Category" Width="1.5" PointX="0.75" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="MvcMusicStore.Models.Order" Width="1.5" PointX="3" PointY="7.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="MvcMusicStore.Models.OrderDetail" Width="1.5" PointX="5.25" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MvcMusicStore.Models.Product" Width="1.5" PointX="0.75" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="MvcMusicStore.Models.Product1" Width="1.5" PointX="7.75" PointY="2" IsExpanded="true" />
+        <AssociationConnector Association="MvcMusicStore.Models.FK__Blog__ProductId__276EDEB3" ManuallyRouted="false" />
+        <AssociationConnector Association="MvcMusicStore.Models.FK_Blog_Category" ManuallyRouted="false" />
+        <AssociationConnector Association="MvcMusicStore.Models.FK_Cart_Blog" ManuallyRouted="false" />
+        <AssociationConnector Association="MvcMusicStore.Models.FK_InvoiceLine_Blog" ManuallyRouted="false" />
+        <AssociationConnector Association="MvcMusicStore.Models.FK__InvoiceLi__Invoi__2F10007B" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
