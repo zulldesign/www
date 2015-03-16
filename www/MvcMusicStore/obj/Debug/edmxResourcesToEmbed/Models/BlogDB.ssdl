@@ -1,0 +1,178 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="MvcMusicStore.Models.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="MvcMusicStoreModelsStoreContainer">
+    <EntitySet Name="__MigrationHistory" EntityType="MvcMusicStore.Models.Store.__MigrationHistory" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Blog" EntityType="MvcMusicStore.Models.Store.Blog" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Cart" EntityType="MvcMusicStore.Models.Store.Cart" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Category" EntityType="MvcMusicStore.Models.Store.Category" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Order" EntityType="MvcMusicStore.Models.Store.Order" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="OrderDetail" EntityType="MvcMusicStore.Models.Store.OrderDetail" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Product" EntityType="MvcMusicStore.Models.Store.Product" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Products" EntityType="MvcMusicStore.Models.Store.Products" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK__Blog__ProductId__276EDEB3" Association="MvcMusicStore.Models.Store.FK__Blog__ProductId__276EDEB3">
+      <End Role="Product" EntitySet="Product" />
+      <End Role="Blog" EntitySet="Blog" />
+    </AssociationSet>
+    <AssociationSet Name="FK__InvoiceLi__Invoi__2F10007B" Association="MvcMusicStore.Models.Store.FK__InvoiceLi__Invoi__2F10007B">
+      <End Role="Order" EntitySet="Order" />
+      <End Role="OrderDetail" EntitySet="OrderDetail" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Blog_Category" Association="MvcMusicStore.Models.Store.FK_Blog_Category">
+      <End Role="Category" EntitySet="Category" />
+      <End Role="Blog" EntitySet="Blog" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Cart_Blog" Association="MvcMusicStore.Models.Store.FK_Cart_Blog">
+      <End Role="Blog" EntitySet="Blog" />
+      <End Role="Cart" EntitySet="Cart" />
+    </AssociationSet>
+    <AssociationSet Name="FK_InvoiceLine_Blog" Association="MvcMusicStore.Models.Store.FK_InvoiceLine_Blog">
+      <End Role="Blog" EntitySet="Blog" />
+      <End Role="OrderDetail" EntitySet="OrderDetail" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="__MigrationHistory">
+    <Key>
+      <PropertyRef Name="MigrationId" />
+      <PropertyRef Name="ContextKey" />
+    </Key>
+    <Property Name="MigrationId" Type="nvarchar" Nullable="false" MaxLength="150" />
+    <Property Name="ContextKey" Type="nvarchar" Nullable="false" MaxLength="300" />
+    <Property Name="Model" Type="varbinary(max)" Nullable="false" />
+    <Property Name="ProductVersion" Type="nvarchar" Nullable="false" MaxLength="32" />
+  </EntityType>
+  <EntityType Name="Blog">
+    <Key>
+      <PropertyRef Name="BlogId" />
+    </Key>
+    <Property Name="BlogId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="CategoryId" Type="int" Nullable="false" />
+    <Property Name="ProductId" Type="int" Nullable="false" />
+    <Property Name="Title" Type="nvarchar" Nullable="false" MaxLength="160" />
+    <Property Name="Price" Type="numeric" Nullable="false" Precision="10" Scale="2" />
+    <Property Name="Description" Type="nvarchar" />
+    <Property Name="BlogArtUrl" Type="nvarchar" MaxLength="1024" />
+  </EntityType>
+  <EntityType Name="Cart">
+    <Key>
+      <PropertyRef Name="RecordId" />
+    </Key>
+    <Property Name="RecordId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="CartId" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="BlogId" Type="int" Nullable="false" />
+    <Property Name="Count" Type="int" Nullable="false" />
+    <Property Name="DateCreated" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Category">
+    <Key>
+      <PropertyRef Name="CategoryId" />
+    </Key>
+    <Property Name="CategoryId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="nvarchar" MaxLength="120" />
+    <Property Name="Description" Type="nvarchar" />
+  </EntityType>
+  <EntityType Name="Order">
+    <Key>
+      <PropertyRef Name="OrderId" />
+    </Key>
+    <Property Name="OrderId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="OrderDate" Type="datetime" Nullable="false" />
+    <Property Name="Username" Type="nvarchar" MaxLength="256" />
+    <Property Name="FirstName" Type="nvarchar" MaxLength="160" />
+    <Property Name="LastName" Type="nvarchar" MaxLength="160" />
+    <Property Name="Address" Type="nvarchar" MaxLength="70" />
+    <Property Name="City" Type="nvarchar" MaxLength="40" />
+    <Property Name="State" Type="nvarchar" MaxLength="40" />
+    <Property Name="PostalCode" Type="nvarchar" MaxLength="10" />
+    <Property Name="Country" Type="nvarchar" MaxLength="40" />
+    <Property Name="Phone" Type="nvarchar" MaxLength="24" />
+    <Property Name="Email" Type="nvarchar" MaxLength="160" />
+    <Property Name="Total" Type="numeric" Nullable="false" Precision="10" Scale="2" />
+  </EntityType>
+  <EntityType Name="OrderDetail">
+    <Key>
+      <PropertyRef Name="OrderDetailId" />
+    </Key>
+    <Property Name="OrderDetailId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="OrderId" Type="int" Nullable="false" />
+    <Property Name="BlogId" Type="int" Nullable="false" />
+    <Property Name="Quantity" Type="int" Nullable="false" />
+    <Property Name="UnitPrice" Type="numeric" Nullable="false" Precision="10" Scale="2" />
+  </EntityType>
+  <EntityType Name="Product">
+    <Key>
+      <PropertyRef Name="ProductId" />
+    </Key>
+    <Property Name="ProductId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="nvarchar" MaxLength="120" />
+  </EntityType>
+  <EntityType Name="Products">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="nvarchar(max)" />
+    <Property Name="ReleaseDate" Type="datetime" Nullable="false" />
+    <Property Name="Category" Type="nvarchar(max)" />
+    <Property Name="Price" Type="decimal" Nullable="false" Scale="2" />
+  </EntityType>
+  <Association Name="FK__Blog__ProductId__276EDEB3">
+    <End Role="Product" Type="MvcMusicStore.Models.Store.Product" Multiplicity="1" />
+    <End Role="Blog" Type="MvcMusicStore.Models.Store.Blog" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Product">
+        <PropertyRef Name="ProductId" />
+      </Principal>
+      <Dependent Role="Blog">
+        <PropertyRef Name="ProductId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__InvoiceLi__Invoi__2F10007B">
+    <End Role="Order" Type="MvcMusicStore.Models.Store.Order" Multiplicity="1" />
+    <End Role="OrderDetail" Type="MvcMusicStore.Models.Store.OrderDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Order">
+        <PropertyRef Name="OrderId" />
+      </Principal>
+      <Dependent Role="OrderDetail">
+        <PropertyRef Name="OrderId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Blog_Category">
+    <End Role="Category" Type="MvcMusicStore.Models.Store.Category" Multiplicity="1" />
+    <End Role="Blog" Type="MvcMusicStore.Models.Store.Blog" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Category">
+        <PropertyRef Name="CategoryId" />
+      </Principal>
+      <Dependent Role="Blog">
+        <PropertyRef Name="CategoryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Cart_Blog">
+    <End Role="Blog" Type="MvcMusicStore.Models.Store.Blog" Multiplicity="1" />
+    <End Role="Cart" Type="MvcMusicStore.Models.Store.Cart" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Blog">
+        <PropertyRef Name="BlogId" />
+      </Principal>
+      <Dependent Role="Cart">
+        <PropertyRef Name="BlogId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_InvoiceLine_Blog">
+    <End Role="Blog" Type="MvcMusicStore.Models.Store.Blog" Multiplicity="1" />
+    <End Role="OrderDetail" Type="MvcMusicStore.Models.Store.OrderDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Blog">
+        <PropertyRef Name="BlogId" />
+      </Principal>
+      <Dependent Role="OrderDetail">
+        <PropertyRef Name="BlogId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>
